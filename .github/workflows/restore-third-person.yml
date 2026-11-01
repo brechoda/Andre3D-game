@@ -1,0 +1,39 @@
+name: Restore third_person
+on:
+  workflow_dispatch:
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Restore and fix third_person.gd
+        run: |
+          git show 4928702338641e41b76ba0ee7396878b2e2567a0:game/scripts/third_person.gd > game/scripts/third_person.gd
+          python3 << 'PY'
+          from pathlib import Path
+          text = Path('game/scripts/third_person.gd').read_text()
+          old = '''    node.global_position = Vector3(x, y, z)\n    node.rotation.y = deg_to_rad(clampf(float(data.get(\"rotation_y\", 0.0)), -3600.0, 3600.0))\n    return true'''
+          new = '''    node.global_position = Vector3(x, y, z)\n    var heading := deg_to_rad(clampf(float(data.get(\"rotation_y\", 0.0)), -3600.0, 3600.0))\n    if node == self:\n        node.rotation = Vector3.ZERO\n        if visual != null:\n            visual.rotation = Vector3(0.0, heading, 0.0)\n        _camera_yaw = heading\n    else:\n        node.rotation.y = heading\n    return true'''
+          if old not in text:
+              raise SystemExit('spawn pattern not found')
+          text = text.replace(old, new)
+          old2 = '''func _physics_process(delta: float) -> void:\n    if not is_instance_valid(visual):\n        return'''
+          new2 = '''func _physics_process(delta: float) -> void:\n    if not is_instance_valid(visual):\n        return\n    if not is_zero_approx(rotation.y) or not is_zero_approx(rotation.x) or not is_zero_approx(rotation.z):\n        rotation = Vector3.ZERO'''
+          if old2 not in text:
+              raise SystemExit('physics pattern not found')
+          text = text.replace(old2, new2, 1)
+          Path('game/scripts/third_person.gd').write_text(text)
+          print('fixed', len(text))
+          PY
+      - name: Commit and push
+        run: |
+          git config user.name "brechoda"
+          git config user.email "dernivalgeraldo01@gmail.com"
+          git add game/scripts/third_person.gd
+          git commit -m "Restore third_person.gd with opposite-walk direction fix" || echo "no changes"
+          git push
