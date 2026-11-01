@@ -39,6 +39,19 @@ var _remote_dg_scene: PackedScene
 var _connecting := false
 var _reconnect_scheduled := false
 
+func _as_bool(value: Variant, fallback := false) -> bool:
+    if value is bool:
+        return value
+    if value is int or value is float:
+        return not is_zero_approx(float(value))
+    if value is String:
+        var normalized := String(value).strip_edges().to_lower()
+        if normalized in ["true", "1", "yes", "sim"]:
+            return true
+        if normalized in ["false", "0", "no", "não", "nao", ""]:
+            return false
+    return fallback
+
 func _ready() -> void:
     _load_config()
     if not enabled:
@@ -85,7 +98,7 @@ func _load_config() -> void:
     var data = JSON.parse_string(file.get_as_text())
     if typeof(data) != TYPE_DICTIONARY:
         return
-    enabled = bool(data.get("enabled", false))
+    enabled = _as_bool(data.get("enabled", false))
     server_url = String(data.get("server_url", ""))
     room_code = String(data.get("room", "ANDRE3D")).to_upper()
     player_name = String(data.get("player_name", "Jogador"))
@@ -149,7 +162,7 @@ func _send_local_state() -> void:
     if player_controller != null and player_controller.has_method("get_network_character_id"):
         character = String(player_controller.call("get_network_character_id"))
     elif player_controller != null and player_controller.has_method("is_gorece_active"):
-        character = "gorece" if bool(player_controller.call("is_gorece_active")) else "andre"
+        character = "gorece" if _as_bool(player_controller.call("is_gorece_active")) else "andre"
     # A orientação de gameplay fica no visual do personagem, não no
     # CharacterBody3D raiz. Enviar a rotação do raiz fazia o remoto receber
     # quase sempre 0 rad e caminhar de costas para a direção real.
@@ -161,19 +174,19 @@ func _send_local_state() -> void:
     if player is CharacterBody3D:
         movement_velocity = (player as CharacterBody3D).velocity
     var vehicle_state := _local_vehicle_state()
-    if bool(vehicle_state.get("riding", false)):
+    if _as_bool(vehicle_state.get("riding", false)):
         movement_velocity = Vector3(
             float(vehicle_state.get("vx", 0.0)),
             float(vehicle_state.get("vy", 0.0)),
             float(vehicle_state.get("vz", 0.0))
         )
     var running := false
-    if not bool(vehicle_state.get("riding", false)) and player_controller != null:
-        if player_controller.has_method("is_gorece_active") and bool(player_controller.call("is_gorece_active")):
+    if not _as_bool(vehicle_state.get("riding", false)) and player_controller != null:
+        if player_controller.has_method("is_gorece_active") and _as_bool(player_controller.call("is_gorece_active")):
             var gorece := player_controller.get("gorece") as Node
-            running = gorece != null and bool(gorece.get("running"))
+            running = gorece != null and _as_bool(gorece.get("running"))
         else:
-            running = bool(player_controller.get("_running"))
+            running = _as_bool(player_controller.get("_running"))
     _state_sequence += 1
     _send({
         "type": "state",
@@ -204,7 +217,7 @@ func _send_local_state() -> void:
 
 func _local_vehicle_state() -> Dictionary:
     for node in get_parent().get_children():
-        if not node.has_method("is_riding") or not bool(node.call("is_riding")):
+        if not node.has_method("is_riding") or not _as_bool(node.call("is_riding")):
             continue
         var vehicle_type := "vehicle"
         var vehicle_id := String(node.get("network_vehicle_id"))
@@ -252,7 +265,7 @@ func request_vehicle_claim(vehicle_id: String) -> bool:
         var response: Variant = _vehicle_claim_results.get(vehicle_id, null)
         if response is Dictionary:
             _vehicle_claim_results.erase(vehicle_id)
-            return bool(response.get("granted", false))
+            return _as_bool(response.get("granted", false))
         await get_tree().process_frame
     _vehicle_claim_results.erase(vehicle_id)
     _send({"type": "vehicle_release", "vehicle_id": vehicle_id})
@@ -355,7 +368,7 @@ func _handle_message(text: String) -> void:
             var vehicle_id := String(message.get("vehicle_id", ""))
             if not vehicle_id.is_empty():
                 _vehicle_claim_results[vehicle_id] = message
-            if bool(message.get("granted", false)):
+            if _as_bool(message.get("granted", false)):
                 _set_status("Veículo reservado para você")
             else:
                 _set_status("Veículo ocupado por outro jogador")
@@ -436,7 +449,7 @@ func _upsert_remote(data: Dictionary) -> void:
             remote_position,
             float(data.get("ry", 0.0)),
             String(data.get("vehicle", "on_foot")),
-            bool(data.get("riding", false)),
+            _as_bool(data.get("riding", false)),
             vehicle_position,
             float(data.get("vehicle_ry", data.get("ry", 0.0))),
             String(data.get("vehicle_id", "")),
@@ -445,7 +458,7 @@ func _upsert_remote(data: Dictionary) -> void:
             remote_vehicle_velocity,
             String(data.get("vehicle_audio", "off")),
             estimated_age,
-            bool(data.get("running", false)),
+            _as_bool(data.get("running", false)),
             float(data.get("vehicle_wheelie", 0.0))
         )
     else:
@@ -508,7 +521,7 @@ func _get_tracked_position() -> Vector3:
         return Vector3.ZERO
     # Durante a pilotagem, o veículo é o objeto que realmente se desloca.
     for child: Node in scene_root.get_children():
-        if child.has_method("is_riding") and bool(child.call("is_riding")) and child is Node3D:
+        if child.has_method("is_riding") and _as_bool(child.call("is_riding")) and child is Node3D:
             return (child as Node3D).global_position
     var player := scene_root.get_node_or_null("Player") as Node3D
     return player.global_position if player != null else Vector3.ZERO
