@@ -23,7 +23,7 @@ jobs:
           distribution: temurin
           java-version: '21'
 
-      - name: Install Godot
+      - name: Install Godot and export templates
         run: |
           mkdir -p "$HOME/.local/bin" "$HOME/.local/share/godot/export_templates/4.7.2.stable"
           curl -fsSL -o /tmp/godot.zip https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
@@ -31,8 +31,11 @@ jobs:
           mv "$HOME/.local/bin/Godot_v4.7.2-stable_linux.x86_64" "$HOME/.local/bin/godot"
           chmod +x "$HOME/.local/bin/godot"
           curl -fsSL -o /tmp/templates.tpz https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_export_templates.tpz
+          mkdir -p /tmp/templates
           unzip -q /tmp/templates.tpz -d /tmp/templates
-          cp /tmp/templates/templates/android_source.zip "$HOME/.local/share/godot/export_templates/4.7.2.stable/android_source.zip"
+          # O .tpz descompacta em templates/; copiar tudo para a pasta de versao do Godot
+          cp -a /tmp/templates/templates/. "$HOME/.local/share/godot/export_templates/4.7.2.stable/"
+          ls -la "$HOME/.local/share/godot/export_templates/4.7.2.stable/" | head -30
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Configure signing key
@@ -54,16 +57,25 @@ jobs:
             'export/android/debug_keystore_pass = "android"' \
             > "$HOME/.config/godot/editor_settings-4.7.tres"
 
-      - name: Install Godot Android build template
+      - name: Install Godot Android build template into project
         working-directory: game
-        run: godot --headless --editor --quit --install-android-build-template
+        run: |
+          godot --headless --editor --quit-after 120 --install-android-build-template || true
+          # Garantir que o template foi extraido no projeto
+          if [ ! -d android/build ]; then
+            echo "Template nao encontrado em android/build; extraindo android_source.zip manualmente"
+            mkdir -p android
+            unzip -q "$HOME/.local/share/godot/export_templates/4.7.2.stable/android_source.zip" -d android/build
+          fi
+          ls -la android/ || true
+          ls -la android/build/ | head -20 || true
 
       - name: Export APK
         working-directory: game
         run: |
           sed -i "s#keystore/release=.*#keystore/release=\"$HOME/.local/share/godot/keystores/debug.keystore\"#; s#keystore/release_user=.*#keystore/release_user=\"androiddebugkey\"#; s#keystore/release_password=.*#keystore/release_password=\"android\"#" export_presets.cfg
           mkdir -p dist
-          godot --headless --path . --export-debug Android dist/Andre3D-2.1.19-debug.apk
+          godot --headless --path . --export-debug "Android" dist/Andre3D-2.1.19-debug.apk
 
       - name: Verify APK
         working-directory: game
