@@ -2,66 +2,78 @@
 
 ## Status
 
-- **Modelo fonte**: `washing.dff` (versão *sem braços*)
-- **ID multiplayer**: `fiatuno_01`
-- **Tipo no servidor**: `fiatuno`
-- **Personagens permitidos**: André, Gorece e DG (sem restrição)
-- **Servidor**: já atualizado (claim + spawn)
-- **Spawn**: posição `[10.0, 2.85, 89.0]`, rotation_y `90`
+| Item | Valor |
+|------|-------|
+| Modelo fonte | `washing.dff` (sem braços) → `fiat_uno_escada.glb` |
+| ID multiplayer | `fiatuno_01` |
+| Tipo no servidor | `fiatuno` |
+| Personagens | André, Gorece e DG (sem restrição) |
+| Script | `scripts/fiatuno_controller.gd` |
+| Spawn | `[10.0, 2.85, 89.0]`, rotation_y `90` |
 
-## O que já foi feito no servidor
+Servidor e spawn já estão atualizados. Controlador criado.
 
-1. `VEHICLE_TYPES` em `server.mjs` agora inclui `fiatuno_01 → fiatuno`.
-2. `updates/files/config/spawn.json` tem a entrada do veículo.
-3. Manifesto atualizado (`2026.11.01.14`) com novo size/sha256 do spawn.
+## Análise do GLB enviado
 
-## O que ainda falta no cliente Godot
+Hierarquia principal (compatível com o estilo GTA do projeto):
 
-### 1. Converter o DFF → GLB
+- `car` → `fiat uno fire`
+- Rodas:
+  - `wheel_lf` ✅
+  - `wheel_lb` ✅
+  - `wheel_rb` ✅
+  - Roda dianteira direita aparece como nó `wheel` (filho de `wheel_rf_dummy`) — o controlador já trata esse caso
+- Portas: `door_lf_ok`, `door_rf_ok`, `door_lr_ok`, `door_rr_ok`
+- Assentos: `ped_frontseat`, `ped_backseat`
+- Outros: `steering_ok`, `chassis`, `bonnet_ok`, `boot_ok`, `exhaust`, luzes, etc.
 
-Use a mesma pipeline da Hilux (`sadler.dff` → `hilux_srx_2017.glb`):
+**Atenção:** o GLB não embute texturas (`images: 0`). Os materiais existem (`paint_primary`, `glass`, etc.), mas sem texturas o carro pode aparecer só com cores planas. Se precisar de texturas, reexporte o GLB incluindo as imagens ou coloque os PNG no projeto e religue os materiais.
 
-1. Abra o Blender com o addon de importação GTA (DragonFF / INU tools / equivalente).
-2. Importe `washing.dff` (versão **sem braços**).
-3. Identifique e nomeie as rodas:
-   - `wheel_lf`, `wheel_rf`, `wheel_lb`, `wheel_rb`
-4. Ajuste altura das rodas para tocar o chão (igual foi feito na Hilux).
-5. Exporte como `assets/models/fiat_uno_escada.glb`.
+## Como colocar na cena (passo a passo no Godot)
 
-### 2. Criar o controlador
+1. **Copie o arquivo**
+   ```
+   game/assets/models/fiat_uno_escada.glb
+   ```
 
-Copie `scripts/hilux_controller.gd` → `scripts/fiatuno_controller.gd` e ajuste:
+2. **Abra** `scenes/third_person.tscn`
 
-- `class_name FiatUnoController`
-- `network_vehicle_id := "fiatuno_01"`
-- `vehicle_display_name := "FIAT UNO + ESCADA"`
-- Constantes de física (velocidade máxima ~12–14 m/s, wheelbase, etc.)
-- Posições de assento (`SEAT_HIP`, `DOOR_APPROACH`, etc.) conforme o modelo
-- Áudio do motor (pode reutilizar o da Hilux temporariamente ou adicionar um novo)
+3. **Crie a hierarquia** (igual à Hilux):
+   ```
+   FiatUno (Node3D)          ← anexe fiatuno_controller.gd aqui
+   ├── FiatUnoVisual         ← instância do GLB (ou MeshInstance / PackedScene)
+   └── CollisionBody (StaticBody3D)
+       └── Collision (CollisionShape3D)  ← BoxShape3D ~ (1.6, 1.3, 3.6)
+   ```
 
-### 3. Adicionar na cena
+4. **No script do FiatUno**:
+   - `network_vehicle_id` = `"fiatuno_01"`
+   - `vehicle_display_name` = `"FIAT UNO + ESCADA"`
 
-Em `scenes/third_person.tscn`:
+5. **Posição inicial** (ou deixe o spawn remoto sobrescrever):
+   - Position ≈ `(10, 2.85, 89)`
+   - Rotation Y ≈ `90°`
 
-- Instancie o GLB como filho de um nó `FiatUno` (Node3D)
-- Anexe o script `fiatuno_controller.gd`
-- Configure `network_vehicle_id = "fiatuno_01"`
-- Adicione `CollisionBody` + `CollisionShape3D` (caixa simples, igual à Hilux)
+6. **Ajuste fino depois do primeiro teste**:
+   - `SEAT_HIP`, `DOOR_APPROACH`, `WHEEL_RADIUS` no script
+   - Altura do nó raiz para as rodas tocarem o chão
+   - Tamanho da caixa de colisão
 
-### 4. Testes
+## Testes recomendados
 
-- Offline: entrar/sair, dirigir, rodas girando, chão do mapa
-- Online: claim exclusivo, outro jogador vê o carro se movendo, áudio remoto
+- [ ] Offline: aproximar, botão DIRIGIR aparece, entrar/sair
+- [ ] Rodas giram e esterçam
+- [ ] Chão do mapa (MapStreamer) mantém o carro no asfalto
+- [ ] Online: claim exclusivo, outro jogador vê o movimento
+- [ ] DG consegue dirigir (sem bloqueio)
 
 ## Referências
 
+- `scripts/hilux_controller.gd` — base do controlador
 - `docs/hilux-srx-2017.md` — conversão de rodas e altura
-- `docs/vehicle-physics.md` — física procedural
-- `scripts/hilux_controller.gd` — base do controlador de carro
-- Servidor: `VEHICLE_TYPES` e `vehicle_claim` / `vehicle_release`
+- `docs/vehicle-physics.md`
+- Servidor: `VEHICLE_TYPES` + `spawn.json` + manifesto `2026.11.01.14`
 
 ## Créditos do modelo
 
-- LFG
-- Fenix3D
-- OcelotMods
+- LFG / Fenix3D / OcelotMods
