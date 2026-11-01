@@ -13,6 +13,9 @@ class_name Gta3MapStreamer
 
 const TILE_DIRECTORY := "res://assets/maps/liberty_city/godot_tiles/"
 const COLLISION_DIRECTORY := "res://assets/maps/liberty_city/collisions/"
+const GROUND_FIX_TILE := "ground_fix"
+const GROUND_FIX_VISUAL := "res://assets/maps/liberty_city/ground_fix/ground_fix_visual.obj"
+const GROUND_FIX_COLLISION := "res://assets/maps/liberty_city/collisions/ground_fix_collision.obj"
 const OVERVIEW_TILE := "maps/overview"
 const INITIAL_SPAWN_TILE := "comntop/comntop"
 
@@ -80,6 +83,9 @@ func _load_parts_manifest() -> void:
 		for part_name: Variant in part_names:
 			part_paths.append(TILE_DIRECTORY + String(part_name))
 		_part_paths_by_tile[tile_name] = part_paths
+	# O remendo corrigido não pertence a um tile original; carregue-o como tile especial.
+	if FileAccess.file_exists(GROUND_FIX_VISUAL):
+		_part_paths_by_tile[GROUND_FIX_TILE] = PackedStringArray([GROUND_FIX_VISUAL])
 	var bounds_path := parts_manifest_path.get_base_dir() + "/tile_part_bounds.json"
 	if FileAccess.file_exists(bounds_path):
 		var bounds_file := FileAccess.open(bounds_path, FileAccess.READ)
@@ -135,6 +141,8 @@ func _refresh_active_tiles() -> void:
 		return float(a["distance"]) < float(b["distance"])
 	)
 	var desired: Dictionary = {}
+	if _part_paths_by_tile.has(GROUND_FIX_TILE):
+		desired[GROUND_FIX_TILE] = true
         if not _ultra_low_mode and _part_paths_by_tile.has(OVERVIEW_TILE):
             desired[OVERVIEW_TILE] = true
 	# O tile inicial contém o chão/colisão do spawn. Ele precisa permanecer
@@ -197,7 +205,7 @@ func _start_tile_load(tile_name: String, source_position: Vector3) -> void:
 		var nearest_error := ResourceLoader.load_threaded_request(nearest_path, "Mesh", false)
 		if nearest_error == OK or nearest_error == ERR_BUSY:
 			_pending_paths[nearest_path] = {"tile": tile_name, "collision": false}
-	var collision_path := COLLISION_DIRECTORY + tile_name.replace("/", "_") + ".obj"
+	var collision_path := GROUND_FIX_COLLISION if tile_name == GROUND_FIX_TILE else COLLISION_DIRECTORY + tile_name.replace("/", "_") + ".obj"
 	if tile_name != OVERVIEW_TILE:
 		var collision_error := ResourceLoader.load_threaded_request(collision_path, "Mesh", false)
 		if collision_error != OK and collision_error != ERR_BUSY:

@@ -121,6 +121,13 @@
       "faces": 222654,
       "primitives": 1855,
       "obj": "maps_props.obj"
+    },
+    {
+      "tile": "ground_fix",
+      "obj": "ground_fix_collision.obj",
+      "vertices": 11795,
+      "faces": 16058,
+      "note": "colisao adicionada onde faltava"
     }
   ],
   "missing_models": [],
