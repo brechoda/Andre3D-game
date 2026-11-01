@@ -52,9 +52,7 @@ var _wheel_lb: Node3D
 var _wheel_rb: Node3D
 var _wheel_base_rotations: Dictionary = {}
 var _wheel_spin := 0.0
-var _idle_engine_audio: AudioStreamPlayer3D
-var _accel_engine_audio: AudioStreamPlayer3D
-var _decel_engine_audio: AudioStreamPlayer3D
+var _engine_audio: AudioStreamPlayer3D
 var _network_audio_mode := "off"
 var _ground_y := 0.0
 var _wheel_ground_offset := 0.0
@@ -83,62 +81,38 @@ func _ready() -> void:
     if lowest_wheel_bottom != INF:
         _wheel_ground_offset = lowest_wheel_bottom
     _ground_y = global_position.y + _wheel_ground_offset
-    call_deferred("_setup_engine_audio_after_updates")
+    call_deferred("_setup_engine_audio")
     _ensure_drive_buttons()
     _set_drive_buttons_visible(false)
     _update_ride_button()
 
-func _setup_engine_audio_after_updates() -> void:
-    # Aguarda o manifesto para que o áudio remoto possa substituir o fallback
-    # sem impedir a abertura do jogo quando a rede estiver indisponível.
-    if RemoteUpdater != null and not RemoteUpdater.is_ready:
-        await RemoteUpdater.wait_until_ready(12.0)
-    _setup_engine_audio()
-
-func _load_hilux_idle_stream() -> AudioStream:
-    var remote_path := ProjectSettings.globalize_path("user://updates/files/audio/hilux_srx_2017_parada_simulacao.wav")
-    if FileAccess.file_exists(remote_path):
-        var remote_stream := AudioStreamWAV.load_from_file(remote_path)
-        if remote_stream != null:
-            remote_stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
-            return remote_stream
-    var bundled_stream := load("res://assets/audio/hilux_srx_2017_parada_simulacao.wav") as AudioStreamWAV
-    if bundled_stream != null:
-        bundled_stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
-        return bundled_stream
-    return load("res://assets/audio/pop100_marcha_lenta_v2.mp3") as AudioStreamMP3
+func _load_hilux_engine_stream() -> AudioStreamWAV:
+    # O áudio é intencionalmente local e próprio da Hilux. Não depender do
+    # atualizador remoto evita que o APK fique sem som quando estiver offline.
+    var stream := load("res://assets/audio/hilux_srx_2017_parada_simulacao.wav") as AudioStreamWAV
+    if stream != null:
+        stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
+    return stream
 
 func _setup_engine_audio() -> void:
-    var streams: Array[AudioStream] = [
-        _load_hilux_idle_stream(),
-        load("res://assets/audio/pop100_acelerando_1.mp3") as AudioStreamMP3,
-        load("res://assets/audio/pop100_desacelerando_v2_1.mp3") as AudioStreamMP3,
-    ]
-    var players := []
-    for i in range(streams.size()):
-        var stream := streams[i]
-        if stream == null: continue
-        if stream is AudioStreamMP3:
-            (stream as AudioStreamMP3).loop = i != 2
-        var player := AudioStreamPlayer3D.new()
-        player.name = ["HiluxIdleEngineAudio", "HiluxAccelerationEngineAudio", "HiluxDecelerationEngineAudio"][i]
-        player.stream = stream
-        player.volume_db = -3.0
-        player.unit_size = 7.0
-        player.max_distance = 32.0
-        add_child(player)
-        players.append(player)
-    if players.size() >= 3:
-        _idle_engine_audio = players[0]
-        _accel_engine_audio = players[1]
-        _decel_engine_audio = players[2]
+    var stream := _load_hilux_engine_stream()
+    if stream == null:
+        push_error("Hilux engine audio is missing from the exported project")
+        return
+    _engine_audio = AudioStreamPlayer3D.new()
+    _engine_audio.name = "HiluxOriginalEngineAudio"
+    _engine_audio.stream = stream
+    _engine_audio.volume_db = -3.0
+    _engine_audio.unit_size = 7.0
+    _engine_audio.max_distance = 32.0
+    add_child(_engine_audio)
 
 func _apply_engine_audio_mode(mode: String) -> void:
-    if _idle_engine_audio == null or _accel_engine_audio == null or _decel_engine_audio == null: return
-    _idle_engine_audio.stop(); _accel_engine_audio.stop(); _decel_engine_audio.stop()
-    if mode == "idle": _idle_engine_audio.play()
-    elif mode == "accel": _accel_engine_audio.play()
-    elif mode == "decel": _decel_engine_audio.play()
+    if _engine_audio == null: return
+    if mode == "off":
+        _engine_audio.stop()
+    elif not _engine_audio.playing:
+        _engine_audio.play()
 
 func get_network_audio_mode() -> String:
     if not _riding or _mounting or _dismounting: return "off"
