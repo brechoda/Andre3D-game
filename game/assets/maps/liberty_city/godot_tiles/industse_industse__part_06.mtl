@@ -1,0 +1,479 @@
+newmtl iten_block06_m7_stepflat_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/stepflat_64HV.PNG
+
+newmtl iten_block06_m8_chalfonts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/italysht/chalfonts.PNG
+
+newmtl iten_garage01_m0_Strip_weathered_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/factory/Strip_weathered_64HV.PNG
+
+newmtl iten_garage01_m1_newall11-2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo3b/newall11-2.PNG
+
+newmtl iten_garage01_m2_Industdoor10
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo3b/Industdoor10.PNG
+
+newmtl iten_block09_m0_flatslates_blue64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/church/flatslates_blue64HV.PNG
+
+newmtl iten_block09_m1_tenwhite128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/tenwhite128.PNG
+
+newmtl iten_block09_m2_tenwhitebrick64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/tenwhitebrick64.PNG
+
+newmtl iten_block09_m3_ind_tentop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ind_tentop128.PNG
+
+newmtl rd_Road1A20_m0_Pave02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Pave02_128.PNG
+
+newmtl rd_Road1A20_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl rd_Road1A20_m2_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl rd_Road1A20_m3_cover7_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/cover7_64.PNG
+
+newmtl rd_Road1A10_m0_tarmac_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basketballcrt/tarmac_64HV.PNG
+
+newmtl rd_Road1A10_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl rd_Road1A10_m2_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl rd_Road1A10_m3_Pave02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Pave02_128.PNG
+
+newmtl rd_Road1A10_m4_rustyboltpaneltns64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/rustyboltpaneltns64.PNG
+
+newmtl rd_Road1A10_m5_Paveroad2_lbrownd64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/Paveroad2_lbrownd64V.PNG
+
+newmtl rd_Road2A50_m0_Pave02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Pave02_128.PNG
+
+newmtl rd_Road2A50_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl rd_Road2A50_m2_Road_1line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_1line256HV.PNG
+
+newmtl rd_Road2A50_m3_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl rd_Road2A50_m4_cover7_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/cover7_64.PNG
+
+newmtl rd_TJunction11_m0_Pave01_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/Pave01_128.PNG
+
+newmtl rd_TJunction11_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl rd_TJunction11_m2_Pave02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Pave02_128.PNG
+
+newmtl rd_TJunction11_m3_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl rd_TJunction11_m4_Road_blank256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_blank256HV.PNG
+
+newmtl rd_TJunction11_m5_dirtywhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/dirtywhite.PNG
+
+newmtl rd_Road1A30_m0_Pave02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Pave02_128.PNG
+
+newmtl rd_Road1A30_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl rd_Road1A30_m2_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl rd_Road1A30_m3_cover7_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/cover7_64.PNG
+
+newmtl rd_Road1B50_m0_Pave02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Pave02_128.PNG
+
+newmtl rd_Road1B50_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl rd_Road1B50_m2_Tar_mix256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combomb/Tar_mix256HV.PNG
+
+newmtl rd_Road1B50_m3_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl rd_Road1B50_m4_Tar_1line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/Tar_1line256HV.PNG
+
+newmtl turnr5x50_m0_Pave04_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/Pave04_128.PNG
+
+newmtl turnr5x50_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl turnr5x50_m2_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl fire_hydrant_m0_redmetal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dynbarrels/redmetal.PNG
+
+newmtl rd_Road1A50_m0_Pave02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Pave02_128.PNG
+
+newmtl rd_Road1A50_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl rd_Road1A50_m2_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl rd_Road1A50_m3_cover7_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/cover7_64.PNG
+
+newmtl rd_Corner1_m0_Pave01_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/Pave01_128.PNG
+
+newmtl rd_Corner1_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl rd_Corner1_m2_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl rd_CrossRoads11_m0_Pave01_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/Pave01_128.PNG
+
+newmtl rd_CrossRoads11_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl rd_CrossRoads11_m2_Road_blank256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_blank256HV.PNG
+
+newmtl rd_CrossRoads11_m3_dirtywhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/dirtywhite.PNG
+
+newmtl woodenbox_m0_crate128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/crate128.PNG
+
+newmtl palette_m0_wood02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/wood02.PNG
+
+newmtl warehouse1z_m0_corrugated
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinaedge/corrugated.PNG
+
+newmtl warehouse1z_m1_newall1-1_16c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/newall1-1_16c.PNG
+
+newmtl warehouse1z_m2_newall15b_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/com_police/newall15b_128.PNG
+
+newmtl warehouse1z_m3_corrugated02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/docfactories/corrugated02.PNG
+
+newmtl warehouse1z_m4_posh1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/posh1_128.PNG
+
+newmtl warehouse1z_m5_hi_nopark1_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/warehouses/hi_nopark1_256.PNG
+
+newmtl warehouse1z_m6_concretemanky
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretemanky.PNG
+
+newmtl warehouse1z_m7_mottled_creme_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/mottled_creme_64HV.PNG
+
+newmtl warehouse1z_m8_metaldoor_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airstuff2/metaldoor_128.PNG
+
+newmtl warehouse1z_m9_Industdoor1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo3h/Industdoor1.PNG
+
+newmtl warehouse1z_m10_bank1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/bank1_64.PNG
+
+newmtl mak_fratec_m0_frate64_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compier/frate64_yellow.PNG
+
+newmtl mak_fratec_m1_Alumplat64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/csitecutscene/Alumplat64.PNG
+
+newmtl mak_fratec_m2_frate_doors64yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/crate/frate_doors64yellow.PNG
+
+newmtl mak_fratea_m0_frate_doors128red
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/crate/frate_doors128red.PNG
+
+newmtl mak_fratea_m1_frate64_red
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/frate64_red.PNG
+
+newmtl mak_fratea_m2_redmetal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dynbarrels/redmetal.PNG
+
+newmtl mak_frateb_m0_frate_doors64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/crate/frate_doors64.PNG
+
+newmtl mak_frateb_m1_frate64_blue
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compier/frate64_blue.PNG
+
+newmtl mak_frateb_m2_barrel_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/barrel_64HV.PNG
+
+newmtl cardboardbox2_m0_cardboxes_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/boxes/cardboxes_128.PNG
+
+newmtl dump1_m0_Metal4_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compound/Metal4_256.PNG
+
+newmtl cardboardbox4_m0_cardboxes_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/boxes/cardboxes_128.PNG
+
+newmtl bar_barrier10_m0_slab256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/fences/slab256.PNG
+
+newmtl bar_barrier10_m1_wirefence
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/wirefence.PNG
+
+newmtl bar_barrier10_m2_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl bar_barriergate1_m0_wirefence
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/wirefence.PNG
+
+newmtl bar_barriergate1_m1_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl bar_barriergate1_m2_NoParking_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/fences/NoParking_64.PNG
+
+newmtl bar_barrier10b_m0_black64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/black64.PNG
+
+newmtl bar_barrier10b_m1_wirefence
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/wirefence.PNG
+
+newmtl bar_barrier10b_m2_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl ind_customrd042_m0_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl ind_customrd042_m1_Pave03_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/Pave03_128.PNG
+
+newmtl ind_customrd042_m2_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl ind_customrd042_m3_Road_blank256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_blank256HV.PNG
+
+newmtl ind_customrd042_m4_dirtywhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/dirtywhite.PNG
+
+newmtl ind_customroad043_m0_Pave01_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/Pave01_128.PNG
+
+newmtl ind_customroad043_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl ind_customroad043_m2_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG

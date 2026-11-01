@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://r8x0dweold2g"
+path="res://.godot/imported/comnbtm_comnbtm__part_10.obj-0f0ad08d10bd91c6baf3fde73fc27e43.mesh"
+
+[deps]
+
+files=["res://.godot/imported/comnbtm_comnbtm__part_10.obj-0f0ad08d10bd91c6baf3fde73fc27e43.mesh"]
+
+source_file="res://assets/maps/liberty_city/godot_tiles/comnbtm_comnbtm__part_10.obj"
+dest_files=["res://.godot/imported/comnbtm_comnbtm__part_10.obj-0f0ad08d10bd91c6baf3fde73fc27e43.mesh", "res://.godot/imported/comnbtm_comnbtm__part_10.obj-0f0ad08d10bd91c6baf3fde73fc27e43.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,11 @@
+{
+  "source": "assets/source/gta3_map/subglass.txd",
+  "source_size_bytes": 2048,
+  "source_valid_txd": false,
+  "replacement_textures": [
+    "subglass/glassfxsub1.PNG",
+    "subglass/glassfxsub2.PNG"
+  ],
+  "patched_mtl_files": 1,
+  "alpha_mode": "runtime_alpha_for_textures_with_alpha_channel"
+}

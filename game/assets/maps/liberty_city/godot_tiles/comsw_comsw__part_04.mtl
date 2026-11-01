@@ -1,0 +1,478 @@
+newmtl subentrance_m39_Libertyarmy128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsbilboard02/Libertyarmy128.PNG
+
+newmtl subentrance_m40_PunkNoodle128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsbilboard02/PunkNoodle128.PNG
+
+newmtl subntrnce_b_m0_poster5_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster5_64.PNG
+
+newmtl subntrnce_b_m1_poster6_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster6_128.PNG
+
+newmtl subntrnce_b_m2_poster3_64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster3_64a.PNG
+
+newmtl subntrnce_b_m3_poster2_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster2_128.PNG
+
+newmtl subntrnce_b_m4_poster1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster1_128.PNG
+
+newmtl subntrnce_b_m5_filmposter1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/filmposter1_64.PNG
+
+newmtl subntrnce_b_m6_subway1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/subway1_64.PNG
+
+newmtl subntrnce_b_m7_subway2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/subway2_64.PNG
+
+newmtl subntrnce_b_m8_carpark_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/amco/carpark_256128.PNG
+
+newmtl subntrnce_b_m9_indsmallwall64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compier/indsmallwall64.PNG
+
+newmtl subntrnce_b_m10_subplatyell
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/subplatyell.PNG
+
+newmtl subntrnce_b_m11_subplat
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casino/subplat.PNG
+
+newmtl subntrnce_b_m12_ledge_classic_0364H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/ledge_classic_0364H.PNG
+
+newmtl subntrnce_b_m13_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl subntrnce_b_m14_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl subntrnce_b_m15_poster7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster7.PNG
+
+newmtl subntrnce_b_m16_poster9_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster9_64.PNG
+
+newmtl subplatform_m0_sandfloorgrey
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/sandfloorgrey.PNG
+
+newmtl subplatform_m1_tilesblue_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casinogarden/tilesblue_64.PNG
+
+newmtl subplatform_m2_whitetile_clean_hi
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casino/whitetile_clean_hi.PNG
+
+newmtl subplatform_m3_Upt_sub_blutile
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/Upt_sub_blutile.PNG
+
+newmtl subplatform_m4_toileticons
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compark/toileticons.PNG
+
+newmtl subplatform_m5_Doorwood_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/Doorwood_64HV.PNG
+
+newmtl subplatform_m6_Alumox64b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/3d8ball/Alumox64b.PNG
+
+newmtl subplatform_m7_graffiti2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/graffiti2.PNG
+
+newmtl subplatform_m8_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl subplatform_m9_poster9_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster9_64.PNG
+
+newmtl subplatform_m10_poster8
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster8.PNG
+
+newmtl subplatform_m11_poster1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster1_128.PNG
+
+newmtl subplatform_m12_poster6_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster6_128.PNG
+
+newmtl subplatform_m13_poster4_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster4_128.PNG
+
+newmtl subplatform_m14_poster3_64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster3_64a.PNG
+
+newmtl subplatform_m15_poster5_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster5_64.PNG
+
+newmtl subplatform_m16_poster5_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster5_128.PNG
+
+newmtl subplatform_m17_Upt_sublightglas
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/Upt_sublightglas.PNG
+
+newmtl subplatform_m18_Upt_sublightsides
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/Upt_sublightsides.PNG
+
+newmtl subplatform_m19_bankblue_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/bankblue_64HV.PNG
+
+newmtl subplatform_m20_Upt_Office_Ceiling
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/Upt_Office_Ceiling.PNG
+
+newmtl subplatform_m21_Upt_sub_escstep
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/Upt_sub_escstep.PNG
+
+newmtl subplatform_m22_Upt_sub_alupan
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/Upt_sub_alupan.PNG
+
+newmtl subplatform_m23_Upt_sub_escrub
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/Upt_sub_escrub.PNG
+
+newmtl subplatform_m24_Upt_sub_floortile
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/Upt_sub_floortile.PNG
+
+newmtl subplatform_m25_subplat
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casino/subplat.PNG
+
+newmtl subplatform_m26_subplatdirt
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/subplatdirt.PNG
+
+newmtl subplatform_m27_subplatfloor
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/subplatfloor.PNG
+
+newmtl subplatform_m28_filmposter3_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/filmposter3_64.PNG
+
+newmtl subplatform_m29_poster7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster7.PNG
+
+newmtl subplatform_m30_Upt_sub_steptop
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/Upt_sub_steptop.PNG
+
+newmtl undergroundS1_m0_concretemanky
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretemanky.PNG
+
+newmtl undergroundS1_m1_BLOCK
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/BLOCK.PNG
+
+newmtl block3scrtop_m0_combeige128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/combeige128.PNG
+
+newmtl block3scrtop_m1_combeigebrick64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/combeigebrick64.PNG
+
+newmtl kb_ofis2_m0_sandstone_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/sandstone_128.PNG
+
+newmtl kb_ofis2_m1_greyrooftop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/greyrooftop128.PNG
+
+newmtl kb_ofis2_m2_sky24_64hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/sky24_64hv.PNG
+
+newmtl kb_ofis2_m3_shopdoor4_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casino/shopdoor4_64.PNG
+
+newmtl kb_ofis2_m4_striplight3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/carpark/striplight3.PNG
+
+newmtl kb_ofis2_m5_kb_ofis1_a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/kb_ofis1_a.PNG
+
+newmtl kb_ofis2_m6_kb_ofis1_c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/kb_ofis1_c.PNG
+
+newmtl kb_ofis2_m7_shopwall_brickgrn_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/shopwall_brickgrn_64H.PNG
+
+newmtl kb_ofis2_m8_shop_wall_blue_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/shop wall blue 64H.PNG
+
+newmtl kb_ofis2_m9_brick
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/brick.PNG
+
+newmtl kb_ofis2_m10_grill_top_64h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/grill_top_64h.PNG
+
+newmtl kb_ofis2_m11_shopdoor1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/shopdoor1_64.PNG
+
+newmtl kb_ofis2_m12_Paveblank_64hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Paveblank_64hv.PNG
+
+newmtl kb_ofis2_m13_electronica64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/electronica64.PNG
+
+newmtl kb_ofis2_m14_bricksbeige128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/bricksbeige128.PNG
+
+newmtl kb_ofis2_m15_shopwall_greystone64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/shopwall_greystone64HV.PNG
+
+newmtl kb_ofis2_m16_shopwall_creme64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/shopwall_creme64HV.PNG
+
+newmtl kb_ofis2_m17_booze128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/booze128.PNG
+
+newmtl kb_ofis2_m18_bricksgreeny128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/bricksgreeny128.PNG
+
+newmtl kb_ofis2_m19_electronicb128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/electronicb128.PNG
+
+newmtl kb_ofis1_m0_sandstone_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/sandstone_128.PNG
+
+newmtl kb_ofis1_m1_greyrooftop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/greyrooftop128.PNG
+
+newmtl kb_ofis1_m2_shopdoor4_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casino/shopdoor4_64.PNG
+
+newmtl kb_ofis1_m3_striplight3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/carpark/striplight3.PNG
+
+newmtl kb_ofis1_m4_sky24_64hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/sky24_64hv.PNG
+
+newmtl kb_ofis1_m5_shopwall_brickgrn_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/shopwall_brickgrn_64H.PNG
+
+newmtl kb_ofis1_m6_shop_wall_blue_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/shop wall blue 64H.PNG
+
+newmtl kb_ofis1_m7_grill_top_64h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/grill_top_64h.PNG
+
+newmtl kb_ofis1_m8_shopdoor1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/shopdoor1_64.PNG
+
+newmtl kb_ofis1_m9_Paveblank_64hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Paveblank_64hv.PNG
+
+newmtl kb_ofis1_m10_electronica64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/electronica64.PNG
+
+newmtl kb_ofis1_m11_brick
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/brick.PNG
+
+newmtl kb_ofis1_m12_bricksbeige128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/bricksbeige128.PNG
+
+newmtl kb_ofis1_m13_shopwall_greystone64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/shopwall_greystone64HV.PNG
+
+newmtl kb_ofis1_m14_shopwall_creme64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/shopwall_creme64HV.PNG
+
+newmtl kb_ofis1_m15_booze128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/booze128.PNG
+
+newmtl kb_ofis1_m16_electronicb128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/electronicb128.PNG
+
+newmtl kb_ofis1_m17_bricksgreeny128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/bricksgreeny128.PNG
+
+newmtl broadwaybuild2_m0_door1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/archedbuilding/door1_64.PNG
+
+newmtl broadwaybuild2_m1_nightnewallkb1128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/nightnewallkb1128.PNG
+
+newmtl broadwaybuild2_m2_newall9d_16c128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/newall9d_16c128.PNG
+
+newmtl broadwaybuild2_m3_department1b256hi128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/department1b256hi128.PNG

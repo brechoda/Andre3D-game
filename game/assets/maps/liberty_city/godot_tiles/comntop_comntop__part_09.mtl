@@ -1,0 +1,478 @@
+newmtl csitecutscene_m19_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl newcpark_roadext_m0_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl newcpark_roadext_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl newcpark_roadext_m2_Pave02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Pave02_128.PNG
+
+newmtl newcpark_roadext_m3_Tar_mix256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combomb/Tar_mix256HV.PNG
+
+newmtl comlandnew4_m0_Road_blank256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_blank256HV.PNG
+
+newmtl comlandnew4_m1_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl comlandnew4_m2_concretebigblu4256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comstadium/concretebigblu4256128.PNG
+
+newmtl comlandnew4_m3_ledgetop_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ledgetop_64HV.PNG
+
+newmtl comlandnew4_m4_indsmallwall64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compier/indsmallwall64.PNG
+
+newmtl comlandnew4_m5_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl com_cust_roads46_m0_Corner1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Corner1_128.PNG
+
+newmtl com_cust_roads46_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl com_cust_roads46_m2_Road_blank256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_blank256HV.PNG
+
+newmtl com_cust_roads46_m3_dirtywhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/dirtywhite.PNG
+
+newmtl com_cust_roads46_m4_Pave02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Pave02_128.PNG
+
+newmtl newunigrnd_m0_Grass_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/com_police/Grass_64HV.PNG
+
+newmtl newunigrnd_m1_stonhotel_1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/stonhotel_1_128.PNG
+
+newmtl newunigrnd_m2_road_nolinescob128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comuni2/road_nolinescob128.PNG
+
+newmtl newunigrnd_m3_cobbles_kb_256_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/carpark/cobbles_kb_256_128.PNG
+
+newmtl newunigrnd_m4_churchwall64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comuni2/churchwall64HV.PNG
+
+newmtl com_landnew23a_m0_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl com_landnew23a_m1_cliffgrass3_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/beach/cliffgrass3_64H.PNG
+
+newmtl com_landnew23a_m2_cliffwall_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/beach/cliffwall_64HV.PNG
+
+newmtl com_cust_roads20_m0_Pave03_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/Pave03_128.PNG
+
+newmtl com_cust_roads20_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl com_cust_roads20_m2_Road_1line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_1line256HV.PNG
+
+newmtl com_cust_roads20_m3_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl com_cust_roads20_m4_cover7_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/cover7_64.PNG
+
+newmtl com_cust_roads29_m0_Pave04_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/Pave04_128.PNG
+
+newmtl com_cust_roads29_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl com_cust_roads29_m2_Road_2line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/Road_2line256HV.PNG
+
+newmtl com_cust_roads29_m3_cover7_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/cover7_64.PNG
+
+newmtl newuni_gz_m0_hotel_kb3_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comuni2/hotel_kb3_256128.PNG
+
+newmtl newuni_gz_m1_hotelkb2_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comuni2/hotelkb2_128.PNG
+
+newmtl newuni_gz_m2_hotelkb2b_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comuni2/hotelkb2b_128.PNG
+
+newmtl newuni_gz_m3_church_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/church/church_128.PNG
+
+newmtl newuni_gz_m4_flatslates_grey64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colmansion/flatslates_grey64HV.PNG
+
+newmtl newuni_gz_m5_stonhotel_1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/stonhotel_1_128.PNG
+
+newmtl newuni_gz_m6_skybig256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/com_police/skybig256128.PNG
+
+newmtl newuni_gz_m7_grn_window16
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/com_police/grn_window16.PNG
+
+newmtl newuni_gz_m8_airportdoor1128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casino/airportdoor1128.PNG
+
+newmtl LODuni_gz_m0_uninew2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/uninew2.PNG
+
+newmtl LODuni_gz_m1_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl LODuni_gz_m2_uninew1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/uninew1.PNG
+
+newmtl LODuni_gz_m3_ptens2_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/ptens2_1.PNG
+
+newmtl LODuni_gz_m4_uni_bit32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/uni_bit32.PNG
+
+newmtl plnt_pipepart01_m0_chromepipe_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indjunk/chromepipe_64HV.PNG
+
+newmtl plnt_pipepart01_m1_rust_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/pipesc/rust_64H.PNG
+
+newmtl plnt_pipepart01_m2_chemsign1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/pipesc/chemsign1_64.PNG
+
+newmtl plnt_pipepart01_m3_chemsign2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/chemsign2_64.PNG
+
+newmtl plnt_pipepart01_m4_chromepipe2_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comartgaly/chromepipe2_64HV.PNG
+
+newmtl plnt_pipepart01_m5_boltring_64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/pipesc/boltring_64a.PNG
+
+newmtl colcomp4bits01_m0_car1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp4/car1_128.PNG
+
+newmtl colcomp4bits01_m1_carundera64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp4/carundera64.PNG
+
+newmtl colcomp4bits01_m2_car2_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp4/car2_128.PNG
+
+newmtl colcomp4bits01_m3_lo_fucked_car_litefr
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp4/lo_fucked_car_litefr.PNG
+
+newmtl colcomp4bits01_m4_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl colcomp4bits01_m5_car3_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp4/car3_128.PNG
+
+newmtl const_woodfence3_m0_csite_board_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildingsite/csite_board_128.PNG
+
+newmtl const_woodfence3_m1_girder_red_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/girder_red_64HV.PNG
+
+newmtl const_woodfence3_m2_wood02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/wood02.PNG
+
+newmtl const_woodfence3_m3_staunt_towers1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/staunt_towers1.PNG
+
+newmtl const_woodfence3_m4_staunt_towers2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/staunt_towers2.PNG
+
+newmtl const_woodfence3_m5_conc_slab_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/conc_slab_256.PNG
+
+newmtl const_woodfence3_m6_chipboard_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/chipboard_256.PNG
+
+newmtl LODst_woodfence_m0_csite_board_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/csite_board_64.PNG
+
+newmtl LODst_woodfence3_m0_csite_board_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/csite_board_64.PNG
+
+newmtl LODst_woodfence3_m1_staunton_towers_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/staunton_towers_lod.PNG
+
+newmtl com_cust_roads42_m0_Pave02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Pave02_128.PNG
+
+newmtl com_cust_roads42_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl com_cust_roads42_m2_Road_2line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/Road_2line256HV.PNG
+
+newmtl com_cust_roads42_m3_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl com_cust_roads42b_m0_Pave02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Pave02_128.PNG
+
+newmtl com_cust_roads42b_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl com_cust_roads42b_m2_Road_2line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/Road_2line256HV.PNG
+
+newmtl com_cust_roads42b_m3_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl subplatform_n2_m0_railtrack_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtrack_64.PNG
+
+newmtl subplatform_n2_m1_rail3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail3_64HV.PNG
+
+newmtl subplatform_n2_m2_rail2_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail2_64V.PNG
+
+newmtl subplatform_n2_m3_rail2_subway
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/traintracks/rail2_subway.PNG
+
+newmtl subplatform_n2_m4_redwall128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/redwall128.PNG
+
+newmtl subplatform_n2_m5_wallwasdrker128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/wallwasdrker128.PNG
+
+newmtl subplatform_n2_m6_raiseroad_section
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/raiseroad_section.PNG
+
+newmtl subplatform_n2_m7_raiseroad_section_mid
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/othersubside/raiseroad_section_mid.PNG
+
+newmtl subplatform_n2_m8_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl subplatform_n2_m9_red
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buoy/red.PNG
+
+newmtl subplatform_n2_m10_subplatyell
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/subplatyell.PNG
+
+newmtl subplatform_n2_m11_subplat
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casino/subplat.PNG
+
+newmtl subplatform_n2_m12_subplatfloor
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/subplatfloor.PNG
+
+newmtl LODlandnew4_m0_broadway5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/broadway5.PNG
+
+newmtl LODlandnew4_m1_newcarpark
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/newcarpark.PNG
+
+newmtl LODtopuni1_m0_newuni2_base
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/newuni2_base.PNG
+
+newmtl LODtopuni1_m1_newuni2_frontside
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/newuni2_frontside.PNG
+
+newmtl LODtopuni1_m2_newuni2_front
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/newuni2_front.PNG
+
+newmtl LODtopuni1_m3_newuni2_over
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/newuni2_over.PNG

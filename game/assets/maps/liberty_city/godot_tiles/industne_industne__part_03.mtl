@@ -1,0 +1,479 @@
+newmtl petrolstation_m25_pump5_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/petrol/pump5_64.PNG
+
+newmtl petrolstation_m26_pump6_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/petrol/pump6_64.PNG
+
+newmtl petrolstation_m27_pump1to4_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/petrol/pump1to4_128.PNG
+
+newmtl petrolstation_m28_Gastatnboard02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/petrol/Gastatnboard02_128.PNG
+
+newmtl petrolstation_m29_Gastatnboard01_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/petrol/Gastatnboard01_128.PNG
+
+newmtl petrolstation_m30_Logoboard2_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/petrol/Logoboard2_128.PNG
+
+newmtl petrolstation_m31_Logoboard1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/petrol/Logoboard1_128.PNG
+
+newmtl petrolstation_m32_entry_no128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/petrol/entry_no128.PNG
+
+newmtl ind_land155_m0_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl ind_land155_m1_cliffnew_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/clif22/cliffnew_128.PNG
+
+newmtl ind_land155_m2_cliffnew_grass_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/clif22/cliffnew_grass_128.PNG
+
+newmtl ind_land155_m3_Grass_dirtb_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_dirtb_64HV.PNG
+
+newmtl ind_land155_m4_dirt64b2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/dirt64b2.PNG
+
+newmtl ind_land155_m5_dirt64b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/dirt64b.PNG
+
+newmtl factoryf_walls1_m0_Oldstone2_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/petrol/Oldstone2_64HV.PNG
+
+newmtl factoryf_walls1_m1_conchev_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/conchev_64HV.PNG
+
+newmtl factoryf_walls1_m2_wallred64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/petrol/wallred64HV.PNG
+
+newmtl factoryf_walls1_m3_bank1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/bank1_64.PNG
+
+newmtl factoryf_walls1_m4_ledge1_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandlodind/ledge1_64H.PNG
+
+newmtl factoryf_walls1_m5_ledgetop_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ledgetop_64HV.PNG
+
+newmtl factoryf_walls1_m6_shut_rdst_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/shut_rdst_128.PNG
+
+newmtl factoryf_walls1_m7_PlaindoorRed_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/PlaindoorRed_64V.PNG
+
+newmtl factoryf_walls1_m8_firewin2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/petrol/firewin2_64.PNG
+
+newmtl factoryf_walls1_m9_FireDept_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/petrol/FireDept_64.PNG
+
+newmtl factoryf_walls1_m10_Oldstone3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/factory/Oldstone3_64HV.PNG
+
+newmtl factoryf_walls1_m11_firedoor
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/firedoor.PNG
+
+newmtl factoryf_walls1_m12_firewin_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/petrol/firewin_64.PNG
+
+newmtl ind_mainten1_m0_tenwhitebrick64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/tenwhitebrick64.PNG
+
+newmtl ind_mainten1_m1_ind_tentop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ind_tentop128.PNG
+
+newmtl ind_mainten1_m2_tenwhite128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/tenwhite128.PNG
+
+newmtl ind_mainten1_m3_mottled_grey_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/mottled_grey_64HV.PNG
+
+newmtl ind_mainten1_m4_Pave04_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/Pave04_128.PNG
+
+newmtl ind_mainten1_m5_stepflat_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/stepflat_64HV.PNG
+
+newmtl ind_mainten1_m6_vent_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/vent_64.PNG
+
+newmtl ind_mainten1_m7_inddoor4
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/inditaly1/inddoor4.PNG
+
+newmtl ind_mainten3_m0_newall9d_16c128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/newall9d_16c128.PNG
+
+newmtl ind_mainten3_m1_nightnewallkb1128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/nightnewallkb1128.PNG
+
+newmtl ind_mainten3_m2_dragtop_64h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/italysht/dragtop_64h.PNG
+
+newmtl ind_mainten3_m3_indten2btm128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/italysht/indten2btm128.PNG
+
+newmtl ind_mainten3_m4_indten2top128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/italysht/indten2top128.PNG
+
+newmtl ind_mainten3_m5_TENbrownwind3_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/maindragn/TENbrownwind3_128.PNG
+
+newmtl ind_mainten3_m6_indtentop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/italysht/indtentop128.PNG
+
+newmtl ind_mainten3_m7_indtenbtm128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/inditaly1/indtenbtm128.PNG
+
+newmtl ind_mainten3_m8_indtendark64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/indtendark64.PNG
+
+newmtl ind_mainten3_m9_ind_tentop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ind_tentop128.PNG
+
+newmtl ind_mainten3_m10_indtendarkb128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/inditaly1/indtendarkb128.PNG
+
+newmtl ind_mainten3_m11_ind_saleshop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/maindragn/ind_saleshop128.PNG
+
+newmtl ind_mainten3_m12_shopgrating128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/shopgrating128H.PNG
+
+newmtl ind_mainten3_m13_ind_fabric128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/com_centrebit/ind_fabric128.PNG
+
+newmtl ind_mainten3_m14_ind_skuz256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo3b/ind_skuz256128.PNG
+
+newmtl ind_mainten3_m15_ind_deli128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/maindragn/ind_deli128.PNG
+
+newmtl ind_mainten3_m16_ind_clothes_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo3b/ind_clothes_256128.PNG
+
+newmtl ind_mainten3_m17_ind_Cafe128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/maindrag/ind_Cafe128.PNG
+
+newmtl ind_mainten3_m18_telewire_32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/maindragn/telewire_32.PNG
+
+newmtl ind_mainten3_m19_newblank4_64hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/maindragn/newblank4_64hv.PNG
+
+newmtl ind_mainten3_m20_ledge1_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandlodind/ledge1_64H.PNG
+
+newmtl ind_mainten3_m21_mottled_grey_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/mottled_grey_64HV.PNG
+
+newmtl ind_mainten3_m22_bricklayerdark_hi64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/bricklayerdark_hi64HV.PNG
+
+newmtl ind_mainten3_m23_stepflat_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/stepflat_64HV.PNG
+
+newmtl ind_mainten3_m24_Pave04_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/Pave04_128.PNG
+
+newmtl ind_mainten3_m25_black64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/black64.PNG
+
+newmtl ind_mainten3_m26_Plaindoor_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinaedge/Plaindoor_128.PNG
+
+newmtl ind_mainten3_m27_newwin1b_64hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/inditaly1/newwin1b_64hv.PNG
+
+newmtl junk_tyre_cubeteeny_m0_junk_tyre
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indjunk/junk_tyre.PNG
+
+newmtl junk_tyre_cubeteeny_m1_tyretread_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indjunk/tyretread_64H.PNG
+
+newmtl wire_shed_m0_rusta64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/rusta64.PNG
+
+newmtl wire_shed_m1_corrugated3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/factory/corrugated3.PNG
+
+newmtl wire_shed_m2_cratetop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/cratetop128.PNG
+
+newmtl wire_shed_m3_conc_slabgrey_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/carpark/conc_slabgrey_256128.PNG
+
+newmtl wire_shed_m4_newall1-1_16c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/newall1-1_16c.PNG
+
+newmtl wire_shed_m5_grating64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comjetty/grating64HV.PNG
+
+newmtl back_box_m0_ybstripe128h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dockvats/ybstripe128h.PNG
+
+newmtl back_box_m1_banding5_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dockvats/banding5_64HV.PNG
+
+newmtl back_box_m2_yellowvertical_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indjunk/yellowvertical_64HV.PNG
+
+newmtl back_box_m3_Grate64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indjunk/Grate64.PNG
+
+newmtl back_box_m4_chimney0264
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indjunk/chimney0264.PNG
+
+newmtl back_box_m5_chromepipe_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indjunk/chromepipe_64HV.PNG
+
+newmtl back_box_m6_banding6_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bilboard/banding6_64HV.PNG
+
+newmtl back_box_m7_blackmetal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinatowns/blackmetal.PNG
+
+newmtl back_box_m8_barrel_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/barrel_64HV.PNG
+
+newmtl back_box_m9_yellowscum64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indjunk/yellowscum64.PNG
+
+newmtl back_box_m10_planetunnel_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airstuff2/planetunnel_64HV.PNG
+
+newmtl back_box_m11_brownmetal02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indjunk/brownmetal02.PNG
+
+newmtl back_box_m12_dirtyyellow64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indjunk/dirtyyellow64.PNG
+
+newmtl back_box_m13_rust_64Ha
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildingsite/rust_64Ha.PNG
+
+newmtl back_box_m14_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl railtracks_join_m0_rail1_64Va
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail1_64Va.PNG
+
+newmtl railtracks_join_m1_rail2_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail2_64V.PNG
+
+newmtl railtracks_join_m2_rail3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail3_64HV.PNG
+
+newmtl railtracks_join_m3_railtrack_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtrack_64.PNG
+
+newmtl ind_newtenementx_m0_newall9d_16c128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/newall9d_16c128.PNG
+
+newmtl ind_newtenementx_m1_ind_tentop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ind_tentop128.PNG
+
+newmtl ind_newtenementx_m2_ind_italywinda128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ind_italywinda128.PNG
+
+newmtl ind_newtenementx_m3_indredten128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/indredten128.PNG
+
+newmtl ind_newtenementx_m4_shopgrating128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/shopgrating128H.PNG
+
+newmtl ind_newtenementx_m5_ind_italdeli128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ind_italdeli128.PNG

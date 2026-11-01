@@ -1,0 +1,483 @@
+newmtl mansion1_m3_tiles
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/tiles.PNG
+
+newmtl mansion1_m4_dirtywhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/dirtywhite.PNG
+
+newmtl mansion1_m5_jettyfloor02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildingsite/jettyfloor02.PNG
+
+newmtl mansion1_m6_windowopen
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/windowopen.PNG
+
+newmtl mansion1_m7_whiteshutters
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/whiteshutters.PNG
+
+newmtl mansion1_m8_windowclosed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/windowclosed.PNG
+
+newmtl mansion1_m9_venta
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/venta.PNG
+
+newmtl mansion1_m10_bigwindow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/bigwindow.PNG
+
+newmtl mansion1_m11_House01t_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/House01t_64.PNG
+
+newmtl mansion1_m12_House01b_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/House01b_64.PNG
+
+newmtl glassfxsub1_m0_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+map_Kd ../textures/subglass/glassfxsub1.PNG
+d 0.52
+Tr 0.48
+newmtl glassfxsub2_m0_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+map_Kd ../textures/subglass/glassfxsub2.PNG
+d 0.52
+Tr 0.48
+newmtl LODdpart18a_m0_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl LODdpart18a_m1_cliffnew_128_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/cliffnew_128_lod.PNG
+
+newmtl landpart18a_m0_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl landpart18a_m1_cliffnew_grass_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/clif22/cliffnew_grass_128.PNG
+
+newmtl landpart18a_m2_cliffnew_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/clif22/cliffnew_128.PNG
+
+newmtl newfence1_m0_Fence_smallwood_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/Fence_smallwood_64H.PNG
+
+newmtl newfence_m0_Fence_smallwood_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/Fence_smallwood_64H.PNG
+
+newmtl clif2_m0_cliffnew_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/clif22/cliffnew_128.PNG
+
+newmtl clif2_m1_cliffnew_grass_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/clif22/cliffnew_grass_128.PNG
+
+newmtl clif2_m2_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl LODf2_m0_cliffnew_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/clif22/cliffnew_128.PNG
+
+newmtl LODf2_m1_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl hill_tunnel2_m0_BLOCK2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildinsite/BLOCK2.PNG
+
+newmtl hill_tunnel2_m1_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl hill_tunnel2_m2_rubble128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colmansion/rubble128HV.PNG
+
+newmtl hill_tunnel2_m3_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl hill_tunnel2_m4_tunnel_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tunnel/tunnel_128.PNG
+
+newmtl hill_tunnel2_m5_tag_gaz1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz1.PNG
+
+newmtl hill_tunnel2_m6_tag_gaz5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz5.PNG
+
+newmtl LODl_tunnel2_m0_tunnel_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/suburb1/tunnel_lod.PNG
+
+newmtl hill_tunnel1_m0_BLOCK2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildinsite/BLOCK2.PNG
+
+newmtl hill_tunnel1_m1_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl hill_tunnel1_m2_rubble128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colmansion/rubble128HV.PNG
+
+newmtl hill_tunnel1_m3_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl hill_tunnel1_m4_tunnel_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tunnel/tunnel_128.PNG
+
+newmtl hill_tunnel1_m5_tag_gaz2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basketballcrt/tag_gaz2.PNG
+
+newmtl LODl_tunnel1_m0_tunnel_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/suburb1/tunnel_lod.PNG
+
+newmtl round_bit_m0_carpark_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/carpark_128.PNG
+
+newmtl round_bit_m1_subindwall3_16
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dam/subindwall3_16.PNG
+
+newmtl round_bit_m2_sandstone2_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/sandstone2_128.PNG
+
+newmtl LODnd_bit_m0_carpark_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/carpark_128.PNG
+
+newmtl LODnd_bit_m1_subindwall3_16
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dam/subindwall3_16.PNG
+
+newmtl LODent3_m0_BLOCK
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/BLOCK.PNG
+
+newmtl LODent4_m0_BLOCK
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/BLOCK.PNG
+
+newmtl LODdpart_mount33_m0_cliffnew_128_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/cliffnew_128_lod.PNG
+
+newmtl LODdpart_mount33_m1_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl LODdpart_mount33_m2_cliffnew_grass_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/clif22/cliffnew_grass_128.PNG
+
+newmtl LODtm_rd32_m0_Grass_128HV_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/Grass_128HV_lod.PNG
+
+newmtl LODtm_rd32_m1_dirt64b_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/dirt64b_lod.PNG
+
+newmtl damfence08_m0_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl damfence08_m1_barbedwire
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/barbedwire.PNG
+
+newmtl damfence08_m2_wire2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dambase/wire2.PNG
+
+newmtl damfence08_m3_newall3_16c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colmansion/newall3_16c.PNG
+
+newmtl damfence08_m4_sr_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dam/sr_2.PNG
+
+newmtl veg_bush14_m0_newtreeleavesb128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/trees/newtreeleavesb128.PNG
+
+newmtl veg_bush14_m1_newtreeleaves128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/trees/newtreeleaves128.PNG
+
+newmtl veg_bush2_m0_newtreeleavesb128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/trees/newtreeleavesb128.PNG
+
+newmtl veg_bush2_m1_newtreeleaves128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/trees/newtreeleaves128.PNG
+
+newmtl LODf12_23_m0_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl LODf12_23_m1_cliffnew_128_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/cliffnew_128_lod.PNG
+
+newmtl sublightsb_m0_lod_lights_texture
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlights/lod_lights_texture.PNG
+
+newmtl LODdpart_mount44_m0_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl LODdpart_mount44_m1_cliffnew_128_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/cliffnew_128_lod.PNG
+
+newmtl damfencing_m0_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl damfencing_m1_barbedwire
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/barbedwire.PNG
+
+newmtl damfencing_m2_wire2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dambase/wire2.PNG
+
+newmtl proj_garage06_m0_regularroof64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/regularroof64.PNG
+
+newmtl proj_garage06_m1_build04_back2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/build04_back2.PNG
+
+newmtl proj_garage06_m2_build05_front
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/build05_front.PNG
+
+newmtl proj_garage06_m1_darkwall64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/darkwall64.PNG
+
+newmtl proj_garage06_m2_subindwall2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/subindwall2.PNG
+
+newmtl proj_garage06_m3_ledgetop_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ledgetop_64HV.PNG
+
+newmtl proj_garage06_m4_Industdoor5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigbuild/Industdoor5.PNG
+
+newmtl proj_garage06_m5_Industdoor3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/Industdoor3.PNG
+
+newmtl proj_garage09_m0_regularroof64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/regularroof64.PNG
+
+newmtl proj_garage09_m1_build04_back2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/build04_back2.PNG
+
+newmtl proj_garage09_m2_build05_front
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/build05_front.PNG
+
+newmtl proj_garage09_m1_darkwall64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/darkwall64.PNG
+
+newmtl proj_garage09_m2_subindwall2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/subindwall2.PNG
+
+newmtl proj_garage09_m3_ledgetop_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ledgetop_64HV.PNG
+
+newmtl proj_garage09_m4_Industdoor5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigbuild/Industdoor5.PNG
+
+newmtl proj_garage09_m5_Industdoor3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/Industdoor3.PNG
+
+newmtl proj_garage08_m0_proj_garage02_top_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/proj_garage02_top_lod.PNG
+
+newmtl proj_garage08_m1_proj_garage02_side_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/proj_garage02_side_lod.PNG
+
+newmtl proj_garage08_m2_proj_garage02_back_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/proj_garage02_back_lod.PNG
+
+newmtl proj_garage08_m3_proj_garage02_front_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/proj_garage02_front_lod.PNG
+
+newmtl proj_garage08_m0_regularroof64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/regularroof64.PNG
+
+newmtl proj_garage08_m1_darkwall64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/darkwall64.PNG
+
+newmtl proj_garage08_m2_subindwall2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/subindwall2.PNG
+
+newmtl proj_garage08_m3_ledgetop_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ledgetop_64HV.PNG
+
+newmtl proj_garage08_m4_Industdoor5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigbuild/Industdoor5.PNG
+
+newmtl proj_garage08_m5_Industdoor3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/Industdoor3.PNG
+
+newmtl proj_garage07_m0_regularroof64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/regularroof64.PNG
+
+newmtl proj_garage07_m1_build04_back2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/build04_back2.PNG

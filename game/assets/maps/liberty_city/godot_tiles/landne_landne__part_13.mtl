@@ -1,0 +1,229 @@
+newmtl proj_garage07_m2_build05_front
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/build05_front.PNG
+
+newmtl proj_garage07_m1_darkwall64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/darkwall64.PNG
+
+newmtl proj_garage07_m2_subindwall2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/subindwall2.PNG
+
+newmtl proj_garage07_m3_ledgetop_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ledgetop_64HV.PNG
+
+newmtl proj_garage07_m4_Industdoor5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigbuild/Industdoor5.PNG
+
+newmtl proj_garage07_m5_Industdoor3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/Industdoor3.PNG
+
+newmtl proj_garage05_m0_regularroof64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/regularroof64.PNG
+
+newmtl proj_garage05_m1_build04_back2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/build04_back2.PNG
+
+newmtl proj_garage05_m2_build05_front
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/build05_front.PNG
+
+newmtl proj_garage05_m1_darkwall64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/darkwall64.PNG
+
+newmtl proj_garage05_m2_subindwall2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/subindwall2.PNG
+
+newmtl proj_garage05_m3_ledgetop_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ledgetop_64HV.PNG
+
+newmtl proj_garage05_m4_Industdoor5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigbuild/Industdoor5.PNG
+
+newmtl proj_garage05_m5_Industdoor3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/Industdoor3.PNG
+
+newmtl proj_garage04_m0_regularroof64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/regularroof64.PNG
+
+newmtl proj_garage04_m1_build04_back2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/build04_back2.PNG
+
+newmtl proj_garage04_m2_build05_front
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/build05_front.PNG
+
+newmtl proj_garage04_m1_darkwall64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/darkwall64.PNG
+
+newmtl proj_garage04_m2_subindwall2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/subindwall2.PNG
+
+newmtl proj_garage04_m3_ledgetop_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ledgetop_64HV.PNG
+
+newmtl proj_garage04_m4_Industdoor5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigbuild/Industdoor5.PNG
+
+newmtl proj_garage04_m5_Industdoor3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/Industdoor3.PNG
+
+newmtl proj_garage01_m0_regularroof64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/regularroof64.PNG
+
+newmtl proj_garage01_m1_build04_back2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/build04_back2.PNG
+
+newmtl proj_garage01_m2_build05_front
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/build05_front.PNG
+
+newmtl proj_garage01_m1_darkwall64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/darkwall64.PNG
+
+newmtl proj_garage01_m2_subindwall2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/subindwall2.PNG
+
+newmtl proj_garage01_m3_ledgetop_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ledgetop_64HV.PNG
+
+newmtl proj_garage03_m0_regularroof64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/regularroof64.PNG
+
+newmtl proj_garage03_m1_build04_back2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/build04_back2.PNG
+
+newmtl proj_garage03_m2_build05_front
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/build05_front.PNG
+
+newmtl proj_garage03_m1_darkwall64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/darkwall64.PNG
+
+newmtl proj_garage03_m2_subindwall2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/subindwall2.PNG
+
+newmtl proj_garage03_m3_ledgetop_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ledgetop_64HV.PNG
+
+newmtl proj_garage03_m4_Industdoor5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigbuild/Industdoor5.PNG
+
+newmtl proj_garage03_m5_Industdoor3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/Industdoor3.PNG
+
+newmtl proj_garage02_m0_proj_garage02_top_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/proj_garage02_top_lod.PNG
+
+newmtl proj_garage02_m1_proj_garage02_side_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/proj_garage02_side_lod.PNG
+
+newmtl proj_garage02_m2_proj_garage02_back_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/proj_garage02_back_lod.PNG
+
+newmtl proj_garage02_m3_proj_garage02_front_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/proj_garage02_front_lod.PNG
+
+newmtl proj_garage02_m0_regularroof64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/regularroof64.PNG
+
+newmtl proj_garage02_m1_darkwall64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/darkwall64.PNG
+
+newmtl proj_garage02_m2_subindwall2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/subindwall2.PNG
+
+newmtl proj_garage02_m3_ledgetop_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ledgetop_64HV.PNG
+
+newmtl proj_garage02_m4_Industdoor5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigbuild/Industdoor5.PNG
+
+newmtl proj_garage02_m5_Industdoor3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/Industdoor3.PNG

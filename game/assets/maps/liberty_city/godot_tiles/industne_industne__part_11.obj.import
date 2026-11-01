@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b6hmsb1lyn4aq"
+path="res://.godot/imported/industne_industne__part_11.obj-d1286bcb29fe8d738f6d67c069d8f64c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/industne_industne__part_11.obj-d1286bcb29fe8d738f6d67c069d8f64c.mesh"]
+
+source_file="res://assets/maps/liberty_city/godot_tiles/industne_industne__part_11.obj"
+dest_files=["res://.godot/imported/industne_industne__part_11.obj-d1286bcb29fe8d738f6d67c069d8f64c.mesh", "res://.godot/imported/industne_industne__part_11.obj-d1286bcb29fe8d738f6d67c069d8f64c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

@@ -1,0 +1,474 @@
+newmtl sbwy_tunl_cstm7_m1_rail3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail3_64HV.PNG
+
+newmtl sbwy_tunl_cstm7_m2_rail2_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail2_64V.PNG
+
+newmtl sbwy_tunl_cstm7_m3_rail2_subway
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/traintracks/rail2_subway.PNG
+
+newmtl sbwy_tunl_cstm7_m4_redwall128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/redwall128.PNG
+
+newmtl sbwy_tunl_cstm7_m5_wallwasdrker128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/wallwasdrker128.PNG
+
+newmtl sbwy_tunl_cstm7_m6_raiseroad_section
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/raiseroad_section.PNG
+
+newmtl sbwy_tunl_cstm7_m7_raiseroad_section_mid
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/othersubside/raiseroad_section_mid.PNG
+
+newmtl sbwy_tunl_cstm7_m8_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl sbwy_tunl_cstm8_m0_railtrack_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtrack_64.PNG
+
+newmtl sbwy_tunl_cstm8_m1_rail3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail3_64HV.PNG
+
+newmtl sbwy_tunl_cstm8_m2_rail2_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail2_64V.PNG
+
+newmtl sbwy_tunl_cstm8_m3_rail2_subway
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/traintracks/rail2_subway.PNG
+
+newmtl sbwy_tunl_cstm8_m4_redwall128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/redwall128.PNG
+
+newmtl sbwy_tunl_cstm8_m5_wallwasdrker128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/wallwasdrker128.PNG
+
+newmtl sbwy_tunl_cstm8_m6_raiseroad_section
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/raiseroad_section.PNG
+
+newmtl sbwy_tunl_cstm8_m7_raiseroad_section_mid
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/othersubside/raiseroad_section_mid.PNG
+
+newmtl sbwy_tunl_cstm8_m8_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl sbwy_tunl_cstm10_m0_railtrack_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtrack_64.PNG
+
+newmtl sbwy_tunl_cstm10_m1_rail3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail3_64HV.PNG
+
+newmtl sbwy_tunl_cstm10_m2_rail2_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail2_64V.PNG
+
+newmtl sbwy_tunl_cstm10_m3_rail2_subway
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/traintracks/rail2_subway.PNG
+
+newmtl sbwy_tunl_cstm10_m4_redwall128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/redwall128.PNG
+
+newmtl sbwy_tunl_cstm10_m5_wallwasdrker128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/wallwasdrker128.PNG
+
+newmtl sbwy_tunl_cstm10_m6_raiseroad_section
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/raiseroad_section.PNG
+
+newmtl sbwy_tunl_cstm10_m7_raiseroad_section_mid
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/othersubside/raiseroad_section_mid.PNG
+
+newmtl sbwy_tunl_cstm10_m8_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl sbwy_tunl_cstm9_m0_railtrack_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtrack_64.PNG
+
+newmtl sbwy_tunl_cstm9_m1_rail3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail3_64HV.PNG
+
+newmtl sbwy_tunl_cstm9_m2_rail2_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail2_64V.PNG
+
+newmtl sbwy_tunl_cstm9_m3_rail2_subway
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/traintracks/rail2_subway.PNG
+
+newmtl sbwy_tunl_cstm9_m4_redwall128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/redwall128.PNG
+
+newmtl sbwy_tunl_cstm9_m5_wallwasdrker128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/wallwasdrker128.PNG
+
+newmtl sbwy_tunl_cstm9_m6_raiseroad_section
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/raiseroad_section.PNG
+
+newmtl sbwy_tunl_cstm9_m7_raiseroad_section_mid
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/othersubside/raiseroad_section_mid.PNG
+
+newmtl sbwy_tunl_cstm9_m8_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl sbwy_tunl_cstm2_m0_railtrack_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtrack_64.PNG
+
+newmtl sbwy_tunl_cstm2_m1_rail3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail3_64HV.PNG
+
+newmtl sbwy_tunl_cstm2_m2_rail2_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail2_64V.PNG
+
+newmtl sbwy_tunl_cstm2_m3_rail2_subway
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/traintracks/rail2_subway.PNG
+
+newmtl sbwy_tunl_cstm2_m4_redwall128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/redwall128.PNG
+
+newmtl sbwy_tunl_cstm2_m5_wallwasdrker128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/wallwasdrker128.PNG
+
+newmtl sbwy_tunl_cstm2_m6_raiseroad_section
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/raiseroad_section.PNG
+
+newmtl sbwy_tunl_cstm2_m7_raiseroad_section_mid
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/othersubside/raiseroad_section_mid.PNG
+
+newmtl sbwy_tunl_cstm2_m8_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl sbwy_tunl_cstm3_m0_railtrack_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtrack_64.PNG
+
+newmtl sbwy_tunl_cstm3_m1_rail3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail3_64HV.PNG
+
+newmtl sbwy_tunl_cstm3_m2_rail2_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail2_64V.PNG
+
+newmtl sbwy_tunl_cstm3_m3_rail2_subway
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/traintracks/rail2_subway.PNG
+
+newmtl sbwy_tunl_cstm3_m4_redwall128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/redwall128.PNG
+
+newmtl sbwy_tunl_cstm3_m5_wallwasdrker128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/wallwasdrker128.PNG
+
+newmtl sbwy_tunl_cstm3_m6_raiseroad_section
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/raiseroad_section.PNG
+
+newmtl sbwy_tunl_cstm3_m7_raiseroad_section_mid
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/othersubside/raiseroad_section_mid.PNG
+
+newmtl sbwy_tunl_cstm3_m8_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl sbwy_tunl_cstm11_m0_railtrack_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtrack_64.PNG
+
+newmtl sbwy_tunl_cstm11_m1_rail3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail3_64HV.PNG
+
+newmtl sbwy_tunl_cstm11_m2_rail2_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail2_64V.PNG
+
+newmtl sbwy_tunl_cstm11_m3_rail2_subway
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/traintracks/rail2_subway.PNG
+
+newmtl sbwy_tunl_cstm11_m4_redwall128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/redwall128.PNG
+
+newmtl sbwy_tunl_cstm11_m5_wallwasdrker128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/wallwasdrker128.PNG
+
+newmtl sbwy_tunl_cstm11_m6_raiseroad_section
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/raiseroad_section.PNG
+
+newmtl sbwy_tunl_cstm11_m7_raiseroad_section_mid
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/othersubside/raiseroad_section_mid.PNG
+
+newmtl sbwy_tunl_cstm11_m8_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl sbwy_tunl_cstm1_m0_railtrack_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtrack_64.PNG
+
+newmtl sbwy_tunl_cstm1_m1_rail3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail3_64HV.PNG
+
+newmtl sbwy_tunl_cstm1_m2_rail2_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail2_64V.PNG
+
+newmtl sbwy_tunl_cstm1_m3_rail2_subway
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/traintracks/rail2_subway.PNG
+
+newmtl sbwy_tunl_cstm1_m4_redwall128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/redwall128.PNG
+
+newmtl sbwy_tunl_cstm1_m5_wallwasdrker128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/wallwasdrker128.PNG
+
+newmtl sbwy_tunl_cstm1_m6_raiseroad_section
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/raiseroad_section.PNG
+
+newmtl sbwy_tunl_cstm1_m7_raiseroad_section_mid
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/othersubside/raiseroad_section_mid.PNG
+
+newmtl sbwy_tunl_cstm1_m8_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl sbwy_tunl_cstm4_m0_railtrack_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtrack_64.PNG
+
+newmtl sbwy_tunl_cstm4_m1_rail3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail3_64HV.PNG
+
+newmtl sbwy_tunl_cstm4_m2_rail2_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail2_64V.PNG
+
+newmtl sbwy_tunl_cstm4_m3_rail2_subway
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/traintracks/rail2_subway.PNG
+
+newmtl sbwy_tunl_cstm4_m4_redwall128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/redwall128.PNG
+
+newmtl sbwy_tunl_cstm4_m5_wallwasdrker128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/wallwasdrker128.PNG
+
+newmtl sbwy_tunl_cstm4_m6_raiseroad_section
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/raiseroad_section.PNG
+
+newmtl sbwy_tunl_cstm4_m7_raiseroad_section_mid
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/othersubside/raiseroad_section_mid.PNG
+
+newmtl sbwy_tunl_cstm4_m8_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl sbwy_tunl_cstm5_m0_railtrack_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtrack_64.PNG
+
+newmtl sbwy_tunl_cstm5_m1_rail3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail3_64HV.PNG
+
+newmtl sbwy_tunl_cstm5_m2_rail2_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail2_64V.PNG
+
+newmtl sbwy_tunl_cstm5_m3_rail2_subway
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/traintracks/rail2_subway.PNG
+
+newmtl sbwy_tunl_cstm5_m4_redwall128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/redwall128.PNG
+
+newmtl sbwy_tunl_cstm5_m5_wallwasdrker128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/wallwasdrker128.PNG
+
+newmtl sbwy_tunl_cstm5_m6_raiseroad_section
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/raiseroad_section.PNG
+
+newmtl sbwy_tunl_cstm5_m7_raiseroad_section_mid
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/othersubside/raiseroad_section_mid.PNG
+
+newmtl sbwy_tunl_cstm5_m8_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl bouy_m0_buoyrust_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buoy/buoyrust_128.PNG
+
+newmtl bouy_m1_yellowrust_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/yellowrust_64.PNG
+
+newmtl bouy_m2_black64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/black64.PNG
+
+newmtl bouy_m3_red
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buoy/red.PNG
+
+newmtl rockpatch1_m0_rocktq128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/rocky/rocktq128.PNG
+
+newmtl rockpatch03_m0_rocktq128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/rocky/rocktq128.PNG

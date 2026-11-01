@@ -1,0 +1,483 @@
+[gd_scene load_steps=26 format=3]
+
+[ext_resource type="Script" path="res://scripts/third_person.gd" id="1_player"]
+[ext_resource type="PackedScene" path="res://assets/models/andre_armed_biked.glb" id="2_andre"]
+[ext_resource type="Script" path="res://scripts/virtual_joystick.gd" id="3_joystick"]
+[ext_resource type="FontFile" path="res://assets/template/fonts/Figtree-VF.subset.woff2" id="4_font"]
+[ext_resource type="Script" path="res://scripts/gorece_npc.gd" id="5_gorece_script"]
+[ext_resource type="PackedScene" path="res://assets/models/gorece_rigged.glb" id="6_gorece"]
+[ext_resource type="PackedScene" path="res://assets/models/pop100e2024.glb" id="7_pop100e"]
+[ext_resource type="Script" path="res://scripts/pop100e2024.gd" id="8_pop100e_script"]
+[ext_resource type="PackedScene" path="res://assets/models/WayfarerR1200.glb" id="10_wayfarer"]
+[ext_resource type="Script" path="res://scripts/r1200_static.gd" id="11_r1200_script"]
+[ext_resource type="PackedScene" path="res://assets/models/hilux_srx_2017.glb" id="12_hilux"]
+[ext_resource type="Script" path="res://scripts/hilux_controller.gd" id="13_hilux_script"]
+[ext_resource type="Script" path="res://scripts/net/multiplayer_client.gd" id="14_multiplayer_client"]
+[ext_resource type="PackedScene" path="res://assets/models/dg_rigged.glb" id="15_dg"]
+[ext_resource type="Script" path="res://scripts/gta3_map_streamer.gd" id="16_map"]
+[ext_resource type="Script" path="res://scripts/gps_autopilot.gd" id="17_gps"]
+
+[sub_resource type="ProceduralSkyMaterial" id="SkyMaterial_empty"]
+sky_top_color = Color(0.055, 0.11, 0.17, 1)
+sky_horizon_color = Color(0.31, 0.48, 0.55, 1)
+ground_bottom_color = Color(0.025, 0.035, 0.05, 1)
+ground_horizon_color = Color(0.24, 0.33, 0.35, 1)
+ground_curve = 0.08
+sun_angle_max = 18.0
+
+[sub_resource type="Sky" id="Sky_empty"]
+sky_material = SubResource("SkyMaterial_empty")
+radiance_size = 3
+
+[sub_resource type="Environment" id="Environment_empty"]
+background_mode = 2
+sky = SubResource("Sky_empty")
+ambient_light_source = 3
+ambient_light_color = Color(0.38, 0.48, 0.54, 1)
+ambient_light_energy = 0.72
+tonemap_mode = 2
+glow_enabled = false
+
+[sub_resource type="BoxShape3D" id="HiluxCollisionShape"]
+size = Vector3(1.78, 1.20, 4.35)
+
+[sub_resource type="CapsuleShape3D" id="PlayerShape"]
+radius = 0.34
+height = 1.8
+
+[sub_resource type="StyleBoxFlat" id="PanelStyle"]
+bg_color = Color(0.035, 0.06, 0.08, 0.78)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.38, 0.66, 0.7, 0.35)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="RunNormalStyle"]
+bg_color = Color(0.08, 0.16, 0.2, 0.88)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.42, 0.78, 0.82, 0.72)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="RunHoverStyle"]
+bg_color = Color(0.12, 0.25, 0.29, 0.94)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.65, 0.94, 0.92, 0.9)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="RunPressedStyle"]
+bg_color = Color(0.32, 0.68, 0.62, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.84, 1, 0.9, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[node name="Andre3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_empty")
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+rotation_degrees = Vector3(-50, -28, 0)
+light_color = Color(0.87, 0.95, 1, 1)
+light_energy = 1.18
+shadow_enabled = false
+
+[node name="MapStreamer" type="Node3D" parent="."]
+position = Vector3(-130.6, -15.2, 30.4)
+rotation_degrees = Vector3(-90, 0, 0)
+script = ExtResource("16_map")
+max_active_tiles = 2
+load_radius = 650.0
+refresh_interval = 1.0
+max_meshes_per_frame = 4
+
+
+
+[node name="Player" type="CharacterBody3D" parent="."]
+position = Vector3(30, 4.3, 89)
+rotation_degrees = Vector3(0, 90, 0)
+script = ExtResource("1_player")
+floor_snap_length = 0.2
+floor_stop_on_slope = true
+collision_layer = 1
+collision_mask = 1
+
+[node name="AndreVisual" parent="Player" instance=ExtResource("2_andre")]
+position = Vector3(0, 0.98, 0)
+
+[node name="DGVisual" parent="Player" instance=ExtResource("15_dg")]
+visible = false
+position = Vector3(0, 0.98, 0)
+
+[node name="Collision" type="CollisionShape3D" parent="Player"]
+shape = SubResource("PlayerShape")
+position = Vector3(0, 0.9, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+fov = 58.0
+near = 0.05
+far = 3800.0
+
+[node name="GoreceNPC" type="CharacterBody3D" parent="."]
+position = Vector3(35, 4.7, 89)
+rotation_degrees = Vector3(0, 90, 0)
+script = ExtResource("5_gorece_script")
+floor_snap_length = 0.2
+floor_stop_on_slope = true
+collision_layer = 1
+collision_mask = 1
+
+[node name="GoreceVisual" parent="GoreceNPC" instance=ExtResource("6_gorece")]
+position = Vector3(0, 0.98, 0)
+
+[node name="Collision" type="CollisionShape3D" parent="GoreceNPC"]
+shape = SubResource("PlayerShape")
+position = Vector3(0, 0.9, 0)
+
+[node name="Pop100e2024" type="Node3D" parent="."]
+position = Vector3(20, 2.862, 89)
+rotation_degrees = Vector3(0, 90, 0)
+script = ExtResource("8_pop100e_script")
+network_vehicle_id = "pop100_01"
+rider_seat_offset = Vector3(0, -0.605, 0.2)
+handlebar_rest_offset = Vector3(0.007, 0.592, -0.414)
+handlebar_pivot_at_center = true
+handlebar_width_scale = 0.929
+universal_ride_controller = true
+
+[node name="MotorcycleVisual" parent="Pop100e2024" instance=ExtResource("7_pop100e")]
+
+[node name="CollisionBody" type="StaticBody3D" parent="Pop100e2024"]
+collision_layer = 1
+collision_mask = 1
+
+[node name="WayfarerR1200" type="Node3D" parent="."]
+position = Vector3(25, 3.236, 89)
+rotation_degrees = Vector3(0, 90, 0)
+script = ExtResource("8_pop100e_script")
+ride_button_path = NodePath("../HUD/Root/RideButton")
+ride_button_idle_text = "PILOTAR WAYFARER"
+vehicle_display_name = "WAYFARER R1200"
+network_vehicle_id = "wayfarer_01"
+rider_seat_offset = Vector3(0, -0.567, 0.22)
+handlebar_rest_offset = Vector3(0, 0.431, -0.472)
+handlebar_pivot_at_center = true
+handlebar_width_scale = 0.654
+
+[node name="MotorcycleVisual" parent="WayfarerR1200" instance=ExtResource("10_wayfarer")]
+
+[node name="CollisionBody" type="StaticBody3D" parent="WayfarerR1200"]
+collision_layer = 1
+collision_mask = 1
+
+[node name="HiluxSRX2017" type="Node3D" parent="."]
+position = Vector3(52.7, 5.131, 90)
+rotation_degrees = Vector3(0, 90, 0)
+script = ExtResource("13_hilux_script")
+network_vehicle_id = "hilux_01"
+
+[node name="HiluxVisual" parent="HiluxSRX2017" instance=ExtResource("12_hilux")]
+
+[node name="CollisionBody" type="StaticBody3D" parent="HiluxSRX2017"]
+collision_layer = 1
+collision_mask = 1
+
+[node name="Collision" type="CollisionShape3D" parent="HiluxSRX2017/CollisionBody"]
+position = Vector3(0, 0.60, 0)
+shape = SubResource("HiluxCollisionShape")
+
+[node name="OnlineMultiplayer" type="Node" parent="."]
+script = ExtResource("14_multiplayer_client")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Root" type="Control" parent="HUD"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TopPanel" type="PanelContainer" parent="HUD/Root"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 22.0
+offset_right = 330.0
+offset_bottom = 88.0
+theme_override_styles/panel = SubResource("PanelStyle")
+mouse_filter = 2
+
+[node name="Title" type="Label" parent="HUD/Root/TopPanel"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.94, 0.94, 1)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 18
+text = "O GRANDE ROUBO DE MOTOS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MovementLabel" type="Label" parent="HUD/Root"]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 31.0
+offset_right = 1250.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(0.87, 0.94, 0.95, 0.9)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 17
+text = "WASD / setas para mover  •  arraste à direita para girar a câmera"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+
+[node name="VehiclePanel" type="Label" parent="HUD/Root"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 102.0
+offset_right = 315.0
+offset_bottom = 174.0
+theme_override_colors/font_color = Color(0.42, 0.96, 0.82, 0.96)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 14
+text = "MOTO POP 100E\nVELOCIDADE: 000 km/h\nW/S ACELERAR • A/D VIRAR"
+mouse_filter = 2
+
+[node name="CoordinatesLabel" type="Label" parent="HUD/Root"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 184.0
+offset_right = 315.0
+offset_bottom = 270.0
+theme_override_colors/font_color = Color(0.72, 0.9, 1, 0.94)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 14
+text = "COORDENADAS\nX:    0.000\nY:    0.000\nZ:    0.000"
+mouse_filter = 2
+
+[node name="CameraHint" type="Label" parent="HUD/Root"]
+layout_mode = 0
+offset_left = 830.0
+offset_top = 675.0
+offset_right = 1248.0
+offset_bottom = 705.0
+theme_override_colors/font_color = Color(0.74, 0.84, 0.86, 0.8)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 14
+text = "ANDROID • CONTROLE TOUCH ATIVO"
+horizontal_alignment = 2
+vertical_alignment = 1
+mouse_filter = 2
+
+[node name="TouchJoystick" type="Control" parent="HUD/Root"]
+layout_mode = 0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -220.0
+offset_right = 230.0
+offset_bottom = -20.0
+grow_vertical = 0
+mouse_filter = 0
+script = ExtResource("3_joystick")
+
+[node name="TouchLabel" type="Label" parent="HUD/Root/TouchJoystick"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 180.0
+offset_right = 176.0
+offset_bottom = 204.0
+theme_override_colors/font_color = Color(0.75, 0.9, 0.91, 0.82)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 13
+text = "ARRASTE PARA MOVER"
+horizontal_alignment = 1
+mouse_filter = 2
+
+[node name="RunButton" type="Button" parent="HUD/Root"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -150.0
+offset_right = -30.0
+offset_bottom = -62.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.84, 1, 0.96, 1)
+theme_override_colors/font_hover_color = Color(0.95, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.04, 0.12, 0.12, 1)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("RunNormalStyle")
+theme_override_styles/hover = SubResource("RunHoverStyle")
+theme_override_styles/pressed = SubResource("RunPressedStyle")
+text = "CORRER"
+focus_mode = 0
+
+[node name="CrouchButton" type="Button" parent="HUD/Root"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -250.0
+offset_right = -30.0
+offset_bottom = -162.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.84, 1, 0.96, 1)
+theme_override_colors/font_hover_color = Color(0.95, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.04, 0.12, 0.12, 1)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("RunNormalStyle")
+theme_override_styles/hover = SubResource("RunHoverStyle")
+theme_override_styles/pressed = SubResource("RunPressedStyle")
+text = "AGACHAR"
+toggle_mode = true
+focus_mode = 0
+
+[node name="JumpButton" type="Button" parent="HUD/Root"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -350.0
+offset_right = -30.0
+offset_bottom = -262.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.84, 1, 0.96, 1)
+theme_override_colors/font_hover_color = Color(0.95, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.04, 0.12, 0.12, 1)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("RunNormalStyle")
+theme_override_styles/hover = SubResource("RunHoverStyle")
+theme_override_styles/pressed = SubResource("RunPressedStyle")
+text = "PULAR"
+focus_mode = 0
+
+[node name="ActionButton" type="Button" parent="HUD/Root"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -450.0
+offset_right = -30.0
+offset_bottom = -362.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.84, 1, 0.96, 1)
+theme_override_colors/font_hover_color = Color(0.95, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.04, 0.12, 0.12, 1)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("RunNormalStyle")
+theme_override_styles/hover = SubResource("RunHoverStyle")
+theme_override_styles/pressed = SubResource("RunPressedStyle")
+text = "DAR SOCO"
+focus_mode = 0
+
+[node name="SwitchButton" type="Button" parent="HUD/Root"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -250.0
+offset_top = 22.0
+offset_right = -30.0
+offset_bottom = 110.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.84, 1, 0.96, 1)
+theme_override_colors/font_hover_color = Color(0.95, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.04, 0.12, 0.12, 1)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("RunNormalStyle")
+theme_override_styles/hover = SubResource("RunHoverStyle")
+theme_override_styles/pressed = SubResource("RunPressedStyle")
+text = "CONTROLAR GORECE"
+focus_mode = 0
+
+[node name="RideButton" type="Button" parent="HUD/Root"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -550.0
+offset_right = -30.0
+offset_bottom = -462.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.84, 1, 0.96, 1)
+theme_override_colors/font_hover_color = Color(0.95, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.04, 0.12, 0.12, 1)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("RunNormalStyle")
+theme_override_styles/hover = SubResource("RunHoverStyle")
+theme_override_styles/pressed = SubResource("RunPressedStyle")
+text = "TESTAR PILOTAGEM"
+focus_mode = 0
+
+[node name="GPSAutopilot" type="Control" parent="HUD/Root"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 182.0
+offset_right = 236.0
+offset_bottom = 486.0
+script = ExtResource("17_gps")
+
+[node name="FollowButton" type="Button" parent="HUD/Root"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -250.0
+offset_top = 122.0
+offset_right = -30.0
+offset_bottom = 210.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.84, 1, 0.96, 1)
+theme_override_colors/font_hover_color = Color(0.95, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.04, 0.12, 0.12, 1)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("RunNormalStyle")
+theme_override_styles/hover = SubResource("RunHoverStyle")
+theme_override_styles/pressed = SubResource("RunPressedStyle")
+text = "SEGUIR"
+focus_mode = 0

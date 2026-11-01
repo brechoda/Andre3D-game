@@ -1,0 +1,478 @@
+newmtl Bank_m19_BankStoneSign128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/BankStoneSign128.PNG
+
+newmtl Bank_m20_BankStoneSign_2128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/BankStoneSign_2128.PNG
+
+newmtl Bank_m21_BankStoneSign_3128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/BankStoneSign_3128.PNG
+
+newmtl Bank_m22_BankStoneSign_4128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/BankStoneSign_4128.PNG
+
+newmtl Bank_m23_slab2_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casinogarden/slab2_64HV.PNG
+
+newmtl Bank_m24_decorentrance256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cempirest/decorentrance256.PNG
+
+newmtl Bank_m25_church_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/church_256.PNG
+
+newmtl Bank_m26_roadsign01_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/roadsign01_128.PNG
+
+newmtl Bank_m27_USAflaglowres
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/USAflaglowres.PNG
+
+newmtl Bank_m28_BLOCK2low
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/BLOCK2low.PNG
+
+newmtl Bank_m29_metpat64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airstuff2/metpat64.PNG
+
+newmtl Bank_m30_airportdoor4
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/airportdoor4.PNG
+
+newmtl Bank_m31_tarmacplain_bank
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/tarmacplain_bank.PNG
+
+newmtl building3_m0_Strip_weathered3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Strip_weathered3_64HV.PNG
+
+newmtl building3_m1_ledge_creme_0264H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild3/ledge_creme_0264H.PNG
+
+newmtl building3_m2_buildgrnd1_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild3/buildgrnd1_256128.PNG
+
+newmtl building3_m3_buildbot_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp_new/buildbot_256128.PNG
+
+newmtl building3_m4_ledge_detl2_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild1/ledge_detl2_256.PNG
+
+newmtl building3_m5_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl building3_m6_sffront21_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild3/sffront21_256.PNG
+
+newmtl building3_m7_sfwindow14_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild3/sfwindow14_128.PNG
+
+newmtl building3_m8_delidark256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild3/delidark256.PNG
+
+newmtl building3_m9_italyred256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/italyred256128.PNG
+
+newmtl building3_m10_italygreenl256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild3/italygreenl256128.PNG
+
+newmtl building3_m11_italygreenr256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild3/italygreenr256128.PNG
+
+newmtl building3_m12_buildtop_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild3/buildtop_256128.PNG
+
+newmtl building3_m13_coffeebarsign256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/coffeebarsign256128.PNG
+
+newmtl building4_m0_redlitlingerie256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild2/redlitlingerie256.PNG
+
+newmtl building4_m1_joepizza256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/joepizza256.PNG
+
+newmtl building4_m2_redlita256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild2/redlita256.PNG
+
+newmtl building4_m3_magazineshop256hi128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/magazineshop256hi128.PNG
+
+newmtl building4_m4_redlitbtq256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild2/redlitbtq256.PNG
+
+newmtl building4_m5_ledge1_com_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/ledge1_com_256.PNG
+
+newmtl building4_m6_ledge_detl_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/ledge_detl_256.PNG
+
+newmtl building4_m7_1stfloor9b_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild2/1stfloor9b_256128.PNG
+
+newmtl building4_m8_1stfloor9_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild2/1stfloor9_256128.PNG
+
+newmtl building4_m9_ornatecornicea128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild1/ornatecornicea128.PNG
+
+newmtl building4_m10_steel_lighter128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild2/steel_lighter128.PNG
+
+newmtl building4_m11_grnd_flr1_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cempirest/grnd_flr1_256.PNG
+
+newmtl building5_m0_redlitlingerie256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild2/redlitlingerie256.PNG
+
+newmtl building5_m1_joepizza256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/joepizza256.PNG
+
+newmtl building5_m2_redlita256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild2/redlita256.PNG
+
+newmtl building5_m3_magazineshop256hi128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/magazineshop256hi128.PNG
+
+newmtl building5_m4_redlitbtq256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild2/redlitbtq256.PNG
+
+newmtl building5_m5_ledge1_com_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/ledge1_com_256.PNG
+
+newmtl building5_m6_ledge_detl_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/ledge_detl_256.PNG
+
+newmtl building5_m7_1stfloor9b_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild2/1stfloor9b_256128.PNG
+
+newmtl building5_m8_1stfloor9_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild2/1stfloor9_256128.PNG
+
+newmtl building5_m9_ornatecornicea128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild1/ornatecornicea128.PNG
+
+newmtl building5_m10_grnd_flr1_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cempirest/grnd_flr1_256.PNG
+
+newmtl cutsceneroad3_m0_Corner1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Corner1_128.PNG
+
+newmtl cutsceneroad3_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl cutsceneroad3_m2_Pave02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Pave02_128.PNG
+
+newmtl cutsceneroad3_m3_Road_1line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_1line256HV.PNG
+
+newmtl cutsceneroad3_m4_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl cutsceneroad3_m5_dirtywhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/dirtywhite.PNG
+
+newmtl cutsceneroad2_m0_Pave02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Pave02_128.PNG
+
+newmtl cutsceneroad2_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl cutsceneroad2_m2_Road_1line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_1line256HV.PNG
+
+newmtl cutsceneroad2_m3_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl cutsceneroad1_m0_Pave02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Pave02_128.PNG
+
+newmtl cutsceneroad1_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl cutsceneroad1_m2_Road_1line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_1line256HV.PNG
+
+newmtl cutsceneroad1_m3_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl cutsceneroad1_m4_Corner1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Corner1_128.PNG
+
+newmtl cutsceneroad1_m5_dirtywhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/dirtywhite.PNG
+
+newmtl cutsceneroad4_m0_Pave02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Pave02_128.PNG
+
+newmtl cutsceneroad4_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl cutsceneroad4_m2_Road_1line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_1line256HV.PNG
+
+newmtl cutsceneroad4_m3_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl cutsceneroad4_m4_Corner1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Corner1_128.PNG
+
+newmtl cutsceneroad4_m5_dirtywhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/dirtywhite.PNG
+
+newmtl rubbish01_m0_Alumox64b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/3d8ball/Alumox64b.PNG
+
+newmtl rubbish01_m1_funcola64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrubbish/funcola64.PNG
+
+newmtl rubbish01_m2_crispacket_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrubbish/crispacket_64.PNG
+
+newmtl rubbish01_m3_newspaper01_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrubbish/newspaper01_64.PNG
+
+newmtl rubbish01_m4_newspaper04_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrubbish/newspaper04_64.PNG
+
+newmtl rubbish01_m5_NoParking2_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrubbish/NoParking2_128.PNG
+
+newmtl rubbish01_m6_roadsign01_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/roadsign01_128.PNG
+
+newmtl rubbish01_m7_banding9_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrubbish/banding9_64HV.PNG
+
+newmtl rubbish01_m8_cardboxes_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/boxes/cardboxes_128.PNG
+
+newmtl rubbish01_m9_Metal4_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compound/Metal4_256.PNG
+
+newmtl rubbish01_m10_bluemetal02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/bluemetal02.PNG
+
+newmtl rubbish01_m11_bincover_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrubbish/bincover_64HV.PNG
+
+newmtl rubbish01_m12_Green_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrubbish/Green_64.PNG
+
+newmtl rubbish01_m13_recycle01_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrubbish/recycle01_64.PNG
+
+newmtl rubbish01_m14_crate128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/crate128.PNG
+
+newmtl rubbish01_m15_Metal1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comtunel/Metal1_128.PNG
+
+newmtl rubbish01_m16_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl rubbish01_m17_bluemetal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/bluemetal.PNG
+
+newmtl rubbish01_m18_mailbox2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrubbish/mailbox2_64.PNG
+
+newmtl rubbish01_m19_black64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/black64.PNG
+
+newmtl rubbish01_m20_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl Cutscene_Watertanks_m0_wood01
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compark/wood01.PNG
+
+newmtl Cutscene_Watertanks_m1_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl Cutscene_Watertanks_m2_barrel_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/barrel_64HV.PNG

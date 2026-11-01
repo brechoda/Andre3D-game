@@ -1,0 +1,475 @@
+newmtl aptowerL_m0_airbrick
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal3/airbrick.PNG
+
+newmtl aptowerL_m1_glasspanel_6dh
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/glasspanel_6dh.PNG
+
+newmtl aptowerL_m2_greyfence
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal4/greyfence.PNG
+
+newmtl aptowerL_m3_corrRoof_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/corrRoof_64HV.PNG
+
+newmtl aptowerL_m4_Window65a_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/Window65a_64HV.PNG
+
+newmtl aptowerL_m5_bankwin_64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal4/bankwin_64a.PNG
+
+newmtl aptowerL_m6_newall_harling_sless
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/newall_harling_sless.PNG
+
+newmtl aptowerL_m7_newall16white
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/newall16white.PNG
+
+newmtl aptowerL_m8_aascaff_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal4/aascaff_yellow.PNG
+
+newmtl aptowerL_m9_Industdoor9white
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal4/Industdoor9white.PNG
+
+newmtl aptowerL_m10_airportwindowsmall1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal4/airportwindowsmall1.PNG
+
+newmtl aptowerL_m11_airportdoor2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/airportdoor2.PNG
+
+newmtl aptowerL_m12_fire_exit64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal4/fire_exit64.PNG
+
+newmtl aptowerL_m13_airbuild1black
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal4/airbuild1black.PNG
+
+newmtl apair_terminal_m0_airportwall_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/airportwall_256.PNG
+
+newmtl apair_terminal_m1_airportwall_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/airportwall_256128.PNG
+
+newmtl apair_terminal_m2_concretemanky
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretemanky.PNG
+
+newmtl apair_terminal_m3_newall_harling_sless
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/newall_harling_sless.PNG
+
+newmtl apair_terminal_m4_Pillarbrick5_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/Pillarbrick5_64HV.PNG
+
+newmtl apair_terminal_m5_Airwall_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/Airwall_64HV.PNG
+
+newmtl apair_terminal_m6_airbeam_64HVa
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/airbeam_64HVa.PNG
+
+newmtl apair_terminal_m7_glasspanel_6dh
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/glasspanel_6dh.PNG
+
+newmtl apair_terminal_m8_airportmetalwall256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/airportmetalwall256.PNG
+
+newmtl apair_terminal_m9_airportwall_256_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/airportwall_256_2.PNG
+
+newmtl apair_terminal_m10_Window65a_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/Window65a_64HV.PNG
+
+newmtl apterminalfront_m0_Paveblank_64hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Paveblank_64hv.PNG
+
+newmtl apterminalfront_m1_airportmetalwall256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/airportmetalwall256.PNG
+
+newmtl apterminalfront_m2_airportwall_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/airportwall_256128.PNG
+
+newmtl apterminalfront_m3_Upt_sub_edgefloortile
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/Upt_sub_edgefloortile.PNG
+
+newmtl apterminalfront_m4_mottled2_white_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/mottled2_white_64HV.PNG
+
+newmtl apterminalfront_m5_airportwind06
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/airportwind06.PNG
+
+newmtl apterminalfront_m6_airportdoor1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/airportdoor1.PNG
+
+newmtl apterminalfront_m7_airportwindows1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/airportwindows1.PNG
+
+newmtl apterminalfront_m8_airportwall_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/airportwall_1.PNG
+
+newmtl apterminalfront_m9_corrRoof_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/corrRoof_64HV.PNG
+
+newmtl apterminalfront_m10_Shrubg
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/Shrubg.PNG
+
+newmtl apterminalfront_m11_airsign1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/airsign1_64.PNG
+
+newmtl apterminalfront_m12_vent_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/vent_64.PNG
+
+newmtl apterminalfront_m13_airportdoor3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/airportdoor3.PNG
+
+newmtl apterminalfront_m14_airportdoor2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/airportdoor2.PNG
+
+newmtl apterminalfront_m15_airsign2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/airsign2_64.PNG
+
+newmtl apterminalfront_m16_fran_black
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/fran_black.PNG
+
+newmtl apterminalfront_m17_cist_black
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/cist_black.PNG
+
+newmtl apterminalfront_m18_eol_black
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/eol_black.PNG
+
+newmtl apterminalfront_m19_black
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/black.PNG
+
+newmtl apterminalfront_m20_shut_rdst_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/shut_rdst_128.PNG
+
+newmtl apterminalfront_m21_firelogo_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/firelogo_128.PNG
+
+newmtl apterminalfront_m22_NoParking02a_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/NoParking02a_64.PNG
+
+newmtl apterminalfront_m23_NoParking02b_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/NoParking02b_64.PNG
+
+newmtl apterminalfront_m24_roadsign01_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/roadsign01_128.PNG
+
+newmtl apTerminalback_m0_Window65a_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/Window65a_64HV.PNG
+
+newmtl apTerminalback_m1_glasspanel_6dh
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/glasspanel_6dh.PNG
+
+newmtl apTerminalback_m2_Airwall_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/Airwall_64HV.PNG
+
+newmtl apTerminalback_m3_airportwall_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/airportwall_256.PNG
+
+newmtl apTerminalback_m4_corrRoof_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/corrRoof_64HV.PNG
+
+newmtl apTerminalback_m5_airportwind06
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/airportwind06.PNG
+
+newmtl apTerminalback_m6_airportwall_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/airportwall_1.PNG
+
+newmtl apTerminalback_m7_sgreyslab64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal3/sgreyslab64HV.PNG
+
+newmtl apTerminalback_m8_Airgrid_64HVa
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl apTerminalback_m9_marbletile_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/marbletile_64HV.PNG
+
+newmtl apTerminalback_m10_newall16white
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/newall16white.PNG
+
+newmtl apTerminalback_m11_airbrick
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal3/airbrick.PNG
+
+newmtl apTerminalback_m12_airportdoor1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/airportdoor1.PNG
+
+newmtl apTerminalback_m13_airportdoor3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/airportdoor3.PNG
+
+newmtl apTerminalback_m14_notice03128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal3/notice03128.PNG
+
+newmtl apTerminalback_m15_airsign2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/airsign2_64.PNG
+
+newmtl apTerminalback_m16_airport1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/airport1_64.PNG
+
+newmtl apTerminalback_m17_airport2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/airport2_64.PNG
+
+newmtl apTerminalback_m18_black
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/black.PNG
+
+newmtl air_grnd11_m0_concretebigb_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretebigb_lod.PNG
+
+newmtl air_grnd11_m1_concretemanky
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretemanky.PNG
+
+newmtl air_planeroad1_m0_Road_yellowline256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_yellowline256HV.PNG
+
+newmtl air_planeroad1_m1_concretemanky
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretemanky.PNG
+
+newmtl air_grnd7_m0_conchev_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/conchev_64HV.PNG
+
+newmtl air_grnd7_m1_concretebigb_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretebigb_lod.PNG
+
+newmtl air_grnd7_m2_darkwallb64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/darkwallb64.PNG
+
+newmtl air_grnd13_m0_concretebigb_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretebigb_lod.PNG
+
+newmtl air_grnd13_m1_carpark_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/carpark_256.PNG
+
+newmtl air_grnd13_m2_concrete_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/concrete_64HV.PNG
+
+newmtl air_grnd13_m3_concretemanky
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretemanky.PNG
+
+newmtl air_grnd04_m0_concretebigb_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretebigb_lod.PNG
+
+newmtl air_grnd04_m1_darkwallb64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/darkwallb64.PNG
+
+newmtl air_grnd04_m2_concrete_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/concrete_64HV.PNG
+
+newmtl landpart87_m0_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl landpart86_m0_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl landpart85_m0_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl landpart89_m0_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl landpart88_m0_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl splay_tunent01_m0_BLOCK
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/BLOCK.PNG
+
+newmtl splay_tunent02_m0_BLOCK
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/BLOCK.PNG
+
+newmtl air_brway_03_m0_runway_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/runway_64.PNG
+
+newmtl air_brway_03_m1_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl air_brway_03_m2_Metal3_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Metal3_128.PNG
+
+newmtl air_brway_03_m3_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl air_srway_02_m0_runway_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/runway_64.PNG
+
+newmtl air_srway_02_m1_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0

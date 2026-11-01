@@ -1,0 +1,479 @@
+newmtl comerside_subway_m18_toileticons
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compark/toileticons.PNG
+
+newmtl comerside_subway_m19_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl comerside_subway_m20_ZIP_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/ZIP_128.PNG
+
+newmtl comerside_subway_m21_ITE128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/ITE128.PNG
+
+newmtl comerside_subway_m22_poster7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster7.PNG
+
+newmtl comerside_subway_m23_filmposter2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/filmposter2_64.PNG
+
+newmtl comerside_subway_m24_filmposter1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/filmposter1_64.PNG
+
+newmtl comerside_subway_m25_poster8
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster8.PNG
+
+newmtl comerside_subway_m26_filmposter3_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/filmposter3_64.PNG
+
+newmtl comerside_subway_m27_headlit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/headlit.PNG
+
+newmtl comerside_subway_m28_libertysoulfm128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/libertysoulfm128.PNG
+
+newmtl comerside_subway_m29_poster5_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster5_64.PNG
+
+newmtl comerside_subway_m30_TaxiCo1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/TaxiCo1_64.PNG
+
+newmtl comerside_subway_m31_bandposter1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/carparkbooth/bandposter1_64.PNG
+
+newmtl comerside_subway_m32_cut_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/cut_128.PNG
+
+newmtl comerside_subway_m33_BOX_64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/BOX_64a.PNG
+
+newmtl comerside_subway_m34_CLCphone_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compark/CLCphone_128.PNG
+
+newmtl comerside_subway_m35_oK_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/oK_128.PNG
+
+newmtl comerside_subway_m36_radioactive_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/radioactive_64.PNG
+
+newmtl comerside_subway_m37_btchndgfood_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/btchndgfood_128.PNG
+
+newmtl comerside_subway_m38_PETROL2_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/PETROL2_128.PNG
+
+newmtl tshrorckgrdn_m0_SstoneBr02_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/SstoneBr02_64HV.PNG
+
+newmtl tshrorckgrdn_m1_castlight_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/castlight_64H.PNG
+
+newmtl tshrorckgrdn_m2_Grass_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/com_police/Grass_64HV.PNG
+
+newmtl tshrorckgrdn_m3_dirt_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/dirt_64HV.PNG
+
+newmtl tshrorckgrdn_m4_Grass_dirt_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/brgwall/Grass_dirt_64HV.PNG
+
+newmtl tshrorckgrdn_m5_crazepave_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/crazepave_64HV.PNG
+
+newmtl tshrorckgrdn_m6_waterlili03_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/waterlili03_64.PNG
+
+newmtl tshrorckgrdn_m7_waterpattern02_64hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comartgaly/waterpattern02_64hv.PNG
+
+newmtl tshrorckgrdn_m8_windowsill_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo3h/windowsill_64.PNG
+
+newmtl tshrorckgrdn_m9_rubble_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/rubble_64HV.PNG
+
+newmtl tshrorckgrdn_m10_cliffwall-64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/inddbridge/cliffwall-64HV.PNG
+
+newmtl tshrorckgrdn_m11_shutter64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/shutter64V.PNG
+
+newmtl tshrorckgrdn_m12_jettyfloor02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildingsite/jettyfloor02.PNG
+
+newmtl tshrorckgrdn_m13_China_gry_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsky3/China_gry_64HV.PNG
+
+newmtl tshrorckgrdn_m14_japanese04_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/japanese04_64.PNG
+
+newmtl tshrorckgrdn_m15_japanese03_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/japanese03_64.PNG
+
+newmtl tshrorckgrdn_m16_japanese02_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/japanese02_64.PNG
+
+newmtl tshrorckgrdn_m17_path_shadow_texture
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/path_shadow_texture.PNG
+
+newmtl tshrorckgrdn_m18_shed_texture
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/shed_texture.PNG
+
+newmtl tshrorckgrdn_m19_shed2_texture
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/shed2_texture.PNG
+
+newmtl tshrorckgrdn_m20_groundshading_texture
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/groundshading_texture.PNG
+
+newmtl tshrorckgrdn_m21_treadmill_shadow_texture
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/treadmill_shadow_texture.PNG
+
+newmtl tshrorckgrdn_m22_stoneshadow_texture
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/stoneshadow_texture.PNG
+
+newmtl tshrorckgrdn_m23_shiny_posts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/shiny_posts.PNG
+
+newmtl tshrorckgrdn_m24_tree_shadow_texture
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/tree_shadow_texture.PNG
+
+newmtl tshrorckgrdn_m25_cardbrdirty64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/cardbrdirty64.PNG
+
+newmtl tshrorckgrdn_m26_pentbox1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/pentbox1.PNG
+
+newmtl tshrorckgrdn_m27_pentbox2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/pentbox2.PNG
+
+newmtl tshrorckgrdn_alfas_m0_jap_bush_texture
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casinogarden/jap_bush_texture.PNG
+
+newmtl tshrorckgrdn_alfas_m1_jap_bush2_texture
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casinogarden/jap_bush2_texture.PNG
+
+newmtl tshrorckgrdn_alfas_m2_treadmill
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/treadmill.PNG
+
+newmtl tshrorckgrdn_alfas_m3_bark
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casinogarden/bark.PNG
+
+newmtl tshrorckgrdn_alfas_m4_lounger_back
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casinogarden/lounger_back.PNG
+
+newmtl tshrorckgrdn_alfas_m5_glass_panel_texture
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/glass_panel_texture.PNG
+
+newmtl tshrorckgrdn_alfas_m6_waterlili01_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/waterlili01_64.PNG
+
+newmtl tshrorckgrdn_alfas_m7_wtrlilidetail01_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/wtrlilidetail01_64.PNG
+
+newmtl tshrorckgrdn_alfas_m8_waterlili02_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/waterlili02_64.PNG
+
+newmtl tshrorckgrdn_alfas_m9_waterlili03_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lovies/waterlili03_64.PNG
+
+newmtl tag1_m0_tag_gaz7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basketballcrt/tag_gaz7.PNG
+
+newmtl tag1_m1_tag_gaz2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basketballcrt/tag_gaz2.PNG
+
+newmtl tag1_m2_tag_gaz1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz1.PNG
+
+newmtl tag1_m3_tag_gaz5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz5.PNG
+
+newmtl tag2_m0_tag_gaz1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz1.PNG
+
+newmtl tag2_m1_tag_gaz4
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz4.PNG
+
+newmtl tag2_m2_tag_gaz2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basketballcrt/tag_gaz2.PNG
+
+newmtl tag2_m3_tag_gaz3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz3.PNG
+
+newmtl tag2_m4_graffiti2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/graffiti2.PNG
+
+newmtl tag4_m0_tag_gaz1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz1.PNG
+
+newmtl tag4_m1_tag_gaz4
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz4.PNG
+
+newmtl tag4_m2_graffiti2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/graffiti2.PNG
+
+newmtl tag4_m3_tag_gaz7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basketballcrt/tag_gaz7.PNG
+
+newmtl tag3_m0_tag_gaz2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basketballcrt/tag_gaz2.PNG
+
+newmtl tag3_m1_tag_gaz7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basketballcrt/tag_gaz7.PNG
+
+newmtl tag3_m2_tag_gaz6
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz6.PNG
+
+newmtl tag3_m3_tag_gaz3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz3.PNG
+
+newmtl tag3_m4_tag_gaz1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz1.PNG
+
+newmtl tag3_m5_graffiti2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/graffiti2.PNG
+
+newmtl tag5_m0_tag_gaz4
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz4.PNG
+
+newmtl tag5_m1_tag_gaz7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basketballcrt/tag_gaz7.PNG
+
+newmtl tag5_m2_tag_gaz6
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz6.PNG
+
+newmtl tag5_m3_tag_gaz1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz1.PNG
+
+newmtl tag5_m4_tag_gaz5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz5.PNG
+
+newmtl com_land064_m0_carpark_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/carpark_128.PNG
+
+newmtl shop_bit_m0_Pave02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Pave02_128.PNG
+
+newmtl underlight1_m0_banding7_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/banding7_64HV.PNG
+
+newmtl underlight1_m1_striplights
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/striplights.PNG
+
+newmtl calahan_bboard_m0_banding3b_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/com_police/banding3b_64H.PNG
+
+newmtl calahan_bboard_m1_PunkNoodle128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsbilboard02/PunkNoodle128.PNG
+
+newmtl calahan_bboard_m2_FBK128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/com_police/FBK128.PNG
+
+newmtl calahan_bboard_m3_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl calahan_bboard_m4_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl calahan_bboard_m5_Libertyarmy128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsbilboard02/Libertyarmy128.PNG
+
+newmtl custom_junction1_m0_Corner1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Corner1_128.PNG
+
+newmtl custom_junction1_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl custom_junction1_m2_Road_blank256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_blank256HV.PNG

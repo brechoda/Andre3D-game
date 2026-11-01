@@ -1,0 +1,7 @@
+.godot/
+dist/
+node_modules/
+.manus-logs/
+*.tmp
+*.staging
+*.rawmerge_staging.glb

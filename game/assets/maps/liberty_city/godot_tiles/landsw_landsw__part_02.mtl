@@ -1,0 +1,479 @@
+newmtl fuel9_m7_cabin3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subcanister/cabin3.PNG
+
+newmtl fuel9_m8_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/yellow.PNG
+
+newmtl fuel9_m9_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/yellow.PNG
+
+newmtl fuel9_m10_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/yellow.PNG
+
+newmtl fuel9_m11_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/yellow.PNG
+
+newmtl fuel4_m0_cabin2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutscenecameras/cabin2.PNG
+
+newmtl fuel4_m1_cabin3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subcanister/cabin3.PNG
+
+newmtl fuel4_m2_greyfence
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal4/greyfence.PNG
+
+newmtl fuel4_m3_metpat_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/metpat_64.PNG
+
+newmtl fuel4_m4_banding5_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dockvats/banding5_64HV.PNG
+
+newmtl fuel4_m5_ybstripe128h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dockvats/ybstripe128h.PNG
+
+newmtl fuel4_m6_Alumox64e
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combomb/Alumox64e.PNG
+
+newmtl indfrate03_m0_frate_doors128red
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/crate/frate_doors128red.PNG
+
+newmtl indfrate03_m1_frate64_red
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/frate64_red.PNG
+
+newmtl indfrate03_m2_barrel_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/barrel_64HV.PNG
+
+newmtl indfrate03_m3_midgrey64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/midgrey64.PNG
+
+newmtl indfrate03_m4_frate_doors64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/crate/frate_doors64.PNG
+
+newmtl indfrate03_m5_frate64_blue
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compier/frate64_blue.PNG
+
+newmtl indfrate03_m6_banding7_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/banding7_64HV.PNG
+
+newmtl indfrate03_m7_frate_doors64yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/crate/frate_doors64yellow.PNG
+
+newmtl indfrate03_m8_frate64_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compier/frate64_yellow.PNG
+
+newmtl indfrate03_m9_Alumplat64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/csitecutscene/Alumplat64.PNG
+
+newmtl indsub_gate03_m0_wireNJA
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/wireNJA.PNG
+
+newmtl indsub_gate03_m1_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl indsub_gate03_m2_NoParking_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/fences/NoParking_64.PNG
+
+newmtl doc_shedbig31_m0_corrugated
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinaedge/corrugated.PNG
+
+newmtl doc_shedbig31_m1_subindwall2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/projbits/subindwall2.PNG
+
+newmtl doc_shedbig31_m2_corrRoof_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/corrRoof_64HV.PNG
+
+newmtl doc_shedbig31_m3_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl doc_shedbig31_m4_corrugated3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/docks/corrugated3_64HV.PNG
+
+newmtl doc_shedbig31_m5_Industdoor5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigbuild/Industdoor5.PNG
+
+newmtl doc_shedbig31_m6_corrugated02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/docfactories/corrugated02.PNG
+
+newmtl doc_shedbig31_m7_conchev_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/conchev_64HV.PNG
+
+newmtl doc_shedbig31_m8_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/yellow.PNG
+
+newmtl doc_shedbig31_m9_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/yellow.PNG
+
+newmtl doc_shedbig31_m10_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/yellow.PNG
+
+newmtl doc_shedbig31_m11_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/yellow.PNG
+
+newmtl doc_shedbig31_m12_corrugated02_red
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/busdepot/corrugated02_red.PNG
+
+newmtl doc_shedbig31_m13_banding3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/banding3_64HV.PNG
+
+newmtl doc_shedbig31_m14_concrete_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/concrete_64HV.PNG
+
+newmtl doc_shedbig12_m0_newall4-1_16c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subuild7/newall4-1_16c.PNG
+
+newmtl doc_shedbig12_m1_newall10
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compark/newall10.PNG
+
+newmtl doc_shedbig12_m2_wallbrown64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/docksbuild/wallbrown64HV.PNG
+
+newmtl doc_shedbig12_m3_newallkb1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/newallkb1.PNG
+
+newmtl doc_shedbig12_m4_Window29_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/docksbuild/Window29_64HV.PNG
+
+newmtl doc_shedbig12_m5_carpark_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/carpark_128.PNG
+
+newmtl doc_shedbig12_m6_plainwoodoor2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/plainwoodoor2.PNG
+
+newmtl doc_shedbig12_m7_inwindow1shdw
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subuild1/inwindow1shdw.PNG
+
+newmtl doc_shedbig12_m8_newall8-1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subuild1/newall8-1.PNG
+
+newmtl doc_shedbig12_m9_punk1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/punk1_64.PNG
+
+newmtl doc_shedbig12_m10_punk2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/punk2_64.PNG
+
+newmtl doc_shedbig12_m11_office
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/office.PNG
+
+newmtl doc_shedbig12_m12_exitgreen
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinaedge/exitgreen.PNG
+
+newmtl dam_road1_m0_dirt64b_grass
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/clif22/dirt64b_grass.PNG
+
+newmtl dam_road1_m1_dirt64b_stone
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/dirt64b_stone.PNG
+
+newmtl caparwall3_m0_weewall256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/weewall256.PNG
+
+newmtl parsign1_m0_steel64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/steel64.PNG
+
+newmtl parsign1_m1_chevronYB_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/chevronYB_64.PNG
+
+newmtl parsign1_m2_exit_noexit128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/exit_noexit128.PNG
+
+newmtl parsign1_m3_airsign2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/airsign2_64.PNG
+
+newmtl parsign1_m4_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl parsign1_m5_metalcopy
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/metalcopy.PNG
+
+newmtl LODport_carpark_m0_newgrnd1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/newgrnd1_128.PNG
+
+newmtl parsign2_m0_steel64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/steel64.PNG
+
+newmtl parsign2_m1_chevronYB_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/chevronYB_64.PNG
+
+newmtl parsign2_m2_exit_noexit128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/exit_noexit128.PNG
+
+newmtl parsign2_m3_airsign2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/airsign2_64.PNG
+
+newmtl parsign2_m4_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl parsign2_m5_metalcopy
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/metalcopy.PNG
+
+newmtl Airportroad06_m0_Road_blank256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_blank256HV.PNG
+
+newmtl Airportroad06_m1_Road_1line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_1line256HV.PNG
+
+newmtl Airportroad06_m2_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl bussign1_m0_chrome
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/pumphouse/chrome.PNG
+
+newmtl bussign1_m1_bus_stop64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/signs/bus_stop64.PNG
+
+newmtl bussign1_m2_busschedule64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/signs/busschedule64.PNG
+
+newmtl bussign1_m3_Alumox64b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/3d8ball/Alumox64b.PNG
+
+newmtl noparkingsign1_m0_Alumox64b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/3d8ball/Alumox64b.PNG
+
+newmtl noparkingsign1_m1_NoParking2_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrubbish/NoParking2_128.PNG
+
+newmtl noparkingsign1_m2_roadsign01_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/roadsign01_128.PNG
+
+newmtl noparkingsign1_m3_banding9_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrubbish/banding9_64HV.PNG
+
+newmtl bar_barrier12_m0_black64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/black64.PNG
+
+newmtl bar_barrier12_m1_wirefence
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/wirefence.PNG
+
+newmtl bar_barrier12_m2_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl bar_barrier16_m0_Alumplat64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/csitecutscene/Alumplat64.PNG
+
+newmtl lhouse_barrier1_m0_Alumplat64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/csitecutscene/Alumplat64.PNG
+
+newmtl lhouse_barrier2_m0_Alumplat64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/csitecutscene/Alumplat64.PNG
+
+newmtl bar_barrier10b_m0_black64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/black64.PNG
+
+newmtl bar_barrier10b_m1_wirefence
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/wirefence.PNG
+
+newmtl bar_barrier10b_m2_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl barrierturn_m0_chevron_red_64HVa
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/chevron_red_64HVa.PNG
+
+newmtl barrierturn_m1_redband_64Ha
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/redband_64Ha.PNG
+
+newmtl barrierturn_m2_bareboards_64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/portabarrier/bareboards_64a.PNG
+
+newmtl barrierturn_m3_glass_64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lighthouse/glass_64a.PNG
+
+newmtl barrierturn_m4_cratetop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/cratetop128.PNG
+
+newmtl barrierturn_m5_banding8_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/banding8_64HV.PNG
+
+newmtl bar_gatebar01_m0_banding8_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/banding8_64HV.PNG

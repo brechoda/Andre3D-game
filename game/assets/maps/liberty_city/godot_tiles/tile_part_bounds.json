@@ -1,0 +1,2373 @@
+{
+  "schema": 1,
+  "parts": {
+    "res://assets/maps/liberty_city/godot_tiles/comnbtm_comnbtm__part_00.obj": {
+      "min": [
+        -114.639,
+        -951.427
+      ],
+      "max": [
+        208.334,
+        -409.905
+      ],
+      "center": [
+        46.847,
+        -680.666
+      ],
+      "radius": 315.261,
+      "vertices": 9123
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comnbtm_comnbtm__part_01.obj": {
+      "min": [
+        -201.437,
+        -976.428
+      ],
+      "max": [
+        399.131,
+        -364.115
+      ],
+      "center": [
+        98.847,
+        -670.272
+      ],
+      "radius": 428.838,
+      "vertices": 8048
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comnbtm_comnbtm__part_02.obj": {
+      "min": [
+        36.515,
+        -911.428
+      ],
+      "max": [
+        446.814,
+        -409.486
+      ],
+      "center": [
+        241.664,
+        -660.457
+      ],
+      "radius": 324.15,
+      "vertices": 12585
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comnbtm_comnbtm__part_03.obj": {
+      "min": [
+        -120.043,
+        -1001.428
+      ],
+      "max": [
+        587.856,
+        -296.429
+      ],
+      "center": [
+        233.906,
+        -648.929
+      ],
+      "radius": 499.536,
+      "vertices": 9390
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comnbtm_comnbtm__part_04.obj": {
+      "min": [
+        -118.186,
+        -911.429
+      ],
+      "max": [
+        461.834,
+        -391.398
+      ],
+      "center": [
+        171.824,
+        -651.413
+      ],
+      "radius": 389.505,
+      "vertices": 10631
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comnbtm_comnbtm__part_05.obj": {
+      "min": [
+        -88.185,
+        -912.507
+      ],
+      "max": [
+        436.834,
+        -396.429
+      ],
+      "center": [
+        174.324,
+        -654.468
+      ],
+      "radius": 368.097,
+      "vertices": 20343
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comnbtm_comnbtm__part_06.obj": {
+      "min": [
+        -75.918,
+        -926.222
+      ],
+      "max": [
+        566.815,
+        -396.362
+      ],
+      "center": [
+        245.448,
+        -661.292
+      ],
+      "radius": 416.49,
+      "vertices": 9882
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comnbtm_comnbtm__part_07.obj": {
+      "min": [
+        -96.608,
+        -926.222
+      ],
+      "max": [
+        531.536,
+        -422.024
+      ],
+      "center": [
+        217.464,
+        -674.123
+      ],
+      "radius": 402.735,
+      "vertices": 17000
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comnbtm_comnbtm__part_08.obj": {
+      "min": [
+        -93.406,
+        -816.277
+      ],
+      "max": [
+        581.814,
+        -411.403
+      ],
+      "center": [
+        244.204,
+        -613.84
+      ],
+      "radius": 393.651,
+      "vertices": 11898
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comnbtm_comnbtm__part_09.obj": {
+      "min": [
+        -88.412,
+        -835.633
+      ],
+      "max": [
+        396.815,
+        -411.738
+      ],
+      "center": [
+        154.201,
+        -623.685
+      ],
+      "radius": 322.154,
+      "vertices": 13339
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comnbtm_comnbtm__part_10.obj": {
+      "min": [
+        -96.308,
+        -917.125
+      ],
+      "max": [
+        531.526,
+        -411.412
+      ],
+      "center": [
+        217.609,
+        -664.268
+      ],
+      "radius": 403.088,
+      "vertices": 13532
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comnbtm_comnbtm__part_11.obj": {
+      "min": [
+        -52.907,
+        -790.333
+      ],
+      "max": [
+        587.856,
+        -401.43
+      ],
+      "center": [
+        267.474,
+        -595.882
+      ],
+      "radius": 374.774,
+      "vertices": 12414
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comnbtm_comnbtm__part_12.obj": {
+      "min": [
+        -87.422,
+        -911.951
+      ],
+      "max": [
+        637.43,
+        -391.423
+      ],
+      "center": [
+        275.004,
+        -651.687
+      ],
+      "radius": 446.195,
+      "vertices": 9972
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comnbtm_comnbtm__part_13.obj": {
+      "min": [
+        -201.136,
+        -911.53
+      ],
+      "max": [
+        396.765,
+        -364.15
+      ],
+      "center": [
+        97.814,
+        -637.84
+      ],
+      "radius": 405.312,
+      "vertices": 9919
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comnbtm_comnbtm__part_14.obj": {
+      "min": [
+        14.2,
+        -779.806
+      ],
+      "max": [
+        531.638,
+        -411.428
+      ],
+      "center": [
+        272.919,
+        -595.617
+      ],
+      "radius": 317.586,
+      "vertices": 7993
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comntop_comntop__part_00.obj": {
+      "min": [
+        -267.196,
+        -371.428
+      ],
+      "max": [
+        575.064,
+        212.721
+      ],
+      "center": [
+        153.934,
+        -79.353
+      ],
+      "radius": 512.502,
+      "vertices": 12492
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comntop_comntop__part_01.obj": {
+      "min": [
+        -192.047,
+        -411.428
+      ],
+      "max": [
+        594.092,
+        266.146
+      ],
+      "center": [
+        201.023,
+        -72.641
+      ],
+      "radius": 518.922,
+      "vertices": 4027
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comntop_comntop__part_02.obj": {
+      "min": [
+        -252.93,
+        -411.429
+      ],
+      "max": [
+        462.102,
+        216.302
+      ],
+      "center": [
+        104.586,
+        -97.564
+      ],
+      "radius": 475.741,
+      "vertices": 51580
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comntop_comntop__part_03.obj": {
+      "min": [
+        -118.186,
+        -411.428
+      ],
+      "max": [
+        556.816,
+        98.572
+      ],
+      "center": [
+        219.315,
+        -156.428
+      ],
+      "radius": 423.003,
+      "vertices": 5684
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comntop_comntop__part_04.obj": {
+      "min": [
+        -223.223,
+        -395.719
+      ],
+      "max": [
+        610.813,
+        146.438
+      ],
+      "center": [
+        193.795,
+        -124.641
+      ],
+      "radius": 497.381,
+      "vertices": 29991
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comntop_comntop__part_05.obj": {
+      "min": [
+        -167.807,
+        -396.655
+      ],
+      "max": [
+        595.109,
+        67.009
+      ],
+      "center": [
+        213.651,
+        -164.823
+      ],
+      "radius": 446.381,
+      "vertices": 22735
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comntop_comntop__part_06.obj": {
+      "min": [
+        -125.967,
+        -411.428
+      ],
+      "max": [
+        667.7,
+        243.981
+      ],
+      "center": [
+        270.866,
+        -83.724
+      ],
+      "radius": 514.652,
+      "vertices": 11833
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comntop_comntop__part_07.obj": {
+      "min": [
+        -305.246,
+        -396.429
+      ],
+      "max": [
+        441.359,
+        244.225
+      ],
+      "center": [
+        68.056,
+        -76.102
+      ],
+      "radius": 491.899,
+      "vertices": 10675
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comntop_comntop__part_08.obj": {
+      "min": [
+        -164.545,
+        -391.622
+      ],
+      "max": [
+        602.419,
+        244.507
+      ],
+      "center": [
+        218.937,
+        -73.557
+      ],
+      "radius": 498.22,
+      "vertices": 22780
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comntop_comntop__part_09.obj": {
+      "min": [
+        -88.186,
+        -1981.242
+      ],
+      "max": [
+        667.836,
+        1006.373
+      ],
+      "center": [
+        289.825,
+        -487.435
+      ],
+      "radius": 1540.894,
+      "vertices": 46174
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comntop_comntop__part_10.obj": {
+      "min": [
+        -305.725,
+        -411.429
+      ],
+      "max": [
+        582.48,
+        273.963
+      ],
+      "center": [
+        138.378,
+        -68.733
+      ],
+      "radius": 560.952,
+      "vertices": 9085
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comntop_comntop__part_11.obj": {
+      "min": [
+        -162.624,
+        -391.428
+      ],
+      "max": [
+        446.489,
+        70.549
+      ],
+      "center": [
+        141.933,
+        -160.44
+      ],
+      "radius": 382.244,
+      "vertices": 807
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comse_comse__part_00.obj": {
+      "min": [
+        -88.491,
+        -1692.065
+      ],
+      "max": [
+        570.598,
+        -917.12
+      ],
+      "center": [
+        241.053,
+        -1304.593
+      ],
+      "radius": 508.659,
+      "vertices": 25038
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comse_comse__part_01.obj": {
+      "min": [
+        166.815,
+        -1710.079
+      ],
+      "max": [
+        504.515,
+        -917.028
+      ],
+      "center": [
+        335.665,
+        -1313.554
+      ],
+      "radius": 430.979,
+      "vertices": 14138
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comse_comse__part_02.obj": {
+      "min": [
+        191.88,
+        -1601.43
+      ],
+      "max": [
+        546.815,
+        -881.429
+      ],
+      "center": [
+        369.347,
+        -1241.429
+      ],
+      "radius": 401.367,
+      "vertices": 6337
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comse_comse__part_03.obj": {
+      "min": [
+        7.093,
+        -1601.43
+      ],
+      "max": [
+        787.919,
+        -887.22
+      ],
+      "center": [
+        397.506,
+        -1244.325
+      ],
+      "radius": 529.1,
+      "vertices": 18072
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comse_comse__part_04.obj": {
+      "min": [
+        196.719,
+        -1428.142
+      ],
+      "max": [
+        787.919,
+        -877.363
+      ],
+      "center": [
+        492.319,
+        -1152.753
+      ],
+      "radius": 404.003,
+      "vertices": 11056
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comse_comse__part_05.obj": {
+      "min": [
+        -88.439,
+        -1708.268
+      ],
+      "max": [
+        570.455,
+        -881.429
+      ],
+      "center": [
+        241.008,
+        -1294.849
+      ],
+      "radius": 528.631,
+      "vertices": 4531
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comse_comse__part_06.obj": {
+      "min": [
+        197.894,
+        -1554.359
+      ],
+      "max": [
+        553.44,
+        -881.429
+      ],
+      "center": [
+        375.667,
+        -1217.894
+      ],
+      "radius": 380.541,
+      "vertices": 10963
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comse_comse__part_07.obj": {
+      "min": [
+        79.33,
+        -1521.425
+      ],
+      "max": [
+        554.067,
+        -881.429
+      ],
+      "center": [
+        316.699,
+        -1201.427
+      ],
+      "radius": 398.425,
+      "vertices": 10442
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comsw_comsw__part_00.obj": {
+      "min": [
+        -188.274,
+        -1596.616
+      ],
+      "max": [
+        139.632,
+        -1296.434
+      ],
+      "center": [
+        -24.321,
+        -1446.525
+      ],
+      "radius": 222.279,
+      "vertices": 14586
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comsw_comsw__part_01.obj": {
+      "min": [
+        -183.007,
+        -1591.698
+      ],
+      "max": [
+        29.54,
+        -1376.013
+      ],
+      "center": [
+        -76.734,
+        -1483.855
+      ],
+      "radius": 151.407,
+      "vertices": 14966
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comsw_comsw__part_02.obj": {
+      "min": [
+        -215.221,
+        -1547.647
+      ],
+      "max": [
+        136.815,
+        -906.43
+      ],
+      "center": [
+        -39.203,
+        -1227.038
+      ],
+      "radius": 365.749,
+      "vertices": 20204
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comsw_comsw__part_03.obj": {
+      "min": [
+        -218.185,
+        -1619.383
+      ],
+      "max": [
+        226.814,
+        -976.433
+      ],
+      "center": [
+        4.314,
+        -1297.908
+      ],
+      "radius": 390.963,
+      "vertices": 6527
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comsw_comsw__part_04.obj": {
+      "min": [
+        -175.433,
+        -1653.881
+      ],
+      "max": [
+        217.564,
+        -950.862
+      ],
+      "center": [
+        21.065,
+        -1302.371
+      ],
+      "radius": 402.704,
+      "vertices": 13242
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comsw_comsw__part_05.obj": {
+      "min": [
+        -218.185,
+        -1626.43
+      ],
+      "max": [
+        246.815,
+        -951.428
+      ],
+      "center": [
+        14.315,
+        -1288.929
+      ],
+      "radius": 409.833,
+      "vertices": 9925
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comsw_comsw__part_06.obj": {
+      "min": [
+        -218.184,
+        -1626.43
+      ],
+      "max": [
+        246.815,
+        -901.429
+      ],
+      "center": [
+        14.315,
+        -1263.929
+      ],
+      "radius": 430.654,
+      "vertices": 8870
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comsw_comsw__part_07.obj": {
+      "min": [
+        -217.763,
+        -1635.288
+      ],
+      "max": [
+        245.62,
+        -891.276
+      ],
+      "center": [
+        13.929,
+        -1263.282
+      ],
+      "radius": 438.257,
+      "vertices": 24672
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comsw_comsw__part_08.obj": {
+      "min": [
+        -216.124,
+        -1594.826
+      ],
+      "max": [
+        195.621,
+        -906.43
+      ],
+      "center": [
+        -10.252,
+        -1250.628
+      ],
+      "radius": 401.068,
+      "vertices": 3450
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comsw_comsw__part_09.obj": {
+      "min": [
+        -347.874,
+        -1624.38
+      ],
+      "max": [
+        195.621,
+        -927.294
+      ],
+      "center": [
+        -76.126,
+        -1275.837
+      ],
+      "radius": 441.96,
+      "vertices": 9868
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comsw_comsw__part_10.obj": {
+      "min": [
+        -59.611,
+        -1221.369
+      ],
+      "max": [
+        169.937,
+        -928.075
+      ],
+      "center": [
+        55.163,
+        -1074.722
+      ],
+      "radius": 186.222,
+      "vertices": 6548
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comsw_comsw__part_11.obj": {
+      "min": [
+        -140.918,
+        -1685.552
+      ],
+      "max": [
+        229.104,
+        -956.431
+      ],
+      "center": [
+        44.093,
+        -1320.991
+      ],
+      "radius": 408.82,
+      "vertices": 5815
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comsw_comsw__part_12.obj": {
+      "min": [
+        -188.101,
+        -1680.42
+      ],
+      "max": [
+        228.857,
+        -939.662
+      ],
+      "center": [
+        20.378,
+        -1310.041
+      ],
+      "radius": 425.023,
+      "vertices": 10597
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comsw_comsw__part_13.obj": {
+      "min": [
+        -62.137,
+        -1665.886
+      ],
+      "max": [
+        264.224,
+        -911.428
+      ],
+      "center": [
+        101.043,
+        -1288.657
+      ],
+      "radius": 411.01,
+      "vertices": 9856
+    },
+    "res://assets/maps/liberty_city/godot_tiles/comsw_comsw__part_14.obj": {
+      "min": [
+        -347.857,
+        -1624.052
+      ],
+      "max": [
+        226.814,
+        -951.43
+      ],
+      "center": [
+        -60.522,
+        -1287.741
+      ],
+      "radius": 442.342,
+      "vertices": 11515
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industne_industne__part_00.obj": {
+      "min": [
+        1063.343,
+        -483.833
+      ],
+      "max": [
+        1357.994,
+        -152.837
+      ],
+      "center": [
+        1210.669,
+        -318.335
+      ],
+      "radius": 221.572,
+      "vertices": 5372
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industne_industne__part_01.obj": {
+      "min": [
+        1077.399,
+        -472.553
+      ],
+      "max": [
+        1645.151,
+        -142.391
+      ],
+      "center": [
+        1361.275,
+        -307.472
+      ],
+      "radius": 328.386,
+      "vertices": 8845
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industne_industne__part_02.obj": {
+      "min": [
+        1032.958,
+        -503.627
+      ],
+      "max": [
+        1589.784,
+        116.828
+      ],
+      "center": [
+        1311.371,
+        -193.399
+      ],
+      "radius": 416.839,
+      "vertices": 9306
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industne_industne__part_03.obj": {
+      "min": [
+        1063.727,
+        -484.841
+      ],
+      "max": [
+        1544.303,
+        73.707
+      ],
+      "center": [
+        1304.015,
+        -205.567
+      ],
+      "radius": 368.418,
+      "vertices": 8593
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industne_industne__part_04.obj": {
+      "min": [
+        980.36,
+        -558.863
+      ],
+      "max": [
+        1640.142,
+        122.773
+      ],
+      "center": [
+        1310.251,
+        -218.045
+      ],
+      "radius": 474.326,
+      "vertices": 5488
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industne_industne__part_05.obj": {
+      "min": [
+        1065.478,
+        -484.987
+      ],
+      "max": [
+        1399.05,
+        66.88
+      ],
+      "center": [
+        1232.264,
+        -209.053
+      ],
+      "radius": 322.423,
+      "vertices": 29282
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industne_industne__part_06.obj": {
+      "min": [
+        1077.971,
+        -483.824
+      ],
+      "max": [
+        1385.774,
+        78.374
+      ],
+      "center": [
+        1231.872,
+        -202.725
+      ],
+      "radius": 320.472,
+      "vertices": 10024
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industne_industne__part_07.obj": {
+      "min": [
+        1065.771,
+        -513.84
+      ],
+      "max": [
+        1385.77,
+        78.28
+      ],
+      "center": [
+        1225.77,
+        -217.78
+      ],
+      "radius": 336.528,
+      "vertices": 3212
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industne_industne__part_08.obj": {
+      "min": [
+        1065.059,
+        -490.242
+      ],
+      "max": [
+        1553.254,
+        55.776
+      ],
+      "center": [
+        1309.156,
+        -217.233
+      ],
+      "radius": 366.22,
+      "vertices": 10282
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industne_industne__part_09.obj": {
+      "min": [
+        1032.956,
+        -484.526
+      ],
+      "max": [
+        1688.29,
+        148.632
+      ],
+      "center": [
+        1360.623,
+        -167.947
+      ],
+      "radius": 455.618,
+      "vertices": 7532
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industne_industne__part_10.obj": {
+      "min": [
+        1204.999,
+        -334.302
+      ],
+      "max": [
+        1490.369,
+        -84.317
+      ],
+      "center": [
+        1347.684,
+        -209.309
+      ],
+      "radius": 189.69,
+      "vertices": 13991
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industne_industne__part_11.obj": {
+      "min": [
+        764.407,
+        -853.785
+      ],
+      "max": [
+        1687.964,
+        30.732
+      ],
+      "center": [
+        1226.185,
+        -411.527
+      ],
+      "radius": 639.4,
+      "vertices": 7690
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industne_industne__part_12.obj": {
+      "min": [
+        917.741,
+        -482.708
+      ],
+      "max": [
+        1489.984,
+        30.732
+      ],
+      "center": [
+        1203.863,
+        -225.988
+      ],
+      "radius": 384.409,
+      "vertices": 4121
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industnw_industnw__part_00.obj": {
+      "min": [
+        745.81,
+        -558.823
+      ],
+      "max": [
+        1070.837,
+        183.026
+      ],
+      "center": [
+        908.323,
+        -187.898
+      ],
+      "radius": 404.964,
+      "vertices": 4651
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industnw_industnw__part_01.obj": {
+      "min": [
+        708.84,
+        -523.516
+      ],
+      "max": [
+        1107.694,
+        192.373
+      ],
+      "center": [
+        908.267,
+        -165.572
+      ],
+      "radius": 409.751,
+      "vertices": 15133
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industnw_industnw__part_02.obj": {
+      "min": [
+        755.791,
+        -508.824
+      ],
+      "max": [
+        1065.77,
+        218.644
+      ],
+      "center": [
+        910.781,
+        -145.09
+      ],
+      "radius": 395.379,
+      "vertices": 23031
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industnw_industnw__part_03.obj": {
+      "min": [
+        805.772,
+        -478.913
+      ],
+      "max": [
+        1035.769,
+        -28.718
+      ],
+      "center": [
+        920.771,
+        -253.815
+      ],
+      "radius": 252.772,
+      "vertices": 2469
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industnw_industnw__part_04.obj": {
+      "min": [
+        825.772,
+        -513.831
+      ],
+      "max": [
+        1070.834,
+        190.054
+      ],
+      "center": [
+        948.303,
+        -161.889
+      ],
+      "radius": 372.663,
+      "vertices": 3371
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industnw_industnw__part_05.obj": {
+      "min": [
+        563.023,
+        -513.823
+      ],
+      "max": [
+        1066.788,
+        219.282
+      ],
+      "center": [
+        814.905,
+        -147.27
+      ],
+      "radius": 444.753,
+      "vertices": 35814
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industnw_industnw__part_06.obj": {
+      "min": [
+        805.773,
+        -508.824
+      ],
+      "max": [
+        1051.11,
+        214.233
+      ],
+      "center": [
+        928.442,
+        -147.296
+      ],
+      "radius": 381.773,
+      "vertices": 6089
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industnw_industnw__part_07.obj": {
+      "min": [
+        878.803,
+        -478.877
+      ],
+      "max": [
+        991.981,
+        -397.174
+      ],
+      "center": [
+        935.392,
+        -438.025
+      ],
+      "radius": 69.794,
+      "vertices": 5923
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industnw_industnw__part_08.obj": {
+      "min": [
+        843.324,
+        -444.826
+      ],
+      "max": [
+        1035.904,
+        -319.066
+      ],
+      "center": [
+        939.614,
+        -381.946
+      ],
+      "radius": 115.003,
+      "vertices": 4782
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industnw_industnw__part_09.obj": {
+      "min": [
+        745.527,
+        -404.324
+      ],
+      "max": [
+        1036.79,
+        219.767
+      ],
+      "center": [
+        891.159,
+        -92.279
+      ],
+      "radius": 344.356,
+      "vertices": 7905
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industnw_industnw__part_10.obj": {
+      "min": [
+        764.298,
+        -508.827
+      ],
+      "max": [
+        1068.097,
+        219.767
+      ],
+      "center": [
+        916.197,
+        -144.53
+      ],
+      "radius": 394.697,
+      "vertices": 9044
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industnw_industnw__part_11.obj": {
+      "min": [
+        755.99,
+        -558.823
+      ],
+      "max": [
+        1037.122,
+        189.793
+      ],
+      "center": [
+        896.556,
+        -184.515
+      ],
+      "radius": 399.832,
+      "vertices": 7754
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industnw_industnw__part_12.obj": {
+      "min": [
+        990.696,
+        -423.759
+      ],
+      "max": [
+        1061.456,
+        -133.586
+      ],
+      "center": [
+        1026.076,
+        -278.673
+      ],
+      "radius": 149.338,
+      "vertices": 470
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industse_industse__part_00.obj": {
+      "min": [
+        1062.542,
+        -1186.084
+      ],
+      "max": [
+        1611.96,
+        -433.822
+      ],
+      "center": [
+        1337.251,
+        -809.953
+      ],
+      "radius": 465.768,
+      "vertices": 7998
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industse_industse__part_01.obj": {
+      "min": [
+        1065.771,
+        -1174.791
+      ],
+      "max": [
+        1405.366,
+        -513.823
+      ],
+      "center": [
+        1235.569,
+        -844.307
+      ],
+      "radius": 371.552,
+      "vertices": 9034
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industse_industse__part_02.obj": {
+      "min": [
+        1145.812,
+        -1011.624
+      ],
+      "max": [
+        1507.981,
+        -513.811
+      ],
+      "center": [
+        1326.896,
+        -762.718
+      ],
+      "radius": 307.808,
+      "vertices": 10861
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industse_industse__part_03.obj": {
+      "min": [
+        1069.589,
+        -1147.004
+      ],
+      "max": [
+        1672.901,
+        -588.615
+      ],
+      "center": [
+        1371.245,
+        -867.809
+      ],
+      "radius": 411.03,
+      "vertices": 9220
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industse_industse__part_04.obj": {
+      "min": [
+        996.594,
+        -1034.458
+      ],
+      "max": [
+        1578.979,
+        -478.851
+      ],
+      "center": [
+        1287.787,
+        -756.654
+      ],
+      "radius": 402.452,
+      "vertices": 10812
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industse_industse__part_05.obj": {
+      "min": [
+        1025.771,
+        -1185.719
+      ],
+      "max": [
+        1578.495,
+        -490.122
+      ],
+      "center": [
+        1302.133,
+        -837.921
+      ],
+      "radius": 444.229,
+      "vertices": 5813
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industse_industse__part_06.obj": {
+      "min": [
+        1025.771,
+        -1162.582
+      ],
+      "max": [
+        1606.92,
+        -513.824
+      ],
+      "center": [
+        1316.346,
+        -838.203
+      ],
+      "radius": 435.494,
+      "vertices": 33723
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industse_industse__part_07.obj": {
+      "min": [
+        1065.748,
+        -1089.542
+      ],
+      "max": [
+        1660.626,
+        -571.016
+      ],
+      "center": [
+        1363.187,
+        -830.279
+      ],
+      "radius": 394.572,
+      "vertices": 30566
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industse_industse__part_08.obj": {
+      "min": [
+        1039.3,
+        -1224.956
+      ],
+      "max": [
+        1628.082,
+        -453.962
+      ],
+      "center": [
+        1333.691,
+        -839.459
+      ],
+      "radius": 485.051,
+      "vertices": 23897
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industse_industse__part_09.obj": {
+      "min": [
+        1019.166,
+        -1108.365
+      ],
+      "max": [
+        1645.166,
+        -434.482
+      ],
+      "center": [
+        1332.166,
+        -771.424
+      ],
+      "radius": 459.89,
+      "vertices": 7691
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industse_industse__part_10.obj": {
+      "min": [
+        1025.764,
+        -1131.566
+      ],
+      "max": [
+        1674.223,
+        -513.824
+      ],
+      "center": [
+        1349.993,
+        -822.695
+      ],
+      "radius": 447.802,
+      "vertices": 7542
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industse_industse__part_11.obj": {
+      "min": [
+        1102.862,
+        -1146.872
+      ],
+      "max": [
+        1653.283,
+        -513.849
+      ],
+      "center": [
+        1378.072,
+        -830.36
+      ],
+      "radius": 419.429,
+      "vertices": 10817
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industse_industse__part_12.obj": {
+      "min": [
+        1065.847,
+        -1186.861
+      ],
+      "max": [
+        1610.539,
+        -514.297
+      ],
+      "center": [
+        1338.193,
+        -850.579
+      ],
+      "radius": 432.733,
+      "vertices": 2450
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industsw_industsw__part_00.obj": {
+      "min": [
+        844.706,
+        -909.369
+      ],
+      "max": [
+        1031.028,
+        -634.312
+      ],
+      "center": [
+        937.867,
+        -771.841
+      ],
+      "radius": 166.112,
+      "vertices": 7635
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industsw_industsw__part_01.obj": {
+      "min": [
+        778.152,
+        -1163.896
+      ],
+      "max": [
+        1099.43,
+        -508.268
+      ],
+      "center": [
+        938.791,
+        -836.082
+      ],
+      "radius": 365.057,
+      "vertices": 12391
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industsw_industsw__part_02.obj": {
+      "min": [
+        757.455,
+        -1098.603
+      ],
+      "max": [
+        1079.382,
+        -508.823
+      ],
+      "center": [
+        918.418,
+        -803.713
+      ],
+      "radius": 335.96,
+      "vertices": 8501
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industsw_industsw__part_03.obj": {
+      "min": [
+        805.509,
+        -1163.896
+      ],
+      "max": [
+        1099.43,
+        -472.847
+      ],
+      "center": [
+        952.47,
+        -818.371
+      ],
+      "radius": 375.479,
+      "vertices": 3741
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industsw_industsw__part_04.obj": {
+      "min": [
+        765.269,
+        -1158.095
+      ],
+      "max": [
+        1065.77,
+        -508.824
+      ],
+      "center": [
+        915.519,
+        -833.46
+      ],
+      "radius": 357.72,
+      "vertices": 6568
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industsw_industsw__part_05.obj": {
+      "min": [
+        780.413,
+        -958.994
+      ],
+      "max": [
+        1068.127,
+        -508.824
+      ],
+      "center": [
+        924.27,
+        -733.909
+      ],
+      "radius": 267.129,
+      "vertices": 23988
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industsw_industsw__part_06.obj": {
+      "min": [
+        785.876,
+        -1069.741
+      ],
+      "max": [
+        1079.454,
+        -508.825
+      ],
+      "center": [
+        932.665,
+        -789.283
+      ],
+      "radius": 316.55,
+      "vertices": 4073
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industsw_industsw__part_07.obj": {
+      "min": [
+        755.248,
+        -1041.07
+      ],
+      "max": [
+        1077.285,
+        -488.458
+      ],
+      "center": [
+        916.267,
+        -764.764
+      ],
+      "radius": 319.8,
+      "vertices": 16011
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industsw_industsw__part_08.obj": {
+      "min": [
+        733.011,
+        -1148.793
+      ],
+      "max": [
+        1039.381,
+        -467.046
+      ],
+      "center": [
+        886.196,
+        -807.919
+      ],
+      "radius": 373.712,
+      "vertices": 8501
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industsw_industsw__part_09.obj": {
+      "min": [
+        780.978,
+        -1158.153
+      ],
+      "max": [
+        1079.548,
+        -588.824
+      ],
+      "center": [
+        930.263,
+        -873.489
+      ],
+      "radius": 321.434,
+      "vertices": 5423
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industsw_industsw__part_10.obj": {
+      "min": [
+        430.843,
+        -1245.976
+      ],
+      "max": [
+        1108.927,
+        -507.52
+      ],
+      "center": [
+        769.885,
+        -876.748
+      ],
+      "radius": 501.277,
+      "vertices": 13889
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industsw_industsw__part_11.obj": {
+      "min": [
+        442.153,
+        -1148.732
+      ],
+      "max": [
+        1038.278,
+        -547.407
+      ],
+      "center": [
+        740.215,
+        -848.07
+      ],
+      "radius": 423.367,
+      "vertices": 10524
+    },
+    "res://assets/maps/liberty_city/godot_tiles/industsw_industsw__part_12.obj": {
+      "min": [
+        1026.624,
+        -953.716
+      ],
+      "max": [
+        1027.896,
+        -913.876
+      ],
+      "center": [
+        1027.26,
+        -933.796
+      ],
+      "radius": 19.93,
+      "vertices": 688
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landne_landne__part_00.obj": {
+      "min": [
+        -879.356,
+        -238.252
+      ],
+      "max": [
+        -295.004,
+        555.334
+      ],
+      "center": [
+        -587.18,
+        158.541
+      ],
+      "radius": 492.759,
+      "vertices": 11652
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landne_landne__part_01.obj": {
+      "min": [
+        -1217.315,
+        -207.551
+      ],
+      "max": [
+        -294.422,
+        567.307
+      ],
+      "center": [
+        -755.869,
+        179.878
+      ],
+      "radius": 602.523,
+      "vertices": 8130
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landne_landne__part_02.obj": {
+      "min": [
+        -1291.839,
+        -67.547
+      ],
+      "max": [
+        -207.195,
+        548.559
+      ],
+      "center": [
+        -749.517,
+        240.506
+      ],
+      "radius": 623.706,
+      "vertices": 20849
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landne_landne__part_03.obj": {
+      "min": [
+        -1291.379,
+        -264.053
+      ],
+      "max": [
+        -88.857,
+        786.21
+      ],
+      "center": [
+        -690.118,
+        261.079
+      ],
+      "radius": 798.297,
+      "vertices": 10718
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landne_landne__part_04.obj": {
+      "min": [
+        -1216.916,
+        -263.703
+      ],
+      "max": [
+        -249.399,
+        613.444
+      ],
+      "center": [
+        -733.158,
+        174.87
+      ],
+      "radius": 652.969,
+      "vertices": 9102
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landne_landne__part_05.obj": {
+      "min": [
+        -1453.743,
+        -102.564
+      ],
+      "max": [
+        -265.004,
+        1200.529
+      ],
+      "center": [
+        -859.374,
+        548.983
+      ],
+      "radius": 881.923,
+      "vertices": 5718
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landne_landne__part_06.obj": {
+      "min": [
+        -985.004,
+        -246.409
+      ],
+      "max": [
+        -265.004,
+        382.448
+      ],
+      "center": [
+        -625.004,
+        68.019
+      ],
+      "radius": 477.98,
+      "vertices": 12024
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landne_landne__part_07.obj": {
+      "min": [
+        -1025.281,
+        -182.552
+      ],
+      "max": [
+        -239.182,
+        544.947
+      ],
+      "center": [
+        -632.232,
+        181.198
+      ],
+      "radius": 535.538,
+      "vertices": 13521
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landne_landne__part_08.obj": {
+      "min": [
+        -1191.556,
+        -120.577
+      ],
+      "max": [
+        -270.209,
+        591.048
+      ],
+      "center": [
+        -730.882,
+        235.235
+      ],
+      "radius": 582.085,
+      "vertices": 17290
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landne_landne__part_09.obj": {
+      "min": [
+        -1247.771,
+        -102.945
+      ],
+      "max": [
+        1993.283,
+        1633.886
+      ],
+      "center": [
+        372.756,
+        765.47
+      ],
+      "radius": 1838.546,
+      "vertices": 24563
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landne_landne__part_10.obj": {
+      "min": [
+        -1453.743,
+        -102.405
+      ],
+      "max": [
+        3.306,
+        1110.708
+      ],
+      "center": [
+        -725.219,
+        504.152
+      ],
+      "radius": 947.976,
+      "vertices": 9627
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landne_landne__part_11.obj": {
+      "min": [
+        -953.182,
+        -0.789
+      ],
+      "max": [
+        -463.185,
+        373.008
+      ],
+      "center": [
+        -708.184,
+        186.109
+      ],
+      "radius": 308.149,
+      "vertices": 16269
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landne_landne__part_12.obj": {
+      "min": [
+        -1447.232,
+        -123.74
+      ],
+      "max": [
+        3.306,
+        924.717
+      ],
+      "center": [
+        -721.963,
+        400.488
+      ],
+      "radius": 894.891,
+      "vertices": 9666
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landne_landne__part_13.obj": {
+      "min": [
+        -670.294,
+        -82.284
+      ],
+      "max": [
+        -445.305,
+        77.12
+      ],
+      "center": [
+        -557.8,
+        -2.582
+      ],
+      "radius": 137.868,
+      "vertices": 2029
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_00.obj": {
+      "min": [
+        -1586.055,
+        -1167.005
+      ],
+      "max": [
+        -604.946,
+        -430.2
+      ],
+      "center": [
+        -1095.501,
+        -798.602
+      ],
+      "radius": 613.485,
+      "vertices": 13326
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_01.obj": {
+      "min": [
+        -1628.535,
+        -1334.113
+      ],
+      "max": [
+        -486.262,
+        151.621
+      ],
+      "center": [
+        -1057.399,
+        -591.246
+      ],
+      "radius": 937.042,
+      "vertices": 9697
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_02.obj": {
+      "min": [
+        -1591.27,
+        -951.972
+      ],
+      "max": [
+        -639.831,
+        277.467
+      ],
+      "center": [
+        -1115.55,
+        -337.252
+      ],
+      "radius": 777.296,
+      "vertices": 10243
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_03.obj": {
+      "min": [
+        -1289.756,
+        -672.29
+      ],
+      "max": [
+        -22.302,
+        1082.421
+      ],
+      "center": [
+        -656.029,
+        205.066
+      ],
+      "radius": 1082.295,
+      "vertices": 32327
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_04.obj": {
+      "min": [
+        -1476.542,
+        -896.291
+      ],
+      "max": [
+        -483.935,
+        334.744
+      ],
+      "center": [
+        -980.239,
+        -280.774
+      ],
+      "radius": 790.683,
+      "vertices": 11791
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_05.obj": {
+      "min": [
+        -1413.376,
+        -703.119
+      ],
+      "max": [
+        -635.193,
+        294.626
+      ],
+      "center": [
+        -1024.285,
+        -204.247
+      ],
+      "radius": 632.666,
+      "vertices": 7308
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_06.obj": {
+      "min": [
+        -1627.669,
+        -1333.737
+      ],
+      "max": [
+        -486.946,
+        82.113
+      ],
+      "center": [
+        -1057.307,
+        -625.812
+      ],
+      "radius": 909.104,
+      "vertices": 7538
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_07.obj": {
+      "min": [
+        -1197.088,
+        -888.94
+      ],
+      "max": [
+        -22.992,
+        -93.011
+      ],
+      "center": [
+        -610.04,
+        -490.976
+      ],
+      "radius": 709.226,
+      "vertices": 15755
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_08.obj": {
+      "min": [
+        -1300.012,
+        -752.973
+      ],
+      "max": [
+        -646.647,
+        297.958
+      ],
+      "center": [
+        -973.329,
+        -227.507
+      ],
+      "radius": 618.737,
+      "vertices": 4812
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_09.obj": {
+      "min": [
+        -1300.005,
+        -741.597
+      ],
+      "max": [
+        -635.61,
+        232.448
+      ],
+      "center": [
+        -967.808,
+        -254.574
+      ],
+      "radius": 589.53,
+      "vertices": 6514
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_10.obj": {
+      "min": [
+        -1197.0,
+        -642.139
+      ],
+      "max": [
+        -540.491,
+        297.958
+      ],
+      "center": [
+        -868.746,
+        -172.09
+      ],
+      "radius": 573.321,
+      "vertices": 5419
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_11.obj": {
+      "min": [
+        -1300.01,
+        -645.311
+      ],
+      "max": [
+        -553.348,
+        152.448
+      ],
+      "center": [
+        -926.679,
+        -246.432
+      ],
+      "radius": 546.334,
+      "vertices": 4574
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_12.obj": {
+      "min": [
+        -1574.45,
+        -881.542
+      ],
+      "max": [
+        -536.354,
+        1065.686
+      ],
+      "center": [
+        -1055.402,
+        92.072
+      ],
+      "radius": 1103.329,
+      "vertices": 19760
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_13.obj": {
+      "min": [
+        -1485.184,
+        -824.356
+      ],
+      "max": [
+        -542.155,
+        132.069
+      ],
+      "center": [
+        -1013.67,
+        -346.144
+      ],
+      "radius": 671.575,
+      "vertices": 12082
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_14.obj": {
+      "min": [
+        -1591.261,
+        -951.949
+      ],
+      "max": [
+        -542.161,
+        151.621
+      ],
+      "center": [
+        -1066.711,
+        -400.164
+      ],
+      "radius": 761.327,
+      "vertices": 5151
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_15.obj": {
+      "min": [
+        -1528.588,
+        -940.709
+      ],
+      "max": [
+        -609.699,
+        150.897
+      ],
+      "center": [
+        -1069.144,
+        -394.906
+      ],
+      "radius": 713.436,
+      "vertices": 47155
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_16.obj": {
+      "min": [
+        -1628.535,
+        -989.799
+      ],
+      "max": [
+        -610.545,
+        151.839
+      ],
+      "center": [
+        -1119.54,
+        -418.98
+      ],
+      "radius": 764.794,
+      "vertices": 18618
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_17.obj": {
+      "min": [
+        -1586.069,
+        -1275.874
+      ],
+      "max": [
+        -554.746,
+        -67.011
+      ],
+      "center": [
+        -1070.408,
+        -671.443
+      ],
+      "radius": 794.509,
+      "vertices": 13867
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_18.obj": {
+      "min": [
+        -1232.768,
+        -779.915
+      ],
+      "max": [
+        -513.688,
+        1118.601
+      ],
+      "center": [
+        -873.228,
+        169.343
+      ],
+      "radius": 1015.066,
+      "vertices": 14883
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_19.obj": {
+      "min": [
+        -625.955,
+        903.618
+      ],
+      "max": [
+        -517.535,
+        1154.929
+      ],
+      "center": [
+        -571.745,
+        1029.273
+      ],
+      "radius": 136.85,
+      "vertices": 9020
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_20.obj": {
+      "min": [
+        -1414.016,
+        -955.78
+      ],
+      "max": [
+        -526.297,
+        1082.441
+      ],
+      "center": [
+        -970.156,
+        63.33
+      ],
+      "radius": 1111.574,
+      "vertices": 20509
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_21.obj": {
+      "min": [
+        -1256.392,
+        -831.183
+      ],
+      "max": [
+        -556.586,
+        1102.014
+      ],
+      "center": [
+        -906.489,
+        135.415
+      ],
+      "radius": 1027.981,
+      "vertices": 18608
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_22.obj": {
+      "min": [
+        -1542.153,
+        -889.259
+      ],
+      "max": [
+        -819.812,
+        2.863
+      ],
+      "center": [
+        -1180.982,
+        -443.198
+      ],
+      "radius": 573.946,
+      "vertices": 4910
+    },
+    "res://assets/maps/liberty_city/godot_tiles/landsw_landsw__part_23.obj": {
+      "min": [
+        -1115.262,
+        -217.718
+      ],
+      "max": [
+        -873.575,
+        -67.281
+      ],
+      "center": [
+        -994.419,
+        -142.499
+      ],
+      "radius": 142.341,
+      "vertices": 2149
+    },
+    "res://assets/maps/liberty_city/godot_tiles/maps_overview__part_00.obj": {
+      "min": [
+        -347.857,
+        -1709.795
+      ],
+      "max": [
+        588.373,
+        265.865
+      ],
+      "center": [
+        120.258,
+        -721.965
+      ],
+      "radius": 1093.133,
+      "vertices": 5839
+    },
+    "res://assets/maps/liberty_city/godot_tiles/maps_overview__part_01.obj": {
+      "min": [
+        -258.066,
+        -1624.054
+      ],
+      "max": [
+        1610.615,
+        219.799
+      ],
+      "center": [
+        676.274,
+        -702.128
+      ],
+      "radius": 1312.609,
+      "vertices": 6852
+    },
+    "res://assets/maps/liberty_city/godot_tiles/maps_overview__part_02.obj": {
+      "min": [
+        -212.307,
+        -1709.796
+      ],
+      "max": [
+        1489.985,
+        265.865
+      ],
+      "center": [
+        638.839,
+        -721.966
+      ],
+      "radius": 1303.939,
+      "vertices": 7440
+    },
+    "res://assets/maps/liberty_city/godot_tiles/maps_overview__part_03.obj": {
+      "min": [
+        -1628.246,
+        -1592.396
+      ],
+      "max": [
+        637.41,
+        1156.114
+      ],
+      "center": [
+        -495.418,
+        -218.141
+      ],
+      "radius": 1780.976,
+      "vertices": 7916
+    },
+    "res://assets/maps/liberty_city/godot_tiles/maps_overview__part_04.obj": {
+      "min": [
+        -1279.975,
+        -1665.891
+      ],
+      "max": [
+        938.304,
+        1131.967
+      ],
+      "center": [
+        -170.835,
+        -266.962
+      ],
+      "radius": 1785.271,
+      "vertices": 97886
+    },
+    "res://assets/maps/liberty_city/godot_tiles/maps_overview__part_05.obj": {
+      "min": [
+        -1468.965,
+        -1829.392
+      ],
+      "max": [
+        1761.116,
+        334.601
+      ],
+      "center": [
+        146.075,
+        -747.396
+      ],
+      "radius": 1943.984,
+      "vertices": 23634
+    },
+    "res://assets/maps/liberty_city/godot_tiles/maps_props__part_00.obj": {
+      "min": [
+        824.667,
+        -1122.734
+      ],
+      "max": [
+        1352.81,
+        66.701
+      ],
+      "center": [
+        1088.738,
+        -528.016
+      ],
+      "radius": 650.71,
+      "vertices": 62869
+    },
+    "res://assets/maps/liberty_city/godot_tiles/maps_props__part_01.obj": {
+      "min": [
+        841.145,
+        -1182.346
+      ],
+      "max": [
+        1478.199,
+        -30.25
+      ],
+      "center": [
+        1159.672,
+        -606.298
+      ],
+      "radius": 658.248,
+      "vertices": 28796
+    }
+  }
+}

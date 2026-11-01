@@ -1,0 +1,479 @@
+newmtl iten_chinatown37_m0_chinatown0864
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/chinatown0864.PNG
+
+newmtl iten_chinatown37_m1_Corigate64green
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/Corigate64green.PNG
+
+newmtl iten_chinatown37_m2_redband_64Ha
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/redband_64Ha.PNG
+
+newmtl iten_chinatown37_m3_chinatown09128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/chinatown09128.PNG
+
+newmtl Chinabuilds05_m0_concrete02_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/concrete02_64HV.PNG
+
+newmtl Chinabuilds05_m1_indmidbeigebrick64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/indmidbeigebrick64.PNG
+
+newmtl Chinabuilds05_m2_conc_wall_128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/conc_wall_128H.PNG
+
+newmtl Chinabuilds05_m3_wallwasdrker128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/wallwasdrker128.PNG
+
+newmtl Chinabuilds05_m4_ind_tentop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ind_tentop128.PNG
+
+newmtl Chinabuilds05_m5_tallbuild256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/tallbuild256.PNG
+
+newmtl Chinabuilds05_m6_redlitblankdark3_128hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildmainten5/redlitblankdark3_128hv.PNG
+
+newmtl Chinabuilds05_m7_ledgeskuzz64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/ledgeskuzz64.PNG
+
+newmtl Chinabuilds05_m8_TENdblueblank_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/TENdblueblank_128.PNG
+
+newmtl Chinabuilds05_m9_indmidbeigeten128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/indmidbeigeten128.PNG
+
+newmtl Chinabuilds05_m10_tenwhitebrick64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/tenwhitebrick64.PNG
+
+newmtl Chinabuilds05_m11_tenwhite128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/tenwhite128.PNG
+
+newmtl Chinabuilds05_m12_tallbuildb256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/tallbuildb256.PNG
+
+newmtl Chinabuilds05_m13_chinakamlay256hi128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/chinakamlay256hi128.PNG
+
+newmtl Chinabuilds05_m14_shopfront3128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/shopfront3128.PNG
+
+newmtl Chinabuilds05_m15_packets128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/packets128.PNG
+
+newmtl Chinabuilds05_m16_shopdoor1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/shopdoor1_64.PNG
+
+newmtl Chinabuilds05_m17_stuffa128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/stuffa128.PNG
+
+newmtl Chinabuilds05_m18_shopdoor4_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casino/shopdoor4_64.PNG
+
+newmtl Chinabuilds05_m19_shopfront1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/shopfront1_128.PNG
+
+newmtl Chinabuilds05_m20_window1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/window1.PNG
+
+newmtl Chinabuilds05_m21_booze128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/booze128.PNG
+
+newmtl Chinabuilds05_m22_inddoordark128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/inddoordark128.PNG
+
+newmtl Chinabuilds05_m23_laundrttephoto_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/laundrttephoto_64.PNG
+
+newmtl Chinabuilds05_m24_chinatown0164
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/chinatown0164.PNG
+
+newmtl Chinabuilds05_m25_chinatown02128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/chinatown02128.PNG
+
+newmtl Chinabuilds05_m26_PlaindoorRed_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/PlaindoorRed_64V.PNG
+
+newmtl Chinabuilds05_m27_chinablue256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/chinablue256128.PNG
+
+newmtl Chinabuilds05_m28_chinagreen256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/chinagreen256128.PNG
+
+newmtl Chinabuilds05_m29_door1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/door1.PNG
+
+newmtl Chinabuilds05_m30_black64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/black64.PNG
+
+newmtl Chinabuilds09_m0_ind_tentop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ind_tentop128.PNG
+
+newmtl Chinabuilds09_m1_newall1-1_16c128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo3b/newall1-1_16c128.PNG
+
+newmtl Chinabuilds09_m2_stepflat_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/stepflat_64HV.PNG
+
+newmtl Chinabuilds09_m3_inddoor7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/inddoor7.PNG
+
+newmtl Chinabuilds09_m4_policewall64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/policewall64.PNG
+
+newmtl Chinabuilds09_m5_sign1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/sign1.PNG
+
+newmtl Chinabuilds09_m6_blackdrum128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/blackdrum128.PNG
+
+newmtl Chinabuilds09_m7_cafea64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/cafea64.PNG
+
+newmtl Chinabuilds09_m8_shopdoor3_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/shopdoor3_64.PNG
+
+newmtl Chinabuilds09_m9_window7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/window7.PNG
+
+newmtl Chinabuilds09_m10_door1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/door1.PNG
+
+newmtl Chinabuilds09_m11_policerepeat256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/policerepeat256128.PNG
+
+newmtl Chinabuilds09_m12_chinadarkbil256hi128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/chinadarkbil256hi128.PNG
+
+newmtl Chinabuilds09_m13_chinadarkbilb256hi128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/chinadarkbilb256hi128.PNG
+
+newmtl Chinabuilds09_m14_chinaneon256hi128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/chinaneon256hi128.PNG
+
+newmtl policeballhall_m0_newall8-2_seamless128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsky3/newall8-2_seamless128.PNG
+
+newmtl policeballhall_m1_flatslates_grey64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colmansion/flatslates_grey64HV.PNG
+
+newmtl policeballhall_m2_ind_tentop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ind_tentop128.PNG
+
+newmtl policeballhall_m3_newall1-3seamless128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/newall1-3seamless128.PNG
+
+newmtl policeballhall_m4_uper_floors_2128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indpoliceball/uper_floors_2128.PNG
+
+newmtl policeballhall_m5_concrete_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/concrete_64HV.PNG
+
+newmtl policeballhall_m6_banding3b_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/com_police/banding3b_64H.PNG
+
+newmtl policeballhall_m7_concreteslab_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indpoliceball/concreteslab_64HV.PNG
+
+newmtl policeballhall_m8_blueboards64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indpoliceball/blueboards64HV.PNG
+
+newmtl policeballhall_m9_wood03
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/wood03.PNG
+
+newmtl policeballhall_m10_black64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/black64.PNG
+
+newmtl policeballhall_m11_sandytar_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/sandytar_64HV.PNG
+
+newmtl firescapb1_m0_ladder
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinablocks/ladder.PNG
+
+newmtl firescapb1_m1_Alumox64b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/3d8ball/Alumox64b.PNG
+
+newmtl firescapb1_m2_Grid64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinablocks/Grid64.PNG
+
+newmtl new_chinaawning_m0_redroof_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/redroof_64.PNG
+
+newmtl new_chinaawning_m1_cratetop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/cratetop128.PNG
+
+newmtl new_chinaawning_m2_wood02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/wood02.PNG
+
+newmtl chinaquadhouse_m0_newall5-2_16c128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/newall5-2_16c128.PNG
+
+newmtl chinaquadhouse_m1_Plaindoor_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/Plaindoor_64.PNG
+
+newmtl chinaquadhouse_m2_ind_tentop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ind_tentop128.PNG
+
+newmtl chinaquadhouse_m3_indtenredbrick64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/indtenredbrick64.PNG
+
+newmtl chinaquadhouse_m4_ind_tenred128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/ind_tenred128.PNG
+
+newmtl chinaquadhouse_m5_hongkong256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/hongkong256128.PNG
+
+newmtl chinaquadhouse_m6_window2128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/window2128.PNG
+
+newmtl chinaquadhouse_m7_white464
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/white464.PNG
+
+newmtl chinaquadhouse_m8_Alumox64b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/3d8ball/Alumox64b.PNG
+
+newmtl chinaquadhouse_m9_Aascaff_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/Aascaff_64HV.PNG
+
+newmtl chinaquadhouse_m10_shopgrating3128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/shopgrating3128H.PNG
+
+newmtl chinaquadhouse_m11_junk_washer1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/junk_washer1.PNG
+
+newmtl chinaquadhouse_m12_canopy_flat_64v
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/canopy_flat_64v.PNG
+
+newmtl chinaquadhouse_m13_pole_support_64h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/pole_support_64h.PNG
+
+newmtl chinaquadhouse_m14_window9
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/window9.PNG
+
+newmtl chinaquadhouse_m15_shopdoor1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/shopdoor1_64.PNG
+
+newmtl chinaquadhouse_m16_shopfront1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/shopfront1_128.PNG
+
+newmtl chinaquadhouse_m17_shopgrating4128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/shopgrating4128H.PNG
+
+newmtl chinaquadhouse_m18_window10
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/window10.PNG
+
+newmtl chinaquadhouse_m19_window4
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/window4.PNG
+
+newmtl chinaquadhouse_m20_b_wtileswet
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/b_wtileswet.PNG
+
+newmtl chinaquadhouse_m21_diner1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/carpark/diner1.PNG
+
+newmtl chinaquadhouse_m22_laundrette_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/laundrette_128.PNG
+
+newmtl chinaquadhouse_m23_dustytar_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/dustytar_64HV.PNG
+
+newmtl chinaquadhouse_m24_stepflat_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/stepflat_64HV.PNG
+
+newmtl chinaquadhouse_m25_inddoor7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/inddoor7.PNG
+
+newmtl chinaquadhouse_m26_indlobster256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/indlobster256128.PNG
+
+newmtl chinaquadhouse_m27_darkphotoshp256hi128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/darkphotoshp256hi128.PNG

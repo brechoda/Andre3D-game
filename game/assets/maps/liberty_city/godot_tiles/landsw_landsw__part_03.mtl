@@ -1,0 +1,479 @@
+newmtl bar_gatebar01_m1_redband_64Ha
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/redband_64Ha.PNG
+
+newmtl bar_gatebox01_m0_bareboards_64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/portabarrier/bareboards_64a.PNG
+
+newmtl bar_gatebox01_m1_cratetop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/cratetop128.PNG
+
+newmtl bar_gatebox01_m2_glass_64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/lighthouse/glass_64a.PNG
+
+newmtl bar_gatebox01_m3_banding_blue_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/banding_blue_64HV.PNG
+
+newmtl bar_gatebox01_m4_Stop2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/portabarrier/Stop2_64.PNG
+
+newmtl lhouse_barrier3_m0_Alumplat64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/csitecutscene/Alumplat64.PNG
+
+newmtl mid_rock_m0_cliffwall-64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/inddbridge/cliffwall-64HV.PNG
+
+newmtl small_rock_m0_cliffwall-64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/inddbridge/cliffwall-64HV.PNG
+
+newmtl slab_block_m0_BLOCK2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildinsite/BLOCK2.PNG
+
+newmtl slab_block_m1_support_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildinsite/support_256128.PNG
+
+newmtl fire_hydrant_m0_redmetal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dynbarrels/redmetal.PNG
+
+newmtl barrel2_m0_barrel_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/barrel_64HV.PNG
+
+newmtl barrel1_m0_yellowmetal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/csitecutscene/yellowmetal.PNG
+
+newmtl barrel1_m1_Alumplat64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/csitecutscene/Alumplat64.PNG
+
+newmtl dump1_m0_Metal4_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compound/Metal4_256.PNG
+
+newmtl palette_m0_wood02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/wood02.PNG
+
+newmtl rcyclbank01_m0_bluemetal02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/bluemetal02.PNG
+
+newmtl rcyclbank01_m1_bincover_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrubbish/bincover_64HV.PNG
+
+newmtl rcyclbank01_m2_Green_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrubbish/Green_64.PNG
+
+newmtl rcyclbank01_m3_recycle01_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrubbish/recycle01_64.PNG
+
+newmtl woodenbox_m0_crate128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/crate128.PNG
+
+newmtl barrel4_m0_redallu
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/csitecutscene/redallu.PNG
+
+newmtl wood_block_m0_floorboard256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildinsite/floorboard256.PNG
+
+newmtl big_rock_m0_cliffwall-64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/inddbridge/cliffwall-64HV.PNG
+
+newmtl verticalift_bridge_m0_subindwall3_16
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dam/subindwall3_16.PNG
+
+newmtl verticalift_bridge_m1_rustybolts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustybolts.PNG
+
+newmtl verticalift_bridge_m2_support_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildinsite/support_256128.PNG
+
+newmtl verticalift_bridge_m3_banding6_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bilboard/banding6_64HV.PNG
+
+newmtl verticalift_bridge_m4_midgrey64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/midgrey64.PNG
+
+newmtl verticalift_bridge_m5_steel_lighter128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild2/steel_lighter128.PNG
+
+newmtl verticalift_bridge_m6_circle_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/circle_64.PNG
+
+newmtl verticalift_bridge_m7_rustyboltpanel
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridge/rustyboltpanel.PNG
+
+newmtl verticalift_bridge_m8_BLOCK
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/BLOCK.PNG
+
+newmtl verticalift_bridge_m9_redstuff
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/carpark/redstuff.PNG
+
+newmtl verticalift_bridge_m10_stopsignred
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/vertbridge/stopsignred.PNG
+
+newmtl subbridge07_m0_rustybolts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustybolts.PNG
+
+newmtl subbridge07_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl subbridge07_m2_conc_wall_stripd128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridgesupport/conc_wall_stripd128H.PNG
+
+newmtl subbridge07_m3_Road_1line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_1line256HV.PNG
+
+newmtl subbridge07_m4_shopwall_metal64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/vertbridge/shopwall_metal64HV.PNG
+
+newmtl subbridge07_m5_rustyboltpanel
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridge/rustyboltpanel.PNG
+
+newmtl subbridge07_m6_BLOCK2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildinsite/BLOCK2.PNG
+
+newmtl subbridge07_m7_girderdiagonal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/pumphouse/girderdiagonal.PNG
+
+newmtl subbridge01_m0_rustybolts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustybolts.PNG
+
+newmtl subbridge01_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl subbridge01_m2_conc_wall_stripd128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridgesupport/conc_wall_stripd128H.PNG
+
+newmtl subbridge01_m3_Road_1line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_1line256HV.PNG
+
+newmtl subbridge01_m4_shopwall_metal64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/vertbridge/shopwall_metal64HV.PNG
+
+newmtl subbridge01_m5_rustyboltpanel
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridge/rustyboltpanel.PNG
+
+newmtl subbridge01_m6_BLOCK2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildinsite/BLOCK2.PNG
+
+newmtl subbridge01_m7_girderdiagonal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/pumphouse/girderdiagonal.PNG
+
+newmtl subbridge19_m0_rustybolts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustybolts.PNG
+
+newmtl subbridge19_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl subbridge19_m2_conc_wall_stripd128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridgesupport/conc_wall_stripd128H.PNG
+
+newmtl subbridge19_m3_Road_1line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_1line256HV.PNG
+
+newmtl subbridge19_m4_shopwall_metal64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/vertbridge/shopwall_metal64HV.PNG
+
+newmtl subbridge19_m5_rustyboltpanel
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridge/rustyboltpanel.PNG
+
+newmtl subbridge19_m6_BLOCK2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildinsite/BLOCK2.PNG
+
+newmtl subbridge19_m7_girderdiagonal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/pumphouse/girderdiagonal.PNG
+
+newmtl subbridge20_m0_rustybolts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustybolts.PNG
+
+newmtl subbridge20_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl subbridge20_m2_conc_wall_stripd128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridgesupport/conc_wall_stripd128H.PNG
+
+newmtl subbridge20_m3_Road_1line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_1line256HV.PNG
+
+newmtl subbridge20_m4_shopwall_metal64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/vertbridge/shopwall_metal64HV.PNG
+
+newmtl subbridge20_m5_rustyboltpanel
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridge/rustyboltpanel.PNG
+
+newmtl subbridge20_m6_BLOCK2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildinsite/BLOCK2.PNG
+
+newmtl subbridge20_m7_girderdiagonal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/pumphouse/girderdiagonal.PNG
+
+newmtl subbridge_lift_m0_rustybolts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustybolts.PNG
+
+newmtl subbridge_lift_m1_conc_wall_stripd128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridgesupport/conc_wall_stripd128H.PNG
+
+newmtl subbridge_lift_m2_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl subbridge_lift_m3_Road_1line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_1line256HV.PNG
+
+newmtl subbridge_lift_m4_shopwall_metal64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/vertbridge/shopwall_metal64HV.PNG
+
+newmtl subbridge_lift_m5_rustyboltpanel
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridge/rustyboltpanel.PNG
+
+newmtl subbridge_lift_m6_BLOCK2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildinsite/BLOCK2.PNG
+
+newmtl bridge_liftweight_m0_redmetal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dynbarrels/redmetal.PNG
+
+newmtl bridge_liftweight_m1_steel_lighter128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild2/steel_lighter128.PNG
+
+newmtl bridge_liftsec_m0_wallwasdrker128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/wallwasdrker128.PNG
+
+newmtl bridge_liftsec_m1_bareboards_64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/portabarrier/bareboards_64a.PNG
+
+newmtl bridge_liftsec_m2_newall15
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subuild4/newall15.PNG
+
+newmtl bridge_liftsec_m3_rustmet64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/helipad/rustmet64.PNG
+
+newmtl bridge_liftsec_m4_banding6_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bilboard/banding6_64HV.PNG
+
+newmtl bridge_liftsec_m5_Window1164HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Window1164HV.PNG
+
+newmtl bridge_liftsec_m6_Wire03_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/Wire03_64.PNG
+
+newmtl bridge_liftsec_m7_midgrey64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/midgrey64.PNG
+
+newmtl bridge_liftsec_m8_cover5_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/cover5_64.PNG
+
+newmtl bridge_liftsec_m9_vent_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/vent_64.PNG
+
+newmtl bridge_liftsec_m10_subindwall3_16
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dam/subindwall3_16.PNG
+
+newmtl bridge_liftsec_m11_pipes_64HVa
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/vertbridge/pipes_64HVa.PNG
+
+newmtl bridge_liftsec_m12_wires_rust_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/wires_rust_64.PNG
+
+newmtl bridge_liftsec_m13_airconbottom64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/airconbottom64.PNG
+
+newmtl bridge_liftsec_m14_rustybolts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustybolts.PNG
+
+newmtl bridge_liftsec_m15_rustyboltpanel
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridge/rustyboltpanel.PNG
+
+newmtl verticalift_bridg2_m0_rustybolts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustybolts.PNG
+
+newmtl verticalift_bridg2_m1_rustyboltpanel
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridge/rustyboltpanel.PNG
+
+newmtl clif23_m0_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG

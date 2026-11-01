@@ -1,0 +1,164 @@
+newmtl sub_indland04_m15_frate_doors64yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/crate/frate_doors64yellow.PNG
+
+newmtl sub_indland04_m16_frate64_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compier/frate64_yellow.PNG
+
+newmtl sub_indland04_m17_Alumplat64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/csitecutscene/Alumplat64.PNG
+
+newmtl sub_indland03_m0_wallwashv128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsky3/wallwashv128.PNG
+
+newmtl sub_indland03_m1_churchwall3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subind3/churchwall3_64HV.PNG
+
+newmtl sub_indland03_m2_outmanwall2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subind6/outmanwall2.PNG
+
+newmtl sub_indland03_m3_newgrnd1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/newgrnd1_128.PNG
+
+newmtl sub_indland03_m0_outmanwall2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subind6/outmanwall2.PNG
+
+newmtl sub_indland03_m1_outmanwall1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subind6/outmanwall1.PNG
+
+newmtl sub_indland03_m2_weewall256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/weewall256128.PNG
+
+newmtl sub_indland03_m3_dustyconcrete128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/dustyconcrete128.PNG
+
+newmtl sub_indland03_m4_tag_gaz3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz3.PNG
+
+newmtl sub_indland03_m5_grasspatch_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subind6/grasspatch_64HV.PNG
+
+newmtl sub_indland03_m6_tag_gaz1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz1.PNG
+
+newmtl sub_indland03_m7_tag_gaz6
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz6.PNG
+
+newmtl sub_indland03_m8_steel64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/steel64.PNG
+
+newmtl sub_indland03_m9_chevronYB_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/chevronYB_64.PNG
+
+newmtl sub_indland03_m10_exit_noexit128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/exit_noexit128.PNG
+
+newmtl sub_indland03_m11_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl sub_indland03_m12_metalcopy
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/metalcopy.PNG
+
+newmtl sub_indland05_m0_newall4-2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subind7/newall4-2.PNG
+
+newmtl sub_indland05_m1_newall4-1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subind7/newall4-1.PNG
+
+newmtl sub_indland05_m2_newall4-3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subind7/newall4-3.PNG
+
+newmtl sub_indland05_m3_newall4-4
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subind7/newall4-4.PNG
+
+newmtl sub_indland05_m4_newgrnd1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/newgrnd1_128.PNG
+
+newmtl sub_indland05_m0_concretebigblu4256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comstadium/concretebigblu4256128.PNG
+
+newmtl sub_indland05_m1_newall4-2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subind7/newall4-2.PNG
+
+newmtl sub_indland05_m4_newall4-1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subind7/newall4-1.PNG
+
+newmtl sub_indland05_m5_KeepOut_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/KeepOut_64.PNG
+
+newmtl sub_indland05_m6_triptich01128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subind7/triptich01128.PNG
+
+newmtl sub_indland05_m7_triptich02128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subind7/triptich02128.PNG
+
+newmtl sub_indland05_m8_triptich03128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subind7/triptich03128.PNG
+
+newmtl sub_indland05_m9_graffiti2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comtoilet/graffiti2_64.PNG

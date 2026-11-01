@@ -1,0 +1,478 @@
+newmtl ind_mainten5_m0_ind_tentop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ind_tentop128.PNG
+
+newmtl ind_mainten5_m1_newall9d_16c128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/newall9d_16c128.PNG
+
+newmtl ind_mainten5_m2_tallbuild256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/tallbuild256.PNG
+
+newmtl ind_mainten5_m3_redlitblankdark3_128hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildmainten5/redlitblankdark3_128hv.PNG
+
+newmtl ind_mainten5_m4_tallbuildb256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/tallbuildb256.PNG
+
+newmtl ind_mainten5_m5_sffront23_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildmainten5/sffront23_256128.PNG
+
+newmtl ind_mainten5_m6_sffront19a_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildmainten5/sffront19a_256128.PNG
+
+newmtl ind_mainten5_m7_gourmetdeli256hi128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildmainten5/gourmetdeli256hi128.PNG
+
+newmtl ind_mainten5_m8_sffront20_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildmainten5/sffront20_256128.PNG
+
+newmtl ind_mainten5_m9_sffront24_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildmainten5/sffront24_256128.PNG
+
+newmtl ind_mainten5_m10_delilib256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildmainten5/delilib256128.PNG
+
+newmtl ind_mainten5_m11_sffront26_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildmainten5/sffront26_256128.PNG
+
+newmtl ind_mainten5_m12_coffeebarsign256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/coffeebarsign256128.PNG
+
+newmtl boatcranelg_m0_yellowvertical_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indjunk/yellowvertical_64HV.PNG
+
+newmtl boatcranelg_m1_ybstripe128h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dockvats/ybstripe128h.PNG
+
+newmtl boatcranelg_m2_Aascaff64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/boats/Aascaff64.PNG
+
+newmtl boatcranelg_m3_metpat_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/metpat_64.PNG
+
+newmtl boatcranelg_m4_glass2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/glass2_64.PNG
+
+newmtl rustship_structure_m0_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl rustship_structure_m1_cargo2_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/cargo2_128.PNG
+
+newmtl rustship_structure_m2_cargo6_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/cargo6_128.PNG
+
+newmtl rustship_structure_m3_rustc64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/rustc64.PNG
+
+newmtl rustship_structure_m4_greyfence
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal4/greyfence.PNG
+
+newmtl rustship_structure_m5_Copperox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/Copperox64.PNG
+
+newmtl rustship_structure_m6_cargo4_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/cargo4_128.PNG
+
+newmtl rustship_structure_m7_rustb64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/rustb64.PNG
+
+newmtl rustship_structure_m8_cargodoor_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/cargodoor_128.PNG
+
+newmtl rustship_structure_m9_brownmetal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/brownmetal.PNG
+
+newmtl rustship_structure_m10_glass2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/glass2_64.PNG
+
+newmtl rustship_structure_m11_cargo5_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/cargo5_128.PNG
+
+newmtl rustship_structure_m12_rustd64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/railway/rustd64.PNG
+
+newmtl rustship_structure_m13_steel128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/com_police/steel128.PNG
+
+newmtl rustship_structure_m14_cargo8_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/cargo8_128.PNG
+
+newmtl rustship_structure_m15_banding4_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basketballcrt/banding4_64HV.PNG
+
+newmtl rustship_structure_m16_cargo1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/cargo1_128.PNG
+
+newmtl rustship_structure_m17_cargo3_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/cargo3_128.PNG
+
+newmtl rustship_structure_m18_crate128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/crate128.PNG
+
+newmtl rustship_structure_m19_yellowvertical_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indjunk/yellowvertical_64HV.PNG
+
+newmtl rustship_structure_m20_redvertical_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/joeysext/redvertical_64HV.PNG
+
+newmtl rustship_structure_m21_frate_doors64yellow128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/frate_doors64yellow128.PNG
+
+newmtl rustship_structure_m22_frate_doors128red128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compier/frate_doors128red128.PNG
+
+newmtl rustship_structure_m23_bluevertical_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/bluevertical_64HV.PNG
+
+newmtl rustship_structure_m24_frate_doors64128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compier/frate_doors64128.PNG
+
+newmtl rustship_structure_m25_ybstripe128h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dockvats/ybstripe128h.PNG
+
+newmtl rustship_structure_m26_Aascaff64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/boats/Aascaff64.PNG
+
+newmtl rustship_structure_m27_metpat_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/metpat_64.PNG
+
+newmtl rustship_structure_m28_light64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/light64.PNG
+
+newmtl rustship_structure_m29_glass2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/glass2_64.PNG
+
+newmtl rustship_structure_m30_runwaylight_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/runwaylight_64.PNG
+
+newmtl rustship_structure_m31_black64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/black64.PNG
+
+newmtl crgoshp01_m0_cargo10_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/cargo10_128.PNG
+
+newmtl crgoshp01_m1_cargo9_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/cargo9_128.PNG
+
+newmtl crgoshp01_m2_steel128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/com_police/steel128.PNG
+
+newmtl crgoshp01_m3_cargo7_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/cargo7_128.PNG
+
+newmtl crgoshp01_m4_rustb64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/rustb64.PNG
+
+newmtl crgoshp01_m5_rustd64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/railway/rustd64.PNG
+
+newmtl crgoshp01_m6_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl crgoshp01_m7_Copperox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/Copperox64.PNG
+
+newmtl crgoshp01_m8_cratetop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/cratetop128.PNG
+
+newmtl crgoshp01_m9_cabintop1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinaedge/cabintop1.PNG
+
+newmtl crgoshp01_m10_cargo6_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/cargo6_128.PNG
+
+newmtl crgoshp01_m11_glass2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/glass2_64.PNG
+
+newmtl crgoshp01_m12_cargo3_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/cargo3_128.PNG
+
+newmtl crgoshp01_m13_greyfence
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal4/greyfence.PNG
+
+newmtl crgoshp01_m14_cargo8_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/cargo8_128.PNG
+
+newmtl crgoshp01_m15_black64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/black64.PNG
+
+newmtl crgoshp01_m16_cabin5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/cabin5.PNG
+
+newmtl crgoshp01_m17_banding4_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basketballcrt/banding4_64HV.PNG
+
+newmtl factorym_box_m0_dogpillar_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/busdepot/dogpillar_128.PNG
+
+newmtl factorym_box_m1_newall1-1_16c128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo3b/newall1-1_16c128.PNG
+
+newmtl factorym_box_m2_diner_window
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/factorym/diner_window.PNG
+
+newmtl factorym_box_m3_sfwindow14_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild3/sfwindow14_128.PNG
+
+newmtl factorym_box_m4_inddoor7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/inddoor7.PNG
+
+newmtl factorym_box_m5_ledgetop_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ledgetop_64HV.PNG
+
+newmtl factorym_box_m6_newall1-3_16c128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/factorym/newall1-3_16c128.PNG
+
+newmtl warehouse3z_m0_corrRoof_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/corrRoof_64HV.PNG
+
+newmtl warehouse3z_m1_newall3_16c128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/newall3_16c128.PNG
+
+newmtl warehouse3z_m2_taxi_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/taxi_256128.PNG
+
+newmtl warehouse3z_m3_concretebuild64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/concretebuild64.PNG
+
+newmtl warehouse3z_m4_hi_nopark1_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/busdepot/hi_nopark1_256128.PNG
+
+newmtl warehouse3z_m5_Plaindoor_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compound/Plaindoor_64V.PNG
+
+newmtl warehouse3z_m6_Window1064HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo3b/Window1064HV.PNG
+
+newmtl warehouse2z_m0_corrRoof_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/corrRoof_64HV.PNG
+
+newmtl warehouse2z_m1_newall3_16c128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/newall3_16c128.PNG
+
+newmtl warehouse2z_m2_corrugated5_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/corrugated5_64HV.PNG
+
+newmtl warehouse2z_m3_concretebuild64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/concretebuild64.PNG
+
+newmtl warehouse2z_m4_hi_nopark1_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/busdepot/hi_nopark1_256128.PNG
+
+newmtl warehouse2z_m5_Oldstone3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/factory/Oldstone3_64HV.PNG
+
+newmtl warehouse2z_m6_Plaindoor_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compound/Plaindoor_64V.PNG
+
+newmtl warehouse2z_m7_Window1064HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo3b/Window1064HV.PNG
+
+newmtl warehouse2z_m8_old_corugwal2_256_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compier/old_corugwal2_256_128.PNG
+
+newmtl westpostsign_m0_jettyfloor02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildingsite/jettyfloor02.PNG
+
+newmtl westpostsign_m1_westportsign4
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sawmillground/westportsign4.PNG
+
+newmtl westpostsign_m2_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl cranebaseb_m0_aascaff
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comseroadbits/aascaff.PNG
+
+newmtl cranebaseb_m1_astruta
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cranes/astruta.PNG

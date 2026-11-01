@@ -1,0 +1,478 @@
+newmtl mak_semtech_m0_rustyblocks_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rustyblocks_64HV.PNG
+
+newmtl mak_semtech_m1_walldirtynewa256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/walldirtynewa256128.PNG
+
+newmtl mak_semtech_m2_newall1-3seamless128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/newall1-3seamless128.PNG
+
+newmtl mak_semtech_m3_Industdoor5128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Industdoor5128.PNG
+
+newmtl mak_semtech_m4_mottled_grey_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/mottled_grey_64HV.PNG
+
+newmtl mak_semtech_m5_corrugated5_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/corrugated5_64HV.PNG
+
+newmtl mak_semtech_m6_newall9-2128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/newall9-2128.PNG
+
+newmtl mak_semtech_m7_banding3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/banding3_64HV.PNG
+
+newmtl mak_semtech_m8_ventc128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/ventc128.PNG
+
+newmtl mak_semtech_m9_toolwall1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/toolwall1.PNG
+
+newmtl mak_semtech_m10_skidmark_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/skidmark_64.PNG
+
+newmtl mak_semtech_m11_veding2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/veding2_64.PNG
+
+newmtl mak_semtech_m12_veding1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/veding1_64.PNG
+
+newmtl mak_semtech_m13_8ballSIGN
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/8ballSIGN.PNG
+
+newmtl mak_semtech_m14_Window1264HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Window1264HV.PNG
+
+newmtl mak_semtech_m15_X-wire_rusty_64VH
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/X-wire rusty 64VH.PNG
+
+newmtl mak_semtech_m16_Window1164HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Window1164HV.PNG
+
+newmtl LOD_semtech_m0_eightballs2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust2/eightballs2.PNG
+
+newmtl LOD_semtech_m1_eightballs1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust2/eightballs1.PNG
+
+newmtl mak_bomb01_m0_newall15128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/newall15128.PNG
+
+newmtl mak_bomb01_m1_walldirtynewa256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/walldirtynewa256128.PNG
+
+newmtl mak_bomb01_m2_Industdoor1128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Industdoor1128.PNG
+
+newmtl mak_bomb01_m3_rustyblocks_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rustyblocks_64HV.PNG
+
+newmtl mak_bomb01_m4_drivecare_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/drivecare_64.PNG
+
+newmtl mak_bomb01_m5_lights_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/lights_64HV.PNG
+
+newmtl mak_bomb01_m6_metpat_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/metpat_64.PNG
+
+newmtl mak_bomb01_m7_chevron_red_64HVa
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/chevron_red_64HVa.PNG
+
+newmtl mak_bomb01_m8_wires_rust_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/wires_rust_64.PNG
+
+newmtl mak_bomb01_m9_8ball_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/8ball_64.PNG
+
+newmtl LOD_bomb01_m0_eightballs2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust2/eightballs2.PNG
+
+newmtl toplandit_m0_newgrnd1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/newgrnd1_128.PNG
+
+newmtl toplandit_m1_newall10128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/docksbuild/newall10128.PNG
+
+newmtl toplandit_m2_Strip_weathered3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Strip_weathered3_64HV.PNG
+
+newmtl toplandit_m3_cover5_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/cover5_64.PNG
+
+newmtl toplandit_m4_black64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/black64.PNG
+
+newmtl toplandit_m5_newallktenb1128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/newallktenb1128.PNG
+
+newmtl indbakland_m0_newgrnd1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/newgrnd1_128.PNG
+
+newmtl indbakland_m1_newall9-2128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/newall9-2128.PNG
+
+newmtl indbakland_m2_Paveroad_tarmac128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/Paveroad_tarmac128.PNG
+
+newmtl ind_newrizzos_m0_rooftiles0264
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tonys/rooftiles0264.PNG
+
+newmtl ind_newrizzos_m1_newall9128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indtunnel/newall9128.PNG
+
+newmtl ind_newrizzos_m2_concretebuild64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/concretebuild64.PNG
+
+newmtl ind_newrizzos_m3_dirtyframe64HVa
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/factory/dirtyframe64HVa.PNG
+
+newmtl ind_newrizzos_m4_comdoor1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/comdoor1_128.PNG
+
+newmtl ind_newrizzos_m5_ledgetop_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ledgetop_64HV.PNG
+
+newmtl ind_newrizzos_m6_fancy_slab128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/fancy_slab128.PNG
+
+newmtl ind_newrizzos_m7_balcony_64Ha
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tonys/balcony_64Ha.PNG
+
+newmtl ind_newrizzos_m8_Mud_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tonys/Mud_64HV.PNG
+
+newmtl ind_newrizzos_m9_newall6_16c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/inddbridge/newall6_16c.PNG
+
+newmtl ind_newrizzos_m10_wallred_white64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tonys/wallred_white64HV.PNG
+
+newmtl ind_newrizzos_m11_Lattice_alpha
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tonys/Lattice_alpha.PNG
+
+newmtl ind_newrizzos_m12_awning1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tonys/awning1.PNG
+
+newmtl ind_newrizzos_m13_flagcols_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/italyfalg/flagcols_64.PNG
+
+newmtl ind_newrizzos_m14_Rizzos_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tonys/Rizzos_64.PNG
+
+newmtl ind_newrizzos_m15_dragwall4_128hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/dragwall4_128hv.PNG
+
+newmtl ind_newrizzos_m16_alleypave_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/alleypave_64V.PNG
+
+newmtl ind_newrizzos_m17_wood03
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/wood03.PNG
+
+newmtl ind_newrizzos_m18_wood02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/wood02.PNG
+
+newmtl ind_newrizzos_m19_redwhite_stripe
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/redwhite_stripe.PNG
+
+newmtl ind_newrizzos_m20_trafficcone
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/trafficcone.PNG
+
+newmtl ind_newrizzos_m21_urntop_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tonys/urntop_64.PNG
+
+newmtl ind_newrizzos_m22_greekurn_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tonys/greekurn_64.PNG
+
+newmtl ind_newrizzos_m23_lattice2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/condo/lattice2.PNG
+
+newmtl ind_newrizzos_m24_ivy4new
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tonys/ivy4new.PNG
+
+newmtl ind_newrizzos_m25_ivy3new
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tonys/ivy3new.PNG
+
+newmtl ind_newrizzos_m26_concretelumbb128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/concretelumbb128HV.PNG
+
+newmtl ind_newrizzos_m27_Boards_dirtyshed_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/Boards_dirtyshed_64HV.PNG
+
+newmtl ind_newrizzos_m28_Mud_wet_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tonys/Mud_wet_128HV.PNG
+
+newmtl ind_newrizzos_m29_Shrub_64HVa
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/Shrub_64HVa.PNG
+
+newmtl ind_newrizzos_m30_gridnorm_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/gridnorm_64HV.PNG
+
+newmtl ind_newrizzos_m31_black64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/black64.PNG
+
+newmtl cs8_door_m0_posh1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/posh1_128.PNG
+
+newmtl franksclbase_m0_sandstone_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/sandstone_128.PNG
+
+newmtl franksclbase_m1_fancy_slab128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/fancy_slab128.PNG
+
+newmtl franksclbase_m2_Marblewhite_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/frankiesbase/Marblewhite_64HV.PNG
+
+newmtl franksclbase_m3_Industdoor1128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Industdoor1128.PNG
+
+newmtl franksclbase_m4_concretenewb256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/concretenewb256128.PNG
+
+newmtl swank_inside_m0_clock_base
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sal_inside/clock_base.PNG
+
+newmtl swank_inside_m1_couch_front
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sal_inside/couch_front.PNG
+
+newmtl swank_inside_m2_couch_back
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sal_inside/couch_back.PNG
+
+newmtl swank_inside_m3_couch_arms
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sal_inside/couch_arms.PNG
+
+newmtl swank_inside_m4_teac
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sal_inside/teac.PNG
+
+newmtl swank_inside_m5_velvet2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/frankiesbase/velvet2.PNG
+
+newmtl swank_inside_m6_WALLPANEL_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sal_inside/WALLPANEL_2.PNG
+
+newmtl swank_inside_m7_pretty_pictures
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sal_inside/pretty_pictures.PNG
+
+newmtl swank_inside_m8_clock_bod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sal_inside/clock_bod.PNG
+
+newmtl swank_inside_m9_clock_guts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sal_inside/clock_guts.PNG
+
+newmtl swank_inside_m10_clock_face
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sal_inside/clock_face.PNG
+
+newmtl swank_inside_m11_backfit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sal_inside/backfit.PNG
+
+newmtl swank_inside_m12_piano
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl swank_inside_m13_CARPET
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sal_inside/CARPET.PNG
+
+newmtl swank_inside_m14_metalblasted
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sal_inside/metalblasted.PNG
+
+newmtl swank_inside_m15_WALLPANEL
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sal_inside/WALLPANEL.PNG
+
+newmtl swank_inside_m16_corniche
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sal_inside/corniche.PNG
+
+newmtl swank_inside_m17_ceiling_panel
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sal_inside/ceiling_panel.PNG
+
+newmtl swank_inside_m18_ceiling
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sal_inside/ceiling.PNG

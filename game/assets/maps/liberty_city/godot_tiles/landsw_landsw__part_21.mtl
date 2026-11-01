@@ -1,0 +1,464 @@
+newmtl tunl_4_Cus9_m8_tunnelroofconcrete
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelroofconcrete.PNG
+
+newmtl tunl_4_Cus9_m9_striplights
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/striplights.PNG
+
+newmtl tunl_4_Cus15_m0_tunnelsidewalk
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelsidewalk.PNG
+
+newmtl tunl_4_Cus15_m1_tunnelwallwhitebottom
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/tunnelwallwhitebottom.PNG
+
+newmtl tunl_4_Cus15_m2_tunnelwallwhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/tunnelwallwhite.PNG
+
+newmtl tunl_4_Cus15_m3_tunnelwallwhitedark2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelwallwhitedark2.PNG
+
+newmtl tunl_4_Cus15_m4_tunnelwallwhitetop
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/tunnelwallwhitetop.PNG
+
+newmtl tunl_4_Cus15_m5_tunnelconcreteside
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/tunnelconcreteside.PNG
+
+newmtl tunl_4_Cus15_m6_Road_1line256HV128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/Road_1line256HV128.PNG
+
+newmtl tunl_4_Cus15_m7_tunnelroofgirder
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelroofgirder.PNG
+
+newmtl tunl_4_Cus15_m8_tunnelroofconcrete
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelroofconcrete.PNG
+
+newmtl tunl_4_Cus15_m9_striplights
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/striplights.PNG
+
+newmtl tunl_4_Cus15_m10_BLOCK2low
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/BLOCK2low.PNG
+
+newmtl tunl_4_Cus14_m0_tunnelwallwhitebottom
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/tunnelwallwhitebottom.PNG
+
+newmtl tunl_4_Cus14_m1_tunnelsidewalk
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelsidewalk.PNG
+
+newmtl tunl_4_Cus14_m2_tunnelwallwhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/tunnelwallwhite.PNG
+
+newmtl tunl_4_Cus14_m3_tunnelwallwhitedark2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelwallwhitedark2.PNG
+
+newmtl tunl_4_Cus14_m4_tunnelwallwhitetop
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/tunnelwallwhitetop.PNG
+
+newmtl tunl_4_Cus14_m5_tunnelconcreteside
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/tunnelconcreteside.PNG
+
+newmtl tunl_4_Cus14_m6_Road_1line256HV128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/Road_1line256HV128.PNG
+
+newmtl tunl_4_Cus14_m7_tunnelroofgirder
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelroofgirder.PNG
+
+newmtl tunl_4_Cus14_m8_tunnelroofconcrete
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelroofconcrete.PNG
+
+newmtl tunl_4_Cus14_m9_striplights
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/striplights.PNG
+
+newmtl tunl_4_Cus11_m0_tunnelwallwhitebottom
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/tunnelwallwhitebottom.PNG
+
+newmtl tunl_4_Cus11_m1_tunnelsidewalk
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelsidewalk.PNG
+
+newmtl tunl_4_Cus11_m2_tunnelwallwhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/tunnelwallwhite.PNG
+
+newmtl tunl_4_Cus11_m3_tunnelwallwhitedark2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelwallwhitedark2.PNG
+
+newmtl tunl_4_Cus11_m4_tunnelwallwhitetop
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/tunnelwallwhitetop.PNG
+
+newmtl tunl_4_Cus11_m5_tunnelconcreteside
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/tunnelconcreteside.PNG
+
+newmtl tunl_4_Cus11_m6_Road_1line256HV128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/Road_1line256HV128.PNG
+
+newmtl tunl_4_Cus11_m7_tunnelroofgirder
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelroofgirder.PNG
+
+newmtl tunl_4_Cus11_m8_tunnelroofconcrete
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelroofconcrete.PNG
+
+newmtl tunl_4_Cus11_m9_striplights
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/striplights.PNG
+
+newmtl tunl_4_Cus10_m0_tunnelwallwhitebottom
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/tunnelwallwhitebottom.PNG
+
+newmtl tunl_4_Cus10_m1_tunnelsidewalk
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelsidewalk.PNG
+
+newmtl tunl_4_Cus10_m2_tunnelwallwhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/tunnelwallwhite.PNG
+
+newmtl tunl_4_Cus10_m3_tunnelwallwhitedark2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelwallwhitedark2.PNG
+
+newmtl tunl_4_Cus10_m4_tunnelwallwhitetop
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/tunnelwallwhitetop.PNG
+
+newmtl tunl_4_Cus10_m5_tunnelconcreteside
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/tunnelconcreteside.PNG
+
+newmtl tunl_4_Cus10_m6_Road_1line256HV128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/Road_1line256HV128.PNG
+
+newmtl tunl_4_Cus10_m7_tunnelroofgirder
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelroofgirder.PNG
+
+newmtl tunl_4_Cus10_m8_tunnelroofconcrete
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelroofconcrete.PNG
+
+newmtl tunl_4_Cus10_m9_striplights
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/striplights.PNG
+
+newmtl tunl_4_Cus12_m0_tunnelconcreteside
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/tunnelconcreteside.PNG
+
+newmtl tunl_4_Cus12_m1_tunnelwallwhitebottom
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/tunnelwallwhitebottom.PNG
+
+newmtl tunl_4_Cus12_m2_tunnelsidewalk
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelsidewalk.PNG
+
+newmtl tunl_4_Cus12_m3_tunnelwallwhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/tunnelwallwhite.PNG
+
+newmtl tunl_4_Cus12_m4_tunnelwallwhitedark2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelwallwhitedark2.PNG
+
+newmtl tunl_4_Cus12_m5_tunnelwallwhitetop
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/tunnelwallwhitetop.PNG
+
+newmtl tunl_4_Cus12_m6_Road_1line256HV128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/Road_1line256HV128.PNG
+
+newmtl tunl_4_Cus12_m7_tunnelroofgirder
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelroofgirder.PNG
+
+newmtl tunl_4_Cus12_m8_tunnelroofconcrete
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/roadtunnel/tunnelroofconcrete.PNG
+
+newmtl tunl_4_Cus12_m9_striplights
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/striplights.PNG
+
+newmtl LODowerL_m0_concretemanky_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/concretemanky_lod.PNG
+
+newmtl LODowerL_m1_Window65a_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/Window65a_64HV.PNG
+
+newmtl LODowerL_m2_bankwin_64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal4/bankwin_64a.PNG
+
+newmtl LODowerL_m3_airportmetalwall64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/suburb1/airportmetalwall64.PNG
+
+newmtl LODowerL_m4_glasspanel_6dh
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/glasspanel_6dh.PNG
+
+newmtl LODowerL_m5_airportdoor2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/suburb1/airportdoor2_64.PNG
+
+newmtl damissionfence_m0_weewall256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/weewall256128.PNG
+
+newmtl damissionfence_m1_barbedwire
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/barbedwire.PNG
+
+newmtl damissionfence_m2_wireNJA
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/wireNJA.PNG
+
+newmtl damissionfence_m3_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl damissionfence_m4_sr_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dam/sr_2.PNG
+
+newmtl 3D8Ball_m0_8ball3D
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl 3D8Ball_m1_Alumox64b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/3d8ball/Alumox64b.PNG
+
+newmtl LODexpgrgesub_m0_impexpgarage_frontlod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/suburb2/impexpgarage_frontlod.PNG
+
+newmtl LODexpgrgesub_m1_impexpgarage_sidelod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/suburb2/impexpgarage_sidelod.PNG
+
+newmtl LOD_ind03_m0_impexpgarage_frontlod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/suburb2/impexpgarage_frontlod.PNG
+
+newmtl LOD_ind03_m1_impexpgarage_sidelod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/suburb2/impexpgarage_sidelod.PNG
+
+newmtl cutscenevan1_m0_securica128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutscenecar3/securica128.PNG
+
+newmtl cutscenevan1_m1_securica8bit128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutscenecar3/securica8bit128.PNG
+
+newmtl cutscenevan1_m2_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl cutscenevan1_m3_securicabody64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl cutscenevan1_m4_enginetopb4bit64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutscenecar3/enginetopb4bit64.PNG
+
+newmtl cutscenevan1_m5_metpat64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airstuff2/metpat64.PNG
+
+newmtl cutscenevan1_m6_mustarda128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutscenecar3/mustarda128.PNG
+
+newmtl cutscenevan1_m7_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl cutscenevan1_m8_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl cutscenevan1_m9_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl cutscenevan1_m10_wheel_lighttruck64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutscenecar3/wheel_lighttruck64.PNG
+
+newmtl cutscenevan1_m11_tyre64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/tyre64a.PNG
+
+newmtl cutscenevan1_m12_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl cutscenevan1_m13_mrwongs8bit128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutscenecar3/mrwongs8bit128.PNG
+
+newmtl cutscenevan1_m14_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl cutscenevan1_m15_mrwongsdecal4bit128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutscenecar3/mrwongsdecal4bit128.PNG
+
+newmtl cutscenevan1_m16_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl cutscenevan1_m17_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl cutscenevan1_m18_esperanto8bit128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutscenecar3/esperanto8bit128.PNG
+
+newmtl cutscenevan1_m19_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl cutscenevan1_m20_esperantobodyc64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl cutscenevan1_m21_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl cutscenevan1_m22_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl cutscenevan1_m23_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl cutscenevan1_m24_wheel_classic64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutscenecar3/wheel_classic64.PNG
+
+newmtl airpshadows02_m0_jetblack1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airpshadow/jetblack1.PNG

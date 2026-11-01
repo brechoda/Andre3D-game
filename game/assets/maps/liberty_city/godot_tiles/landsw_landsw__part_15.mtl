@@ -1,0 +1,479 @@
+newmtl impexpgrgesub_m9_carlist_sub_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/importexp/carlist_sub_128.PNG
+
+newmtl impexpsubgrgdoor_m0_Industdoor5128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Industdoor5128.PNG
+
+newmtl suby_tunl_start_m0_railtrack_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtrack_64.PNG
+
+newmtl suby_tunl_start_m1_raiseroad_section
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/raiseroad_section.PNG
+
+newmtl suby_tunl_start_m2_wallwasdrker128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/wallwasdrker128.PNG
+
+newmtl suby_tunl_start_m3_redwall128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/redwall128.PNG
+
+newmtl suby_tunl_start_m4_raiseroad_section_mid
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/othersubside/raiseroad_section_mid.PNG
+
+newmtl suby_tunl_start_m5_subplatyell
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/subplatyell.PNG
+
+newmtl suby_tunl_start_m6_subplat
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casino/subplat.PNG
+
+newmtl suby_tunl_start_m7_subplatfloor
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/subplatfloor.PNG
+
+newmtl suby_tunl_start_m8_rail3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail3_64HV.PNG
+
+newmtl suby_tunl_start_m9_rail2_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail2_64V.PNG
+
+newmtl suby_tunl_start_m10_rail2_subway
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/traintracks/rail2_subway.PNG
+
+newmtl suby_tunl_start_m11_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl suby_tunl_start_m12_red
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buoy/red.PNG
+
+newmtl chassis_heliradio_m0_helistripes
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/heli1/helistripes.PNG
+
+newmtl chassis_heliradio_m1_black64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dirtpass/black64a.PNG
+
+newmtl chassis_heliradio_m2_rescue64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/heli1/rescue64.PNG
+
+newmtl chassis_heliradio_m3_firelogo
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/heli1/firelogo.PNG
+
+newmtl plane_chassis_m0_airblock3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/airblock3.PNG
+
+newmtl plane_chassis_m1_airblock2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/airblock2.PNG
+
+newmtl plane_chassis_m2_airblock1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/airblock1.PNG
+
+newmtl plane_chassis_m3_black64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/black64.PNG
+
+newmtl sub_tripbboard_m0_bluevertical_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/bluevertical_64HV.PNG
+
+newmtl sub_tripbboard_m1_chromepipe3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/chromepipe3_64HV.PNG
+
+newmtl sub_tripbboard_m2_ladder64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/ladder64.PNG
+
+newmtl sub_tripbboard_m3_boardlights_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bilboard/boardlights_64.PNG
+
+newmtl sub_billboard1_m0_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl sub_billboard1_m1_craneblnk_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/craneblnk_128.PNG
+
+newmtl sub_billboard1_m2_neonwhite64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/neonwhite64.PNG
+
+newmtl subposter08_m0_Fbk64lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/Fbk64lit.PNG
+
+newmtl subposter08_m1_cut_128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/cut_128lit.PNG
+
+newmtl subposter08_m2_Plummet_64lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/postersub/Plummet_64lit.PNG
+
+newmtl subposter08_m3_PunkNoodle128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsbilboard02/PunkNoodle128.PNG
+
+newmtl subposter08_m4_lipslit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bilboard/lipslit.PNG
+
+newmtl subposter08_m5_Funcola128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/Funcola128lit.PNG
+
+newmtl subposter08_m6_SupaSave01_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/fdr_underpass/SupaSave01_128.PNG
+
+newmtl subposter08_m7_doubleclef
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/postersub/doubleclef.PNG
+
+newmtl subposter08_m8_chatterbox
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/postersub/chatterbox.PNG
+
+newmtl subposter03_m0_SUMO_128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/SUMO_128lit.PNG
+
+newmtl subposter03_m1_MNKY128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/postersub/MNKY128lit.PNG
+
+newmtl subposter03_m2_ITE128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/ITE128lit.PNG
+
+newmtl subposter03_m3_Funcola128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/Funcola128lit.PNG
+
+newmtl subposter03_m4_Squid128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/Squid128lit.PNG
+
+newmtl subposter03_m5_stalkers_128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/postersub/stalkers_128lit.PNG
+
+newmtl subposter03_m6_morningstar01128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/postersub/morningstar01128lit.PNG
+
+newmtl subposter03_m7_YFBC128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/YFBC128lit.PNG
+
+newmtl subposter03_m8_Libertyarmy02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/com_police/Libertyarmy02_128.PNG
+
+newmtl subposter03_m9_Super74128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/postersub/Super74128lit.PNG
+
+newmtl subposter03_m10_ZIP_128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/ZIP_128lit.PNG
+
+newmtl subposter03_m11_HappyBlimp128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsbilboard02/HappyBlimp128.PNG
+
+newmtl subposter03_m12_PunkNoodle128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsbilboard02/PunkNoodle128.PNG
+
+newmtl subposter04_m0_marcos02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/marcos02_128.PNG
+
+newmtl subposter04_m1_nuns_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/carparkbooth/nuns_64.PNG
+
+newmtl subposter04_m2_poster4_128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster4_128lit.PNG
+
+newmtl subposter04_m3_Squidboard128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsbilboard05/Squidboard128.PNG
+
+newmtl subposter05_m0_poster2_128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster2_128lit.PNG
+
+newmtl subposter05_m1_TaxiCo1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/TaxiCo1_64.PNG
+
+newmtl subposter05_m2_bandposter1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/carparkbooth/bandposter1_64.PNG
+
+newmtl subposter05_m3_poster5_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster5_64.PNG
+
+newmtl subposter05_m4_convenience02_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/postersub/convenience02_64.PNG
+
+newmtl subposter06_m0_poster8
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster8.PNG
+
+newmtl subposter06_m1_poster9_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster9_64.PNG
+
+newmtl subposter06_m2_poster7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster7.PNG
+
+newmtl subposter06_m3_poster5_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster5_128.PNG
+
+newmtl subposter06_m4_poster6_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster6_128.PNG
+
+newmtl subposter06_m5_filmposter1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/filmposter1_64.PNG
+
+newmtl subposter06_m6_filmposter2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/filmposter2_64.PNG
+
+newmtl subposter06_m7_filmposter3_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/filmposter3_64.PNG
+
+newmtl subposter07_m0_Squidboard128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsbilboard05/Squidboard128.PNG
+
+newmtl subposter07_m1_ZIP_128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/ZIP_128lit.PNG
+
+newmtl subposter07_m2_PETROL_128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/postersub/PETROL_128lit.PNG
+
+newmtl subposter07_m3_PunkNoodle128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsbilboard02/PunkNoodle128.PNG
+
+newmtl subposter07_m4_SUMO_128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/SUMO_128lit.PNG
+
+newmtl subposter01_m0_Plummet_64lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/postersub/Plummet_64lit.PNG
+
+newmtl subposter01_m1_PETROL_128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/postersub/PETROL_128lit.PNG
+
+newmtl subposter01_m2_SUMO_128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/SUMO_128lit.PNG
+
+newmtl strtbarrier01_m0_Cone02_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dyncones/Cone02_64.PNG
+
+newmtl carparkfence_m0_barbedwire
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/barbedwire.PNG
+
+newmtl carparkfence_m1_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl carparkfence_m2_wireNJA
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/wireNJA.PNG
+
+newmtl subsign1_m0_aascaff
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comseroadbits/aascaff.PNG
+
+newmtl subsign1_m1_sr_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subsign1/sr_1.PNG
+
+newmtl subsign1_m2_sr_5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subsign1/sr_5.PNG
+
+newmtl subsign1_m3_Concrete_rough_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subsign1/Concrete_rough_256.PNG
+
+newmtl subsign1_m4_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl subsign1_m5_MetalDoorPlate_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/MetalDoorPlate_64H.PNG
+
+newmtl subsign1_m6_sr_6
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/localsignsub/sr_6.PNG
+
+newmtl hghwysgn02_m0_Metal3_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Metal3_128.PNG
+
+newmtl hghwysgn_sub_m0_Metal3_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Metal3_128.PNG
+
+newmtl newairportwall1_m0_weewall256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/weewall256.PNG
+
+newmtl airportfence4_m0_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl airportfence4_m1_wireNJA
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/wireNJA.PNG
+
+newmtl airportfence4_m2_barbedwire
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/barbedwire.PNG
+
+newmtl newairportwall2_m0_weewall256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/weewall256.PNG
+
+newmtl newairportwall3_m0_weewall256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/weewall256.PNG

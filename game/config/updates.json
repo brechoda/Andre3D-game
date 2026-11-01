@@ -1,0 +1,5 @@
+{
+  "enabled": true,
+  "manifest_url": "https://raw.githubusercontent.com/brechoda/andre3d-multiplayer-server/main/updates/manifest.json",
+  "check_on_start": true
+}

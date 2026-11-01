@@ -1,0 +1,475 @@
+newmtl newairportwall4_m0_weewall256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/weewall256.PNG
+
+newmtl newairportwall4_m1_barbedwire
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/barbedwire.PNG
+
+newmtl newairportwall4_m2_wireNJA
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/wireNJA.PNG
+
+newmtl newairportwall4_m3_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl newairportwall4_m4_KeepOut_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/KeepOut_64.PNG
+
+newmtl carpark55_m0_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl carpark55_m1_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl carpark55_m2_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl carpark55_m3_redstuff
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/carpark/redstuff.PNG
+
+newmtl carpark55_m4_redwhite_stripe
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/redwhite_stripe.PNG
+
+newmtl carpark55_m5_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl newairportwall5_m0_weewall256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/weewall256.PNG
+
+newmtl newairportwall5_m1_barbedwire
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/barbedwire.PNG
+
+newmtl newairportwall5_m2_wireNJA
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/wireNJA.PNG
+
+newmtl newairportwall5_m3_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl newairportwall6_m0_weewall256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/weewall256.PNG
+
+newmtl newairportwall6_m1_barbedwire
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/barbedwire.PNG
+
+newmtl newairportwall6_m2_wireNJA
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/wireNJA.PNG
+
+newmtl newairportwall6_m3_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl airportfence6_m0_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl airportfence6_m1_barbedwire
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/barbedwire.PNG
+
+newmtl airportfence6_m2_wireNJA
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/wireNJA.PNG
+
+newmtl airportfence5_m0_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl airportfence5_m1_barbedwire
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/barbedwire.PNG
+
+newmtl airportfence5_m2_wireNJA
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/wireNJA.PNG
+
+newmtl Carparkbooth_m0_old_corugwal_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/old_corugwal_256.PNG
+
+newmtl Carparkbooth_m1_step_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/step_64HV.PNG
+
+newmtl Carparkbooth_m2_Plaindoorblue_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/Plaindoorblue_128.PNG
+
+newmtl Carparkbooth_m3_yellowrust_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/yellowrust_64.PNG
+
+newmtl Carparkbooth_m4_glass_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/glass_64.PNG
+
+newmtl Carparkbooth_m5_carpark1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/carparkbooth/carpark1_64.PNG
+
+newmtl Carparkbooth_m6_airport1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/airport1_64.PNG
+
+newmtl Carparkbooth_m7_airport2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/airport2_64.PNG
+
+newmtl Carparkbooth_m8_drivecare_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/drivecare_64.PNG
+
+newmtl Carparkbooth_m9_Flybynight_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/carparkbooth/Flybynight_64.PNG
+
+newmtl Carparkbooth_m10_nuns_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/carparkbooth/nuns_64.PNG
+
+newmtl Carparkbooth_m11_funbags01_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/carparkbooth/funbags01_64.PNG
+
+newmtl Carparkbooth_m12_bandposter1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/carparkbooth/bandposter1_64.PNG
+
+newmtl Carparkbooth_m13_funbags02_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/carparkbooth/funbags02_64.PNG
+
+newmtl sub_subway_m0_concretenewb256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/concretenewb256128.PNG
+
+newmtl sub_subway_m1_taxi_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/taxi_256128.PNG
+
+newmtl heliradio_m0_cityheli
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/heli2/cityheli.PNG
+
+newmtl heliradio_m1_citynews
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/heli2/citynews.PNG
+
+newmtl helirock_m0_whiteheli
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/heli2/whiteheli.PNG
+
+newmtl helirock_m1_Rockstar
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/heli2/Rockstar.PNG
+
+newmtl helirock_m2_black64b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/heli2/black64b.PNG
+
+newmtl helipolice_m0_policeheli
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/heli1/policeheli.PNG
+
+newmtl helipolice_m1_black64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/black64.PNG
+
+newmtl luggage_m0_bagwheel
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airstuff2/bagwheel.PNG
+
+newmtl luggage_m1_Alumox64c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airstuff2/Alumox64c.PNG
+
+newmtl luggage_m2_baggage
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airstuff2/baggage.PNG
+
+newmtl airportsteps_m0_metpat64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airstuff2/metpat64.PNG
+
+newmtl airportsteps_m1_planetunnel_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airstuff2/planetunnel_64HV.PNG
+
+newmtl airportsteps_m2_metaldoor_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airstuff2/metaldoor_128.PNG
+
+newmtl airportsteps_m3_shuttersb
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airstuff2/shuttersb.PNG
+
+newmtl airportsteps_m4_rustybolts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustybolts.PNG
+
+newmtl airportsteps_m5_wheel02_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/wheel02_64.PNG
+
+newmtl air_grnd0301_m0_conchev_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/conchev_64HV.PNG
+
+newmtl air_grnd0301_m1_concretebigb_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretebigb_lod.PNG
+
+newmtl air_grnd0301_m2_darkwallb64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/darkwallb64.PNG
+
+newmtl air_grnd0301_m3_concretemanky
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretemanky.PNG
+
+newmtl 8ballsuburbandoor_m0_Industdoor1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo3h/Industdoor1.PNG
+
+newmtl suburbansigns1_m0_sr_6
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/localsignsub/sr_6.PNG
+
+newmtl suburbansigns1_m1_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl suburbansigns2_m0_suburban_sign_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/localsignsub/suburban sign 2.PNG
+
+newmtl suburbansigns2_m1_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl suburbansigns3_m0_suburban_sign_3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/localsignsub/suburban sign 3.PNG
+
+newmtl suburbansigns3_m1_Fence_bigwhite_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/localsignsub/Fence_bigwhite_64HV.PNG
+
+newmtl suburbansigns7_m0_suburban_sign_7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/localsignsub/suburban sign 7.PNG
+
+newmtl suburbansigns7_m1_Fence_bigwhite_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/localsignsub/Fence_bigwhite_64HV.PNG
+
+newmtl undersubridge1_m0_concretelump364HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridgesupports/concretelump364HV.PNG
+
+newmtl undersubridge1_m1_rustybolts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustybolts.PNG
+
+newmtl undersubridge1_m2_BLOCK
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/BLOCK.PNG
+
+newmtl LODersubridge1_m0_BLOCK_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/BLOCK_lod.PNG
+
+newmtl LODersubridge1_m1_concretemanky_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/concretemanky_lod.PNG
+
+newmtl LODersubridge1_m2_bridgegaps128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/suburb2/bridgegaps128.PNG
+
+newmtl LODersubridge1_m3_concretelump364HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridgesupports/concretelump364HV.PNG
+
+newmtl sub_indfrate2108_m0_frate_doors64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/crate/frate_doors64.PNG
+
+newmtl sub_indfrate2108_m1_frate64_blue
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compier/frate64_blue.PNG
+
+newmtl sub_indfrate2108_m2_banding7_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/banding7_64HV.PNG
+
+newmtl sub_indfrate2108_m3_midgrey64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/midgrey64.PNG
+
+newmtl sub_indfrate2108_m4_frate_doors128red
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/crate/frate_doors128red.PNG
+
+newmtl sub_indfrate2108_m5_frate64_red
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/frate64_red.PNG
+
+newmtl sub_indfrate2108_m6_barrel_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/barrel_64HV.PNG
+
+newmtl sub_indfrate2108_m7_frate_doors64yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/crate/frate_doors64yellow.PNG
+
+newmtl sub_indfrate2108_m8_frate64_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compier/frate64_yellow.PNG
+
+newmtl sub_indfrate2108_m9_Alumplat64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/csitecutscene/Alumplat64.PNG
+
+newmtl sub_indfrate2109_m0_frate_doors64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/crate/frate_doors64.PNG
+
+newmtl sub_indfrate2109_m1_frate64_blue
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compier/frate64_blue.PNG
+
+newmtl sub_indfrate2109_m2_banding7_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/banding7_64HV.PNG
+
+newmtl sub_indfrate2109_m3_midgrey64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/midgrey64.PNG
+
+newmtl sub_indfrate2109_m4_frate_doors128red
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/crate/frate_doors128red.PNG
+
+newmtl sub_indfrate2109_m5_frate64_red
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/frate64_red.PNG
+
+newmtl sub_indfrate2109_m6_barrel_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/barrel_64HV.PNG
+
+newmtl sub_indfrate2109_m7_frate_doors64yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/crate/frate_doors64yellow.PNG
+
+newmtl sub_indfrate2109_m8_frate64_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compier/frate64_yellow.PNG

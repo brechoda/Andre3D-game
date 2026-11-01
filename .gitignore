@@ -1,0 +1,22 @@
+# Godot generated data
+.godot/
+.manus-webdev/
+**/.godot/
+
+# Build outputs and local caches
+dist/
+build/
+android/build/
+*.apk
+*.aab
+*.pck
+*.aar
+server/node_modules/
+server/updates/files/
+
+# Signing material and local secrets
+*.jks
+*.keystore
+.env
+.env.*
+password

@@ -1,0 +1,475 @@
+newmtl trailer_m2_airstuff
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/airstuff.PNG
+
+newmtl trailer_m3_airstuff1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/airstuff1.PNG
+
+newmtl trailer_m4_wheel02_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/wheel02_64.PNG
+
+newmtl trailermetal_m0_Alumox64c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airstuff2/Alumox64c.PNG
+
+newmtl trailermetal_m1_bluewood
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/bluewood.PNG
+
+newmtl trailermetal_m2_wheel02_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/wheel02_64.PNG
+
+newmtl trailermetal_m3_bluemetal05
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/bluemetal05.PNG
+
+newmtl suittrailer_m0_Alumox64c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airstuff2/Alumox64c.PNG
+
+newmtl suittrailer_m1_cratetop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/cratetop128.PNG
+
+newmtl suittrailer_m2_airstuff
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/airstuff.PNG
+
+newmtl suittrailer_m3_airstuff1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/airstuff1.PNG
+
+newmtl suittrailer_m4_wheel02_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/wheel02_64.PNG
+
+newmtl suittrailer_m5_yellcase
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/yellcase.PNG
+
+newmtl suittrailer_m6_blacksuit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/blacksuit.PNG
+
+newmtl suittrailer_m7_greencase
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/greencase.PNG
+
+newmtl suittrailer_m8_redcase
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/redcase.PNG
+
+newmtl suittrailer_m9_bluesuit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/bluesuit.PNG
+
+newmtl suittrailer_m10_bluecase
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/bluecase.PNG
+
+newmtl suittrailer_m11_suitcase
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/suitcase.PNG
+
+newmtl suitcases_m0_greencase
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/greencase.PNG
+
+newmtl suitcases_m1_yellcase
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/yellcase.PNG
+
+newmtl suitcases_m2_redcase
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/redcase.PNG
+
+newmtl suitcases_m3_bluesuit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/bluesuit.PNG
+
+newmtl suitcases_m4_bluecase
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/bluecase.PNG
+
+newmtl suitcases_m5_suitcase
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/suitcase.PNG
+
+newmtl suitcases_m6_blacksuit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luggage/blacksuit.PNG
+
+newmtl sub_indfrate2110_m0_frate_doors64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/crate/frate_doors64.PNG
+
+newmtl sub_indfrate2110_m1_frate64_blue
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compier/frate64_blue.PNG
+
+newmtl sub_indfrate2110_m2_banding7_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/banding7_64HV.PNG
+
+newmtl sub_indfrate2110_m3_midgrey64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/midgrey64.PNG
+
+newmtl sub_indfrate2110_m4_frate_doors128red
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/crate/frate_doors128red.PNG
+
+newmtl sub_indfrate2110_m5_frate64_red
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/frate64_red.PNG
+
+newmtl sub_indfrate2110_m6_barrel_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/barrel_64HV.PNG
+
+newmtl sub_indfrate2110_m7_frate_doors64yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/crate/frate_doors64yellow.PNG
+
+newmtl sub_indfrate2110_m8_frate64_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compier/frate64_yellow.PNG
+
+newmtl sub_indfrate2110_m9_Alumplat64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/csitecutscene/Alumplat64.PNG
+
+newmtl Rear_Building_m0_subindwall2hi128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/subindwall2hi128.PNG
+
+newmtl Rear_Building_m1_newall6128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrearbuild/newall6128.PNG
+
+newmtl Rear_Building_m2_greyrooftop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/greyrooftop128.PNG
+
+newmtl Rear_Building_m3_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl Rear_Building_m4_tenbronhicol256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrearbuild/tenbronhicol256128.PNG
+
+newmtl Rear_Building_m5_indmidbrwnten128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrearbuild/indmidbrwnten128.PNG
+
+newmtl Rear_Building_m6_indmidbrownbrick64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrearbuild/indmidbrownbrick64.PNG
+
+newmtl Rear_Building_m7_ledge2_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/ledge2_64H.PNG
+
+newmtl Rear_Building_m8_ledge_creme_0264H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild3/ledge_creme_0264H.PNG
+
+newmtl Rear_Building_m9_ind_tenred256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinatowns/ind_tenred256128.PNG
+
+newmtl Rear_Building_m10_inwindow5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cempirest/inwindow5.PNG
+
+newmtl Rear_Building_m11_banding_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/banding_64HV.PNG
+
+newmtl Rear_Building_m12_ventb64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comtenblock6b/ventb64.PNG
+
+newmtl Rear_Building_m13_Metal2_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrearbuild/Metal2_256128.PNG
+
+newmtl Rear_Building_m14_ventb128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinaedge/ventb128.PNG
+
+newmtl Rear_Building_m15_inwindow3_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrearbuild/inwindow3_2.PNG
+
+newmtl Rear_Building_m16_inwindow2_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrearbuild/inwindow2_2.PNG
+
+newmtl Rear_Building_m17_tag_gaz2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basketballcrt/tag_gaz2.PNG
+
+newmtl Rear_Building_m18_tag_gaz5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz5.PNG
+
+newmtl Rear_Building_m19_cover
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrearbuild/cover.PNG
+
+newmtl Rear_Building_m20_rustc256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustc256128.PNG
+
+newmtl Rear_Building_m21_tag_gaz3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz3.PNG
+
+newmtl Rear_Building_m22_graffiti2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/graffiti2.PNG
+
+newmtl Building1_m0_cafered256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinaedge/cafered256128.PNG
+
+newmtl Building1_m1_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl Building1_m2_greyground256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinaedge/greyground256128.PNG
+
+newmtl Building1_m3_fencekb_64h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal3/fencekb_64h.PNG
+
+newmtl Building1_m4_cafered256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild1/cafered256.PNG
+
+newmtl Building1_m5_newall5-1_16c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild1/newall5-1_16c.PNG
+
+newmtl Building1_m6_newall_harling_sless128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/avery/newall_harling_sless128.PNG
+
+newmtl Building1_m7_uper_floors_1_high128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/avery/uper_floors_1_high128.PNG
+
+newmtl Building1_m8_1stfloor1_256_16c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl Building1_m9_ledge_detl_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ledge_detl_256128.PNG
+
+newmtl Building1_m10_1stfloor4_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild1/1stfloor4_256.PNG
+
+newmtl Building1_m11_ind_italdeli256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild1/ind_italdeli256.PNG
+
+newmtl Building1_m12_ornatecornicea128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild1/ornatecornicea128.PNG
+
+newmtl Building1_m13_ledge_detl2_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild1/ledge_detl2_256.PNG
+
+newmtl Building1_m14_taxi_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/taxi_256128.PNG
+
+newmtl Building1_m15_newall5-2_16c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/newall5-2_16c.PNG
+
+newmtl Building1_m16_newall5-3_16c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild1/newall5-3_16c.PNG
+
+newmtl Building1_m17_newall5-4_16c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild1/newall5-4_16c.PNG
+
+newmtl Bank_m0_cutscenebank256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/cutscenebank256.PNG
+
+newmtl Bank_m1_lower_1-256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/lower_1-256.PNG
+
+newmtl Bank_m2_ledge_detl_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/ledge_detl_256128.PNG
+
+newmtl Bank_m3_veryornatearch256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/veryornatearch256128.PNG
+
+newmtl Bank_m4_ledge_classic_0364H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/ledge_classic_0364H.PNG
+
+newmtl Bank_m5_RomanPillar2_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/RomanPillar2_64HV.PNG
+
+newmtl Bank_m6_RomanPillarTop_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/RomanPillarTop_64.PNG
+
+newmtl Bank_m7_detail_bground128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/detail_bground128.PNG
+
+newmtl Bank_m8_detail_128_grey
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl Bank_m9_Wire03_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/Wire03_64.PNG
+
+newmtl Bank_m10_greyground256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinaedge/greyground256128.PNG
+
+newmtl Bank_m11_sprinklersign64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/sprinklersign64.PNG
+
+newmtl Bank_m12_notice01
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/notice01.PNG
+
+newmtl Bank_m13_Metal4_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/Metal4_256128.PNG
+
+newmtl Bank_m14_rustc256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustc256128.PNG
+
+newmtl Bank_m15_ventb64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comtenblock6b/ventb64.PNG
+
+newmtl Bank_m16_steel256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/steel256128.PNG
+
+newmtl Bank_m17_banding_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/banding_64HV.PNG
+
+newmtl Bank_m18_fire_exit128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbank/fire_exit128.PNG

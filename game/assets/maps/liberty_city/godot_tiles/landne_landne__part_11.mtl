@@ -1,0 +1,479 @@
+newmtl towerflat28_m11_tiles_white_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_projects/tiles_white_64HV.PNG
+
+newmtl towerflat28_m12_lift_exterior_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casino/lift_exterior_64.PNG
+
+newmtl towerflat29_m0_indmidbrownbrick64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrearbuild/indmidbrownbrick64.PNG
+
+newmtl towerflat29_m1_concretelump128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/concretelump128HV.PNG
+
+newmtl towerflat29_m2_Window1064HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo3b/Window1064HV.PNG
+
+newmtl towerflat29_m3_Window1264HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Window1264HV.PNG
+
+newmtl towerflat29_m4_indmidbrwnten128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrearbuild/indmidbrwnten128.PNG
+
+newmtl towerflat29_m5_Window1364HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luigiclub/Window1364HV.PNG
+
+newmtl towerflat29_m6_Window1164HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Window1164HV.PNG
+
+newmtl towerflat29_m7_concrete_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/concrete_64HV.PNG
+
+newmtl towerflat29_m8_pavepat128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cempirest/pavepat128.PNG
+
+newmtl towerflat29_m9_Upt_sub_blutile
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/Upt_sub_blutile.PNG
+
+newmtl towerflat29_m10_Upt_sub_walltilemos
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_projects/Upt_sub_walltilemos.PNG
+
+newmtl towerflat29_m11_tiles_white_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_projects/tiles_white_64HV.PNG
+
+newmtl towerflat29_m12_lift_exterior_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casino/lift_exterior_64.PNG
+
+newmtl suburbansigns4_m0_sr_6
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/localsignsub/sr_6.PNG
+
+newmtl suburbansigns4_m1_Fence_bigwhite_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/localsignsub/Fence_bigwhite_64HV.PNG
+
+newmtl suburbansigns6_m0_sr_6
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/localsignsub/sr_6.PNG
+
+newmtl suburbansigns6_m1_Fence_bigwhite_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/localsignsub/Fence_bigwhite_64HV.PNG
+
+newmtl suburbansigns5_m0_sr_6
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/localsignsub/sr_6.PNG
+
+newmtl suburbansigns5_m1_Fence_bigwhite_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/localsignsub/Fence_bigwhite_64HV.PNG
+
+newmtl undersubridge1_m0_concretelump364HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridgesupports/concretelump364HV.PNG
+
+newmtl undersubridge1_m1_rustybolts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustybolts.PNG
+
+newmtl undersubridge1_m2_BLOCK
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/BLOCK.PNG
+
+newmtl LODersubridge1_m0_BLOCK_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/BLOCK_lod.PNG
+
+newmtl LODersubridge1_m1_concretemanky_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/concretemanky_lod.PNG
+
+newmtl LODersubridge1_m2_bridgegaps128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/suburb2/bridgegaps128.PNG
+
+newmtl LODersubridge1_m3_concretelump364HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridgesupports/concretelump364HV.PNG
+
+newmtl mansion5_m0_redclad
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/redclad.PNG
+
+newmtl mansion5_m1_ledge_grey_128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/ledge_grey_128H.PNG
+
+newmtl mansion5_m2_step_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/step_64HV.PNG
+
+newmtl mansion5_m3_tiles
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/tiles.PNG
+
+newmtl mansion5_m4_dirtywhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/dirtywhite.PNG
+
+newmtl mansion5_m5_jettyfloor02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildingsite/jettyfloor02.PNG
+
+newmtl mansion5_m6_windowopen
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/windowopen.PNG
+
+newmtl mansion5_m7_whiteshutters
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/whiteshutters.PNG
+
+newmtl mansion5_m8_windowclosed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/windowclosed.PNG
+
+newmtl mansion5_m9_venta
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/venta.PNG
+
+newmtl mansion5_m10_bigwindow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/bigwindow.PNG
+
+newmtl mansion5_m11_House01t_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/House01t_64.PNG
+
+newmtl mansion5_m12_House01b_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/House01b_64.PNG
+
+newmtl mansion6_m0_cladding
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/cladding.PNG
+
+newmtl mansion6_m1_ledge_grey_128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/ledge_grey_128H.PNG
+
+newmtl mansion6_m2_step_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/step_64HV.PNG
+
+newmtl mansion6_m3_tiles
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/tiles.PNG
+
+newmtl mansion6_m4_dirtywhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/dirtywhite.PNG
+
+newmtl mansion6_m5_jettyfloor02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildingsite/jettyfloor02.PNG
+
+newmtl mansion6_m6_windowopen
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/windowopen.PNG
+
+newmtl mansion6_m7_whiteshutters
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/whiteshutters.PNG
+
+newmtl mansion6_m8_windowclosed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/windowclosed.PNG
+
+newmtl mansion6_m9_venta
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/venta.PNG
+
+newmtl mansion6_m10_bigwindow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/bigwindow.PNG
+
+newmtl mansion6_m11_House01t_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/House01t_64.PNG
+
+newmtl mansion6_m12_House01b_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/House01b_64.PNG
+
+newmtl mansion4_m0_blueclad
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/blueclad.PNG
+
+newmtl mansion4_m1_ledge_grey_128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/ledge_grey_128H.PNG
+
+newmtl mansion4_m2_step_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/step_64HV.PNG
+
+newmtl mansion4_m3_tiles
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/tiles.PNG
+
+newmtl mansion4_m4_dirtywhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/dirtywhite.PNG
+
+newmtl mansion4_m5_jettyfloor02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildingsite/jettyfloor02.PNG
+
+newmtl mansion4_m6_windowopen
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/windowopen.PNG
+
+newmtl mansion4_m7_redshut
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/redshut.PNG
+
+newmtl mansion4_m8_windowclosed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/windowclosed.PNG
+
+newmtl mansion4_m9_venta
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/venta.PNG
+
+newmtl mansion4_m10_bigwindow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/bigwindow.PNG
+
+newmtl mansion4_m11_House01t_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/House01t_64.PNG
+
+newmtl mansion4_m12_House01b_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/House01b_64.PNG
+
+newmtl mansion3_m0_cladding
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/cladding.PNG
+
+newmtl mansion3_m1_ledge_grey_128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/ledge_grey_128H.PNG
+
+newmtl mansion3_m2_step_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/step_64HV.PNG
+
+newmtl mansion3_m3_tiles
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/tiles.PNG
+
+newmtl mansion3_m4_dirtywhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/dirtywhite.PNG
+
+newmtl mansion3_m5_jettyfloor02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildingsite/jettyfloor02.PNG
+
+newmtl mansion3_m6_windowopen
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/windowopen.PNG
+
+newmtl mansion3_m7_blueshut
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/blueshut.PNG
+
+newmtl mansion3_m8_windowclosed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/windowclosed.PNG
+
+newmtl mansion3_m9_venta
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/venta.PNG
+
+newmtl mansion3_m10_bigwindow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/bigwindow.PNG
+
+newmtl mansion3_m11_House01t_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/House01t_64.PNG
+
+newmtl mansion3_m12_House01b_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/House01b_64.PNG
+
+newmtl mansion2_m0_yellowclad
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/yellowclad.PNG
+
+newmtl mansion2_m1_ledge_grey_128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/ledge_grey_128H.PNG
+
+newmtl mansion2_m2_step_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/step_64HV.PNG
+
+newmtl mansion2_m3_tiles
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/tiles.PNG
+
+newmtl mansion2_m4_dirtywhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/dirtywhite.PNG
+
+newmtl mansion2_m5_jettyfloor02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildingsite/jettyfloor02.PNG
+
+newmtl mansion2_m6_windowopen
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/windowopen.PNG
+
+newmtl mansion2_m7_whiteshutters
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/whiteshutters.PNG
+
+newmtl mansion2_m8_windowclosed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/windowclosed.PNG
+
+newmtl mansion2_m9_venta
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/venta.PNG
+
+newmtl mansion2_m10_bigwindow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/bigwindow.PNG
+
+newmtl mansion2_m11_House01t_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/House01t_64.PNG
+
+newmtl mansion2_m12_House01b_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/door/House01b_64.PNG
+
+newmtl mansion1_m0_redclad
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/sub_villas/redclad.PNG
+
+newmtl mansion1_m1_ledge_grey_128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/ledge_grey_128H.PNG
+
+newmtl mansion1_m2_step_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/step_64HV.PNG

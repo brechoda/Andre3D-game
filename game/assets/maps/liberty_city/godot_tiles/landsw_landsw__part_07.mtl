@@ -1,0 +1,478 @@
+newmtl subplatform_sub_m8_green64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/green64.PNG
+
+newmtl subplatform_sub_m9_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/yellow.PNG
+
+newmtl subplatform_sub_m10_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl subplatform_sub_m11_poster9_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster9_64.PNG
+
+newmtl subplatform_sub_m12_poster1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster1_128.PNG
+
+newmtl subplatform_sub_m13_poster6_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster6_128.PNG
+
+newmtl subplatform_sub_m14_poster4_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster4_128.PNG
+
+newmtl subplatform_sub_m15_poster3_64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster3_64a.PNG
+
+newmtl subplatform_sub_m16_poster5_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster5_64.PNG
+
+newmtl subplatform_sub_m17_poster5_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster5_128.PNG
+
+newmtl subplatform_sub_m18_Upt_sublightglas
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/Upt_sublightglas.PNG
+
+newmtl subplatform_sub_m19_Upt_sublightsides
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/Upt_sublightsides.PNG
+
+newmtl subplatform_sub_m20_Upt_sub_escstep
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/Upt_sub_escstep.PNG
+
+newmtl subplatform_sub_m21_metpatdark_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subway2/metpatdark_64.PNG
+
+newmtl subplatform_sub_m22_Metal3_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Metal3_128.PNG
+
+newmtl subplatform_sub_m23_liftdoors_kb_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/liftdoors_kb_256.PNG
+
+newmtl subplatform_sub_m24_Upt_sub_escrub
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/Upt_sub_escrub.PNG
+
+newmtl subplatform_sub_m25_Upt_sub_floortile
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/Upt_sub_floortile.PNG
+
+newmtl subplatform_sub_m26_Upt_Office_Ceiling
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/Upt_Office_Ceiling.PNG
+
+newmtl subplatform_sub_m27_subplatdirt
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/subplatdirt.PNG
+
+newmtl subplatform_sub_m28_subplatfloor
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/subplatfloor.PNG
+
+newmtl subplatform_sub_m29_filmposter3_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/filmposter3_64.PNG
+
+newmtl subplatform_sub_m30_poster7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster7.PNG
+
+newmtl subentrance_sub1_m0_poster8
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster8.PNG
+
+newmtl subentrance_sub1_m1_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl subentrance_sub1_m2_subway1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/subway1_64.PNG
+
+newmtl subentrance_sub1_m3_subway2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/subway2_64.PNG
+
+newmtl subentrance_sub1_m4_step_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/step_64HV.PNG
+
+newmtl subentrance_sub1_m5_brickblue_hi64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subway/brickblue_hi64HV.PNG
+
+newmtl subentrance_sub1_m6_whitetile_new1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subway/whitetile_new1.PNG
+
+newmtl subentrance_sub1_m7_ledge_classic_0364H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/ledge_classic_0364H.PNG
+
+newmtl subentrance_sub1_m8_fancy_slab128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/fancy_slab128.PNG
+
+newmtl subentrance_sub1_m9_Doorwood_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/Doorwood_64HV.PNG
+
+newmtl subentrance_sub1_m10_KeepOut_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/KeepOut_64.PNG
+
+newmtl subentrance_sub1_m11_Alumox64b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/3d8ball/Alumox64b.PNG
+
+newmtl subentrance_sub1_m12_poster6_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster6_128.PNG
+
+newmtl subentrance_sub1_m13_filmposter1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/filmposter1_64.PNG
+
+newmtl subentrance_sub1_m14_poster4_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster4_128.PNG
+
+newmtl subentrance_sub1_m15_poster1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster1_128.PNG
+
+newmtl subentrance_sub1_m16_filmposter3_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/filmposter3_64.PNG
+
+newmtl subentrance_sub1_m17_libertysoulfm128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/libertysoulfm128.PNG
+
+newmtl subentrance_sub1_m18_PETROL2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/PETROL2_64.PNG
+
+newmtl subentrance_sub1_m19_tag_gaz2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basketballcrt/tag_gaz2.PNG
+
+newmtl subentrance_sub1_m20_tag_gaz5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo_tags/tag_gaz5.PNG
+
+newmtl subentrance_sub1_m21_poster5_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster5_64.PNG
+
+newmtl subentrance_sub1_m22_poster5_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster5_128.PNG
+
+newmtl subentrance_sub1_m23_poster7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster7.PNG
+
+newmtl subentrance_sub1_m24_poster2_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/poster2_128.PNG
+
+newmtl subentrance_sub1_m25_filmposter2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/filmposter2_64.PNG
+
+newmtl subentrance_sub1_m26_cut_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/cut_64.PNG
+
+newmtl subentrance_sub1_m27_oK_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/oK_64.PNG
+
+newmtl subentrance_sub1_m28_ZIP_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/ZIP_128.PNG
+
+newmtl subentrance_sub1_m29_whitetile_plain_hi
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/whitetile_plain_hi.PNG
+
+newmtl subentrance_sub1_m30_Upt_Sub_MetalFloorplate
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subway1/Upt_Sub_MetalFloorplate.PNG
+
+newmtl subentrance_sub1_m31_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl subentrance_sub1_m32_Upt_sublightglas
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/Upt_sublightglas.PNG
+
+newmtl subentrance_sub1_m33_Upt_sublightsides
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/Upt_sublightsides.PNG
+
+newmtl subentrance_sub1_m34_Upt_sub_alupan
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/Upt_sub_alupan.PNG
+
+newmtl subentrance_sub1_m35_fencekb_64h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal3/fencekb_64h.PNG
+
+newmtl subentrance_sub1_m36_weewall256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/weewall256128.PNG
+
+newmtl bin1_m0_bluemetal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/bluemetal.PNG
+
+newmtl parkbench1_m0_concretelumbb128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/concretelumbb128HV.PNG
+
+newmtl parkbench1_m1_wood02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/wood02.PNG
+
+newmtl LODdpart91_m0_cliffnew_128_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/cliffnew_128_lod.PNG
+
+newmtl LODdpart91_m1_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl LODdpart99_m0_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl LODdpart99_m1_darkwallb64_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/darkwallb64_lod.PNG
+
+newmtl LODdpart99_m2_concrete_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/concrete_64HV.PNG
+
+newmtl LOD_subway_m0_concretenewb_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/concretenewb_lod.PNG
+
+newmtl LOD_subway_m1_taxi_256_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/taxi_256_lod.PNG
+
+newmtl LOD_subway_m2_sub_subway_stairs
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/suburb1/sub_subway_stairs.PNG
+
+newmtl LODdpart110_m0_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl LODdpart90_m0_cliffnew_128_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/cliffnew_128_lod.PNG
+
+newmtl LODdpart90_m1_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl LODticalift_bridge_m0_subridge_cab1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/subridge_cab1.PNG
+
+newmtl LODticalift_bridge_m1_rustybolts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustybolts.PNG
+
+newmtl LODticalift_bridge_m2_support_water64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/support_water64.PNG
+
+newmtl LODticalift_bridge_m3_subridge_top2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/subridge_top2.PNG
+
+newmtl LODticalift_bridge_m4_subridge_top1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/subridge_top1.PNG
+
+newmtl LODticalift_bridge_m5_BLOCK
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/BLOCK.PNG
+
+newmtl LODticalift_bridge_m6_subridge_middle1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/subridge_middle1.PNG
+
+newmtl LODticalift_bridge_m7_subridge_side2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/subridge_side2.PNG
+
+newmtl LODticalift_bridge_m8_subridge_side1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/subridge_side1.PNG
+
+newmtl LODdge_liftsec_m0_subridge_cab1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/subridge_cab1.PNG
+
+newmtl LODdge_liftsec_m1_rustybolts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustybolts.PNG
+
+newmtl LODdge_liftsec_m2_subridge_middle1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/subridge_middle1.PNG
+
+newmtl LODticalift_bridg2_m0_subridge_top1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/subridge_top1.PNG
+
+newmtl LODdge_liftweight_m0_subridge_cab1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/subridge_cab1.PNG
+
+newmtl subind_build06_m0_corrugated5_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/corrugated5_64HV.PNG
+
+newmtl subind_build06_m1_steel_lighter128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild2/steel_lighter128.PNG
+
+newmtl subind_build06_m2_corugwall1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/corugwall1.PNG
+
+newmtl subind_build06_m3_brckwht128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subuild1/brckwht128.PNG
+
+newmtl subind_build06_m4_plainwoodoor1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/fishfactory/plainwoodoor1.PNG
+
+newmtl subind_build06_m5_bluebrick128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subuild1/bluebrick128.PNG
+
+newmtl subind_build06_m6_newall8-1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/subuild1/newall8-1.PNG
+
+newmtl subind_build06_m7_inddoor1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/busdepot/inddoor1.PNG

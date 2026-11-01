@@ -1,0 +1,479 @@
+newmtl IslandLODcomIND_m47_churchwall64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/churchwall64.PNG
+
+newmtl IslandLODcomIND_m48_carpark_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/carpark_128.PNG
+
+newmtl IslandLODcomIND_m49_ledge_grey_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/ledge_grey_64H.PNG
+
+newmtl IslandLODcomIND_m50_rustyboltpanel
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridge/rustyboltpanel.PNG
+
+newmtl IslandLODcomIND_m51_lodwindowkb1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/lodwindowkb1_64.PNG
+
+newmtl IslandLODcomIND_m52_bank3_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/bank3_64.PNG
+
+newmtl IslandLODcomIND_m53_scrap3bottom
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/scrap3bottom.PNG
+
+newmtl IslandLODcomIND_m54_museum6
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod2/museum6.PNG
+
+newmtl IslandLODcomIND_m55_China_gry_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod2/China_gry_64.PNG
+
+newmtl IslandLODcomIND_m56_museum3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod2/museum3.PNG
+
+newmtl IslandLODcomIND_m57_museumwall_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod2/museumwall_64.PNG
+
+newmtl IslandLODcomIND_m58_museum4
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod2/museum4.PNG
+
+newmtl IslandLODcomIND_m59_greyground256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandcomind/greyground256.PNG
+
+newmtl IslandLODcomIND_m60_skyrCS64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/skyrCS64.PNG
+
+newmtl IslandLODcomIND_m61_police_4
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/police_4.PNG
+
+newmtl IslandLODcomIND_m62_sandstone_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/sandstone_64.PNG
+
+newmtl IslandLODcomIND_m63_Window59_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casino/Window59_64HV.PNG
+
+newmtl IslandLODcomIND_m64_Grass_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/com_police/Grass_64HV.PNG
+
+newmtl IslandLODcomIND_m65_skyscrp26b_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/skyscrp26b_2.PNG
+
+newmtl IslandLODcomIND_m66_ptens2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/ptens2.PNG
+
+newmtl IslandLODcomIND_m67_ptens3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/ptens3.PNG
+
+newmtl IslandLODcomIND_m68_door5_com_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/door5_com_64.PNG
+
+newmtl IslandLODcomIND_m69_ptens2_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/ptens2_1.PNG
+
+newmtl IslandLODcomIND_m70_ptens2_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/ptens2_2.PNG
+
+newmtl IslandLODcomIND_m71_tarmac_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basketballcrt/tarmac_64HV.PNG
+
+newmtl IslandLODcomIND_m72_Window65a_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/Window65a_64HV.PNG
+
+newmtl IslandLODcomIND_m73_Window97_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/Window97_64HV.PNG
+
+newmtl IslandLODcomIND_m74_Window66_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/Window66_64HV.PNG
+
+newmtl IslandLODcomIND_m75_sandstone_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/sandstone_128.PNG
+
+newmtl IslandLODcomIND_m76_comsky64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/comsky64.PNG
+
+newmtl IslandLODcomIND_m77_snipe_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/snipe_1.PNG
+
+newmtl IslandLODcomIND_m78_snipe_3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/snipe_3.PNG
+
+newmtl IslandLODcomIND_m79_hilo4_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod2/hilo4_1.PNG
+
+newmtl IslandLODcomIND_m80_hilo4_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod2/hilo4_2.PNG
+
+newmtl IslandLODcomIND_m81_hilo4_4
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod2/hilo4_4.PNG
+
+newmtl IslandLODcomIND_m82_hilo4_3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod2/hilo4_3.PNG
+
+newmtl IslandLODcomIND_m83_scraper5_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod2/scraper5_2.PNG
+
+newmtl IslandLODcomIND_m84_scraper5_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod2/scraper5_1.PNG
+
+newmtl IslandLODcomIND_m85_darkersky64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/darkersky64.PNG
+
+newmtl IslandLODcomIND_m86_skyblueblod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/skyblueblod.PNG
+
+newmtl IslandLODcomIND_m87_csky_skyscrp23_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/csky_skyscrp23_1.PNG
+
+newmtl IslandLODcomIND_m88_skyscrp26b_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/skyscrp26b_1.PNG
+
+newmtl IslandLODcomIND_m89_skyscrp26b_3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/skyscrp26b_3.PNG
+
+newmtl IslandLODcomIND_m90_underground_over1_wall
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_over1_wall.PNG
+
+newmtl IslandLODcomIND_m91_carpark_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/carpark_256.PNG
+
+newmtl IslandLODcomIND_m92_peir
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandcomind/peir.PNG
+
+newmtl IslandLODsubCOM_m0_cliffnew_128_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/cliffnew_128_lod.PNG
+
+newmtl IslandLODsubCOM_m1_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl IslandLODsubCOM_m2_subindwall3_16lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/subindwall3_16lod.PNG
+
+newmtl IslandLODsubCOM_m3_dam_lower
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/dam_lower.PNG
+
+newmtl IslandLODsubCOM_m4_dam_front
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/dam_front.PNG
+
+newmtl IslandLODsubCOM_m5_carpark_64lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/carpark_64lod.PNG
+
+newmtl IslandLODsubCOM_m6_concretebigb_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretebigb_lod.PNG
+
+newmtl IslandLODsubCOM_m7_darkwallb64_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/darkwallb64_lod.PNG
+
+newmtl IslandLODsubCOM_m8_darkwallb64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/darkwallb64.PNG
+
+newmtl IslandLODsubCOM_m9_concrete_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/concrete_64HV.PNG
+
+newmtl IslandLODsubCOM_m10_conchev_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/conchev_64HV.PNG
+
+newmtl IslandLODsubCOM_m11_concretemanky_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/concretemanky_lod.PNG
+
+newmtl IslandLODsubCOM_m12_concretemanky
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretemanky.PNG
+
+newmtl IslandLODsubCOM_m13_shedbig4
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/shedbig4.PNG
+
+newmtl IslandLODsubCOM_m14_sub_indland08_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/sub_indland08_1.PNG
+
+newmtl IslandLODsubCOM_m15_sub_indland08_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/sub_indland08_2.PNG
+
+newmtl IslandLODsubCOM_m16_sub_indland08_3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/sub_indland08_3.PNG
+
+newmtl IslandLODsubCOM_m17_BLOCK
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/BLOCK.PNG
+
+newmtl IslandLODsubCOM_m18_carpark_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/carpark_128.PNG
+
+newmtl IslandLODsubCOM_m19_subindwall3_16
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dam/subindwall3_16.PNG
+
+newmtl IslandLODsubCOM_m20_docshedbig1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/docshedbig1.PNG
+
+newmtl IslandLODsubCOM_m21_docshedbig1b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/docshedbig1b.PNG
+
+newmtl IslandLODsubCOM_m22_docshedbig3a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/docshedbig3a.PNG
+
+newmtl IslandLODsubCOM_m23_docshedbig3b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/docshedbig3b.PNG
+
+newmtl IslandLODsubCOM_m24_LO1road_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/LO1road_128.PNG
+
+newmtl IslandLODsubCOM_m25_concretenewb_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/concretenewb_lod.PNG
+
+newmtl IslandLODsubCOM_m26_taxi_256_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/taxi_256_lod.PNG
+
+newmtl IslandLODsubCOM_m27_cliffnew_grass_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/clif22/cliffnew_grass_128.PNG
+
+newmtl IslandLODsubCOM_m28_cliffnew_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/clif22/cliffnew_128.PNG
+
+newmtl IslandLODsubCOM_m29_concretelump128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/concretelump128HV.PNG
+
+newmtl IslandLODsubCOM_m30_proj_front
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/proj_front.PNG
+
+newmtl IslandLODsubCOM_m31_proj_frontfill
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/proj_frontfill.PNG
+
+newmtl IslandLODsubCOM_m32_proj_entrance
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/proj_entrance.PNG
+
+newmtl IslandLODsubCOM_m33_glasspanel_6dh
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/glasspanel_6dh.PNG
+
+newmtl IslandLODsubCOM_m34_corrRoof_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/corrRoof_64HV.PNG
+
+newmtl IslandLODsubCOM_m35_airportwind06
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal/airportwind06.PNG
+
+newmtl IslandLODsubCOM_m36_newall16white
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/newall16white.PNG
+
+newmtl IslandLODsubCOM_m37_airportwall_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal2/airportwall_256.PNG
+
+newmtl IslandLODsubCOM_m38_airportwall_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/airportwall_lod.PNG
+
+newmtl IslandLODsubCOM_m39_newall16white_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/newall16white_lod.PNG
+
+newmtl IslandLODsubCOM_m40_airportfront_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/airportfront_lod.PNG
+
+newmtl IslandLODsubCOM_m41_airport_win_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/airport_win_lod.PNG
+
+newmtl IslandLODsubCOM_m42_Paveblank_64hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Paveblank_64hv.PNG
+
+newmtl IslandLODsubCOM_m43_airportside1_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/airportside1_lod.PNG
+
+newmtl IslandLODsubCOM_m44_proj_side
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/proj_side.PNG
+
+newmtl IslandLODsubCOM_m45_dirt64b_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/dirt64b_lod.PNG
+
+newmtl IslandLODsubCOM_m46_path_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/path_64.PNG
+
+newmtl IslandLODsubCOM_m47_build01_right
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build01_right.PNG
+
+newmtl IslandLODsubCOM_m48_build01_front1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build01_front1.PNG
+
+newmtl IslandLODsubCOM_m49_build01_roof
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/build01_roof.PNG

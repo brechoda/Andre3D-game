@@ -1,0 +1,478 @@
+newmtl IslandLODsubCOM_m50_build01_front2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build01_front2.PNG
+
+newmtl IslandLODsubCOM_m51_build02_roof
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build02_roof.PNG
+
+newmtl IslandLODsubCOM_m52_build02_back
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build02_back.PNG
+
+newmtl IslandLODsubCOM_m53_build02_left
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build02_left.PNG
+
+newmtl IslandLODsubCOM_m54_build03_left
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build03_left.PNG
+
+newmtl IslandLODsubCOM_m55_build03_front2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build03_front2.PNG
+
+newmtl IslandLODsubCOM_m56_build03_right
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build03_right.PNG
+
+newmtl IslandLODsubCOM_m57_build03_front1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build03_front1.PNG
+
+newmtl IslandLODsubCOM_m58_build03_front3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build03_front3.PNG
+
+newmtl IslandLODsubCOM_m59_build03_roof
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build03_roof.PNG
+
+newmtl IslandLODsubCOM_m60_build06_front1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build06_front1.PNG
+
+newmtl IslandLODsubCOM_m61_corugwall1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/corugwall1.PNG
+
+newmtl IslandLODsubCOM_m62_build06_back
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build06_back.PNG
+
+newmtl IslandLODsubCOM_m63_build06_right
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build06_right.PNG
+
+newmtl IslandLODsubCOM_m64_build06_front2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build06_front2.PNG
+
+newmtl IslandLODsubCOM_m65_Strip_weathered2_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigbuild/Strip_weathered2_64HV.PNG
+
+newmtl IslandLODsubCOM_m66_build07_right
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build07_right.PNG
+
+newmtl IslandLODsubCOM_m67_build07_front3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build07_front3.PNG
+
+newmtl IslandLODsubCOM_m68_build07_left
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build07_left.PNG
+
+newmtl IslandLODsubCOM_m69_build07_front1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build07_front1.PNG
+
+newmtl IslandLODsubCOM_m70_build07_front2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/build07_front2.PNG
+
+newmtl IslandLODsubCOM_m71_terminal1_64HVa
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/terminal1_64HVa.PNG
+
+newmtl IslandLODsubCOM_m72_octopustop
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/octopustop.PNG
+
+newmtl IslandLODsubCOM_m73_octopuspillar
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/octopuspillar.PNG
+
+newmtl IslandLODsubCOM_m74_octopusbot
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/octopusbot.PNG
+
+newmtl IslandLODsubCOM_m75_tarmacplain_128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp4b/tarmacplain_128H.PNG
+
+newmtl IslandLODsubCOM_m76_dirt64b_grass
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/clif22/dirt64b_grass.PNG
+
+newmtl IslandLODsubCOM_m77_pumphouse_back
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/pumphouse_back.PNG
+
+newmtl IslandLODsubCOM_m78_pumphouse_frontnew1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/pumphouse_frontnew1.PNG
+
+newmtl IslandLODsubCOM_m79_pumphouse_side
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/pumphouse_side.PNG
+
+newmtl IslandLODsubCOM_m80_pumphouse_pipes
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/pumphouse_pipes.PNG
+
+newmtl IslandLODsubCOM_m81_pumphouse_funnel
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/pumphouse_funnel.PNG
+
+newmtl IslandLODsubCOM_m82_newgrnd1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/newgrnd1_128.PNG
+
+newmtl IslandLODsubCOM_m83_concretelump364HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridgesupports/concretelump364HV.PNG
+
+newmtl IslandLODsubCOM_m84_bridgegaps
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/bridgegaps.PNG
+
+newmtl IslandLODsubCOM_m85_Pave02_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/Pave02_128.PNG
+
+newmtl IslandLODsubCOM_m86_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl IslandLODsubCOM_m87_subindwall2hi64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/subindwall2hi64.PNG
+
+newmtl IslandLODsubCOM_m88_Hospital_side32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/Hospital_side32.PNG
+
+newmtl IslandLODsubCOM_m89_cutscenebank64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/suburb1/cutscenebank64.PNG
+
+newmtl IslandLODsubCOM_m90_Hospital_rear32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/Hospital_rear32.PNG
+
+newmtl IslandLODsubCOM_m91_newall8-2_16c64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/newall8-2_16c64.PNG
+
+newmtl IslandLODsubCOM_m92_newall6_16c64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/newall6_16c64.PNG
+
+newmtl IslandLODsubCOM_m93_police_station_side
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/suburb2/police station side.PNG
+
+newmtl IslandLODsubCOM_m94_police_station_front
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl IslandLODsubCOM_m95_police_station_back
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/suburb2/police station back.PNG
+
+newmtl IslandLODsubCOM_m99_mansion3_front_lod32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/mansion3_front_lod32.PNG
+
+newmtl IslandLODsubCOM_m100_mansion3_side_lod32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/mansion3_side_lod32.PNG
+
+newmtl IslandLODsubCOM_m101_mansion2_side_lod32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/mansion2_side_lod32.PNG
+
+newmtl IslandLODsubCOM_m102_mansion2_back_lod32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/mansion2_back_lod32.PNG
+
+newmtl IslandLODsubCOM_m103_mansion3_back_lod32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/mansion3_back_lod32.PNG
+
+newmtl IslandLODsubCOM_m104_mansion2_front_lod32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/mansion2_front_lod32.PNG
+
+newmtl IslandLODsubCOM_m105_craneblnk_32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/craneblnk_32.PNG
+
+newmtl IslandLODsubIND_m0_cliffnew_128_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/cliffnew_128_lod.PNG
+
+newmtl IslandLODsubIND_m1_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl IslandLODsubIND_m2_concretemanky_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/islandLODsubCOM/concretemanky_lod.PNG
+
+newmtl IslandLODsubIND_m3_cliffnew_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/clif22/cliffnew_128.PNG
+
+newmtl IslandLODsubIND_m4_dirt64b_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/dirt64b_lod.PNG
+
+newmtl LODticalift_bridge_m0_subridge_cab1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/subridge_cab1.PNG
+
+newmtl LODticalift_bridge_m1_rustybolts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustybolts.PNG
+
+newmtl LODticalift_bridge_m2_support_water64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/support_water64.PNG
+
+newmtl LODticalift_bridge_m3_subridge_top2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/subridge_top2.PNG
+
+newmtl LODticalift_bridge_m4_subridge_top1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/subridge_top1.PNG
+
+newmtl LODticalift_bridge_m5_BLOCK
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/BLOCK.PNG
+
+newmtl LODticalift_bridge_m6_subridge_middle1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/subridge_middle1.PNG
+
+newmtl LODticalift_bridge_m7_subridge_side2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/subridge_side2.PNG
+
+newmtl LODticalift_bridge_m8_subridge_side1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/subridge_side1.PNG
+
+newmtl LODticalift_bridg2_m0_subridge_top1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/subridge_top1.PNG
+
+newmtl sbwy_tunl_bend_m0_railtrack_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtrack_64.PNG
+
+newmtl sbwy_tunl_bend_m1_rail3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail3_64HV.PNG
+
+newmtl sbwy_tunl_bend_m2_rail2_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail2_64V.PNG
+
+newmtl sbwy_tunl_bend_m3_rail2_subway
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/traintracks/rail2_subway.PNG
+
+newmtl sbwy_tunl_bend_m4_redwall128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/redwall128.PNG
+
+newmtl sbwy_tunl_bend_m5_wallwasdrker128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/wallwasdrker128.PNG
+
+newmtl sbwy_tunl_bend_m6_raiseroad_section
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/raiseroad_section.PNG
+
+newmtl sbwy_tunl_bend_m7_raiseroad_section_mid
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/othersubside/raiseroad_section_mid.PNG
+
+newmtl sbwy_tunl_bend_m8_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl sbwy_tunl_bit_m0_railtrack_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtrack_64.PNG
+
+newmtl sbwy_tunl_bit_m1_rail3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail3_64HV.PNG
+
+newmtl sbwy_tunl_bit_m2_rail2_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail2_64V.PNG
+
+newmtl sbwy_tunl_bit_m3_rail2_subway
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/traintracks/rail2_subway.PNG
+
+newmtl sbwy_tunl_bit_m4_redwall128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/redwall128.PNG
+
+newmtl sbwy_tunl_bit_m5_wallwasdrker128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/wallwasdrker128.PNG
+
+newmtl sbwy_tunl_bit_m6_raiseroad_section
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/raiseroad_section.PNG
+
+newmtl sbwy_tunl_bit_m7_raiseroad_section_mid
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/othersubside/raiseroad_section_mid.PNG
+
+newmtl sbwy_tunl_bit_m8_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl sbwy_tunl_cstm6_m0_railtrack_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtrack_64.PNG
+
+newmtl sbwy_tunl_cstm6_m1_rail3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail3_64HV.PNG
+
+newmtl sbwy_tunl_cstm6_m2_rail2_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/rail2_64V.PNG
+
+newmtl sbwy_tunl_cstm6_m3_rail2_subway
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/traintracks/rail2_subway.PNG
+
+newmtl sbwy_tunl_cstm6_m4_redwall128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_c/redwall128.PNG
+
+newmtl sbwy_tunl_cstm6_m5_wallwasdrker128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/wallwasdrker128.PNG
+
+newmtl sbwy_tunl_cstm6_m6_raiseroad_section
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/raiseroad_section.PNG
+
+newmtl sbwy_tunl_cstm6_m7_raiseroad_section_mid
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/othersubside/raiseroad_section_mid.PNG
+
+newmtl sbwy_tunl_cstm6_m8_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl sbwy_tunl_cstm7_m0_railtrack_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtrack_64.PNG

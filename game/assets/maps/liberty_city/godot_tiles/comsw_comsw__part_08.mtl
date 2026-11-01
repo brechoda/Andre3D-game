@@ -1,0 +1,479 @@
+newmtl LODcom027_m0_LO1road_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/LO1road_128.PNG
+
+newmtl LODcom028_m0_LO1road_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/LO1road_128.PNG
+
+newmtl LODcom029_m0_LO1road_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/LO1road_128.PNG
+
+newmtl LODcom030_m0_LO1road_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/LO1road_128.PNG
+
+newmtl LODcom031_m0_LO1road_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/LO1road_128.PNG
+
+newmtl LODcom032_m0_LO1road_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/LO1road_128.PNG
+
+newmtl LODcom033_m0_LO1road_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/LO1road_128.PNG
+
+newmtl LODcom034_m0_LO1road_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/LO1road_128.PNG
+
+newmtl LODcom035_m0_LO1road_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/LO1road_128.PNG
+
+newmtl LOD_gazground_m0_LO1road_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/LO1road_128.PNG
+
+newmtl LODgallerground_m0_artgallerground
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/artgallerground.PNG
+
+newmtl LOD_land064_m0_LO1road_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/LO1road_128.PNG
+
+newmtl LODhl_lndnite_m0_twnhl_lndnite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/twnhl_lndnite.PNG
+
+newmtl LOD_land013_m0_LO1road_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/LO1road_128.PNG
+
+newmtl LOD_land048nite_m0_com_land048nite_l0
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/com_land048nite_l0.PNG
+
+newmtl LODk3_ground_m0_LO1road_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/LO1road_128.PNG
+
+newmtl LODglry_stn_m0_artgallery3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/artgallery3.PNG
+
+newmtl LODglry_stn_m1_artgallery2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/artgallery2.PNG
+
+newmtl LODglry_stn_m2_artgallery1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/artgallery1.PNG
+
+newmtl LODirestate_m0_empstat5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/empstat5.PNG
+
+newmtl LODirestate_m1_empstat6
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/empstat6.PNG
+
+newmtl LODirestate_m2_empstat4
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/empstat4.PNG
+
+newmtl LODirestate_m3_empstat7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/empstat7.PNG
+
+newmtl LODirestate_m4_empstat2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/empstat2.PNG
+
+newmtl LODirestate_m5_empstat1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/empstat1.PNG
+
+newmtl LODirestate_m6_empstat3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/empstat3.PNG
+
+newmtl LODk3_flats1_m0_blok3_flats1a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/blok3_flats1a.PNG
+
+newmtl LODk3_flats1_m1_blok3_flats1b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/blok3_flats1b.PNG
+
+newmtl LODk3_flats1_m2_blok3_flats1c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/blok3_flats1c.PNG
+
+newmtl LODm_cthdrlfcde_m0_church3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/church3.PNG
+
+newmtl LODm_cthdrlfcde_m1_church4
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/church4.PNG
+
+newmtl LODm_cthdrlfcde_m2_church1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/church1.PNG
+
+newmtl LODm_cthdrlfcde_m3_church2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/church2.PNG
+
+newmtl LODnhall_nite_m0_townhallnite3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/townhallnite3.PNG
+
+newmtl LODnhall_nite_m1_townhallnite1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/townhallnite1.PNG
+
+newmtl LODnhall_nite_m2_townhallnite2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/townhallnite2.PNG
+
+newmtl LODofis1_m0_kb_ofis1_a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/kb_ofis1_a.PNG
+
+newmtl LODofis1_m1_comswcentralbld703
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld703.PNG
+
+newmtl LODofis1_m2_sky24_64hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/sky24_64hv.PNG
+
+newmtl LODofis1_m3_greyrooftop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/greyrooftop128.PNG
+
+newmtl LODofis1_m4_Pave01_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/Pave01_128.PNG
+
+newmtl LODra_house_m0_opera_house_top
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/opera_house_top.PNG
+
+newmtl LODra_house_m1_opera_house_front
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/opera_house_front.PNG
+
+newmtl LODra_house_m2_opera_house_side
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/opera_house_side.PNG
+
+newmtl LODrthse_night_m0_courthouse1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/courthouse1.PNG
+
+newmtl LODrthse_night_m1_courthouse3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/courthouse3.PNG
+
+newmtl LODrthse_night_m2_courthouse2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/courthouse2.PNG
+
+newmtl LODrthse_night_m3_courthouse4
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/courthouse4.PNG
+
+newmtl LODerground_over1_m0_underground_over1_pointybit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_over1_pointybit.PNG
+
+newmtl LODerground_over1_m1_underground_road_walls
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_walls.PNG
+
+newmtl LODerground_over1_m2_underground_road_support
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_support.PNG
+
+newmtl LODerground_over1_m3_underground_over1_wall
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_over1_wall.PNG
+
+newmtl LODerground_over1_m4_underground_over1_grass
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_over1_grass.PNG
+
+newmtl LODerground_over5_m0_underground_road_support
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_support.PNG
+
+newmtl LODerground_over5_m1_underground_road_walls
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_walls.PNG
+
+newmtl LODerground_over5_m2_underground_over1_pointybit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_over1_pointybit.PNG
+
+newmtl LODerground_over5_m3_underground_road_roof
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_roof.PNG
+
+newmtl LODerground_over4_m0_underground_road_support
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_support.PNG
+
+newmtl LODerground_over4_m1_underground_road_walls
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_walls.PNG
+
+newmtl LODerground_over4_m2_underground_over1_pointybit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_over1_pointybit.PNG
+
+newmtl LODerground_over4_m3_underground_road_roof
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_roof.PNG
+
+newmtl LODerground_over3_m0_underground_road_support
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_support.PNG
+
+newmtl LODerground_over3_m1_underground_road_walls
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_walls.PNG
+
+newmtl LODerground_over3_m2_underground_over1_pointybit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_over1_pointybit.PNG
+
+newmtl LODerground_over3_m3_underground_road_roof
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_roof.PNG
+
+newmtl LODerground_over2_m0_underground_road_support
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_support.PNG
+
+newmtl LODerground_over2_m1_underground_road_walls
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_walls.PNG
+
+newmtl LODerground_over2_m2_underground_over1_pointybit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_over1_pointybit.PNG
+
+newmtl LODerground_over2_m3_underground_road_roof
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_roof.PNG
+
+newmtl LODerground_over6_m0_underground_road_support
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_support.PNG
+
+newmtl LODerground_over6_m1_underground_road_walls
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_walls.PNG
+
+newmtl LODerground_over6_m2_underground_over1_pointybit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_over1_pointybit.PNG
+
+newmtl LODerground_over6_m3_underground_road_roof
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_roof.PNG
+
+newmtl LODerground_over7_m0_underground_road_support
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_support.PNG
+
+newmtl LODerground_over7_m1_underground_road_walls
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_walls.PNG
+
+newmtl LODerground_over7_m2_underground_over1_pointybit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_over1_pointybit.PNG
+
+newmtl LODerground_over7_m3_underground_road_roof
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_roof.PNG
+
+newmtl LODerground_over7_m4_underground_over_roof1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_over_roof1.PNG
+
+newmtl LODtom_rd2_ug_m0_underground_road2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road2.PNG
+
+newmtl LODtom_rd1_ug_m0_underground_road3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road3.PNG
+
+newmtl LODergroSD1_m0_underground_road_walls
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_walls.PNG
+
+newmtl LODergroundS1_m0_underground_road_walls
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_walls.PNG
+
+newmtl LODtom_rd3_ug_m0_underground_road1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road1.PNG
+
+newmtl LODergroundS2_m0_underground_road_walls
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/underground_road_walls.PNG
+
+newmtl underground_over1_m0_support
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo3e/support.PNG
+
+newmtl underground_over1_m1_hazard_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/hazard_yellow.PNG
+
+newmtl underground_over1_m2_BLOCK
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/BLOCK.PNG
+
+newmtl underground_over1_m3_cabin5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/cabin5.PNG
+
+newmtl underground_over1_m4_raiseroad_section
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/raiseroad_section.PNG
+
+newmtl underground_over1_m5_banding7_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comdocks/banding7_64HV.PNG
+
+newmtl underground_over1_m6_concretemanky
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretemanky.PNG
+
+newmtl underground_over1_m7_Grass_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/com_police/Grass_64HV.PNG
+
+newmtl underground_over1_m8_Grass_dirtpave_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_dirtpave_64HV.PNG
+
+newmtl LODky_skyscrp6_m0_csky_skyscrp6
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/csky_skyscrp6.PNG
+
+newmtl LODky_skyscrp6_m1_tcsky_skyscrp6_lod_b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/tcsky_skyscrp6_lod_b.PNG
+
+newmtl LODhedbuilding_m0_arch_building_3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/arch_building_3.PNG

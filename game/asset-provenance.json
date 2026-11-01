@@ -1,0 +1,972 @@
+{
+  "assets": {
+    "assets/models/andre.glb": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:bad8ee14ef0b1fb457b8277c2a9217ba23c520f059d1167c1393722e2293c58a",
+      "shipped": true,
+      "size": 1102420,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": [],
+      "versions": {
+        "sha256:bd25ac9278c5cc9778721d9a70cede1ba748adce24334032387953689cb9133c": {
+          "generator": {},
+          "inputs": [],
+          "license": {},
+          "origin": "unknown",
+          "regions": [],
+          "sha256": "sha256:bd25ac9278c5cc9778721d9a70cede1ba748adce24334032387953689cb9133c",
+          "size": 631808,
+          "source": {},
+          "transformations": [],
+          "usedBy": []
+        }
+      }
+    },
+    "assets/models/andre_armed.glb": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scenes/third_person.tscn"
+      ],
+      "regions": [],
+      "sha256": "sha256:1f6f3f54ad61b4bae934355472b2d835640b8e654d26b17e0b88cc433fe355a8",
+      "shipped": true,
+      "size": 1727072,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scenes/third_person.tscn"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/models/andre_rigged.glb": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:caa2cbc4dc1451763cbe215f11b2535a1f3a90b338a7dcbf044a2a35c1eaefbb",
+      "shipped": true,
+      "size": 1210924,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/assault_rifle.glb": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/third_person.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:ca6875768214f06884a9a78f5867cb4c28edb3f64f0c6e2ab92320e1504d5555",
+      "shipped": true,
+      "size": 100640,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/third_person.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/models/assault_rifle_simple.glb": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scripts/third_person.gd"
+      ],
+      "regions": [],
+      "sha256": "sha256:266ffd12306a2afc2638e9a479687adf738fc3cd9e938ce8e3195ccb312a6b31",
+      "shipped": true,
+      "size": 8740,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scripts/third_person.gd"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/models/cuntgun.mtl": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:ec4f6ccae1ce7dca0460e168e46e385d71fc7367b0fce99eb2097f0a69f0179c",
+      "shipped": false,
+      "size": 315,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/cuntgun.obj": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:9f7e5eb312e0e18895958d3f94bcf3ffde0be73aabb268656e33f07d5069bb5c",
+      "shipped": true,
+      "size": 1067084,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/gorece_rigged.glb": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [
+        "scenes/third_person.tscn"
+      ],
+      "regions": [],
+      "sha256": "sha256:e38b128c65612ce6ac9f0c6117ef14efcf3da8f2eb7f9f06a6b97035e2b2bd79",
+      "shipped": true,
+      "size": 21687688,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "scenes/third_person.tscn"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/models/gorece_rigged_acessorios1.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:6d2604becc0e1076766a3fc675fb367b47687f2bde80d319a8ccf8e76bcf5983",
+      "shipped": true,
+      "size": 5536819,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/gorece_rigged_acessorios2.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:897ca67ddbbb6578376b9e49fe1e46f32fe5185bccc43d1223571ae4d5514032",
+      "shipped": true,
+      "size": 2828369,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/gorece_rigged_balaclava.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:10dc268fc5a15c86c4cded706e079c8868ae1dcf0d378d0e617f70fd828d22cf",
+      "shipped": true,
+      "size": 7466,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/gorece_rigged_brasil.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:5d0ce089513d13b31918dcec0586c166b84333585bcebf4501eb8f553ebc10b5",
+      "shipped": true,
+      "size": 32149,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/gorece_rigged_cal�as.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:99c703381aff2e98c77601d6d9393ae6c59007eb810894d564d10c6000c096e7",
+      "shipped": true,
+      "size": 210631,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/gorece_rigged_camisa.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:67fea32652aeb6a8ac327b3d0e5e5fb9c09bfe3e66a0795795219d9504378249",
+      "shipped": true,
+      "size": 34278,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/gorece_rigged_cinto.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:39b1f1684f47a9529e4dd21ebae601419203b20744e6662e68349877f04b7dc3",
+      "shipped": true,
+      "size": 1547311,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/gorece_rigged_colete.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:38d79343a11b5703a95eadb2ff900c10dd4589a73f454cb355d97f8bb2fd6255",
+      "shipped": true,
+      "size": 8273463,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/gorece_rigged_coturno.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:85c5bf133887ec1531b492422b4ab0428485b44f6716ba9b255c38a6833ca3a6",
+      "shipped": true,
+      "size": 102035,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/gorece_rigged_farda.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:ba747d577ae1562c81f1c5739b2ad811de6489e748dc7458c31cf258b6ae1c10",
+      "shipped": true,
+      "size": 163353,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/gorece_rigged_gore.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:250f61743081a156b5f5fd577180b4e1d36b87a5eecb56f9ea69e3bd670ccd03",
+      "shipped": true,
+      "size": 45619,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/gorece_rigged_head_diff_042_a_whi.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:703a54f9aa6c228397f41cc8ecedeba6ed1cffeb80a011f7545cb848a21bbdaf",
+      "shipped": true,
+      "size": 384913,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/gorece_rigged_marrom.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:60732205c9711ad001a1e4c3f8ccd750bf32efef628b99c1d8bf606e80249011",
+      "shipped": true,
+      "size": 144555,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/gorece_rigged_placa.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:9b8705187ce56e6435153847d1ed0f451a5677bf7ee8974bd8bd28ee094b8fa9",
+      "shipped": true,
+      "size": 33148,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/models/gorece_rigged_uppr_diff_000_a_uni.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "unknown",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:2bc4038ad39828506aab5d25d628af5dcd8cb874bee873fa625c69b2b7141277",
+      "shipped": true,
+      "size": 84902,
+      "source": {},
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/characters/runner.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "project.godot"
+      ],
+      "regions": [],
+      "sha256": "sha256:c88485773d6ff9361e036f37d8ac76fb77b8c3f7c041c3f52c8dd222adc8cc21",
+      "shipped": true,
+      "size": 68885,
+      "source": {
+        "starterId": "game-generic-v56"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "project.godot"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/characters/sentinel.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:0d9fb751bca5507ba14f7090573e6605a94753390a9e7c53bf2f590f0a24918d",
+      "shipped": true,
+      "size": 64998,
+      "source": {
+        "starterId": "game-generic-v56"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/environment/backdrop.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:ec4ab7867e60fb483dd438459f587b478aac4c1e71ec4fe509ce74a18de34216",
+      "shipped": true,
+      "size": 971282,
+      "source": {
+        "starterId": "game-generic-v56"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/environment/foreground.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:4b6916024c69961fbfa7cdc929c68f547fea4561e61ebdb3405b3aba0efbd94d",
+      "shipped": true,
+      "size": 58603,
+      "source": {
+        "starterId": "game-generic-v56"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/fonts/Figtree-VF.subset.woff2": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "assets/template/fonts/ui_bold.tres",
+        "assets/template/fonts/ui_medium.tres",
+        "assets/template/fonts/ui_regular.tres",
+        "scenes/third_person.tscn"
+      ],
+      "regions": [],
+      "sha256": "sha256:b3976c5969c8b1afd81dc3e314b61d8ffe3f3f58cf40906443105d330e6e0bdf",
+      "shipped": true,
+      "size": 23660,
+      "source": {
+        "starterId": "game-generic-v56"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "assets/template/fonts/ui_bold.tres",
+        "assets/template/fonts/ui_medium.tres",
+        "assets/template/fonts/ui_regular.tres",
+        "scenes/third_person.tscn"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/fonts/NotoSansSC-VF.subset.woff2": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {
+        "id": "OFL-1.1",
+        "url": "https://openfontlicense.org/open-font-license-official-text/"
+      },
+      "origin": "template",
+      "referenceEvidence": [
+        "assets/template/fonts/noto_sans_sc_bold.tres",
+        "assets/template/fonts/noto_sans_sc_medium.tres",
+        "assets/template/fonts/noto_sans_sc_regular.tres"
+      ],
+      "regions": [],
+      "sha256": "sha256:38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412",
+      "shipped": true,
+      "size": 1869368,
+      "source": {
+        "name": "NotoSansSC-VF.subset.woff2",
+        "starterId": "game-generic-v56"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "assets/template/fonts/noto_sans_sc_bold.tres",
+        "assets/template/fonts/noto_sans_sc_medium.tres",
+        "assets/template/fonts/noto_sans_sc_regular.tres"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/fonts/display/Sora-VF.subset.woff2": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:438fbf4582548e76b266a738f2c11bcbd5137978f2d2e2f3aaabd49df69186f2",
+      "shipped": true,
+      "size": 41696,
+      "source": {
+        "starterId": "game-generic-v56"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/powerups/energy.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:ffd7906f240f928e785d7c19a9e7a7b5dfab0d7483be5205dda3e4ba17ebe06a",
+      "shipped": true,
+      "size": 50950,
+      "source": {
+        "starterId": "game-generic-v56"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/powerups/magnet.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:6e7354aa6510a462717218b09b9d784bb161b87878bff62ef4f2a9d03c053de7",
+      "shipped": true,
+      "size": 53724,
+      "source": {
+        "starterId": "game-generic-v56"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/powerups/overdrive.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:6a48a85886c0551c1af0df576b0225f0ec3ae86b326fd84fc614083fbfe2908b",
+      "shipped": true,
+      "size": 37238,
+      "source": {
+        "starterId": "game-generic-v56"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/powerups/shield.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:8cebf0cf730ca35c8c8697192ef78121c926442328a0725e0bd3e31701d64f13",
+      "shipped": true,
+      "size": 39659,
+      "source": {
+        "starterId": "game-generic-v56"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/powerups/slow_field.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:96874c000866b2e7503b40da73888afb918ae36e462f51488415157da52a8637",
+      "shipped": true,
+      "size": 49145,
+      "source": {
+        "starterId": "game-generic-v56"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/ui/loading-background.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [
+        "project.godot"
+      ],
+      "regions": [],
+      "sha256": "sha256:16dde3061f4e60802f8f0d1a6b875e72b6add05192237b03fef1fd313968a13a",
+      "shipped": true,
+      "size": 473356,
+      "source": {
+        "starterId": "game-generic-v56"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [
+        "project.godot"
+      ],
+      "used": true,
+      "usedBy": []
+    },
+    "assets/template/ui/pause_glass.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:c88a4725838df85e72c7270865848f275b62c525c5679a2a8b7ecefb1af82d4b",
+      "shipped": true,
+      "size": 115691,
+      "source": {
+        "starterId": "game-generic-v56"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    },
+    "assets/template/ui/title_glass.png": {
+      "declaredUseEvidence": [],
+      "generator": {},
+      "inputs": [],
+      "license": {},
+      "origin": "template",
+      "referenceEvidence": [],
+      "regions": [],
+      "sha256": "sha256:8860db07768f093d4effea10b51431f76a1552d4bc7fd4e57757f189c51f0429",
+      "shipped": true,
+      "size": 155592,
+      "source": {
+        "starterId": "game-generic-v56"
+      },
+      "status": "present",
+      "transformations": [],
+      "useEvidence": [],
+      "used": false,
+      "usedBy": []
+    }
+  },
+  "discoveries": {},
+  "downloads": {},
+  "export": {
+    "coverage": "verified",
+    "hostMedia": [
+      {
+        "contentMatches": [],
+        "path": "index.apple-touch-icon.png",
+        "sha256": "sha256:223ba4214aa892c363acf1d673904d77262a586cc66ff0adf75128f85e931e88",
+        "size": 32579,
+        "sourcePaths": []
+      },
+      {
+        "contentMatches": [],
+        "path": "index.icon.png",
+        "sha256": "sha256:24e35756331a1621216bb32813dc7899b8bd94bc28e2cdca264d00c855d34768",
+        "size": 59927,
+        "sourcePaths": []
+      },
+      {
+        "contentMatches": [],
+        "path": "index.png",
+        "sha256": "sha256:5743a648b82437e0e60db5e4aa08103cea96b01e110961082223c0e7fa819ebf",
+        "size": 1010767,
+        "sourcePaths": []
+      }
+    ],
+    "pckSha256": "sha256:44b3b7d00ce74b46c0157691570ae24fe90b70f5232c9e5fc6bf72d1912ceade",
+    "profile": "preview",
+    "sourceFingerprint": "sha256:a10153cbf13dc5816bbb06bbaa6dfb23b70711501dc6a125f0dc015f00c75ff6"
+  },
+  "procedures": {},
+  "summary": {
+    "ancestry": {
+      "ai": {
+        "retained": 0,
+        "shipped": 0,
+        "used": 0
+      },
+      "catalog": {
+        "retained": 0,
+        "shipped": 0,
+        "used": 0
+      },
+      "procedural": {
+        "retained": 0,
+        "shipped": 0,
+        "used": 0
+      }
+    },
+    "derivatives": {
+      "retained": 0,
+      "shipped": 0,
+      "used": 0
+    },
+    "exportedHostMedia": {
+      "paths": 3,
+      "uniqueHashes": 3,
+      "unmatchedSourcePaths": 3
+    },
+    "files": {
+      "downloaded": 0,
+      "retained": 38,
+      "shipped": 37,
+      "used": 8
+    },
+    "origins": {
+      "ai": {
+        "retained": 0,
+        "shipped": 0,
+        "used": 0
+      },
+      "catalog": {
+        "retained": 0,
+        "shipped": 0,
+        "used": 0
+      },
+      "derivative": {
+        "retained": 0,
+        "shipped": 0,
+        "used": 0
+      },
+      "external": {
+        "retained": 0,
+        "shipped": 0,
+        "used": 0
+      },
+      "procedural": {
+        "retained": 0,
+        "shipped": 0,
+        "used": 0
+      },
+      "template": {
+        "retained": 15,
+        "shipped": 15,
+        "used": 4
+      },
+      "unknown": {
+        "retained": 23,
+        "shipped": 22,
+        "used": 4
+      }
+    },
+    "packs": {
+      "discovered": 0,
+      "downloaded": 0,
+      "shipped": 0,
+      "used": 0
+    },
+    "proceduralSystems": {
+      "retained": 0,
+      "used": 0
+    },
+    "spriteRegions": {
+      "retained": 0,
+      "shipped": 0,
+      "used": 0
+    },
+    "visualCoverage": {
+      "approvedRevision": 3,
+      "blueprintId": "gbp_56b557d88a3e574f0a9eedd2",
+      "committedRoles": 3,
+      "expectedDigest": "32dff6a66a40bcd78295706f2519b5244ec96cd4d3260739a686e1ad5bc19431",
+      "fulfilledRoles": 0,
+      "roles": [
+        {
+          "id": "personagem-andre",
+          "reasons": [
+            "unresolved"
+          ],
+          "status": "unresolved"
+        },
+        {
+          "id": "mapa-teste-simples",
+          "reasons": [
+            "unresolved"
+          ],
+          "status": "unresolved"
+        },
+        {
+          "id": "controles-touch-basicos",
+          "reasons": [
+            "unresolved"
+          ],
+          "status": "unresolved"
+        }
+      ],
+      "search": {
+        "checkedPages": 0,
+        "outcomes": 0,
+        "overflowEvents": 0,
+        "requests": 0
+      },
+      "selectedButUnusedAssets": [],
+      "staleRenderedEvidence": [],
+      "status": "incomplete",
+      "unexplainedFallbacks": [],
+      "unresolvedRoles": [
+        "personagem-andre",
+        "mapa-teste-simples",
+        "controles-touch-basicos"
+      ],
+      "visualQuality": "requires_agent_review"
+    }
+  },
+  "version": 1,
+  "visualCoverage": {
+    "attempts": {},
+    "expected": {
+      "approvedRevision": 3,
+      "blueprintId": "gbp_56b557d88a3e574f0a9eedd2",
+      "digest": "32dff6a66a40bcd78295706f2519b5244ec96cd4d3260739a686e1ad5bc19431",
+      "roles": [
+        {
+          "description": "Use exclusivamente o personagem Andre que você forneceu como player, preservando sua aparência e realizando somente a conversão técnica necessária do formato RenderWare DFF para um recurso 3D importável pelo Godot; não o substitua por outro personagem.",
+          "id": "personagem-andre",
+          "label": "Seu personagem 3D fornecido"
+        },
+        {
+          "description": "Mantenha para você apenas uma superfície 3D simples, vazia e legível para caminhar e testar a câmera em terceira pessoa, sem cenário elaborado, campanha, inimigos, itens ou elementos decorativos opcionais.",
+          "id": "mapa-teste-simples",
+          "label": "Seu mapa 3D vazio de teste"
+        },
+        {
+          "description": "Apresente na tela controles touch básicos e legíveis para você movimentar o personagem no Android, mantendo também o suporte de teclado no desktop e sem acrescentar interfaces ou sistemas extras.",
+          "id": "controles-touch-basicos",
+          "label": "Seus controles touch básicos"
+        }
+      ]
+    },
+    "overflowEvents": 0,
+    "resolutions": {},
+    "version": 1
+  }
+}

@@ -1,0 +1,478 @@
+newmtl LODNcoast5_m1_BLOCKLOD
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/BLOCKLOD.PNG
+
+newmtl hghwysgn02_m0_Metal3_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Metal3_128.PNG
+
+newmtl glassfx55_m0_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl LODlightbuild11_m0_redlightbuild11_l0f
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/redlightbuild11_l0f.PNG
+
+newmtl luigiineerclub_m0_Window1364HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luigiclub/Window1364HV.PNG
+
+newmtl luigiineerclub_m1_concretemanky
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretemanky.PNG
+
+newmtl luigiineerclub_m2_newall5-1seamless
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luigiclub/newall5-1seamless.PNG
+
+newmtl luigiineerclub_m3_ventb64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comtenblock6b/ventb64.PNG
+
+newmtl luigiineerclub_m4_banding3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/banding3_64HV.PNG
+
+newmtl luigiineerclub_m5_clubcrete128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luigiclub/clubcrete128.PNG
+
+newmtl luigiineerclub_m6_newallkb1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/newallkb1.PNG
+
+newmtl luigiineerclub_m7_dirtyframe64HVa
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/factory/dirtyframe64HVa.PNG
+
+newmtl luigiineerclub_m8_fire_exit64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal4/fire_exit64.PNG
+
+newmtl luigiineerclub_m9_metfence_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colmansion/metfence_64HV.PNG
+
+newmtl luigiineerclub_m10_crate1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luigiclub/crate1_64.PNG
+
+newmtl luigiineerclub_m11_crate3_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luigiclub/crate3_64.PNG
+
+newmtl luigiineerclub_m12_crate2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luigiclub/crate2_64.PNG
+
+newmtl luigiineerclub_m13_wallmuck
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luigiclub/wallmuck.PNG
+
+newmtl luigiineerclub_m14_wallmuck
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luigiclub/wallmuck.PNG
+
+newmtl luigiineerclub_m15_luigigraf128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luigiclub/luigigraf128.PNG
+
+newmtl luigiineerclub_m16_metpat_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/metpat_64.PNG
+
+newmtl luigiineerclub_m17_blackmetal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinatowns/blackmetal.PNG
+
+newmtl luigiineerclub_m18_wallmix64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/wallmix64HV.PNG
+
+newmtl luigiineerclub_m19_tunnelwallwhitebottom
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/tunnelwallwhitebottom.PNG
+
+newmtl luigiineerclub_m20_steel64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/steel64.PNG
+
+newmtl luigiineerclub_m21_steel256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/steel256128.PNG
+
+newmtl luigiineerclub_m22_banding3c_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comtenblock6b/banding3c_64HV.PNG
+
+newmtl luigiineerclub_m23_black64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dirtpass/black64a.PNG
+
+newmtl luigiineerclub_m24_feets_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/luigiclub/feets_128.PNG
+
+newmtl luigiineerclub_m25_black64b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/heli2/black64b.PNG
+
+newmtl LOD_newradio_m0_radiostat
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/radiostat.PNG
+
+newmtl LODlightbuild05_nt_m0_redlightbuild04_dyr_l0
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/redlightbuild04_dyr_l0.PNG
+
+newmtl LODlightbuild05_nt_m1_LO1road_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/LO1road_128.PNG
+
+newmtl ind_customroad088_m0_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl ind_customroad088_m1_curb_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/curb_64H.PNG
+
+newmtl ind_customroad088_m2_Road_blank256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/Road_blank256HV.PNG
+
+newmtl ind_customroad088_m3_Road_2line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/Road_2line256HV.PNG
+
+newmtl ind_customroad088_m4_Grass_dirtpave_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_dirtpave_64HV.PNG
+
+newmtl DIRTPASS3_m0_black64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/black64.PNG
+
+newmtl DIRTPASS3_m1_black64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dirtpass/black64a.PNG
+
+newmtl LOD_land118_m0_green64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/green64.PNG
+
+newmtl indhibuild9_m0_Strip_brown_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indhibuildns/Strip_brown_64HV.PNG
+
+newmtl indhibuild9_m1_newall1-1_16c128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo3b/newall1-1_16c128.PNG
+
+newmtl indhibuild9_m2_tallbuild256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/tallbuild256.PNG
+
+newmtl indhibuild9_m3_subindwall2128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/docks/subindwall2128.PNG
+
+newmtl indhibuild9_m4_tallbuildb256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/tallbuildb256.PNG
+
+newmtl indhibuild9_m5_craneblnk_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/craneblnk_128.PNG
+
+newmtl indhibuild9_m6_corrugated64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinaedge/corrugated64HV.PNG
+
+newmtl indhibuild9_m7_inddoor2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp_new/inddoor2.PNG
+
+newmtl indhibuild9_m8_ToLet1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinaedge/ToLet1_64.PNG
+
+newmtl indhibuild9_m9_Build14win
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indhibuildns/Build14win.PNG
+
+newmtl indhibuild9_m10_dustytar_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/dustytar_64HV.PNG
+
+newmtl redlightbuild06e_m0_dustytar_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/dustytar_64HV.PNG
+
+newmtl redlightbuild06e_m1_indmidbeigeten128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/indmidbeigeten128.PNG
+
+newmtl redlightbuild06e_m2_tenstripe256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk4/tenstripe256128.PNG
+
+newmtl redlightbuild06e_m3_indmidbeigebrick64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/indmidbeigebrick64.PNG
+
+newmtl redlightbuild06e_m4_ledgeskuzz64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/ledgeskuzz64.PNG
+
+newmtl redlightbuild06e_m5_ledge_creme_0264H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild3/ledge_creme_0264H.PNG
+
+newmtl redlightbuild06e_m6_TENcreme1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk4/TENcreme1_128.PNG
+
+newmtl redlightbuild06e_m7_ledge2_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/ledge2_64H.PNG
+
+newmtl redlightbuild06e_m8_walldirtynewa256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/walldirtynewa256128.PNG
+
+newmtl redlightbuild06e_m9_Storeroom2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk4/Storeroom2.PNG
+
+newmtl redlightbuild06e_m10_inddoor3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comunation/inddoor3.PNG
+
+newmtl redlightbuild06e_m11_shadegreen64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/hotelkb/shadegreen64HV.PNG
+
+newmtl redlightbuild06e_m12_chimney0264
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indjunk/chimney0264.PNG
+
+newmtl redlightbuild06e_m13_inddoor1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/busdepot/inddoor1.PNG
+
+newmtl redlightbuild06e_m14_ledge_classic_0364H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsub_b/ledge_classic_0364H.PNG
+
+newmtl redlightbuild06e_m15_newwin1b_64hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/inditaly1/newwin1b_64hv.PNG
+
+newmtl redlightbuild06e_m16_dirtyblack_matte
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colmansion/dirtyblack_matte.PNG
+
+newmtl redlightbuild06e_m17_cratetop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/cratetop128.PNG
+
+newmtl redlightbuild06e_m18_redlitlingerie256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk4/redlitlingerie256128.PNG
+
+newmtl redlightbuild06e_m19_tatt_mass_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk4/tatt_mass_128.PNG
+
+newmtl redlightbuild06e_m20_rustpipe_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/docfactories/rustpipe_128.PNG
+
+newmtl redlightbuild06e_m21_banding3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/banding3_64HV.PNG
+
+newmtl redlightbuild06e_m22_ventb64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comtenblock6b/ventb64.PNG
+
+newmtl redlightbuild06e_m23_Paveblank_64hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Paveblank_64hv.PNG
+
+newmtl redlightbuild06v_m0_concretemanky
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretemanky.PNG
+
+newmtl redlightbuild06v_m1_tenstripe256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk4/tenstripe256128.PNG
+
+newmtl redlightbuild06v_m2_indmidbeigeten128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/indmidbeigeten128.PNG
+
+newmtl redlightbuild06v_m3_indmidbeigebrick64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/indmidbeigebrick64.PNG
+
+newmtl redlightbuild06v_m4_redlittatoob256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk4/redlittatoob256128.PNG
+
+newmtl redlightbuild06v_m5_mottbrick_dark64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/mottbrick_dark64HV.PNG
+
+newmtl redlightbuild06v_m6_shopgrating128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/shopgrating128H.PNG
+
+newmtl redlightbuild06v_m7_shopgrating4128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/shopgrating4128H.PNG
+
+newmtl redlightbuild06v_m8_step_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/step_64HV.PNG
+
+newmtl redlightbuild06v_m9_ledge_creme_0264H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutbuild3/ledge_creme_0264H.PNG
+
+newmtl redlightbuild06v_m10_plasterb128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk4/plasterb128.PNG
+
+newmtl redlightbuild06v_m11_stepflat_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/stepflat_64HV.PNG
+
+newmtl redlightbuild06v_m12_ledgeskuzz64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/ledgeskuzz64.PNG
+
+newmtl redlightbuild06v_m13_inddoor7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/inddoor7.PNG
+
+newmtl redlightbuild06v_m14_sexkitten128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk4/sexkitten128.PNG
+
+newmtl redlightbuild06v_m15_blackmetal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinatowns/blackmetal.PNG
+
+newmtl redlightbuild06v_m16_Strip_weathered2_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigbuild/Strip_weathered2_64HV.PNG
+
+newmtl redlightbuild06v_m17_Door2_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitblk1b/Door2_64H.PNG
+
+newmtl redlightbuild06v_m18_cinemaboard_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/cinemaboard_64HV.PNG
+
+newmtl redlightbuild06v_m19_redstuff
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/carpark/redstuff.PNG

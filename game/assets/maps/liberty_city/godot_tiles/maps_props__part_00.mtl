@@ -1,0 +1,477 @@
+newmtl Scffldng02top_m0_bluemetal02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/bluemetal02.PNG
+
+newmtl Scffldng02top_m1_librtycnstrctn_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/librtycnstrctn_64.PNG
+
+newmtl Scffldng02top_m2_Boards_LBrown_0264HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/Boards_LBrown_0264HV.PNG
+
+newmtl Scffldng02top_m3_crate128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/crate128.PNG
+
+newmtl Scffldng02top_m4_barrel_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/barrel_64HV.PNG
+
+newmtl iten_details7_m0_darkgrey64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casino/darkgrey64.PNG
+
+newmtl iten_details7_m1_pipe64v
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/pipe64v.PNG
+
+newmtl iten_details7_m2_ladderbase4_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comtenblock6b/ladderbase4_64.PNG
+
+newmtl mak_billsmall_m0_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl mak_billsmall_m1_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl mak_billsmall_m2_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl firescapa1_m0_midgrey64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/midgrey64.PNG
+
+newmtl firescapa1_m1_ladderbase4_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comtenblock6b/ladderbase4_64.PNG
+
+newmtl mak_Watertank2_m0_Copperox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ships/Copperox64.PNG
+
+newmtl mak_Watertank2_m1_giantoil_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/dockvats/giantoil_128.PNG
+
+newmtl mak_Watertank2_m2_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl mak_ventchim_m0_Alumox64b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/3d8ball/Alumox64b.PNG
+
+newmtl mak_ventchim_m1_shutters
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/docklight/shutters.PNG
+
+newmtl iten_washline01_m0_washing3_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/washin/washing3_64.PNG
+
+newmtl iten_washline01_m1_washing2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/washin/washing2_64.PNG
+
+newmtl iten_washline01_m2_washing1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/washin/washing1_64.PNG
+
+newmtl iten_washline01_m3_washing4_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compolice/washing4_64.PNG
+
+newmtl iten_washline02_m0_washing3_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/washin/washing3_64.PNG
+
+newmtl iten_washline02_m1_washing1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/washin/washing1_64.PNG
+
+newmtl iten_washline02_m2_washing4_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compolice/washing4_64.PNG
+
+newmtl iten_washline02_m3_washing2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/washin/washing2_64.PNG
+
+newmtl parktable1_m0_wood03
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/wood03.PNG
+
+newmtl parktable1_m1_wood02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/wood02.PNG
+
+newmtl parktable1_m2_redwhite_stripe
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/redwhite_stripe.PNG
+
+newmtl parktable1_m3_trafficcone
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/trafficcone.PNG
+
+newmtl bar_barrier10_m0_slab256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/fences/slab256.PNG
+
+newmtl bar_barrier10_m1_wirefence
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/wirefence.PNG
+
+newmtl bar_barrier10_m2_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl palette_m0_wood02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/wood02.PNG
+
+newmtl barrel1_m0_yellowmetal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/csitecutscene/yellowmetal.PNG
+
+newmtl barrel1_m1_Alumplat64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/csitecutscene/Alumplat64.PNG
+
+newmtl trafficcone_m0_redwhite_stripe
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/redwhite_stripe.PNG
+
+newmtl woodenbox_m0_crate128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/crate128.PNG
+
+newmtl junk_tyre_m0_tyretread_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indjunk/tyretread_64H.PNG
+
+newmtl junk_tyre_m1_junk_tyre
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indjunk/junk_tyre.PNG
+
+newmtl junk_tyre_pilemid_m0_tyretread_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indjunk/tyretread_64H.PNG
+
+newmtl junk_tyre_pilemid_m1_junk_tyre
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indjunk/junk_tyre.PNG
+
+newmtl junk_tyre_cubebig_m0_tyrecover_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tyrestack/tyrecover_256.PNG
+
+newmtl junk_tyre_cubewee_m0_tyrecover_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tyrestack/tyrecover_256.PNG
+
+newmtl junk_tyre_cubemid_m0_tyrecover_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tyrestack/tyrecover_256.PNG
+
+newmtl car_fucko_m0_car1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp4/car1_128.PNG
+
+newmtl car_fucko_m1_carundera64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp4/carundera64.PNG
+
+newmtl car_fucko_m2_car2_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp4/car2_128.PNG
+
+newmtl car_fucko_m3_lo_fucked_car_litefr
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp4/lo_fucked_car_litefr.PNG
+
+newmtl car_fucko_m4_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl fuckedup_skewlbus_m0_corrugated02_yellow
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compound/corrugated02_yellow.PNG
+
+newmtl fuckedup_skewlbus_m1_platesa64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/schoolbus/platesa64.PNG
+
+newmtl fuckedup_skewlbus_m2_yellowrust_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/yellowrust_64.PNG
+
+newmtl fuckedup_skewlbus_m3_yellowrust2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/schoolbus/yellowrust2_64.PNG
+
+newmtl fuckedup_skewlbus_m4_dirty_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitgrey/dirty_64.PNG
+
+newmtl fuckedup_skewlbus_m5_carlites64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/schoolbus/carlites64a.PNG
+
+newmtl fuckedup_skewlbus_m6_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl fuckedup_skewlbus_m7_carlitesb64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comsky3/carlitesb64a.PNG
+
+newmtl fuckedup_skewlbus_m8_carbits64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/schoolbus/carbits64a.PNG
+
+newmtl fuckedup_skewlbus_m9_canvasblue_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/schoolbus/canvasblue_64.PNG
+
+newmtl fuckedup_skewlbus_m10_carundera64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp4/carundera64.PNG
+
+newmtl fuckedup_skewlbus_m11_beigeleather64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/schoolbus/beigeleather64.PNG
+
+newmtl fuckedup_skewlbus_m12_blackleather64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/schoolbus/blackleather64.PNG
+
+newmtl fuckedup_skewlbus_m13_metpat64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airstuff2/metpat64.PNG
+
+newmtl fuckedup_skewlbus_m14_blackdrum128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/blackdrum128.PNG
+
+newmtl fuckedup_skewlbus_m15_allcolor
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cskytosh/allcolor.PNG
+
+newmtl lofucked_car_m0_car2_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp4/car2_128.PNG
+
+newmtl lofucked_car_m1_car3_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp4/car3_128.PNG
+
+newmtl lofucked_car_m2_car1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp4/car1_128.PNG
+
+newmtl lofucked_car_m3_carundera64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp4/carundera64.PNG
+
+newmtl mak_Watertank_m0_wood01
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/compark/wood01.PNG
+
+newmtl mak_Watertank_m1_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl mak_Watertank_m2_barrel_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/barrel_64HV.PNG
+
+newmtl Gsel_canopy5_m0_shade_red_white64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/canopy/shade_red_white64HV.PNG
+
+newmtl flagsitaly_m0_flagcols_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/italyfalg/flagcols_64.PNG
+
+newmtl usedcardelrflgs01_m0_rope
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl usedcardelrflgs01_m1_carlot2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/usedcar/carlot2_64.PNG
+
+newmtl usedcardelrflgs01_m2_carlot3_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/usedcar/carlot3_64.PNG
+
+newmtl usedcardelrflgs01_m3_carlot1_64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/usedcar/carlot1_64a.PNG
+
+newmtl usedcardelrflgs01_m4_carlot4_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/carlot4_64.PNG
+
+newmtl billboard02_m0_Aascaff_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/Aascaff_64HV.PNG
+
+newmtl billboard02_m1_ClothesClub01_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/ClothesClub01_64.PNG
+
+newmtl billboard02_m2_ClothesClub02_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/ClothesClub02_64.PNG
+
+newmtl billboard02_m3_gridnorm_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/gridnorm_64HV.PNG
+
+newmtl billboard02_m4_greyfence
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airporterminal4/greyfence.PNG
+
+newmtl billboard02_m5_runwaylight_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bigsign/runwaylight_64.PNG
+
+newmtl fraightback03_m0_bluemetal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/bluemetal.PNG
+
+newmtl fraightback03_m1_steelgirder_64V
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/steelgirder_64V.PNG
+
+newmtl fraightback03_m2_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl fraightback03_m3_Diamondp64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Diamondp64.PNG
+
+newmtl fraightback03_m4_bincover02_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/bincover02_64HV.PNG
+
+newmtl fraightback03_m5_bluevertical_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/bluevertical_64HV.PNG
+
+newmtl fraightback03_m6_tyre64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/tyre64a.PNG
+
+newmtl fraightback03_m7_wheel02_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/wheel02_64.PNG
+
+newmtl fraightback03_m8_hi_vanback_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/hi_vanback_256.PNG
+
+newmtl fraightback03_m9_hi_vanside_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/hi_vanside_256.PNG

@@ -1,0 +1,4 @@
+[config]
+name="BackgroundUpdate"
+binary_type="local"
+binary="BackgroundUpdate.aar"

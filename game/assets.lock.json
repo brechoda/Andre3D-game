@@ -1,0 +1,312 @@
+{
+  "version": 2,
+  "groups": {
+    "models": {
+      "name": "Models",
+      "order": 20
+    },
+    "template": {
+      "name": "Template",
+      "order": 0
+    }
+  },
+  "bundles": {},
+  "assets": {
+    "assets/models/andre.glb": {
+      "path": "/manus-storage/game/sha256/bad8ee14ef0b1fb457b8277c2a9217ba23c520f059d1167c1393722e2293c58a.glb",
+      "sha256": "sha256:bad8ee14ef0b1fb457b8277c2a9217ba23c520f059d1167c1393722e2293c58a",
+      "size": 1102420,
+      "assetType": "model",
+      "groupId": "models",
+      "used": true
+    },
+    "assets/models/andre_armed.glb": {
+      "path": "/manus-storage/game/sha256/1f6f3f54ad61b4bae934355472b2d835640b8e654d26b17e0b88cc433fe355a8.glb",
+      "sha256": "sha256:1f6f3f54ad61b4bae934355472b2d835640b8e654d26b17e0b88cc433fe355a8",
+      "size": 1727072,
+      "assetType": "model",
+      "groupId": "models",
+      "used": true
+    },
+    "assets/models/andre_rigged.glb": {
+      "path": "/manus-storage/game/sha256/caa2cbc4dc1451763cbe215f11b2535a1f3a90b338a7dcbf044a2a35c1eaefbb.glb",
+      "sha256": "sha256:caa2cbc4dc1451763cbe215f11b2535a1f3a90b338a7dcbf044a2a35c1eaefbb",
+      "size": 1210924,
+      "assetType": "model",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/assault_rifle.glb": {
+      "path": "/manus-storage/game/sha256/ca6875768214f06884a9a78f5867cb4c28edb3f64f0c6e2ab92320e1504d5555.glb",
+      "sha256": "sha256:ca6875768214f06884a9a78f5867cb4c28edb3f64f0c6e2ab92320e1504d5555",
+      "size": 100640,
+      "assetType": "model",
+      "groupId": "models",
+      "used": true
+    },
+    "assets/models/assault_rifle_simple.glb": {
+      "path": "/manus-storage/game/sha256/266ffd12306a2afc2638e9a479687adf738fc3cd9e938ce8e3195ccb312a6b31.glb",
+      "sha256": "sha256:266ffd12306a2afc2638e9a479687adf738fc3cd9e938ce8e3195ccb312a6b31",
+      "size": 8740,
+      "assetType": "model",
+      "groupId": "models",
+      "used": true
+    },
+    "assets/models/cuntgun.obj": {
+      "path": "/manus-storage/game/sha256/9f7e5eb312e0e18895958d3f94bcf3ffde0be73aabb268656e33f07d5069bb5c.obj",
+      "sha256": "sha256:9f7e5eb312e0e18895958d3f94bcf3ffde0be73aabb268656e33f07d5069bb5c",
+      "size": 1067084,
+      "assetType": "model",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/gorece_rigged.glb": {
+      "path": "/manus-storage/game/sha256/c146f48a930f43267f870a8d256d1bc384cbb59ce47afd5a748d132ba5df1701.glb",
+      "sha256": "sha256:c146f48a930f43267f870a8d256d1bc384cbb59ce47afd5a748d132ba5df1701",
+      "size": 22024820,
+      "assetType": "model",
+      "groupId": "models",
+      "used": true
+    },
+    "assets/models/gorece_rigged_acessorios1.png": {
+      "path": "/manus-storage/game/sha256/6d2604becc0e1076766a3fc675fb367b47687f2bde80d319a8ccf8e76bcf5983.png",
+      "sha256": "sha256:6d2604becc0e1076766a3fc675fb367b47687f2bde80d319a8ccf8e76bcf5983",
+      "size": 5536819,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/gorece_rigged_acessorios2.png": {
+      "path": "/manus-storage/game/sha256/897ca67ddbbb6578376b9e49fe1e46f32fe5185bccc43d1223571ae4d5514032.png",
+      "sha256": "sha256:897ca67ddbbb6578376b9e49fe1e46f32fe5185bccc43d1223571ae4d5514032",
+      "size": 2828369,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/gorece_rigged_balaclava.png": {
+      "path": "/manus-storage/game/sha256/10dc268fc5a15c86c4cded706e079c8868ae1dcf0d378d0e617f70fd828d22cf.png",
+      "sha256": "sha256:10dc268fc5a15c86c4cded706e079c8868ae1dcf0d378d0e617f70fd828d22cf",
+      "size": 7466,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/gorece_rigged_brasil.png": {
+      "path": "/manus-storage/game/sha256/5d0ce089513d13b31918dcec0586c166b84333585bcebf4501eb8f553ebc10b5.png",
+      "sha256": "sha256:5d0ce089513d13b31918dcec0586c166b84333585bcebf4501eb8f553ebc10b5",
+      "size": 32149,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/gorece_rigged_cal�as.png": {
+      "path": "/manus-storage/game/sha256/99c703381aff2e98c77601d6d9393ae6c59007eb810894d564d10c6000c096e7.png",
+      "sha256": "sha256:99c703381aff2e98c77601d6d9393ae6c59007eb810894d564d10c6000c096e7",
+      "size": 210631,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/gorece_rigged_camisa.png": {
+      "path": "/manus-storage/game/sha256/67fea32652aeb6a8ac327b3d0e5e5fb9c09bfe3e66a0795795219d9504378249.png",
+      "sha256": "sha256:67fea32652aeb6a8ac327b3d0e5e5fb9c09bfe3e66a0795795219d9504378249",
+      "size": 34278,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/gorece_rigged_cinto.png": {
+      "path": "/manus-storage/game/sha256/39b1f1684f47a9529e4dd21ebae601419203b20744e6662e68349877f04b7dc3.png",
+      "sha256": "sha256:39b1f1684f47a9529e4dd21ebae601419203b20744e6662e68349877f04b7dc3",
+      "size": 1547311,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/gorece_rigged_colete.png": {
+      "path": "/manus-storage/game/sha256/38d79343a11b5703a95eadb2ff900c10dd4589a73f454cb355d97f8bb2fd6255.png",
+      "sha256": "sha256:38d79343a11b5703a95eadb2ff900c10dd4589a73f454cb355d97f8bb2fd6255",
+      "size": 8273463,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/gorece_rigged_coturno.png": {
+      "path": "/manus-storage/game/sha256/85c5bf133887ec1531b492422b4ab0428485b44f6716ba9b255c38a6833ca3a6.png",
+      "sha256": "sha256:85c5bf133887ec1531b492422b4ab0428485b44f6716ba9b255c38a6833ca3a6",
+      "size": 102035,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/gorece_rigged_farda.png": {
+      "path": "/manus-storage/game/sha256/ba747d577ae1562c81f1c5739b2ad811de6489e748dc7458c31cf258b6ae1c10.png",
+      "sha256": "sha256:ba747d577ae1562c81f1c5739b2ad811de6489e748dc7458c31cf258b6ae1c10",
+      "size": 163353,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/gorece_rigged_gore.png": {
+      "path": "/manus-storage/game/sha256/250f61743081a156b5f5fd577180b4e1d36b87a5eecb56f9ea69e3bd670ccd03.png",
+      "sha256": "sha256:250f61743081a156b5f5fd577180b4e1d36b87a5eecb56f9ea69e3bd670ccd03",
+      "size": 45619,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/gorece_rigged_head_diff_042_a_whi.png": {
+      "path": "/manus-storage/game/sha256/703a54f9aa6c228397f41cc8ecedeba6ed1cffeb80a011f7545cb848a21bbdaf.png",
+      "sha256": "sha256:703a54f9aa6c228397f41cc8ecedeba6ed1cffeb80a011f7545cb848a21bbdaf",
+      "size": 384913,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/gorece_rigged_marrom.png": {
+      "path": "/manus-storage/game/sha256/60732205c9711ad001a1e4c3f8ccd750bf32efef628b99c1d8bf606e80249011.png",
+      "sha256": "sha256:60732205c9711ad001a1e4c3f8ccd750bf32efef628b99c1d8bf606e80249011",
+      "size": 144555,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/gorece_rigged_placa.png": {
+      "path": "/manus-storage/game/sha256/9b8705187ce56e6435153847d1ed0f451a5677bf7ee8974bd8bd28ee094b8fa9.png",
+      "sha256": "sha256:9b8705187ce56e6435153847d1ed0f451a5677bf7ee8974bd8bd28ee094b8fa9",
+      "size": 33148,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/models/gorece_rigged_uppr_diff_000_a_uni.png": {
+      "path": "/manus-storage/game/sha256/2bc4038ad39828506aab5d25d628af5dcd8cb874bee873fa625c69b2b7141277.png",
+      "sha256": "sha256:2bc4038ad39828506aab5d25d628af5dcd8cb874bee873fa625c69b2b7141277",
+      "size": 84902,
+      "assetType": "image",
+      "groupId": "models",
+      "used": false
+    },
+    "assets/template/characters/runner.png": {
+      "path": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/06/game-template/game-generic/2026.09.07-minimalist-v1/c88485773d6ff9361e036f37d8ac76fb77b8c3f7c041c3f52c8dd222adc8cc21/assets/characters/runner.png",
+      "sha256": "sha256:c88485773d6ff9361e036f37d8ac76fb77b8c3f7c041c3f52c8dd222adc8cc21",
+      "size": 68885,
+      "assetType": "image",
+      "groupId": "template",
+      "used": true
+    },
+    "assets/template/characters/sentinel.png": {
+      "path": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/06/game-template/game-generic/2026.09.07-minimalist-v1/0d9fb751bca5507ba14f7090573e6605a94753390a9e7c53bf2f590f0a24918d/assets/characters/sentinel.png",
+      "sha256": "sha256:0d9fb751bca5507ba14f7090573e6605a94753390a9e7c53bf2f590f0a24918d",
+      "size": 64998,
+      "assetType": "image",
+      "groupId": "template",
+      "used": true
+    },
+    "assets/template/environment/backdrop.png": {
+      "path": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/06/game-template/game-generic/2026.09.07-minimalist-v1/ec4ab7867e60fb483dd438459f587b478aac4c1e71ec4fe509ce74a18de34216/assets/environment/backdrop.png",
+      "sha256": "sha256:ec4ab7867e60fb483dd438459f587b478aac4c1e71ec4fe509ce74a18de34216",
+      "size": 971282,
+      "assetType": "image",
+      "groupId": "template",
+      "used": true
+    },
+    "assets/template/environment/foreground.png": {
+      "path": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/06/game-template/game-generic/2026.09.07-minimalist-v1/4b6916024c69961fbfa7cdc929c68f547fea4561e61ebdb3405b3aba0efbd94d/assets/environment/foreground.png",
+      "sha256": "sha256:4b6916024c69961fbfa7cdc929c68f547fea4561e61ebdb3405b3aba0efbd94d",
+      "size": 58603,
+      "assetType": "image",
+      "groupId": "template",
+      "used": true
+    },
+    "assets/template/fonts/Figtree-VF.subset.woff2": {
+      "path": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/25/game-template/game-generic/2026.09.25-typography-v1/b3976c5969c8b1afd81dc3e314b61d8ffe3f3f58cf40906443105d330e6e0bdf/assets/template/fonts/Figtree-VF.subset.woff2",
+      "sha256": "sha256:b3976c5969c8b1afd81dc3e314b61d8ffe3f3f58cf40906443105d330e6e0bdf",
+      "size": 23660,
+      "assetType": "font",
+      "groupId": "template",
+      "used": true
+    },
+    "assets/template/fonts/NotoSansSC-VF.subset.woff2": {
+      "path": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/25/game-template/game-generic/2026.09.25-typography-v1/38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412/assets/template/fonts/NotoSansSC-VF.subset.woff2",
+      "sha256": "sha256:38f4c5f927f746b3dfa4c3a5d7edf0b7a3e828e27438418fa54f9e1565289412",
+      "size": 1869368,
+      "assetType": "font",
+      "groupId": "template",
+      "used": true
+    },
+    "assets/template/fonts/display/Sora-VF.subset.woff2": {
+      "path": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/25/game-template/game-generic/2026.09.25-typography-v1/438fbf4582548e76b266a738f2c11bcbd5137978f2d2e2f3aaabd49df69186f2/assets/template/fonts/display/Sora-VF.subset.woff2",
+      "sha256": "sha256:438fbf4582548e76b266a738f2c11bcbd5137978f2d2e2f3aaabd49df69186f2",
+      "size": 41696,
+      "assetType": "font",
+      "groupId": "template",
+      "used": true
+    },
+    "assets/template/powerups/energy.png": {
+      "path": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/06/game-template/game-generic/2026.09.07-minimalist-v1/ffd7906f240f928e785d7c19a9e7a7b5dfab0d7483be5205dda3e4ba17ebe06a/assets/powerups/energy.png",
+      "sha256": "sha256:ffd7906f240f928e785d7c19a9e7a7b5dfab0d7483be5205dda3e4ba17ebe06a",
+      "size": 50950,
+      "assetType": "image",
+      "groupId": "template",
+      "used": true
+    },
+    "assets/template/powerups/magnet.png": {
+      "path": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/06/game-template/game-generic/2026.09.07-minimalist-v1/6e7354aa6510a462717218b09b9d784bb161b87878bff62ef4f2a9d03c053de7/assets/powerups/magnet.png",
+      "sha256": "sha256:6e7354aa6510a462717218b09b9d784bb161b87878bff62ef4f2a9d03c053de7",
+      "size": 53724,
+      "assetType": "image",
+      "groupId": "template",
+      "used": true
+    },
+    "assets/template/powerups/overdrive.png": {
+      "path": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/06/game-template/game-generic/2026.09.07-minimalist-v1/6a48a85886c0551c1af0df576b0225f0ec3ae86b326fd84fc614083fbfe2908b/assets/powerups/overdrive.png",
+      "sha256": "sha256:6a48a85886c0551c1af0df576b0225f0ec3ae86b326fd84fc614083fbfe2908b",
+      "size": 37238,
+      "assetType": "image",
+      "groupId": "template",
+      "used": true
+    },
+    "assets/template/powerups/shield.png": {
+      "path": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/06/game-template/game-generic/2026.09.07-minimalist-v1/8cebf0cf730ca35c8c8697192ef78121c926442328a0725e0bd3e31701d64f13/assets/powerups/shield.png",
+      "sha256": "sha256:8cebf0cf730ca35c8c8697192ef78121c926442328a0725e0bd3e31701d64f13",
+      "size": 39659,
+      "assetType": "image",
+      "groupId": "template",
+      "used": true
+    },
+    "assets/template/powerups/slow_field.png": {
+      "path": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/06/game-template/game-generic/2026.09.07-minimalist-v1/96874c000866b2e7503b40da73888afb918ae36e462f51488415157da52a8637/assets/powerups/slow_field.png",
+      "sha256": "sha256:96874c000866b2e7503b40da73888afb918ae36e462f51488415157da52a8637",
+      "size": 49145,
+      "assetType": "image",
+      "groupId": "template",
+      "used": true
+    },
+    "assets/template/ui/loading-background.png": {
+      "path": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/25/game-template/game-generic/2026.09.25-typography-v1/16dde3061f4e60802f8f0d1a6b875e72b6add05192237b03fef1fd313968a13a/assets/template/ui/loading-background.png",
+      "sha256": "sha256:16dde3061f4e60802f8f0d1a6b875e72b6add05192237b03fef1fd313968a13a",
+      "size": 473356,
+      "assetType": "image",
+      "groupId": "template",
+      "used": true
+    },
+    "assets/template/ui/pause_glass.png": {
+      "path": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/06/game-template/game-generic/2026.09.07-minimalist-v1/c88a4725838df85e72c7270865848f275b62c525c5679a2a8b7ecefb1af82d4b/assets/ui/pause_glass.png",
+      "sha256": "sha256:c88a4725838df85e72c7270865848f275b62c525c5679a2a8b7ecefb1af82d4b",
+      "size": 115691,
+      "assetType": "image",
+      "groupId": "template",
+      "used": true
+    },
+    "assets/template/ui/title_glass.png": {
+      "path": "https://d1oupeiobkpcny.cloudfront.net/assets/dashboard/materials/2026/09/06/game-template/game-generic/2026.09.07-minimalist-v1/8860db07768f093d4effea10b51431f76a1552d4bc7fd4e57757f189c51f0429/assets/ui/title_glass.png",
+      "sha256": "sha256:8860db07768f093d4effea10b51431f76a1552d4bc7fd4e57757f189c51f0429",
+      "size": 155592,
+      "assetType": "image",
+      "groupId": "template",
+      "used": true
+    }
+  }
+}

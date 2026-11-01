@@ -1,0 +1,475 @@
+newmtl LODridgerda_m0_Xrail_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridge/Xrail_64.PNG
+
+newmtl LODridgerda_m1_pavedark128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridge/pavedark128.PNG
+
+newmtl LODridgerda_m2_ledge_grey_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/ledge_grey_64H.PNG
+
+newmtl LODridgerda_m3_Road_2line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwyrd/Road_2line256HV.PNG
+
+newmtl LODridgerda_m4_bridgegrid
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/bridgegrid.PNG
+
+newmtl LODridgerda_m5_bridgebelly_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridge/bridgebelly_64.PNG
+
+newmtl LODridgerda_m6_rustybolts_drk
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridge/rustybolts_drk.PNG
+
+newmtl LODridgerda_m7_rustyboltpanel
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridge/rustyboltpanel.PNG
+
+newmtl LODhwall_m0_newall9-1128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/newall9-1128.PNG
+
+newmtl pathnodepoly_m0_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl iten_chntown37b_m0_chinatown0864
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/chinatown0864.PNG
+
+newmtl iten_chntown37b_m1_Corigate64green
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/Corigate64green.PNG
+
+newmtl iten_chntown37b_m2_redband_64Ha
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/redband_64Ha.PNG
+
+newmtl iten_chntown37b_m3_chinatown09128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/china2big/chinatown09128.PNG
+
+newmtl newramp_m0_cratetop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildsite/cratetop128.PNG
+
+newmtl newramp_m1_craneblnk_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/craneblnk_128.PNG
+
+newmtl ch_roof_kb_m0_greenroof_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/greenroof_64.PNG
+
+newmtl ch_roof_kb_m1_grn_tileB_KB_64_hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/grn_tileB_KB_64_hv.PNG
+
+newmtl ch_roof_kb_m2_railtunnelbottom
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtunnelbottom.PNG
+
+newmtl ch_roof_kb_m3_railtunnelmid
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtunnelmid.PNG
+
+newmtl ch_roof_kb_m4_railtunneltop
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/railtunneltop.PNG
+
+newmtl ch_roof_kb_m5_redpillar_64v
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/redpillar_64v.PNG
+
+newmtl ch_roof_kb_m6_greenpillar_64v
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/greenpillar_64v.PNG
+
+newmtl ch_roof_kb_m7_blue_tilea_64_hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/blue_tilea_64_hv.PNG
+
+newmtl ch_roof_kb_m8_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl ch_roof_kb_m9_lion641
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/lion641.PNG
+
+newmtl ch_roof_kb_m10_icecream128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/icecream128.PNG
+
+newmtl ch_roof_kb_m11_Paveblank_64hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Paveblank_64hv.PNG
+
+newmtl ch_roof_kb_m12_board02_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/board02_64.PNG
+
+newmtl ch_roof_kb_m13_TingFuGarden64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/TingFuGarden64.PNG
+
+newmtl ch_roof_kb_m14_red_tilea_64_hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/red_tilea_64_hv.PNG
+
+newmtl ch_roof_kb_m15_grn_tileA_KB_64_hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/grn_tileA_KB_64_hv.PNG
+
+newmtl ch_roof_kb_m16_punk1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/punk1_64.PNG
+
+newmtl ch_roof_kb_m17_punk2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/punk2_64.PNG
+
+newmtl ch_roof_kb_m18_LEDGECHINA_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/LEDGECHINA_64H.PNG
+
+newmtl ch_roof_kb_m19_shopWIN4KB_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/shopWIN4KB_64H.PNG
+
+newmtl ch_roof_kb_m20_shopdoor2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/block4grn/shopdoor2_64.PNG
+
+newmtl ch_roof_kb_m21_board03_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/board03_64.PNG
+
+newmtl ch_roof_kb_m22_redcarpet_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/redcarpet_64HV.PNG
+
+newmtl ch_roof_kb_m23_shopWIN3KB_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/shopWIN3KB_64H.PNG
+
+newmtl ch_roof_kb_m24_triptich02_64A
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/triptich02_64A.PNG
+
+newmtl ch_roof_kb_m25_shopwindow2_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/shopwindow2_64H.PNG
+
+newmtl ch_roof_kb_m26_largepostr_64h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/largepostr_64h.PNG
+
+newmtl ch_roof_kb_m27_whitewall64hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/whitewall64hv.PNG
+
+newmtl ch_roof_kb_m28_windtilered_64_h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/windtilered_64_h.PNG
+
+newmtl ch_roof_kb_m29_Windowmid64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/Windowmid64HV.PNG
+
+newmtl ch_roof_kb_m30_Windowside64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/Windowside64HV.PNG
+
+newmtl ch_roof_kb_m31_red_tileb_64_hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/red_tileb_64_hv.PNG
+
+newmtl ch_roof_kb_m32_rooftimber_64_h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/rooftimber_64_h.PNG
+
+newmtl ch_roof_kb_m33_CANOPYTOP_wht_KB_H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/CANOPYTOP_wht_KB_H.PNG
+
+newmtl ch_roof_kb_m34_chinese__A_64h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/chinese _A_64h.PNG
+
+newmtl ch_roof_kb_m35_chinese__R_64h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/chinese _R_64h.PNG
+
+newmtl ch_roof_kb_m36_chinese__S_64h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/chinese _S_64h.PNG
+
+newmtl ch_roof_kb_m37_chinese__E_64h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/chinese _E_64h.PNG
+
+newmtl ch_roof_kb_m38_CANOPYTOP_grn_KB_H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/CANOPYTOP_grn_KB_H.PNG
+
+newmtl ch_roof_kb_m39_samosign_64h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/samosign_64h.PNG
+
+newmtl ch_roof_kb_m40_CANOPYTOPKB_H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/CANOPYTOPKB_H.PNG
+
+newmtl ch_roof_kb_m41_glass2_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/glass2_64.PNG
+
+newmtl ch_roof_kb_m42_corrugated3_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/docks/corrugated3_64HV.PNG
+
+newmtl ch_roof_kb_m43_light64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/light64.PNG
+
+newmtl ch_roof_kb_m44_blackmetal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinatowns/blackmetal.PNG
+
+newmtl ch_roof_kb_m45_banding9_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cutrubbish/banding9_64HV.PNG
+
+newmtl ch_roof_kb_m46_stonerailings
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indchinabuild/stonerailings.PNG
+
+newmtl ind_land078_m0_Paveblank_64hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Paveblank_64hv.PNG
+
+newmtl LOD_land019_m0_firewall
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/firewall.PNG
+
+newmtl LOD_land019_m1_cliffwall_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/beach/cliffwall_64HV.PNG
+
+newmtl LOD_land019_m2_Grass_32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/Grass_32.PNG
+
+newmtl LODerind_m0_dinerind01
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/dinerind01.PNG
+
+newmtl LODerind_m1_LO1road_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/LO1road_128.PNG
+
+newmtl LODerind_m2_noodlebox
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/noodlebox.PNG
+
+newmtl LODerind02_m0_newalllod_16c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/newalllod_16c.PNG
+
+newmtl LODerind02_m1_dinerind01
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/dinerind01.PNG
+
+newmtl LODerind02_m2_LO1road_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/LO1road_128.PNG
+
+newmtl LODerind02_m3_noodlebox
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust1/noodlebox.PNG
+
+newmtl LODerind02_m4_newall6_16c128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/newall6_16c128.PNG
+
+newmtl chinalanterns_m0_darkgrey64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casino/darkgrey64.PNG
+
+newmtl chinalanterns_m1_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl LODl_platformw_m0_railplat01
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust2/railplat01.PNG
+
+newmtl LODl_platformw_m1_Metalox32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust2/Metalox32.PNG
+
+newmtl LODl_platformw_m2_rustybolts_drk32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust2/rustybolts_drk32.PNG
+
+newmtl LODrpassind_m0_Metalox32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust2/Metalox32.PNG
+
+newmtl LODrpassind_m1_railplat01
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust2/railplat01.PNG
+
+newmtl LODrpassind_m2_rustybolts_drk32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust2/rustybolts_drk32.PNG
+
+newmtl LODilstepswest0_m0_Metalox32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust2/Metalox32.PNG
+
+newmtl LODilstepswest0_m1_rustybolts_drk32
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indust2/rustybolts_drk32.PNG
+
+newmtl rail_platformw_m0_Diamondp64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Diamondp64.PNG
+
+newmtl rail_platformw_m1_steel256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/steel256128.PNG
+
+newmtl rail_platformw_m2_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl rail_platformw_m3_black64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airplane/black64.PNG
+
+newmtl rail_platformw_m4_rustybolts_drk
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridge/rustybolts_drk.PNG
+
+newmtl rail_platformw_m5_dirty_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/indredlitgrey/dirty_64.PNG
+
+newmtl overpassind_m0_steel256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basmntcrpark/steel256128.PNG
+
+newmtl overpassind_m1_Metalox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Metalox64.PNG
+
+newmtl overpassind_m2_rustybolts_drk
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/bridge/rustybolts_drk.PNG
+
+newmtl overpassind_m3_Diamondp64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/TRUCKTRAIL/Diamondp64.PNG
+
+newmtl nullpathnodeinsw_m0_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0

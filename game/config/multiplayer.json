@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "server_url": "wss://andre3d-multiplayer-server.onrender.com/ws",
+  "room": "ANDRE3D",
+  "player_name": "Jogador"
+}
