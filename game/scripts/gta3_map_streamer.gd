@@ -40,11 +40,11 @@ func _ready() -> void:
 	set_process(true)
 
 func apply_graphics_settings(distance_level: int, texture_quality_level: int) -> void:
-    _ultra_low_mode = distance_level == 0
-    max_active_tiles = [1, 1, 2, 3][clampi(distance_level, 0, 3)]
-    load_radius = [220.0, 520.0, 780.0, 1100.0][clampi(distance_level, 0, 3)]
-    refresh_interval = 0.35 if _ultra_low_mode else 0.75
-    max_meshes_per_frame = [1, 2, 4, 7][clampi(texture_quality_level, 0, 3)]
+	_ultra_low_mode = distance_level == 0
+	max_active_tiles = [1, 1, 2, 3][clampi(distance_level, 0, 3)]
+	load_radius = [220.0, 520.0, 780.0, 1100.0][clampi(distance_level, 0, 3)]
+	refresh_interval = 0.35 if _ultra_low_mode else 0.75
+	max_meshes_per_frame = [1, 2, 4, 7][clampi(texture_quality_level, 0, 3)]
 	_refresh_active_tiles()
 
 func _process(delta: float) -> void:
@@ -129,11 +129,11 @@ func _refresh_active_tiles() -> void:
 	var source_position := to_local(player.global_position)
 	var candidates: Array[Dictionary] = []
 	for record: Dictionary in _tile_records:
-        var tile_name := String(record.get("name", ""))
-        if tile_name == OVERVIEW_TILE or not _part_paths_by_tile.has(tile_name):
-            continue
-        if _ultra_low_mode and tile_name == "maps/props":
-            continue
+		var tile_name := String(record.get("name", ""))
+		if tile_name == OVERVIEW_TILE or not _part_paths_by_tile.has(tile_name):
+			continue
+		if _ultra_low_mode and tile_name == "maps/props":
+			continue
 		var distance := _distance_to_tile_center(source_position, record)
 		if distance <= load_radius:
 			candidates.append({"name": tile_name, "distance": distance})
@@ -143,25 +143,25 @@ func _refresh_active_tiles() -> void:
 	var desired: Dictionary = {}
 	if _part_paths_by_tile.has(GROUND_FIX_TILE):
 		desired[GROUND_FIX_TILE] = true
-        if not _ultra_low_mode and _part_paths_by_tile.has(OVERVIEW_TILE):
-            desired[OVERVIEW_TILE] = true
+		if not _ultra_low_mode and _part_paths_by_tile.has(OVERVIEW_TILE):
+			desired[OVERVIEW_TILE] = true
 	# O tile inicial contém o chão/colisão do spawn. Ele precisa permanecer
 	# carregado também no preset BAIXA, mesmo quando o raio foi reduzido.
-        if not _ultra_low_mode and _part_paths_by_tile.has(INITIAL_SPAWN_TILE):
-            desired[INITIAL_SPAWN_TILE] = true
-        if _ultra_low_mode and candidates.is_empty():
-            var nearest: Dictionary = {}
-            var nearest_distance := INF
-            for record: Dictionary in _tile_records:
-                var tile_name := String(record.get("name", ""))
-                if tile_name == OVERVIEW_TILE or tile_name == "maps/props" or not _part_paths_by_tile.has(tile_name):
-                    continue
-                var distance := _distance_to_tile_center(source_position, record)
-                if distance < nearest_distance:
-                    nearest_distance = distance
-                    nearest = {"name": tile_name, "distance": distance}
-            if not nearest.is_empty():
-                candidates.append(nearest)
+		if not _ultra_low_mode and _part_paths_by_tile.has(INITIAL_SPAWN_TILE):
+			desired[INITIAL_SPAWN_TILE] = true
+		if _ultra_low_mode and candidates.is_empty():
+			var nearest: Dictionary = {}
+			var nearest_distance := INF
+			for record: Dictionary in _tile_records:
+				var tile_name := String(record.get("name", ""))
+				if tile_name == OVERVIEW_TILE or tile_name == "maps/props" or not _part_paths_by_tile.has(tile_name):
+					continue
+				var distance := _distance_to_tile_center(source_position, record)
+				if distance < nearest_distance:
+					nearest_distance = distance
+					nearest = {"name": tile_name, "distance": distance}
+			if not nearest.is_empty():
+				candidates.append(nearest)
 	var limit := mini(max_active_tiles, candidates.size())
 	for index: int in range(limit):
 		desired[String(candidates[index]["name"])] = true
