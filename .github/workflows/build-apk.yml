@@ -45,15 +45,15 @@ jobs:
             -keyalg RSA -keysize 2048 -validity 10000 \
             -dname 'CN=Android Debug,O=Android,C=US'
           mkdir -p "$HOME/.config/godot"
-          cat > "$HOME/.config/godot/editor_settings-4.7.tres" <<EOF
-[gd_resource type="EditorSettings" format=3]
-
-[resource]
-export/android/android_sdk_path = "$ANDROID_HOME"
-export/android/java_sdk_path = "$JAVA_HOME"
-export/android/debug_keystore = "$HOME/.local/share/godot/keystores/debug.keystore"
-export/android/debug_keystore_pass = "android"
-EOF
+          printf '%s\n' \
+            '[gd_resource type="EditorSettings" format=3]' \
+            '' \
+            '[resource]' \
+            "export/android/android_sdk_path = \"$ANDROID_HOME\"" \
+            "export/android/java_sdk_path = \"$JAVA_HOME\"" \
+            "export/android/debug_keystore = \"$HOME/.local/share/godot/keystores/debug.keystore\"" \
+            'export/android/debug_keystore_pass = "android"' \
+            > "$HOME/.config/godot/editor_settings-4.7.tres"
 
       - name: Install Godot Android build template
         working-directory: game
@@ -63,6 +63,7 @@ EOF
         working-directory: game
         run: |
           sed -i "s#keystore/release=.*#keystore/release=\"$HOME/.local/share/godot/keystores/debug.keystore\"#; s#keystore/release_user=.*#keystore/release_user=\"androiddebugkey\"#; s#keystore/release_password=.*#keystore/release_password=\"android\"#" export_presets.cfg
+          mkdir -p dist
           godot --headless --path . --export-debug Android dist/Andre3D-2.1.19-debug.apk
 
       - name: Verify APK
@@ -70,6 +71,7 @@ EOF
         run: |
           test -s dist/Andre3D-2.1.19-debug.apk
           sha256sum dist/Andre3D-2.1.19-debug.apk
+          ls -lh dist/Andre3D-2.1.19-debug.apk
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
