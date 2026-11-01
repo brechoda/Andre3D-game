@@ -20,3 +20,5 @@ server/updates/files/
 .env
 .env.*
 password
+
+server/Moto#2026Game.zip
