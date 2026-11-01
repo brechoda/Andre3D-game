@@ -198,6 +198,7 @@ func _send_local_state() -> void:
         "vehicle_vy": vehicle_state.get("vy", 0.0),
         "vehicle_vz": vehicle_state.get("vz", 0.0),
         "vehicle_audio": vehicle_state.get("audio", "off"),
+        "vehicle_wheelie": vehicle_state.get("wheelie", 0.0),
         "character": character,
     })
 
@@ -220,6 +221,7 @@ func _local_vehicle_state() -> Dictionary:
         var vehicle_speed := float(node.get("_speed"))
         var vehicle_velocity: Vector3 = -vehicle_node.global_transform.basis.z * vehicle_speed
         var vehicle_audio := String(node.call("get_network_audio_mode")) if node.has_method("get_network_audio_mode") else "off"
+        var vehicle_wheelie := float(node.call("get_network_wheelie")) if node.has_method("get_network_wheelie") else 0.0
         return {
             "vehicle": vehicle_type,
             "vehicle_id": vehicle_id,
@@ -232,6 +234,7 @@ func _local_vehicle_state() -> Dictionary:
             "vy": vehicle_velocity.y,
             "vz": vehicle_velocity.z,
             "audio": vehicle_audio,
+            "wheelie": vehicle_wheelie,
         }
     return {"vehicle": "on_foot", "vehicle_id": "", "riding": false}
 
@@ -442,7 +445,8 @@ func _upsert_remote(data: Dictionary) -> void:
             remote_vehicle_velocity,
             String(data.get("vehicle_audio", "off")),
             estimated_age,
-            bool(data.get("running", false))
+            bool(data.get("running", false)),
+            float(data.get("vehicle_wheelie", 0.0))
         )
     else:
         remote.global_position = remote_position

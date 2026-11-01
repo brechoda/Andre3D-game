@@ -28,6 +28,7 @@ var _target_vehicle_velocity := Vector3.ZERO
 var _vehicle_received_at_msec := 0
 var _vehicle_network_age_seconds := 0.0
 var _vehicle_audio_mode := "off"
+var _target_vehicle_wheelie := 0.0
 
 
 var _vehicle_error_offset := Vector3.ZERO
@@ -62,7 +63,7 @@ func setup(visual_instance: Node3D, selected_character: String) -> void:
         _apply_andre_appearance(visual)
     _play_idle()
 
-func apply_state(position: Vector3, rotation_y: float, vehicle_type: String = "on_foot", riding: bool = false, vehicle_position := Vector3.ZERO, vehicle_rotation := 0.0, vehicle_id := "", sequence: int = 0, velocity := Vector3.ZERO, vehicle_velocity := Vector3.ZERO, vehicle_audio_mode := "off", network_age_seconds := 0.0, running: bool = false) -> void:
+func apply_state(position: Vector3, rotation_y: float, vehicle_type: String = "on_foot", riding: bool = false, vehicle_position := Vector3.ZERO, vehicle_rotation := 0.0, vehicle_id := "", sequence: int = 0, velocity := Vector3.ZERO, vehicle_velocity := Vector3.ZERO, vehicle_audio_mode := "off", network_age_seconds := 0.0, running: bool = false, vehicle_wheelie := 0.0) -> void:
     if sequence > 0 and sequence <= _last_state_sequence:
         return
     if sequence > 0:
@@ -98,7 +99,7 @@ func apply_state(position: Vector3, rotation_y: float, vehicle_type: String = "o
     global_rotation.y = 0.0
     if first_state and visual != null:
         visual.global_rotation.y = rotation_y
-    _apply_vehicle_state(vehicle_type, vehicle_id, riding, vehicle_position, vehicle_rotation, vehicle_velocity, _network_age_seconds, vehicle_audio_mode)
+    _apply_vehicle_state(vehicle_type, vehicle_id, riding, vehicle_position, vehicle_rotation, vehicle_velocity, _network_age_seconds, vehicle_audio_mode, vehicle_wheelie)
     if now_msec < _combat_until_msec or now_msec < _jump_until_msec:
         return
     if _riding:
@@ -128,11 +129,13 @@ func _process(delta: float) -> void:
         _shared_vehicle.global_rotation.y = lerp_angle(_shared_vehicle.global_rotation.y, _target_vehicle_rotation, rotation_weight)
         if _riding and vehicle_age < MAX_LEAD_SECONDS and _shared_vehicle.has_method("update_remote_wheel_spin"):
             _shared_vehicle.call("update_remote_wheel_spin", _target_vehicle_velocity, delta)
+        if _shared_vehicle.has_method("set_remote_wheelie"):
+            _shared_vehicle.call("set_remote_wheelie", _target_vehicle_wheelie if _riding else 0.0)
 
 func _predict(position: Vector3, velocity: Vector3, age_seconds: float) -> Vector3:
     return position + velocity * clampf(age_seconds, 0.0, MAX_LEAD_SECONDS)
 
-func _apply_vehicle_state(vehicle_type: String, vehicle_id: String, riding: bool, vehicle_position: Vector3, vehicle_rotation: float, vehicle_velocity: Vector3, network_age_seconds: float, vehicle_audio_mode: String = "off") -> void:
+func _apply_vehicle_state(vehicle_type: String, vehicle_id: String, riding: bool, vehicle_position: Vector3, vehicle_rotation: float, vehicle_velocity: Vector3, network_age_seconds: float, vehicle_audio_mode: String = "off", vehicle_wheelie: float = 0.0) -> void:
     var normalized_type := vehicle_type if riding else "on_foot"
     var normalized_id := vehicle_id if riding else ""
     var vehicle_changed := normalized_type != _vehicle_type or normalized_id != _vehicle_id
@@ -148,8 +151,11 @@ func _apply_vehicle_state(vehicle_type: String, vehicle_id: String, riding: bool
     _target_vehicle_rotation = vehicle_rotation
     _target_vehicle_velocity = vehicle_velocity
     _vehicle_audio_mode = vehicle_audio_mode
+    _target_vehicle_wheelie = clampf(vehicle_wheelie, 0.0, 0.72)
     if is_instance_valid(_shared_vehicle) and _shared_vehicle.has_method("set_network_audio_mode"):
         _shared_vehicle.call("set_network_audio_mode", _vehicle_audio_mode if riding else "off")
+    if is_instance_valid(_shared_vehicle) and _shared_vehicle.has_method("set_remote_wheelie"):
+        _shared_vehicle.call("set_remote_wheelie", _target_vehicle_wheelie if riding else 0.0)
     _vehicle_received_at_msec = Time.get_ticks_msec()
     _vehicle_network_age_seconds = clampf(network_age_seconds, 0.0, MAX_LEAD_SECONDS)
     if is_instance_valid(_shared_vehicle):

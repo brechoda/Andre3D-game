@@ -108,6 +108,11 @@ func _test_motorcycle_claim_and_shared_transform() -> bool:
     if not await _wait_for(func() -> bool: return _bike_wheels_rotating(remote_biker, second_bike), 3.0):
         _fail("As rodas da Wayfarer não giraram no segundo cliente enquanto o primeiro acelerava")
         return false
+    first_bike.set("_wheelie", 0.42)
+    first_bike.call("_apply_lean")
+    if not await _wait_for(func() -> bool: return _bike_wheelie_synced(remote_biker, second_bike), 3.0):
+        _fail("A empinada da Wayfarer não apareceu no segundo cliente")
+        return false
 
     first_bike.call("_finish_dismount")
     await create_timer(0.2).timeout
@@ -216,6 +221,11 @@ func _bike_wheels_rotating(remote: Node3D, bike: Node3D) -> bool:
         and is_same(remote.get("_shared_vehicle"), bike) \
         and absf(float(bike.get("_front_spin_angle"))) > 0.1 \
         and absf(float(bike.get("_rear_spin_angle"))) > 0.1
+
+func _bike_wheelie_synced(remote: Node3D, bike: Node3D) -> bool:
+    return remote != null \
+        and is_same(remote.get("_shared_vehicle"), bike) \
+        and absf(float(bike.get("_wheelie")) - 0.42) < 0.08
 
 func _hilux_wheels_rotating(car: Node3D) -> bool:
     return absf(float(car.get("_wheel_spin"))) > 0.1 \

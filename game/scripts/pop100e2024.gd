@@ -1119,6 +1119,15 @@ func update_remote_wheel_spin(world_velocity: Vector3, delta: float) -> void:
     _apply_front_steering(0.0)
     _apply_wheel_spin()
 
+func get_network_wheelie() -> float:
+    return _wheelie if _riding and not _mounting and not _dismounting else 0.0
+
+func set_remote_wheelie(value: float) -> void:
+    # O observador só aplica a inclinação visual recebida; não assume a física
+    # nem altera a posição autoritativa da moto local.
+    _wheelie = clampf(value, 0.0, MAX_WHEELIE)
+    _apply_lean()
+
 func _setup_rider_grip_ik() -> void:
     if _rider_skeleton == null:
         return
