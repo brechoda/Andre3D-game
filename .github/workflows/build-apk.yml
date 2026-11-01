@@ -1,0 +1,77 @@
+name: Build Android APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          packages: 'platform-tools platforms;android-36 build-tools;36.1.0'
+
+      - name: Install Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: gradle
+
+      - name: Install Godot
+        run: |
+          mkdir -p "$HOME/.local/bin" "$HOME/.local/share/godot/export_templates/4.7.2.stable"
+          curl -fsSL -o /tmp/godot.zip https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
+          unzip -q /tmp/godot.zip -d "$HOME/.local/bin"
+          mv "$HOME/.local/bin/Godot_v4.7.2-stable_linux.x86_64" "$HOME/.local/bin/godot"
+          chmod +x "$HOME/.local/bin/godot"
+          curl -fsSL -o /tmp/templates.tpz https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_export_templates.tpz
+          unzip -q /tmp/templates.tpz -d /tmp/templates
+          cp /tmp/templates/templates/android_source.zip "$HOME/.local/share/godot/export_templates/4.7.2.stable/android_source.zip"
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
+      - name: Configure signing key
+        run: |
+          mkdir -p "$HOME/.local/share/godot/keystores"
+          keytool -genkeypair -v \
+            -keystore "$HOME/.local/share/godot/keystores/debug.keystore" \
+            -storepass android -alias androiddebugkey -keypass android \
+            -keyalg RSA -keysize 2048 -validity 10000 \
+            -dname 'CN=Android Debug,O=Android,C=US'
+          mkdir -p "$HOME/.config/godot"
+          cat > "$HOME/.config/godot/editor_settings-4.7.tres" <<EOF
+[gd_resource type="EditorSettings" format=3]
+
+[resource]
+export/android/android_sdk_path = "$ANDROID_HOME"
+export/android/java_sdk_path = "$JAVA_HOME"
+export/android/debug_keystore = "$HOME/.local/share/godot/keystores/debug.keystore"
+export/android/debug_keystore_pass = "android"
+EOF
+
+      - name: Install Godot Android build template
+        working-directory: game
+        run: godot --headless --editor --quit --install-android-build-template
+
+      - name: Export APK
+        working-directory: game
+        run: |
+          sed -i "s#keystore/release=.*#keystore/release=\"$HOME/.local/share/godot/keystores/debug.keystore\"#; s#keystore/release_user=.*#keystore/release_user=\"androiddebugkey\"#; s#keystore/release_password=.*#keystore/release_password=\"android\"#" export_presets.cfg
+          godot --headless --path . --export-debug Android dist/Andre3D-2.1.19-debug.apk
+
+      - name: Verify APK
+        working-directory: game
+        run: |
+          test -s dist/Andre3D-2.1.19-debug.apk
+          sha256sum dist/Andre3D-2.1.19-debug.apk
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Andre3D-2.1.19-debug
+          path: game/dist/Andre3D-2.1.19-debug.apk
+          if-no-files-found: error
