@@ -83,18 +83,43 @@ func _ready() -> void:
     if lowest_wheel_bottom != INF:
         _wheel_ground_offset = lowest_wheel_bottom
     _ground_y = global_position.y + _wheel_ground_offset
-    _setup_engine_audio()
+    call_deferred("_setup_engine_audio_after_updates")
     _ensure_drive_buttons()
     _set_drive_buttons_visible(false)
     _update_ride_button()
 
+func _setup_engine_audio_after_updates() -> void:
+    # Aguarda o manifesto para que o áudio remoto possa substituir o fallback
+    # sem impedir a abertura do jogo quando a rede estiver indisponível.
+    if RemoteUpdater != null and not RemoteUpdater.is_ready:
+        await RemoteUpdater.wait_until_ready(12.0)
+    _setup_engine_audio()
+
+func _load_hilux_idle_stream() -> AudioStream:
+    var remote_path := ProjectSettings.globalize_path("user://updates/files/audio/hilux_srx_2017_parada_simulacao.wav")
+    if FileAccess.file_exists(remote_path):
+        var remote_stream := AudioStreamWAV.load_from_file(remote_path)
+        if remote_stream != null:
+            remote_stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
+            return remote_stream
+    var bundled_stream := load("res://assets/audio/hilux_srx_2017_parada_simulacao.wav") as AudioStreamWAV
+    if bundled_stream != null:
+        bundled_stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
+        return bundled_stream
+    return load("res://assets/audio/pop100_marcha_lenta_v2.mp3") as AudioStreamMP3
+
 func _setup_engine_audio() -> void:
-    var paths := ["res://assets/audio/pop100_marcha_lenta_v2.mp3", "res://assets/audio/pop100_acelerando_1.mp3", "res://assets/audio/pop100_desacelerando_v2_1.mp3"]
+    var streams: Array[AudioStream] = [
+        _load_hilux_idle_stream(),
+        load("res://assets/audio/pop100_acelerando_1.mp3") as AudioStreamMP3,
+        load("res://assets/audio/pop100_desacelerando_v2_1.mp3") as AudioStreamMP3,
+    ]
     var players := []
-    for i in range(paths.size()):
-        var stream := load(paths[i]) as AudioStreamMP3
+    for i in range(streams.size()):
+        var stream := streams[i]
         if stream == null: continue
-        stream.loop = i != 2
+        if stream is AudioStreamMP3:
+            (stream as AudioStreamMP3).loop = i != 2
         var player := AudioStreamPlayer3D.new()
         player.name = ["HiluxIdleEngineAudio", "HiluxAccelerationEngineAudio", "HiluxDecelerationEngineAudio"][i]
         player.stream = stream
