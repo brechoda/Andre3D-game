@@ -114,8 +114,11 @@ func _find_part(root: Node, part_name: String) -> Node3D:
 	return null
 
 func _load_engine_stream() -> AudioStream:
-	# Reutiliza o áudio da Hilux por enquanto (pode trocar depois).
-	var stream := load("res://assets/audio/hilux_srx_2017_parada_simulacao.wav") as AudioStreamWAV
+	# Áudio próprio do Fiat Uno (motor ligado / marcha lenta).
+	var stream := load("res://assets/audio/fiat_uno_motor_ligado.wav") as AudioStreamWAV
+	if stream == null:
+		# Fallback temporário se o arquivo ainda não estiver no projeto.
+		stream = load("res://assets/audio/hilux_srx_2017_parada_simulacao.wav") as AudioStreamWAV
 	if stream != null:
 		stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
 	return stream
@@ -123,7 +126,7 @@ func _load_engine_stream() -> AudioStream:
 func _setup_engine_audio() -> void:
 	var stream := _load_engine_stream()
 	if stream == null:
-		push_warning("FiatUno: áudio de motor não encontrado")
+		push_warning("FiatUno: áudio de motor não encontrado (fiat_uno_motor_ligado.wav)")
 		return
 	_engine_audio = AudioStreamPlayer3D.new()
 	_engine_audio.name = "FiatUnoEngineAudio"
@@ -352,8 +355,6 @@ func _approach_point() -> Vector3:
 	return point
 
 func _place_driver() -> void:
-	# Posiciona o personagem ativo no assento (simplificado).
-	# Ajuste SEAT_HIP após testar visualmente.
 	var driver: Node3D = null
 	if _andre != null and _andre.has_method("is_gorece_active") and _andre.is_gorece_active() and _gorece != null:
 		driver = _gorece
@@ -389,7 +390,6 @@ func _start_mount(allow_follow_mount := false) -> void:
 	_mounting = true
 	_speed = 0.0
 	_set_driving_hud(true)
-	# Sequência simplificada: senta direto (sem animação de porta completa ainda)
 	if _door != null:
 		var t := create_tween()
 		t.tween_property(_door, "rotation:y", _door_base_rotation.y + DOOR_OPEN_ANGLE, DOOR_SECONDS)
@@ -440,7 +440,6 @@ func _set_driving_hud(driving: bool) -> void:
 			n.visible = not driving
 
 func _ensure_drive_buttons() -> void:
-	# Os botões de acelerar/frear/esterçar da Hilux são reutilizados via meta do HUD.
 	pass
 
 func _set_drive_buttons_visible(visible: bool) -> void:
