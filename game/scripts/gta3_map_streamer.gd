@@ -5,6 +5,7 @@ class_name Gta3MapStreamer
 ## into Godot Y-up by the transform on this node in third_person.tscn.
 
 @export_file("*.json") var parts_manifest_path := "res://assets/maps/liberty_city/godot_tiles/tile_parts.json"
+@export_file("*.json") var regions_manifest_path := "res://assets/maps/liberty_city/map_regions.json"
 @export var max_active_tiles := 3
 @export var load_radius := 900.0
 @export var refresh_interval := 0.75
@@ -18,6 +19,7 @@ const GROUND_FIX_VISUAL := "res://assets/maps/liberty_city/ground_fix/ground_fix
 const GROUND_FIX_COLLISION := "res://assets/maps/liberty_city/collisions/ground_fix_collision.obj"
 const OVERVIEW_TILE := "maps/overview"
 const INITIAL_SPAWN_TILE := "comntop/comntop"
+const SESSION_PATH := "user://andre3d_session.json"
 
 var _tile_records: Array[Dictionary] = []
 var _part_paths_by_tile: Dictionary = {}
@@ -30,11 +32,15 @@ var _refresh_elapsed := 0.0
 var _manifest_ready := false
 var _ultra_low_mode := false
 var _low_material_cache: Dictionary = {}
+var _selected_region_id := "center"
+var _selected_region_tiles: Dictionary = {}
+var _selected_spawn := Vector3(13.9, 80.0, 517.0)
 
 func _ready() -> void:
 	add_to_group("graphics_map")
 	GraphicsSettings.apply()
 	_load_parts_manifest()
+	_load_selected_region()
 	if _manifest_ready:
 		_refresh_active_tiles()
 	set_process(true)
@@ -117,6 +123,35 @@ func _load_parts_manifest() -> void:
 	if not _manifest_ready:
 		push_error("GTA III map manifests contain no usable tiles")
 
+func _load_selected_region() -> void:
+	var region_data: Variant = _read_json(regions_manifest_path)
+	if not region_data is Dictionary:
+		return
+	var regions: Variant = (region_data as Dictionary).get("regions", [])
+	if not regions is Array:
+		return
+	var requested_id := String((region_data as Dictionary).get("default_region", "center"))
+	if FileAccess.file_exists(SESSION_PATH):
+		var session := _read_json(SESSION_PATH)
+		if session is Dictionary:
+			requested_id = String((session as Dictionary).get("map_region", requested_id))
+	for row: Variant in regions:
+		if not row is Dictionary or String((row as Dictionary).get("id", "")) != requested_id:
+			continue
+		_selected_region_id = requested_id
+		for tile: Variant in (row as Dictionary).get("tiles", []):
+			_selected_region_tiles[String(tile)] = true
+		var spawn: Variant = (row as Dictionary).get("spawn", [])
+		if spawn is Array and spawn.size() == 3:
+			_selected_spawn = Vector3(float(spawn[0]), float(spawn[1]), float(spawn[2]))
+		return
+
+func _read_json(path: String) -> Variant:
+	if not FileAccess.file_exists(path):
+		return null
+	var file := FileAccess.open(path, FileAccess.READ)
+	return JSON.parse_string(file.get_as_text()) if file != null else null
+
 func _refresh_active_tiles() -> void:
 	if not _manifest_ready:
 		return
@@ -130,9 +165,7 @@ func _refresh_active_tiles() -> void:
 	var candidates: Array[Dictionary] = []
 	for record: Dictionary in _tile_records:
 		var tile_name := String(record.get("name", ""))
-		if tile_name == OVERVIEW_TILE or not _part_paths_by_tile.has(tile_name):
-			continue
-		if _ultra_low_mode and tile_name == "maps/props":
+		if tile_name == OVERVIEW_TILE or not _part_paths_by_tile.has(tile_name) or not _selected_region_tiles.has(tile_name):
 			continue
 		var distance := _distance_to_tile_center(source_position, record)
 		if distance <= load_radius:
@@ -143,18 +176,13 @@ func _refresh_active_tiles() -> void:
 	var desired: Dictionary = {}
 	if _part_paths_by_tile.has(GROUND_FIX_TILE):
 		desired[GROUND_FIX_TILE] = true
-	if not _ultra_low_mode and _part_paths_by_tile.has(OVERVIEW_TILE):
-		desired[OVERVIEW_TILE] = true
-	# O tile inicial contém o chão/colisão do spawn. Ele precisa permanecer
-	# carregado também no preset BAIXA, mesmo quando o raio foi reduzido.
-	if not _ultra_low_mode and _part_paths_by_tile.has(INITIAL_SPAWN_TILE):
-		desired[INITIAL_SPAWN_TILE] = true
+		# O mapa selecionado é autocontido; overview/props não entram nos três mapas.
 	if _ultra_low_mode and candidates.is_empty():
 		var nearest: Dictionary = {}
 		var nearest_distance := INF
 		for record: Dictionary in _tile_records:
 			var tile_name := String(record.get("name", ""))
-			if tile_name == OVERVIEW_TILE or tile_name == "maps/props" or not _part_paths_by_tile.has(tile_name):
+				if tile_name == OVERVIEW_TILE or not _part_paths_by_tile.has(tile_name) or not _selected_region_tiles.has(tile_name):
 				continue
 			var distance := _distance_to_tile_center(source_position, record)
 			if distance < nearest_distance:
@@ -314,6 +342,12 @@ func get_loaded_tile_names() -> PackedStringArray:
 	names.sort()
 	return names
 
+func get_selected_region_id() -> String:
+	return _selected_region_id
+
+func get_selected_spawn() -> Vector3:
+	return _selected_spawn
+
 func get_pending_mesh_count() -> int:
 	return _pending_paths.size()
 
@@ -358,7 +392,7 @@ func sample_ground_height(position: Vector3, reference_y: float, exclude: Array[
 	return {}
 
 func snap_body_to_map(body: CharacterBody3D) -> bool:
-	if body == null or not is_collision_tile_loaded(INITIAL_SPAWN_TILE):
+	if body == null or not _has_loaded_region_collision():
 		return false
 	# Spawn points can sit below a building roof but above the street. Starting
 	# hundreds of metres above the map hits the roof/floor first and leaves the
@@ -377,3 +411,9 @@ func snap_body_to_map(body: CharacterBody3D) -> bool:
 	body.global_position.y = (hit["position"] as Vector3).y + 0.05
 	body.velocity.y = 0.0
 	return true
+
+func _has_loaded_region_collision() -> bool:
+	for tile_name: String in _selected_region_tiles.keys():
+		if is_collision_tile_loaded(tile_name):
+			return true
+	return false

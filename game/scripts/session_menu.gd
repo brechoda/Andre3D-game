@@ -6,8 +6,10 @@ const LOADING_ART_PATH := "res://assets/template/ui/loading_gta.png"
 
 var selected_mode := "online"
 var selected_character := "andre"
+var selected_map_region := "center"
 var mode_hint: Label
 var character_box: VBoxContainer
+var map_region_option: OptionButton
 var start_button: Button
 var _loading := false
 var _loading_overlay: Control
@@ -179,6 +181,18 @@ func _build_menu() -> void:
     var graphics_button := _make_button("CONFIGURAÇÕES GRÁFICAS")
     graphics_button.pressed.connect(_open_graphics_menu)
     content.add_child(graphics_button)
+    var map_title := Label.new()
+    map_title.text = "MAPA DE ENTRADA"
+    map_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+    map_title.add_theme_font_size_override("font_size", 16)
+    content.add_child(map_title)
+    map_region_option = OptionButton.new()
+    map_region_option.custom_minimum_size = Vector2(360, 44)
+    map_region_option.add_item("CENTRO — bairros comerciais")
+    map_region_option.add_item("INDUSTRIAL — área portuária")
+    map_region_option.add_item("ILHAS E PARQUES — áreas abertas")
+    map_region_option.item_selected.connect(_select_map_region)
+    content.add_child(map_region_option)
     var character_title := Label.new()
     character_title.text = "PERSONAGEM"
     character_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -207,6 +221,7 @@ func _build_menu() -> void:
     footer.add_theme_font_size_override("font_size", 13)
     content.add_child(footer)
     _select_mode("online")
+    _select_map_region(0)
     _select_character("andre")
 
 func _open_graphics_menu() -> void:
@@ -313,6 +328,11 @@ func _select_mode(mode: String) -> void:
 func _select_character(character: String) -> void:
     selected_character = character
 
+func _select_map_region(index: int) -> void:
+    var ids := ["center", "industrial", "islands"]
+    if index >= 0 and index < ids.size():
+        selected_map_region = ids[index]
+
 func _start_game() -> void:
     if _loading or not _remote_update_ready:
         return
@@ -331,6 +351,7 @@ func _start_game() -> void:
         file.store_string(JSON.stringify({
             "mode": selected_mode,
             "character": selected_character,
+            "map_region": selected_map_region,
         }))
     _show_loading_screen()
     var request_error := ResourceLoader.load_threaded_request(GAME_SCENE, "PackedScene", true)

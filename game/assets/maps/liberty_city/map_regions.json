@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "default_region": "center",
+  "regions": [
+    {
+      "id": "center",
+      "name": "CENTRO",
+      "description": "Região central e bairros comerciais",
+      "tiles": [
+        "comnbtm/comnbtm",
+        "comntop/comntop",
+        "comse/comse",
+        "comsw/comsw"
+      ],
+      "spawn": [13.9, 80.0, 517.0]
+    },
+    {
+      "id": "industrial",
+      "name": "INDUSTRIAL",
+      "description": "Zona industrial e áreas portuárias",
+      "tiles": [
+        "industne/industne",
+        "industnw/industnw",
+        "industse/industse",
+        "industsw/industsw"
+      ],
+      "spawn": [677.6, 80.0, 850.7]
+    },
+    {
+      "id": "islands",
+      "name": "ILHAS E PARQUES",
+      "description": "Áreas verdes, ilhas e estradas abertas",
+      "tiles": [
+        "landne/landne",
+        "landsw/landsw"
+      ],
+      "spawn": [-973.5, 80.0, 95.4]
+    }
+  ]
+}
