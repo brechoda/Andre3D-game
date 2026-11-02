@@ -180,9 +180,24 @@ func _apply_remote_spawn_payload(json_text: String) -> void:
     if not parsed is Dictionary:
         push_warning("Spawn remoto inválido; usando posições padrão do APK.")
         return
-    var config := parsed as Dictionary
+    var config := (parsed as Dictionary).duplicate(true) as Dictionary
     if str(config.get("map", "")) != "liberty_city":
         push_warning("Spawn remoto ignorado: mapa incompatível.")
+        return
+    var map_streamer := get_node_or_null("../MapStreamer")
+    var selected_region := "industrial"
+    if map_streamer != null and map_streamer.has_method("get_selected_region_id"):
+        selected_region = str(map_streamer.call("get_selected_region_id"))
+    var regional_spawns: Variant = config.get("regional_spawns", {})
+    if regional_spawns is Dictionary and (regional_spawns as Dictionary).has(selected_region):
+        var regional_config: Variant = (regional_spawns as Dictionary)[selected_region]
+        if regional_config is Dictionary:
+            for key: String in ["player", "gorece", "vehicles"]:
+                if (regional_config as Dictionary).has(key):
+                    config[key] = (regional_config as Dictionary)[key]
+            config["map_region"] = selected_region
+    elif str(config.get("map_region", "")) != selected_region:
+        push_warning("Spawn remoto de %s ignorado para a região selecionada %s." % [str(config.get("map_region", "")), selected_region])
         return
     var revision_parts: PackedStringArray = str(config.get("spawn_revision", "")).split("-")
     var spawn_revision: int = revision_parts[revision_parts.size() - 1].to_int() if not revision_parts.is_empty() else 0
@@ -207,7 +222,6 @@ func _apply_remote_spawn_payload(json_text: String) -> void:
             if vehicle != null:
                 _apply_spawn_transform(vehicle, vehicle_data as Dictionary)
 
-    var map_streamer := get_node_or_null("../MapStreamer")
     if map_streamer != null and map_streamer.has_method("snap_body_to_map"):
         map_streamer.call("snap_body_to_map", self)
         map_streamer.call("snap_body_to_map", gorece)
