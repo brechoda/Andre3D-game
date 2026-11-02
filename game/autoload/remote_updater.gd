@@ -11,7 +11,6 @@ const FILE_CACHE_ROOT := "user://updates/files"
 const PACKAGE_CACHE_ROOT := "user://updates/packages"
 const CONTENT_ROOT := "user://content"
 const INSTALLED_MANIFEST_PATH := "user://updates/installed.json"
-const UPDATE_PREFS_PATH := "user://andre3d_update_preferences.json"
 const MAX_MANIFEST_BYTES := 256 * 1024
 const MAX_FILE_BYTES := 256 * 1024 * 1024
 const MAX_APK_BYTES := 512 * 1024 * 1024
@@ -19,9 +18,10 @@ const MAX_APK_BYTES := 512 * 1024 * 1024
 var is_ready := false
 var update_succeeded := true
 var status_message := ""
-var auto_download_apk := false
 var client_update_available := false
 var client_update_downloaded := false
+var client_update_download_in_progress := false
+var client_update_download_failed := false
 var client_update_version := ""
 var client_update_url := ""
 var client_update_sha256 := ""
@@ -37,7 +37,6 @@ var _http_result: Array = []
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_ensure_cache_dirs()
-	auto_download_apk = bool(_load_json_file(UPDATE_PREFS_PATH).get("auto_download_apk", false))
 	call_deferred("_start_update_check")
 
 func wait_until_ready(timeout_seconds: float = -1.0) -> bool:
@@ -55,10 +54,6 @@ func wait_until_ready(timeout_seconds: float = -1.0) -> bool:
 func get_status_message() -> String:
 	return status_message
 
-func set_auto_download_apk(enabled: bool) -> void:
-	auto_download_apk = enabled
-	_write_json(UPDATE_PREFS_PATH, {"auto_download_apk": enabled})
-
 func get_app_version() -> String:
 	return str(ProjectSettings.get_setting("application/config/version", "0.0.0"))
 
@@ -72,17 +67,23 @@ func get_client_update_message() -> String:
 	if not client_update_available:
 		return ""
 	if client_update_downloaded:
-		return "Versão %s baixada. Instale a atualização e abra o jogo novamente." % client_update_version
-	if auto_download_apk:
-		return "Nova versão %s encontrada; baixando automaticamente..." % client_update_version
-	return "Nova versão %s disponível. Ative o download automático nas opções." % client_update_version
+		return "Versão %s baixada. Instale a atualização e abra o jogo novamente para continuar." % client_update_version
+	if client_update_download_in_progress:
+		return "A versão %s é obrigatória. Baixando atualização..." % client_update_version
+	if client_update_download_failed:
+		return "A versão %s é obrigatória. Toque para tentar o download novamente." % client_update_version
+	return "A versão %s é obrigatória para continuar." % client_update_version
 
 func is_client_update_required() -> bool:
-	# Não bloqueia o jogo por atualização de APK.
-	return false
+	return client_update_available
 
 func install_downloaded_apk() -> bool:
 	if _client_apk_path.is_empty() or not FileAccess.file_exists(_client_apk_path):
+		return false
+	if not _is_cached_file_valid(_client_apk_path, {"size": client_update_size, "sha256": client_update_sha256}):
+		client_update_downloaded = false
+		client_update_download_failed = true
+		_emit_status("O APK salvo não passou na validação. Baixe novamente.", 1.0)
 		return false
 	return OS.shell_open(ProjectSettings.globalize_path(_client_apk_path)) == OK
 
@@ -97,14 +98,17 @@ func read_remote_text(relative_path: String) -> String:
 	return "" if file == null else file.get_as_text()
 
 func _start_update_check() -> void:
+	# Desativa o serviço antigo de download em segundo plano para evitar uma
+	# segunda cópia do APK sem a validação SHA-256 deste atualizador.
+	if OS.has_feature("android") and Engine.has_singleton("BackgroundUpdate"):
+		var background_update := Engine.get_singleton("BackgroundUpdate")
+		background_update.stop_background_update()
+		background_update.configure_background_update("")
 	var config := _load_json_file(UPDATE_CONFIG_PATH)
 	var manifest_url := str(config.get("manifest_url", ""))
 	if manifest_url.is_empty():
 		_finish(true, "Atualizações remotas desativadas")
 		return
-	if OS.has_feature("android") and Engine.has_singleton("BackgroundUpdate"):
-		Engine.get_singleton("BackgroundUpdate").configure_background_update(manifest_url)
-
 	_emit_status("Verificando atualizações...", 0.0)
 	var response := await _http_get(manifest_url, MAX_MANIFEST_BYTES)
 	if not bool(response.get("ok", false)):
@@ -155,9 +159,8 @@ func _start_update_check() -> void:
 	_write_json(INSTALLED_MANIFEST_PATH, _manifest)
 	_load_cached_packs(packages)
 	_finish(true, "Atualização remota verificada")
-	# Não força download do APK. Só baixa se o jogador ativou nas preferências.
-	if client_update_available and auto_download_apk:
-		await _download_client_apk()
+	if client_update_available:
+		await download_client_apk()
 
 func has_map_region(region_id: String) -> bool:
 	return _find_map_entry(region_id).size() > 0 and _is_cached_map_region_valid(region_id)
@@ -222,6 +225,9 @@ func _load_cached_pack_entry(entry: Dictionary) -> void:
 		push_warning("RemoteUpdater: pacote PCK não pôde ser carregado: " + package_path)
 
 func _inspect_client_update(manifest: Dictionary, manifest_url: String) -> void:
+	client_update_available = false
+	client_update_downloaded = false
+	client_update_download_failed = false
 	var client: Variant = manifest.get("client", {})
 	if not client is Dictionary:
 		return
@@ -235,20 +241,41 @@ func _inspect_client_update(manifest: Dictionary, manifest_url: String) -> void:
 		_client_apk_path = "user://updates/apk/Andre3D-%s.apk" % client_update_version
 		client_update_downloaded = _is_cached_file_valid(_client_apk_path, {"size": client_update_size, "sha256": client_update_sha256})
 
-func _download_client_apk() -> void:
-	if not client_update_available or client_update_downloaded or client_update_url.is_empty():
-		return
-	_emit_status("Baixando atualização do APK... 0%", 0.0)
+func download_client_apk() -> bool:
+	if not client_update_available:
+		return true
+	if client_update_downloaded:
+		return true
+	if client_update_download_in_progress:
+		return false
+	client_update_download_in_progress = true
+	client_update_download_failed = false
+	if client_update_url.is_empty():
+		client_update_download_in_progress = false
+		client_update_download_failed = true
+		_emit_status("Não foi possível localizar o APK obrigatório no manifesto.", 1.0)
+		return false
+	_emit_status("Baixando a atualização obrigatória do APK... 0%", 0.0)
 	var response := await _http_get(client_update_url, MAX_APK_BYTES, "Baixando atualização do APK", client_update_size)
 	if not bool(response.get("ok", false)):
-		_emit_status("Não foi possível baixar o APK; usando a versão atual", 1.0)
-		return
+		client_update_download_in_progress = false
+		client_update_download_failed = true
+		_emit_status("Falha no download obrigatório do APK. Toque para tentar novamente.", 1.0)
+		return false
 	var body: PackedByteArray = response.get("body", PackedByteArray())
 	if not _body_matches_entry(body, {"size": client_update_size, "sha256": client_update_sha256}):
-		_emit_status("Hash do APK inválido; atualização ignorada", 1.0)
-		return
+		client_update_download_in_progress = false
+		client_update_download_failed = true
+		_emit_status("A validação do APK falhou. O jogo continua bloqueado; tente baixar novamente.", 1.0)
+		return false
 	client_update_downloaded = _store_bytes(_client_apk_path, body)
-	_emit_status("Download da versão %s concluído (100%%). Toque em INSTALAR APK BAIXADO." % client_update_version, 1.0)
+	client_update_download_in_progress = false
+	client_update_download_failed = not client_update_downloaded
+	if client_update_downloaded:
+		_emit_status("Versão %s baixada. Instale a atualização para continuar." % client_update_version, 1.0)
+	else:
+		_emit_status("Não foi possível salvar o APK obrigatório. Tente novamente.", 1.0)
+	return client_update_downloaded
 
 func _validate_manifest(manifest: Dictionary) -> Dictionary:
 	var version := str(manifest.get("version", ""))

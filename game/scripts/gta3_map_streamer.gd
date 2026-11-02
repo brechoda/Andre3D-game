@@ -357,6 +357,28 @@ func get_pending_mesh_count() -> int:
 func get_catalog_tile_count() -> int:
 	return _tile_records.size()
 
+func is_start_area_loaded() -> bool:
+	for tile_name: String in _selected_region_tiles.keys():
+		if not _loaded_tiles.has(tile_name) or not is_collision_tile_loaded(tile_name):
+			continue
+		var tile_root := _loaded_tiles[tile_name] as Node3D
+		var has_visual_mesh := false
+		for child: Node in tile_root.get_children():
+			if child is MeshInstance3D and (child as MeshInstance3D).mesh != null:
+				has_visual_mesh = true
+				break
+		if not has_visual_mesh:
+			continue
+		var tile_has_pending_meshes := false
+		for pending_variant: Variant in _pending_paths.values():
+			var pending: Dictionary = pending_variant
+			if String(pending.get("tile", "")) == tile_name:
+				tile_has_pending_meshes = true
+				break
+		if not tile_has_pending_meshes:
+			return true
+	return false
+
 func is_collision_tile_loaded(tile_name: String) -> bool:
 	if not _loaded_tiles.has(tile_name):
 		return false

@@ -35,6 +35,8 @@ const MIN_ANALOG_SPEED := 0.18
 const NPC_SIMULATION_DISTANCE := 90.0
 const VEHICLE_SIMULATION_DISTANCE := 120.0
 const DISTANCE_LOD_INTERVAL := 0.5
+const LOADING_ART_PATH := "res://assets/template/ui/loading_gta.png"
+const MAP_READY_HOLD_SECONDS := 5.0
 
 @onready var andre_visual: Node3D = $AndreVisual
 @onready var dg_visual: Node3D = $DGVisual
@@ -87,8 +89,14 @@ var _follow_bike_target: Node3D
 var _follow_vehicle: Node3D
 var _online_mode := false
 var _distance_lod_elapsed := DISTANCE_LOD_INTERVAL
+var _map_loading_layer: CanvasLayer
+var _map_loading_status: Label
+var _map_loading_progress: ProgressBar
+var _map_loading_percent: Label
+var _map_ready_elapsed := 0.0
 
 func _ready() -> void:
+    _show_map_loading_screen()
     visual = andre_visual
     # O avatar local não pode depender do estado de conexão/mapa para ser renderizado.
     visible = true
@@ -349,6 +357,9 @@ func get_network_character_id() -> String:
 func _physics_process(delta: float) -> void:
     if not is_instance_valid(visual):
         return
+    if _map_loading_layer != null:
+        velocity = Vector3.ZERO
+        return
     if not is_zero_approx(rotation.y) or not is_zero_approx(rotation.x) or not is_zero_approx(rotation.z):
         rotation = Vector3.ZERO
     if not _spawn_grounded:
@@ -439,6 +450,7 @@ func _physics_process(delta: float) -> void:
     _update_walk_animation(walking, analog_strength)
 
 func _process(_delta: float) -> void:
+    _update_map_loading_screen(_delta)
     _update_follow_button()
     _update_follow_vehicle()
     if _active_character == 1:
@@ -456,6 +468,88 @@ func _process(_delta: float) -> void:
     if _action_busy:
         _combo_elapsed += _delta
         _update_combo_chain()
+
+func _show_map_loading_screen() -> void:
+    _map_loading_layer = CanvasLayer.new()
+    _map_loading_layer.name = "MapLoadingLayer"
+    _map_loading_layer.layer = 100
+    add_child(_map_loading_layer)
+
+    var overlay := Control.new()
+    overlay.name = "MapLoadingScreen"
+    overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+    overlay.mouse_filter = Control.MOUSE_FILTER_STOP
+    _map_loading_layer.add_child(overlay)
+
+    var image := TextureRect.new()
+    image.texture = load(LOADING_ART_PATH) as Texture2D
+    image.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+    image.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+    image.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+    image.mouse_filter = Control.MOUSE_FILTER_IGNORE
+    overlay.add_child(image)
+
+    var shade := ColorRect.new()
+    shade.color = Color(0.02, 0.03, 0.05, 0.48)
+    shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+    shade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+    overlay.add_child(shade)
+
+    var bottom := VBoxContainer.new()
+    bottom.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
+    bottom.position = Vector2(-300, -160)
+    bottom.size = Vector2(600, 130)
+    bottom.add_theme_constant_override("separation", 10)
+    overlay.add_child(bottom)
+
+    var title := Label.new()
+    title.text = "CARREGANDO A CIDADE"
+    title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+    title.add_theme_font_size_override("font_size", 28)
+    title.add_theme_color_override("font_color", Color.WHITE)
+    bottom.add_child(title)
+
+    _map_loading_status = Label.new()
+    _map_loading_status.text = "Carregando o mapa e as colisões iniciais..."
+    _map_loading_status.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+    _map_loading_status.add_theme_font_size_override("font_size", 16)
+    _map_loading_status.add_theme_color_override("font_color", Color("f6d58a"))
+    bottom.add_child(_map_loading_status)
+
+    _map_loading_progress = ProgressBar.new()
+    _map_loading_progress.custom_minimum_size = Vector2(0, 24)
+    _map_loading_progress.max_value = 100.0
+    _map_loading_progress.show_percentage = false
+    bottom.add_child(_map_loading_progress)
+
+    _map_loading_percent = Label.new()
+    _map_loading_percent.text = "Aguarde..."
+    _map_loading_percent.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+    _map_loading_percent.add_theme_font_size_override("font_size", 20)
+    _map_loading_percent.add_theme_color_override("font_color", Color.WHITE)
+    bottom.add_child(_map_loading_percent)
+
+func _update_map_loading_screen(delta: float) -> void:
+    if _map_loading_layer == null:
+        return
+    var map_streamer := get_node_or_null("../MapStreamer")
+    var map_loaded := map_streamer != null and map_streamer.has_method("is_start_area_loaded") and bool(map_streamer.call("is_start_area_loaded"))
+    if not map_loaded:
+        _map_ready_elapsed = 0.0
+        _map_loading_status.text = "Carregando o mapa e as colisões iniciais..."
+        _map_loading_progress.value = 0.0
+        _map_loading_percent.text = "Aguarde..."
+        return
+
+    _map_ready_elapsed += delta
+    var progress := clampf(_map_ready_elapsed / MAP_READY_HOLD_SECONDS, 0.0, 1.0)
+    var seconds_left := int(ceil(maxf(0.0, MAP_READY_HOLD_SECONDS - _map_ready_elapsed)))
+    _map_loading_status.text = "Mapa carregado. Preparando entrada... %d s" % seconds_left
+    _map_loading_progress.value = progress * 100.0
+    _map_loading_percent.text = "%d%%" % int(round(progress * 100.0))
+    if _map_ready_elapsed >= MAP_READY_HOLD_SECONDS:
+        _map_loading_layer.queue_free()
+        _map_loading_layer = null
 
 func _update_distance_lod() -> void:
     var player_position := gorece.global_position if _active_character == 1 else global_position

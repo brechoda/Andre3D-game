@@ -23,10 +23,10 @@ Não substituir o projeto por um template novo. O projeto já tem mapa, veículo
 ## Arquitetura importante
 
 - `project.godot`: versão, cena inicial e autoloads. A cena inicial é `res://scenes/session_menu.tscn`.
-- `scenes/session_menu.tscn` e `scripts/session_menu.gd`: menu inicial, escolha de modo/personagem, espera da checagem remota, bloqueio do online quando o APK é antigo e opção de baixar APKs automaticamente.
-- `scenes/third_person.tscn` e `scripts/third_person.gd`: gameplay principal em terceira pessoa.
+- `scenes/session_menu.tscn` e `scripts/session_menu.gd`: menu inicial, escolha de modo/personagem, espera da checagem remota e bloqueio de entrada quando há atualização obrigatória do APK.
+- `scenes/third_person.tscn` e `scripts/third_person.gd`: gameplay principal em terceira pessoa; mantém a tela de carregamento até o streamer confirmar geometria visual e colisão na área inicial, e por mais cinco segundos.
 - `scripts/net/multiplayer_client.gd`: cliente WebSocket. Ao entrar, envia `build`, `app_version`, sala, nome e personagem. Não remova `app_version`, pois o servidor bloqueia versões antigas.
-- `autoload/remote_updater.gd`: consulta o manifesto, valida arquivos por tamanho/SHA-256, grava conteúdo em `user://updates`, verifica a versão do APK, baixa o APK novo e abre o instalador Android através do botão do menu.
+- `autoload/remote_updater.gd`: consulta o manifesto, valida arquivos por tamanho/SHA-256, grava conteúdo em `user://updates`, bloqueia o gameplay quando há versão obrigatória do APK, baixa o APK novo e abre o instalador Android através do botão do menu.
 - `autoload/tuning_store.gd`: lê `config/tuning.json` remoto validado e usa o arquivo local como fallback.
 - `config/updates.json`: endpoint do manifesto e flag de checagem no início.
 - `config/multiplayer.json`: endpoint WebSocket/HTTP do servidor.
@@ -50,11 +50,11 @@ O manifesto atual tem:
 
 Arquivos `kind: "file"` são baixados para o cache do usuário e usados pelo código que os solicita. Um APK já instalado não consegue substituir código GDScript nativo. Alterações de código, cenas empacotadas ou lógica necessitam de uma nova versão do APK. Conteúdo externo/PCK só deve ser usado se o carregamento correspondente estiver implementado e validado.
 
-Se a rede falhar, o jogo continua usando o cache local/conteúdo instalado. Nunca faça o menu travar indefinidamente por causa de uma atualização remota.
+Se a rede falhar ao baixar conteúdo normal, o jogo continua usando o cache local/conteúdo instalado. Se o manifesto já identificou uma versão do APK mais nova e obrigatória, mantenha o gameplay bloqueado até validar, instalar e reabrir o app atualizado; ofereça uma nova tentativa de download, sem ignorar o requisito.
 
 ## Atualização do próprio APK
 
-A opção `BAIXAR ATUALIZAÇÕES DO APK AUTOMATICAMENTE` é salva em `user://andre3d_update_preferences.json`. Quando o manifesto informa um `client.version` maior que `application/config/version`, o atualizador baixa o APK para `user://updates/apk/` e valida tamanho/SHA-256. O botão `INSTALAR APK BAIXADO` abre o instalador Android; a confirmação do usuário é normal e não deve ser contornada.
+Quando o manifesto informa um `client.version` maior que `application/config/version`, o jogo bloqueia a entrada no gameplay e baixa o APK automaticamente para `user://updates/apk/`, validando tamanho e SHA-256. Depois do download, `INSTALAR ATUALIZAÇÃO` abre o instalador Android; a confirmação do usuário é obrigatória e não deve ser contornada. O jogador precisa reabrir o app atualizado para continuar. Se o download falhar, o jogo permanece bloqueado e oferece nova tentativa. O jogo desativa o serviço Android legado para evitar uma segunda cópia do APK sem validação.
 
 Para forçar atualização online, o cliente verifica `min_online_version` e o servidor também valida `app_version` no evento `join`. Portanto, não basta alterar somente a mensagem do menu: cliente, servidor e manifesto precisam permanecer compatíveis.
 

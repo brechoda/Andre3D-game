@@ -32,8 +32,7 @@ var _graphics_auto: CheckButton
 func _ready() -> void:
     set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
     _build_menu()
-    # O RemoteUpdater baixa em segundo plano quando o app é minimizado. Com o
-    # app aberto, preservamos a tela preta e a porcentagem durante o download.
+    # Mantém a tela de progresso visível até o conteúdo inicial estar pronto.
     _show_download_screen()
     ExternalContent.status_changed.connect(_on_map_content_status)
     _map_content_ready = ExternalContent.is_map_available()
@@ -50,7 +49,8 @@ func _on_map_content_status(message: String) -> void:
 func _wait_for_remote_update() -> void:
     await RemoteUpdater.wait_until_ready()
     _remote_update_ready = true
-    call_deferred("_prepare_selected_map")
+    if not RemoteUpdater.is_client_update_required():
+        call_deferred("_prepare_selected_map")
     _sync_download_gate()
     if mode_hint != null:
         var update_message := RemoteUpdater.get_status_message()
@@ -59,13 +59,9 @@ func _wait_for_remote_update() -> void:
             mode_hint.text = RemoteUpdater.get_client_update_message()
         elif selected_mode == "online" and not RemoteUpdater.can_play_online():
             mode_hint.text = RemoteUpdater.get_online_block_message()
-        var client_message := RemoteUpdater.get_client_update_message()
-        if not client_message.is_empty():
-            mode_hint.text += "\n" + client_message
-        if _install_update_button != null:
-            _install_update_button.visible = RemoteUpdater.client_update_downloaded
-        if client_message.is_empty() and not update_message.is_empty() and not RemoteUpdater.update_succeeded:
+        if not RemoteUpdater.is_client_update_required() and not update_message.is_empty() and not RemoteUpdater.update_succeeded:
             mode_hint.text += "\n" + update_message
+    _refresh_update_action()
 
 func _on_remote_update_status(message: String, progress: float) -> void:
     if _download_progress != null:
@@ -75,15 +71,35 @@ func _on_remote_update_status(message: String, progress: float) -> void:
     if mode_hint != null and RemoteUpdater.is_client_update_required():
         mode_hint.text = message
     _sync_download_gate()
-    if _install_update_button != null:
-        _install_update_button.visible = RemoteUpdater.client_update_downloaded
+    _refresh_update_action()
 
 func _sync_download_gate() -> void:
     var ready := _map_content_ready and _remote_update_ready and not _map_region_loading
     if start_button != null:
         start_button.disabled = not ready or RemoteUpdater.is_client_update_required()
-    if ready and _download_overlay != null:
+    if (ready or RemoteUpdater.is_client_update_required()) and _download_overlay != null:
         _download_overlay.visible = false
+
+func _refresh_update_action() -> void:
+    if _install_update_button == null:
+        return
+    var required := RemoteUpdater.is_client_update_required()
+    _install_update_button.visible = required and (RemoteUpdater.client_update_downloaded or RemoteUpdater.client_update_download_failed)
+    _install_update_button.disabled = RemoteUpdater.client_update_download_in_progress
+    _install_update_button.text = "INSTALAR ATUALIZAÇÃO" if RemoteUpdater.client_update_downloaded else "TENTAR BAIXAR APK"
+
+func _on_update_action_pressed() -> void:
+    if RemoteUpdater.client_update_downloaded:
+        if not RemoteUpdater.install_downloaded_apk():
+            mode_hint.text = "Não foi possível abrir o instalador. Tente novamente."
+        else:
+            mode_hint.text = "Confirme a instalação do APK no Android. Depois, abra o jogo novamente."
+        return
+    call_deferred("_retry_required_apk_download")
+
+func _retry_required_apk_download() -> void:
+    await RemoteUpdater.download_client_apk()
+    _refresh_update_action()
 
 func _show_download_screen() -> void:
     _download_overlay = Control.new()
@@ -173,14 +189,9 @@ func _build_menu() -> void:
     mode_hint.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
     mode_hint.custom_minimum_size = Vector2(400, 42)
     content.add_child(mode_hint)
-    var auto_update := CheckButton.new()
-    auto_update.text = "BAIXAR ATUALIZAÇÕES DO APK AUTOMATICAMENTE"
-    auto_update.button_pressed = RemoteUpdater.auto_download_apk
-    auto_update.toggled.connect(RemoteUpdater.set_auto_download_apk)
-    content.add_child(auto_update)
-    _install_update_button = _make_button("INSTALAR APK BAIXADO")
+    _install_update_button = _make_button("INSTALAR ATUALIZAÇÃO")
     _install_update_button.visible = false
-    _install_update_button.pressed.connect(RemoteUpdater.install_downloaded_apk)
+    _install_update_button.pressed.connect(_on_update_action_pressed)
     content.add_child(_install_update_button)
     var graphics_button := _make_button("CONFIGURAÇÕES GRÁFICAS")
     graphics_button.pressed.connect(_open_graphics_menu)
@@ -339,7 +350,7 @@ func _select_map_region(index: int) -> void:
             call_deferred("_prepare_selected_map")
 
 func _prepare_selected_map() -> void:
-    if _map_region_loading or not _remote_update_ready:
+    if _map_region_loading or not _remote_update_ready or RemoteUpdater.is_client_update_required():
         return
     if ExternalContent.is_region_available(selected_map_region):
         _map_content_ready = await ExternalContent.ensure_region(selected_map_region)
@@ -362,6 +373,10 @@ func _prepare_selected_map() -> void:
 
 func _start_game() -> void:
     if _loading or not _remote_update_ready:
+        return
+    if RemoteUpdater.is_client_update_required():
+        mode_hint.text = RemoteUpdater.get_client_update_message()
+        _refresh_update_action()
         return
     if not _map_content_ready:
         await _prepare_selected_map()
