@@ -38,7 +38,7 @@
 - [x] Substituir o `subglass.txd` truncado por texturas RGBA `glassfxsub1`/`glassfxsub2` e atualizar os MTLs dos modelos afetados.
 - [x] Executar smoke test desktop headless da cena de terceira pessoa após a importação dos meshes COL1.
 - [x] Remover de todos os tiles as árvores (incluindo variantes LOD e sombras), postes de iluminação/telefonia e semáforos, tanto visualmente quanto nas colisões; preservar arbustos baixos, prédios, asfalto e suportes estruturais.
-- [x] Fazer teste visual/jogável completo no desktop, validar streaming/câmera/movimento e testar a exportação APK no Android antes de considerar o mapa finalizado.
+- [ ] Fazer playtest visual/jogável no desktop e em dispositivo Android, conferir streaming/câmera/movimento e as bordas dos remendos do chão; o build APK do CI não substitui esses testes antes de considerar o mapa finalizado.
 
 ## Piloto automático e GPS offline
 - [x] No modo offline, adicionar um botão de piloto automático para o veículo; ao ativá-lo, o veículo deve seguir a pista sozinho e poder percorrê-la nos dois sentidos, sem remover o controle manual existente.

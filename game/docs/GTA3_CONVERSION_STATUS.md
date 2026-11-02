@@ -16,9 +16,9 @@ A primeira importação de teste identificou que os OBJ originais excediam o lim
 
 ## Verificações executadas
 
-Os cinco testes `tests/test_gta3_map_assets.py` verificam cobertura dos 12 tiles, igualdade do número de triângulos entre fonte e peças, limite máximo de 96 materiais por peça, existência dos PNG referenciados e integração estática com a cena. O teste Godot `test/check_gta3_obj_import.gd` foi executado em um projeto isolado com uma peça real e importou uma malha com 96 superfícies. Um smoke test runtime separado carregou essa peça através do streamer e confirmou a presença do `StaticBody3D` trimesh. `test/check_gta3_map_streamer_script.gd` confirmou que o script de streaming pode ser carregado e instanciado pelo Godot 4.7.2.
+Os testes `tests/test_gta3_map_assets.py` verificam cobertura dos 12 tiles, correspondência entre faces OBJ e manifesto, limite máximo de 96 materiais, caminhos de textura, transparência de `subglass` e registro dos assets do remendo de chão para Android. O teste de paridade contra `conversion_report.json` é executado quando os dados-fonte estão disponíveis; esse arquivo fica em `assets/source`, excluído do checkout público/runtime. `test/check_gta3_map_streamer_script.gd` também carrega os OBJ de visual e colisão do remendo de chão como meshes pelo Godot.
 
-A validação headless da cena de terceira pessoa foi concluída após a importação dos assets runtime: a cena executou por 15 segundos sem erros críticos, recursos ausentes ou falhas de script, e os meshes COL1 foram importados pelo Godot. Isso ainda não substitui um playtest visual/jogável com interação de câmera, movimento e streaming em desktop.
+A validação headless da cena de terceira pessoa foi executada por 15 segundos. O log não mostrou falhas do streamer nem de recursos do mapa, mas reportou três arquivos de áudio Fiat Uno ausentes (`fiat_uno_motor_ligado.wav`, `fiat_uno_acelerando.wav` e `fiat_uno_desacelerando.wav`), que são uma pendência separada do mapa. O workflow GitHub Actions de Android concluiu builds APK com sucesso. Isso não substitui um playtest visual/jogável interativo no desktop nem a instalação e validação em dispositivo Android.
 
 ## Pendências para finalização
 
@@ -30,8 +30,9 @@ A validação headless da cena de terceira pessoa foi concluída após a importa
 | Colisão fonte COL | Integrada | 24 arquivos COL1 foram decodificados; os 8.689 posicionamentos tiveram modelo COL correspondente e foram gerados em 12 meshes por tile. |
 | Transparência/máscaras | Integrada | O streamer detecta as 280 texturas runtime com alpha, duplica os materiais e aplica `TRANSPARENCY_ALPHA` com culling desativado. |
 | TXD `subglass.txd` | Corrigido | A entrada original tinha somente 36 bytes úteis; foram geradas texturas RGBA substitutas para `glassfxsub1` e `glassfxsub2`, com MTLs atualizados e relatório de reparo. |
-| Smoke test desktop | Concluído | A cena de terceira pessoa executou por 15 segundos em Godot headless sem erros críticos; os meshes COL1 foram importados. |
-| Playtest visual desktop | Pendente | Conferir movimento, colisão, visibilidade, câmera e carregamento assíncrono em execução interativa. |
-| APK | Pendente | A validação Android será feita após o playtest desktop. |
+| Remendos de terreno e colisão | Integrados ao streamer | `ground_fix_visual.obj` e `ground_fix_collision.obj` são registrados como tile especial e carregados por recursos importados, sem depender do OBJ-fonte estar acessível via `FileAccess` no APK. |
+| Smoke test desktop | Parcial | A cena rodou por 15 segundos sem erros do mapa/streamer; o log acusa três áudios Fiat Uno ausentes, fora do mapa. |
+| Playtest visual desktop | Pendente | Conferir movimento, colisão, visibilidade, bordas dos remendos, câmera e streaming em execução interativa. |
+| Build APK Android | Aprovado no CI | O workflow cria APK; falta instalar e validar o mapa em dispositivo Android real. |
 
 Para regenerar as peças runtime e as respectivas texturas, execute `python3 tools/split_gta3_obj_surfaces.py --source assets/source/gta3_map/converted_tiles --output assets/maps/liberty_city/godot_tiles --material-limit 96`. Para regenerar as colisões COL1, instale `rwfury` e execute `python3 tools/generate_gta3_col_collision.py --manifest assets/source/gta3_map/map_manifest.json --col-root assets/source/gta3_map --output assets/maps/liberty_city/collisions`. Para reparar o subglass e atualizar os MTLs, execute `python3 tools/fix_gta3_transparency.py --source-txd assets/source/gta3_map/subglass.txd --mtl-root assets/maps/liberty_city/godot_tiles --texture-root assets/maps/liberty_city/textures --report assets/maps/liberty_city/subglass_repair_report.json`. Para validar os assets, execute `python3 tests/test_gta3_map_assets.py`.

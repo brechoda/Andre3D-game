@@ -18,7 +18,12 @@ class Gta3MapAssetTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.parts_manifest = json.loads((GODOT_TILES / "tile_parts.json").read_text(encoding="utf-8"))
-        cls.conversion_report = json.loads((CONVERTED / "conversion_report.json").read_text(encoding="utf-8"))
+        conversion_report_path = CONVERTED / "conversion_report.json"
+        cls.conversion_report = (
+            json.loads(conversion_report_path.read_text(encoding="utf-8"))
+            if conversion_report_path.is_file()
+            else None
+        )
         cls.catalog = json.loads((RUNTIME_ROOT / "gta3_tile_catalog.json").read_text(encoding="utf-8"))
 
     def test_manifest_covers_all_spatial_tiles(self) -> None:
@@ -28,6 +33,8 @@ class Gta3MapAssetTests(unittest.TestCase):
         self.assertEqual(12, self.parts_manifest["tile_count"])
 
     def test_split_meshes_preserve_every_triangle(self) -> None:
+        if self.conversion_report is None:
+            self.skipTest("source conversion report is excluded from the public runtime-assets repository")
         source_counts = {tile["tile"]: tile["faces"] for tile in self.conversion_report["tiles"]}
         split_counts = {
             tile["tile"].replace("/", "_"): tile["triangle_count"]
@@ -83,6 +90,24 @@ class Gta3MapAssetTests(unittest.TestCase):
                     alpha_min, alpha_max = image.getchannel("A").getextrema()
                     self.assertGreater(alpha_min, 0)
                     self.assertLess(alpha_max, 255)
+
+    def test_ground_fix_assets_are_registered_for_android_runtime(self) -> None:
+        streamer_path = ROOT / "scripts/gta3_map_streamer.gd"
+        streamer = streamer_path.read_text(encoding="utf-8")
+        self.assertIn(
+            "_part_paths_by_tile[GROUND_FIX_TILE] = PackedStringArray([GROUND_FIX_VISUAL])",
+            streamer,
+        )
+        self.assertNotIn("if FileAccess.file_exists(GROUND_FIX_VISUAL)", streamer)
+        for relative_path in (
+            "assets/maps/liberty_city/ground_fix/ground_fix_visual.obj",
+            "assets/maps/liberty_city/ground_fix/ground_fix_visual.obj.import",
+            "assets/maps/liberty_city/ground_fix/ground_fix_visual.mtl",
+            "assets/maps/liberty_city/ground_fix/grass_dirt.png",
+            "assets/maps/liberty_city/collisions/ground_fix_collision.obj",
+            "assets/maps/liberty_city/collisions/ground_fix_collision.obj.import",
+        ):
+            self.assertTrue((ROOT / relative_path).is_file(), relative_path)
 
     def test_third_person_scene_uses_streamed_city_without_flat_ground(self) -> None:
         scene = (ROOT / "scenes/third_person.tscn").read_text(encoding="utf-8")

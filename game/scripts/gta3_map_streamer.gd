@@ -84,8 +84,8 @@ func _load_parts_manifest() -> void:
 			part_paths.append(TILE_DIRECTORY + String(part_name))
 		_part_paths_by_tile[tile_name] = part_paths
 	# O remendo corrigido não pertence a um tile original; carregue-o como tile especial.
-	if FileAccess.file_exists(GROUND_FIX_VISUAL):
-		_part_paths_by_tile[GROUND_FIX_TILE] = PackedStringArray([GROUND_FIX_VISUAL])
+	# Use o caminho do recurso importado; o OBJ fonte pode não existir como arquivo no APK.
+	_part_paths_by_tile[GROUND_FIX_TILE] = PackedStringArray([GROUND_FIX_VISUAL])
 	var bounds_path := parts_manifest_path.get_base_dir() + "/tile_part_bounds.json"
 	if FileAccess.file_exists(bounds_path):
 		var bounds_file := FileAccess.open(bounds_path, FileAccess.READ)
@@ -143,25 +143,25 @@ func _refresh_active_tiles() -> void:
 	var desired: Dictionary = {}
 	if _part_paths_by_tile.has(GROUND_FIX_TILE):
 		desired[GROUND_FIX_TILE] = true
-		if not _ultra_low_mode and _part_paths_by_tile.has(OVERVIEW_TILE):
-			desired[OVERVIEW_TILE] = true
+	if not _ultra_low_mode and _part_paths_by_tile.has(OVERVIEW_TILE):
+		desired[OVERVIEW_TILE] = true
 	# O tile inicial contém o chão/colisão do spawn. Ele precisa permanecer
 	# carregado também no preset BAIXA, mesmo quando o raio foi reduzido.
-		if not _ultra_low_mode and _part_paths_by_tile.has(INITIAL_SPAWN_TILE):
-			desired[INITIAL_SPAWN_TILE] = true
-		if _ultra_low_mode and candidates.is_empty():
-			var nearest: Dictionary = {}
-			var nearest_distance := INF
-			for record: Dictionary in _tile_records:
-				var tile_name := String(record.get("name", ""))
-				if tile_name == OVERVIEW_TILE or tile_name == "maps/props" or not _part_paths_by_tile.has(tile_name):
-					continue
-				var distance := _distance_to_tile_center(source_position, record)
-				if distance < nearest_distance:
-					nearest_distance = distance
-					nearest = {"name": tile_name, "distance": distance}
-			if not nearest.is_empty():
-				candidates.append(nearest)
+	if not _ultra_low_mode and _part_paths_by_tile.has(INITIAL_SPAWN_TILE):
+		desired[INITIAL_SPAWN_TILE] = true
+	if _ultra_low_mode and candidates.is_empty():
+		var nearest: Dictionary = {}
+		var nearest_distance := INF
+		for record: Dictionary in _tile_records:
+			var tile_name := String(record.get("name", ""))
+			if tile_name == OVERVIEW_TILE or tile_name == "maps/props" or not _part_paths_by_tile.has(tile_name):
+				continue
+			var distance := _distance_to_tile_center(source_position, record)
+			if distance < nearest_distance:
+				nearest_distance = distance
+				nearest = {"name": tile_name, "distance": distance}
+		if not nearest.is_empty():
+			candidates.append(nearest)
 	var limit := mini(max_active_tiles, candidates.size())
 	for index: int in range(limit):
 		desired[String(candidates[index]["name"])] = true
