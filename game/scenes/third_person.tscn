@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3]
+[gd_scene load_steps=28 format=3]
 
 [ext_resource type="Script" path="res://scripts/third_person.gd" id="1_player"]
 [ext_resource type="PackedScene" path="res://assets/models/andre_armed_biked.glb" id="2_andre"]
@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" path="res://assets/models/dg_rigged.glb" id="15_dg"]
 [ext_resource type="Script" path="res://scripts/gta3_map_streamer.gd" id="16_map"]
 [ext_resource type="Script" path="res://scripts/gps_autopilot.gd" id="17_gps"]
-[ext_resource type="PackedScene" path="res://assets/models/fiat_uno_escada.glb" id="18_fiatuno"]
 [ext_resource type="Script" path="res://scripts/fiatuno_controller.gd" id="19_fiatuno_script"]
 
 [sub_resource type="ProceduralSkyMaterial" id="SkyMaterial_empty"]
@@ -218,7 +217,7 @@ script = ExtResource("19_fiatuno_script")
 network_vehicle_id = "fiatuno_01"
 vehicle_display_name = "FIAT UNO + ESCADA"
 
-[node name="FiatUnoVisual" parent="FiatUno" instance=ExtResource("18_fiatuno")]
+[node name="FiatUnoVisual" type="Node3D" parent="FiatUno"]
 
 [node name="CollisionBody" type="StaticBody3D" parent="FiatUno"]
 collision_layer = 1
