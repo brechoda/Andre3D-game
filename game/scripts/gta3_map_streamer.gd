@@ -130,9 +130,9 @@ func _load_selected_region() -> void:
 	var regions: Variant = (region_data as Dictionary).get("regions", [])
 	if not regions is Array:
 		return
-	var requested_id := String((region_data as Dictionary).get("default_region", "center"))
+	var requested_id: String = String((region_data as Dictionary).get("default_region", "center"))
 	if FileAccess.file_exists(SESSION_PATH):
-		var session := _read_json(SESSION_PATH)
+		var session: Variant = _read_json(SESSION_PATH)
 		if session is Dictionary:
 			requested_id = String((session as Dictionary).get("map_region", requested_id))
 	for row: Variant in regions:
@@ -182,7 +182,7 @@ func _refresh_active_tiles() -> void:
 		var nearest_distance := INF
 		for record: Dictionary in _tile_records:
 			var tile_name := String(record.get("name", ""))
-				if tile_name == OVERVIEW_TILE or not _part_paths_by_tile.has(tile_name) or not _selected_region_tiles.has(tile_name):
+			if tile_name == OVERVIEW_TILE or not _part_paths_by_tile.has(tile_name) or not _selected_region_tiles.has(tile_name):
 				continue
 			var distance := _distance_to_tile_center(source_position, record)
 			if distance < nearest_distance:
