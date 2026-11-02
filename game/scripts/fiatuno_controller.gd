@@ -3,7 +3,9 @@ class_name FiatUnoController
 
 ## Fiat Uno + Escada (sem braços)
 ## network_vehicle_id: fiatuno_01
-## Servidor já reconhece o ID. Coloque o GLB como filho visual e anexe este script.
+## Áudios:
+##   res://assets/audio/fiat_uno_motor_ligado.wav          (idle)
+##   res://assets/audio/fiat_uno_acelerando.wav            (accel)
 
 const MOUNT_INTERACTION_DISTANCE := 3.0
 const MAX_SPEED := 12.5
@@ -17,7 +19,6 @@ const STEER_RESPONSE := 5.0
 const BODY_ROLL := 0.04
 const WHEEL_RADIUS := 0.32
 
-# Coordenadas locais do carro (ajuste fino depois de testar o modelo)
 const SEAT_HIP := Vector3(-0.35, 0.12, -0.08)
 const DOOR_THRESHOLD_HIP := Vector3(-0.90, 0.20, -0.18)
 const DOOR_APPROACH := Vector3(-1.35, 0.0, -0.25)
@@ -61,7 +62,8 @@ var _wheel_lb: Node3D
 var _wheel_rb: Node3D
 var _wheel_base_rotations: Dictionary = {}
 var _wheel_spin := 0.0
-var _engine_audio: AudioStreamPlayer3D
+var _idle_engine_audio: AudioStreamPlayer3D
+var _accel_engine_audio: AudioStreamPlayer3D
 var _network_audio_mode := "off"
 var _ground_y := 0.0
 var _wheel_ground_offset := 0.0
@@ -79,7 +81,6 @@ func _ready() -> void:
 
 	_wheel_lf = _find_part(root, "wheel_lf")
 	_wheel_rf = _find_part(root, "wheel_rf")
-	# O GLB exportado às vezes nomeia a roda dianteira direita só como "wheel"
 	if _wheel_rf == null:
 		_wheel_rf = _find_part(root, "wheel")
 	_wheel_lb = _find_part(root, "wheel_lb")
@@ -113,36 +114,51 @@ func _find_part(root: Node, part_name: String) -> Node3D:
 			return found
 	return null
 
-func _load_engine_stream() -> AudioStream:
-	# Áudio próprio do Fiat Uno (motor ligado / marcha lenta).
-	var stream := load("res://assets/audio/fiat_uno_motor_ligado.wav") as AudioStreamWAV
-	if stream == null:
-		# Fallback temporário se o arquivo ainda não estiver no projeto.
-		stream = load("res://assets/audio/hilux_srx_2017_parada_simulacao.wav") as AudioStreamWAV
-	if stream != null:
-		stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
-	return stream
-
 func _setup_engine_audio() -> void:
-	var stream := _load_engine_stream()
-	if stream == null:
-		push_warning("FiatUno: áudio de motor não encontrado (fiat_uno_motor_ligado.wav)")
-		return
-	_engine_audio = AudioStreamPlayer3D.new()
-	_engine_audio.name = "FiatUnoEngineAudio"
-	_engine_audio.stream = stream
-	_engine_audio.volume_db = -4.0
-	_engine_audio.unit_size = 6.5
-	_engine_audio.max_distance = 28.0
-	add_child(_engine_audio)
+	var idle_stream := load("res://assets/audio/fiat_uno_motor_ligado.wav") as AudioStreamWAV
+	if idle_stream == null:
+		idle_stream = load("res://assets/audio/hilux_srx_2017_parada_simulacao.wav") as AudioStreamWAV
+	if idle_stream != null:
+		idle_stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
+		_idle_engine_audio = AudioStreamPlayer3D.new()
+		_idle_engine_audio.name = "FiatUnoIdleEngineAudio"
+		_idle_engine_audio.stream = idle_stream
+		_idle_engine_audio.volume_db = -4.0
+		_idle_engine_audio.unit_size = 6.5
+		_idle_engine_audio.max_distance = 28.0
+		add_child(_idle_engine_audio)
+	else:
+		push_warning("FiatUno: áudio idle não encontrado")
+
+	var accel_stream := load("res://assets/audio/fiat_uno_acelerando.wav") as AudioStreamWAV
+	if accel_stream != null:
+		accel_stream.loop_mode = AudioStreamWAV.LOOP_FORWARD
+		_accel_engine_audio = AudioStreamPlayer3D.new()
+		_accel_engine_audio.name = "FiatUnoAccelEngineAudio"
+		_accel_engine_audio.stream = accel_stream
+		_accel_engine_audio.volume_db = -3.0
+		_accel_engine_audio.unit_size = 6.5
+		_accel_engine_audio.max_distance = 28.0
+		add_child(_accel_engine_audio)
+	else:
+		push_warning("FiatUno: áudio de aceleração não encontrado (fiat_uno_acelerando.wav)")
 
 func _apply_engine_audio_mode(mode: String) -> void:
-	if _engine_audio == null:
-		return
-	if mode == "off":
-		_engine_audio.stop()
-	elif not _engine_audio.playing:
-		_engine_audio.play()
+	if mode == "accel":
+		if _idle_engine_audio != null:
+			_idle_engine_audio.stop()
+		if _accel_engine_audio != null and not _accel_engine_audio.playing:
+			_accel_engine_audio.play()
+	elif mode == "idle" or mode == "decel":
+		if _accel_engine_audio != null:
+			_accel_engine_audio.stop()
+		if _idle_engine_audio != null and not _idle_engine_audio.playing:
+			_idle_engine_audio.play()
+	else: # off
+		if _idle_engine_audio != null:
+			_idle_engine_audio.stop()
+		if _accel_engine_audio != null:
+			_accel_engine_audio.stop()
 
 func get_network_audio_mode() -> String:
 	if not _riding or _mounting or _dismounting:
