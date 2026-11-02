@@ -4,8 +4,9 @@ class_name FiatUnoController
 ## Fiat Uno + Escada (sem braços)
 ## network_vehicle_id: fiatuno_01
 ## Áudios:
-##   res://assets/audio/fiat_uno_motor_ligado.wav          (idle)
-##   res://assets/audio/fiat_uno_acelerando.wav            (accel)
+##   res://assets/audio/fiat_uno_motor_ligado.wav   (idle — loop)
+##   res://assets/audio/fiat_uno_acelerando.wav     (accel — loop)
+##   res://assets/audio/fiat_uno_desacelerando.wav  (decel — one-shot)
 
 const MOUNT_INTERACTION_DISTANCE := 3.0
 const MAX_SPEED := 12.5
@@ -64,6 +65,8 @@ var _wheel_base_rotations: Dictionary = {}
 var _wheel_spin := 0.0
 var _idle_engine_audio: AudioStreamPlayer3D
 var _accel_engine_audio: AudioStreamPlayer3D
+var _decel_engine_audio: AudioStreamPlayer3D
+var _decel_played_this_coast := false
 var _network_audio_mode := "off"
 var _ground_y := 0.0
 var _wheel_ground_offset := 0.0
@@ -141,24 +144,55 @@ func _setup_engine_audio() -> void:
 		_accel_engine_audio.max_distance = 28.0
 		add_child(_accel_engine_audio)
 	else:
-		push_warning("FiatUno: áudio de aceleração não encontrado (fiat_uno_acelerando.wav)")
+		push_warning("FiatUno: áudio de aceleração não encontrado")
+
+	var decel_stream := load("res://assets/audio/fiat_uno_desacelerando.wav") as AudioStreamWAV
+	if decel_stream != null:
+		decel_stream.loop_mode = AudioStreamWAV.LOOP_DISABLED
+		_decel_engine_audio = AudioStreamPlayer3D.new()
+		_decel_engine_audio.name = "FiatUnoDecelEngineAudio"
+		_decel_engine_audio.stream = decel_stream
+		_decel_engine_audio.volume_db = -3.5
+		_decel_engine_audio.unit_size = 6.5
+		_decel_engine_audio.max_distance = 28.0
+		add_child(_decel_engine_audio)
+	else:
+		push_warning("FiatUno: áudio de desaceleração não encontrado")
 
 func _apply_engine_audio_mode(mode: String) -> void:
 	if mode == "accel":
+		_decel_played_this_coast = false
 		if _idle_engine_audio != null:
 			_idle_engine_audio.stop()
+		if _decel_engine_audio != null:
+			_decel_engine_audio.stop()
 		if _accel_engine_audio != null and not _accel_engine_audio.playing:
 			_accel_engine_audio.play()
-	elif mode == "idle" or mode == "decel":
+	elif mode == "decel":
 		if _accel_engine_audio != null:
 			_accel_engine_audio.stop()
+		if _idle_engine_audio != null:
+			_idle_engine_audio.stop()
+		# One-shot: toca uma vez ao começar a desacelerar, não reinicia a cada frame
+		if _decel_engine_audio != null and not _decel_played_this_coast:
+			_decel_engine_audio.play()
+			_decel_played_this_coast = true
+	elif mode == "idle":
+		_decel_played_this_coast = false
+		if _accel_engine_audio != null:
+			_accel_engine_audio.stop()
+		if _decel_engine_audio != null:
+			_decel_engine_audio.stop()
 		if _idle_engine_audio != null and not _idle_engine_audio.playing:
 			_idle_engine_audio.play()
 	else: # off
+		_decel_played_this_coast = false
 		if _idle_engine_audio != null:
 			_idle_engine_audio.stop()
 		if _accel_engine_audio != null:
 			_accel_engine_audio.stop()
+		if _decel_engine_audio != null:
+			_decel_engine_audio.stop()
 
 func get_network_audio_mode() -> String:
 	if not _riding or _mounting or _dismounting:
@@ -173,7 +207,9 @@ func get_network_audio_mode() -> String:
 			throttle = -1.0
 	if throttle > 0.01:
 		return "accel"
-	if absf(_speed) > 0.12:
+	if _speed < -0.12:
+		return "idle"  # ré usa idle
+	if _speed > 0.12:
 		return "decel"
 	return "idle"
 
