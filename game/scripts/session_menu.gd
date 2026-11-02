@@ -6,7 +6,7 @@ const LOADING_ART_PATH := "res://assets/template/ui/loading_gta.png"
 
 var selected_mode := "online"
 var selected_character := "andre"
-var selected_map_region := "center"
+var selected_map_region := "industrial"
 var mode_hint: Label
 var character_box: VBoxContainer
 var map_region_option: OptionButton
@@ -22,6 +22,7 @@ var _download_percent: Label
 var _install_update_button: Button
 var _remote_update_ready := false
 var _map_content_ready := false
+var _map_region_loading := false
 var _graphics_overlay: Control
 var _graphics_distance: OptionButton
 var _graphics_texture: OptionButton
@@ -41,12 +42,15 @@ func _ready() -> void:
     call_deferred("_wait_for_remote_update")
 
 func _on_map_content_status(message: String) -> void:
-    _map_content_ready = ExternalContent.is_map_available()
+    _map_content_ready = ExternalContent.is_region_available(selected_map_region)
+    if mode_hint != null and not message.is_empty() and _map_region_loading:
+        mode_hint.text = message
     _sync_download_gate()
 
 func _wait_for_remote_update() -> void:
     await RemoteUpdater.wait_until_ready()
     _remote_update_ready = true
+    call_deferred("_prepare_selected_map")
     _sync_download_gate()
     if mode_hint != null:
         var update_message := RemoteUpdater.get_status_message()
@@ -75,7 +79,7 @@ func _on_remote_update_status(message: String, progress: float) -> void:
         _install_update_button.visible = RemoteUpdater.client_update_downloaded
 
 func _sync_download_gate() -> void:
-    var ready := _map_content_ready and _remote_update_ready
+    var ready := _map_content_ready and _remote_update_ready and not _map_region_loading
     if start_button != null:
         start_button.disabled = not ready or RemoteUpdater.is_client_update_required()
     if ready and _download_overlay != null:
@@ -188,9 +192,9 @@ func _build_menu() -> void:
     content.add_child(map_title)
     map_region_option = OptionButton.new()
     map_region_option.custom_minimum_size = Vector2(360, 44)
-    map_region_option.add_item("CENTRO — bairros comerciais")
-    map_region_option.add_item("INDUSTRIAL — área portuária")
+    map_region_option.add_item("INDUSTRIAL — principal, menor pacote")
     map_region_option.add_item("ILHAS E PARQUES — áreas abertas")
+    map_region_option.add_item("CENTRO — bairros comerciais")
     map_region_option.item_selected.connect(_select_map_region)
     content.add_child(map_region_option)
     var character_title := Label.new()
@@ -329,13 +333,41 @@ func _select_character(character: String) -> void:
     selected_character = character
 
 func _select_map_region(index: int) -> void:
-    var ids := ["center", "industrial", "islands"]
+    var ids := ["industrial", "islands", "center"]
     if index >= 0 and index < ids.size():
         selected_map_region = ids[index]
+        if _remote_update_ready:
+            call_deferred("_prepare_selected_map")
+
+func _prepare_selected_map() -> void:
+    if _map_region_loading or not _remote_update_ready:
+        return
+    if ExternalContent.is_region_available(selected_map_region):
+        _map_content_ready = await ExternalContent.ensure_region(selected_map_region)
+        _sync_download_gate()
+        return
+    _map_region_loading = true
+    _map_content_ready = false
+    _sync_download_gate()
+    if _download_overlay != null:
+        _download_overlay.visible = true
+    if mode_hint != null:
+        mode_hint.text = "Baixando mapa %s (%s)..." % [selected_map_region.to_upper(), RemoteUpdater.map_region_size_text(selected_map_region)]
+    var downloaded := await RemoteUpdater.download_map_region(selected_map_region)
+    if downloaded:
+        _map_content_ready = await ExternalContent.ensure_region(selected_map_region)
+    _map_region_loading = false
+    _sync_download_gate()
+    if mode_hint != null and not _map_content_ready:
+        mode_hint.text = "Não foi possível preparar o mapa selecionado. Tente novamente."
 
 func _start_game() -> void:
     if _loading or not _remote_update_ready:
         return
+    if not _map_content_ready:
+        await _prepare_selected_map()
+        if not _map_content_ready:
+            return
     if selected_mode == "online" and not RemoteUpdater.can_play_online():
         mode_hint.text = RemoteUpdater.get_online_block_message()
         return

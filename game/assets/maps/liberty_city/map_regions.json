@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "default_region": "center",
+  "default_region": "industrial",
   "regions": [
     {
       "id": "center",

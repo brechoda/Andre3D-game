@@ -29,6 +29,7 @@ var client_update_size := 0
 var min_online_version := "0.0.0"
 var _client_apk_path := ""
 var _manifest: Dictionary = {}
+var _map_download_in_progress := false
 var _http: HTTPRequest
 var _http_completed := false
 var _http_result: Array = []
@@ -129,6 +130,9 @@ func _start_update_check() -> void:
 	for entry_variant: Variant in packages:
 		index += 1
 		var entry: Dictionary = entry_variant
+		# Pacotes regionais opcionais só baixam quando o jogador escolhe a região.
+		if _is_optional_map_package(entry):
+			continue
 		var relative_path := str(entry.get("path", ""))
 		var kind := str(entry.get("kind", "file"))
 		var destination := _cache_file_path(relative_path) if kind != "pck" else _cache_package_path(relative_path)
@@ -154,6 +158,65 @@ func _start_update_check() -> void:
 	# Não força download do APK. Só baixa se o jogador ativou nas preferências.
 	if client_update_available and auto_download_apk:
 		await _download_client_apk()
+
+func has_map_region(region_id: String) -> bool:
+	return _find_map_entry(region_id).size() > 0 and _is_cached_map_region_valid(region_id)
+
+func map_region_size_text(region_id: String) -> String:
+	var entry := _find_map_entry(region_id)
+	if entry.is_empty():
+		return "tamanho indisponível"
+	return _format_bytes(int(entry.get("size", 0)))
+
+func download_map_region(region_id: String) -> bool:
+	if _map_download_in_progress:
+		return false
+	await wait_until_ready()
+	var entry := _find_map_entry(region_id)
+	if entry.is_empty():
+		_emit_status("Mapa selecionado indisponível no servidor", 1.0)
+		return false
+	if _is_cached_map_region_valid(region_id):
+		return true
+	_map_download_in_progress = true
+	var relative_path := str(entry.get("path", ""))
+	var destination := _cache_package_path(relative_path)
+	_emit_status("Baixando mapa %s..." % region_id, 0.0)
+	var response := await _http_get(_resolve_url(str(_load_json_file(UPDATE_CONFIG_PATH).get("manifest_url", "")), str(entry.get("url", ""))), MAX_FILE_BYTES, "Baixando mapa %s" % region_id, int(entry.get("size", 0)))
+	var success := false
+	if bool(response.get("ok", false)):
+		var body: PackedByteArray = response.get("body", PackedByteArray())
+		if _body_matches_entry(body, entry):
+			success = _store_bytes(destination, body)
+	if success:
+		_load_cached_pack_entry(entry)
+		_emit_status("Mapa %s pronto" % region_id, 1.0)
+	else:
+		_emit_status("Não foi possível baixar o mapa %s" % region_id, 1.0)
+	_map_download_in_progress = false
+	return success
+
+func get_map_package_path(region_id: String) -> String:
+	var entry := _find_map_entry(region_id)
+	return _cache_package_path(str(entry.get("path", ""))) if not entry.is_empty() else ""
+
+func _find_map_entry(region_id: String) -> Dictionary:
+	for entry_variant: Variant in _manifest.get("files", []):
+		if entry_variant is Dictionary and str((entry_variant as Dictionary).get("kind", "")) == "pck" and str((entry_variant as Dictionary).get("region", "")) == region_id:
+			return entry_variant as Dictionary
+	return {}
+
+func _is_optional_map_package(entry: Dictionary) -> bool:
+	return str(entry.get("kind", "")) == "pck" and bool(entry.get("optional", false))
+
+func _is_cached_map_region_valid(region_id: String) -> bool:
+	var entry := _find_map_entry(region_id)
+	return not entry.is_empty() and _is_cached_file_valid(_cache_package_path(str(entry.get("path", ""))), entry)
+
+func _load_cached_pack_entry(entry: Dictionary) -> void:
+	var package_path := _cache_package_path(str(entry.get("path", "")))
+	if FileAccess.file_exists(package_path) and not ProjectSettings.load_resource_pack(package_path, false):
+		push_warning("RemoteUpdater: pacote PCK não pôde ser carregado: " + package_path)
 
 func _inspect_client_update(manifest: Dictionary, manifest_url: String) -> void:
 	var client: Variant = manifest.get("client", {})
@@ -341,8 +404,8 @@ func _cache_file_path(relative_path: String) -> String:
 	return FILE_CACHE_ROOT + "/" + relative_path
 
 func _cache_package_path(relative_path: String) -> String:
-	if relative_path.get_file() == "Andre3D-map.pck":
-		return CONTENT_ROOT + "/Andre3D-map.pck"
+	if relative_path.begins_with("content/"):
+		return CONTENT_ROOT + "/" + relative_path.trim_prefix("content/")
 	return PACKAGE_CACHE_ROOT + "/" + relative_path.get_file()
 
 func _is_safe_relative_path(path: String) -> bool:

@@ -1,60 +1,55 @@
 extends Node
 
-## Monta conteúdo Godot externo sem duplicá-lo dentro do APK.
-## O arquivo é um PCK Godot; a extensão pode ser .pck ou .obb.
+## Monta os pacotes regionais do mapa sem duplicá-los dentro do APK.
 
 signal status_changed(message: String)
-
-const MAP_PACK_CANDIDATES := [
-    "user://content/Andre3D-map.pck",
-    "user://content/Andre3D-map.obb",
-    "user://Andre3D-map.pck",
-    "user://Andre3D-map.obb",
-    "user://updates/packages/Andre3D-map.pck",
-]
 
 var map_ready := false
 var map_pack_path := ""
 var status_message := "Pacote do mapa não instalado."
+var _mounted_regions: Dictionary = {}
 
 func _ready() -> void:
-    call_deferred("_mount_map_pack")
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	call_deferred("_mount_initial_map")
 
-func _mount_map_pack() -> void:
-    status_message = "Procurando pacote do mapa..."
-    status_changed.emit(status_message)
-    if _try_mount_map_pack():
-        return
-    # O RemoteUpdater pode baixar o PCK para user://content durante a inicialização.
-    # Aguarde o resultado antes de bloquear o botão de entrada no menu.
-    await RemoteUpdater.wait_until_ready()
-    if _try_mount_map_pack():
-        return
-    status_message = "Instale Andre3D-map.pck em user://content/."
-    status_changed.emit(status_message)
+func _mount_initial_map() -> void:
+	status_message = "Procurando pacote do mapa principal..."
+	status_changed.emit(status_message)
+	await RemoteUpdater.wait_until_ready()
+	if await ensure_region("industrial"):
+		return
+	status_message = "Baixe o mapa principal INDUSTRIAL para jogar."
+	status_changed.emit(status_message)
 
-func _try_mount_map_pack() -> bool:
-    for path: String in MAP_PACK_CANDIDATES:
-        if not FileAccess.file_exists(path):
-            continue
-        status_message = "Carregando mapa..."
-        status_changed.emit(status_message)
-        if ProjectSettings.load_resource_pack(path, false):
-            map_ready = true
-            map_pack_path = path
-            status_message = "Mapa pronto."
-            status_changed.emit(status_message)
-            return true
-        status_message = "Não foi possível abrir o pacote do mapa."
-        status_changed.emit(status_message)
-        return false
-    return false
+func ensure_region(region_id: String) -> bool:
+	if _mounted_regions.has(region_id):
+		map_ready = true
+		return true
+	var package_path := RemoteUpdater.get_map_package_path(region_id)
+	if package_path.is_empty() or not FileAccess.file_exists(package_path):
+		return false
+	status_message = "Carregando mapa %s..." % region_id
+	status_changed.emit(status_message)
+	if not ProjectSettings.load_resource_pack(package_path, false):
+		status_message = "Não foi possível abrir o mapa %s." % region_id
+		status_changed.emit(status_message)
+		return false
+	_mounted_regions[region_id] = package_path
+	map_pack_path = package_path
+	map_ready = true
+	status_message = "Mapa %s pronto." % region_id
+	status_changed.emit(status_message)
+	return true
 
 func is_map_available() -> bool:
-    return map_ready
+	return map_ready
+
+func is_region_available(region_id: String) -> bool:
+	return _mounted_regions.has(region_id) or RemoteUpdater.has_map_region(region_id)
 
 func get_status_message() -> String:
-    return status_message
+	return status_message
 
 func get_install_path_hint() -> String:
-    return "Android/data/com.manus.andre3d.next/files/content/Andre3D-map.pck"
+	return "Android/data/com.manus.andre3d.next/files/content/Andre3D-map-center.pck"
