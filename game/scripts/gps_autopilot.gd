@@ -21,6 +21,8 @@ var _grid_width := 0
 var _grid_height := 0
 var _cell_size := 4.0
 var _bounds := Rect2()
+var _map_view_bounds := Rect2()
+var _map_region_label := "MAPA"
 var _road_mask := PackedByteArray()
 var _road_graph: AStar2D
 var _graph_ready := false
@@ -43,10 +45,40 @@ func _ready() -> void:
     _gorece = _scene.get_node_or_null("GoreceNPC") as Node3D if _scene != null else null
     _map_streamer = _scene.get_node_or_null("MapStreamer") as Node3D if _scene != null else null
     _map_texture = load(MAP_TEXTURE_PATH) as Texture2D
+    _configure_map_view()
     _font = load("res://assets/template/fonts/Figtree-VF.subset.woff2") as Font
     _create_ui()
     _set_status(_status)
     queue_redraw()
+
+func _configure_map_view() -> void:
+    _map_view_bounds = _bounds
+    if _map_streamer == null:
+        return
+    if _map_streamer.has_method("get_selected_region_id"):
+        _map_region_label = String(_map_streamer.call("get_selected_region_id")).to_upper()
+    if not _map_streamer.has_method("get_selected_spawn"):
+        return
+    var grid_file := FileAccess.open(GRID_PATH, FileAccess.READ)
+    if grid_file == null:
+        return
+    var grid_data: Variant = JSON.parse_string(grid_file.get_as_text())
+    if not grid_data is Dictionary or not (grid_data as Dictionary).get("bounds", {}) is Dictionary:
+        return
+    var grid_bounds: Dictionary = (grid_data as Dictionary).get("bounds", {})
+    var min_x := float(grid_bounds.get("min_x", 0.0))
+    var min_y := float(grid_bounds.get("min_y", 0.0))
+    var max_x := float(grid_bounds.get("max_x", 0.0))
+    var max_y := float(grid_bounds.get("max_y", 0.0))
+    _bounds = Rect2(min_x, min_y, max_x - min_x, max_y - min_y)
+    var spawn: Vector3 = _map_streamer.call("get_selected_spawn")
+    var local_spawn := _map_streamer.to_local(spawn)
+    var half_height := 600.0
+    var half_width := half_height * MAP_RECT.size.x / MAP_RECT.size.y
+    _map_view_bounds = Rect2(
+        Vector2(local_spawn.x - half_width, local_spawn.y - half_height),
+        Vector2(half_width * 2.0, half_height * 2.0)
+    )
 
 func _create_ui() -> void:
     _button = Button.new()
@@ -180,8 +212,20 @@ func _physics_process(delta: float) -> void:
 func _draw() -> void:
     draw_rect(Rect2(Vector2.ZERO, size), Color("07141d", 0.94), true)
     draw_rect(Rect2(Vector2.ZERO, size), Color("4b7d83", 0.95), false, 1.4)
-    draw_string(_font, Vector2(9.0, 19.0), "GPS  •  TOQUE NO MAPA", HORIZONTAL_ALIGNMENT_LEFT, 194.0, 11, Color("bde1df"))
-    if _map_texture != null:
+    draw_string(_font, Vector2(9.0, 19.0), "GPS  •  %s" % _map_region_label, HORIZONTAL_ALIGNMENT_LEFT, 194.0, 11, Color("bde1df"))
+    if _map_texture != null and _bounds.size.x > 0.0 and _map_view_bounds.size.x > 0.0:
+        var source_rect := Rect2(
+            Vector2(
+                (_map_view_bounds.position.x - _bounds.position.x) / _bounds.size.x * _map_texture.get_width(),
+                (_bounds.end.y - _map_view_bounds.end.y) / _bounds.size.y * _map_texture.get_height()
+            ),
+            Vector2(
+                _map_view_bounds.size.x / _bounds.size.x * _map_texture.get_width(),
+                _map_view_bounds.size.y / _bounds.size.y * _map_texture.get_height()
+            )
+        )
+        draw_texture_rect_region(_map_texture, MAP_RECT, source_rect)
+    elif _map_texture != null:
         draw_texture_rect(_map_texture, MAP_RECT, false)
     else:
         draw_rect(MAP_RECT, Color("10252e"), true)
@@ -233,8 +277,8 @@ func _mark_destination(local_position: Vector2) -> void:
         return
     var uv := (local_position - MAP_RECT.position) / MAP_RECT.size
     var source_click := Vector2(
-        lerpf(_bounds.position.x, _bounds.end.x, uv.x),
-        lerpf(_bounds.end.y, _bounds.position.y, uv.y)
+        lerpf(_map_view_bounds.position.x, _map_view_bounds.end.x, uv.x),
+        lerpf(_map_view_bounds.end.y, _map_view_bounds.position.y, uv.y)
     )
     var destination_id := _nearest_road_id(source_click)
     if destination_id < 0:
@@ -435,10 +479,10 @@ func _get_map_actor() -> Node3D:
     return _player
 
 func _source_to_panel(source_position: Vector2) -> Vector2:
-    if _bounds.size.x <= 0.0 or _bounds.size.y <= 0.0:
+    if _map_view_bounds.size.x <= 0.0 or _map_view_bounds.size.y <= 0.0:
         return MAP_RECT.position
-    var u := (source_position.x - _bounds.position.x) / _bounds.size.x
-    var v := (_bounds.end.y - source_position.y) / _bounds.size.y
+    var u := (source_position.x - _map_view_bounds.position.x) / _map_view_bounds.size.x
+    var v := (_map_view_bounds.end.y - source_position.y) / _map_view_bounds.size.y
     return MAP_RECT.position + Vector2(u * MAP_RECT.size.x, v * MAP_RECT.size.y)
 
 func _refresh_button_text() -> void:
