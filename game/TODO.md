@@ -38,7 +38,7 @@
 - [x] Substituir o `subglass.txd` truncado por texturas RGBA `glassfxsub1`/`glassfxsub2` e atualizar os MTLs dos modelos afetados.
 - [x] Executar smoke test desktop headless da cena de terceira pessoa após a importação dos meshes COL1.
 - [x] Remover de todos os tiles as árvores (incluindo variantes LOD e sombras), postes de iluminação/telefonia e semáforos, tanto visualmente quanto nas colisões; preservar arbustos baixos, prédios, asfalto e suportes estruturais.
-- [x] Separar o mapa em três PCKs regionais, baixar automaticamente somente INDUSTRIAL como mapa principal mais leve e deixar CENTRO/ILHAS E PARQUES como downloads opcionais escolhidos no menu.
+- [x] Separar o mapa em PCKs regionais, baixar automaticamente INDUSTRIAL como mapa principal mais leve e deixar CENTRO como download opcional escolhido no menu.
 - [ ] Fazer playtest visual/jogável no desktop e em dispositivo Android, conferir streaming/câmera/movimento e as bordas dos remendos do chão; o build APK do CI não substitui esses testes antes de considerar o mapa finalizado.
 
 ## Piloto automático e GPS offline

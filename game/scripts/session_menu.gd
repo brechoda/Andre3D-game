@@ -193,7 +193,6 @@ func _build_menu() -> void:
     map_region_option = OptionButton.new()
     map_region_option.custom_minimum_size = Vector2(360, 44)
     map_region_option.add_item("INDUSTRIAL — principal, menor pacote")
-    map_region_option.add_item("ILHAS E PARQUES — áreas abertas")
     map_region_option.add_item("CENTRO — bairros comerciais")
     map_region_option.item_selected.connect(_select_map_region)
     content.add_child(map_region_option)
@@ -333,7 +332,7 @@ func _select_character(character: String) -> void:
     selected_character = character
 
 func _select_map_region(index: int) -> void:
-    var ids := ["industrial", "islands", "center"]
+    var ids := ["industrial", "center"]
     if index >= 0 and index < ids.size():
         selected_map_region = ids[index]
         if _remote_update_ready:
