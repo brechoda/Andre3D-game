@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3]
+[gd_scene load_steps=29 format=3]
 
 [ext_resource type="Script" path="res://scripts/third_person.gd" id="1_player"]
 [ext_resource type="PackedScene" path="res://assets/models/andre_armed_biked.glb" id="2_andre"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" path="res://assets/models/dg_rigged.glb" id="15_dg"]
 [ext_resource type="Script" path="res://scripts/gta3_map_streamer.gd" id="16_map"]
 [ext_resource type="Script" path="res://scripts/gps_autopilot.gd" id="17_gps"]
+[ext_resource type="PackedScene" path="res://assets/models/fiat_uno_escada.glb" id="18_fiatuno"]
+[ext_resource type="Script" path="res://scripts/fiatuno_controller.gd" id="19_fiatuno_script"]
 
 [sub_resource type="ProceduralSkyMaterial" id="SkyMaterial_empty"]
 sky_top_color = Color(0.055, 0.11, 0.17, 1)
@@ -40,6 +42,9 @@ glow_enabled = false
 
 [sub_resource type="BoxShape3D" id="HiluxCollisionShape"]
 size = Vector3(1.78, 1.20, 4.35)
+
+[sub_resource type="BoxShape3D" id="FiatUnoCollisionShape"]
+size = Vector3(1.55, 1.15, 3.55)
 
 [sub_resource type="CapsuleShape3D" id="PlayerShape"]
 radius = 0.34
@@ -112,8 +117,6 @@ max_active_tiles = 2
 load_radius = 650.0
 refresh_interval = 1.0
 max_meshes_per_frame = 4
-
-
 
 [node name="Player" type="CharacterBody3D" parent="."]
 position = Vector3(30, 4.3, 89)
@@ -207,6 +210,23 @@ collision_mask = 1
 [node name="Collision" type="CollisionShape3D" parent="HiluxSRX2017/CollisionBody"]
 position = Vector3(0, 0.60, 0)
 shape = SubResource("HiluxCollisionShape")
+
+[node name="FiatUno" type="Node3D" parent="."]
+position = Vector3(10, 2.85, 89)
+rotation_degrees = Vector3(0, 90, 0)
+script = ExtResource("19_fiatuno_script")
+network_vehicle_id = "fiatuno_01"
+vehicle_display_name = "FIAT UNO + ESCADA"
+
+[node name="FiatUnoVisual" parent="FiatUno" instance=ExtResource("18_fiatuno")]
+
+[node name="CollisionBody" type="StaticBody3D" parent="FiatUno"]
+collision_layer = 1
+collision_mask = 1
+
+[node name="Collision" type="CollisionShape3D" parent="FiatUno/CollisionBody"]
+position = Vector3(0, 0.55, 0)
+shape = SubResource("FiatUnoCollisionShape")
 
 [node name="OnlineMultiplayer" type="Node" parent="."]
 script = ExtResource("14_multiplayer_client")
