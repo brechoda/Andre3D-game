@@ -172,13 +172,14 @@ func _build_menu() -> void:
     center.add_child(panel)
     var content := VBoxContainer.new()
     content.add_theme_constant_override("separation", 14)
-    content.alignment = BoxContainer.ALIGNMENT_CENTER
+    content.alignment = BoxContainer.ALIGNMENT_BEGIN
     panel.add_child(content)
-    var title := Label.new()
-    title.text = "O GRANDE ROUBO DE MOTOS"
-    title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-    title.add_theme_font_size_override("font_size", 28)
-    content.add_child(title)
+    map_region_option = OptionButton.new()
+    map_region_option.custom_minimum_size = Vector2(360, 44)
+    map_region_option.add_item("INDUSTRIAL — principal, menor pacote")
+    map_region_option.add_item("CENTRO — bairros comerciais")
+    map_region_option.item_selected.connect(_select_map_region)
+    content.add_child(map_region_option)
     var subtitle := Label.new()
     subtitle.text = "ESCOLHA COMO JOGAR"
     subtitle.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -196,17 +197,6 @@ func _build_menu() -> void:
     var graphics_button := _make_button("CONFIGURAÇÕES GRÁFICAS")
     graphics_button.pressed.connect(_open_graphics_menu)
     content.add_child(graphics_button)
-    var map_title := Label.new()
-    map_title.text = "MAPA DE ENTRADA"
-    map_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-    map_title.add_theme_font_size_override("font_size", 16)
-    content.add_child(map_title)
-    map_region_option = OptionButton.new()
-    map_region_option.custom_minimum_size = Vector2(360, 44)
-    map_region_option.add_item("INDUSTRIAL — principal, menor pacote")
-    map_region_option.add_item("CENTRO — bairros comerciais")
-    map_region_option.item_selected.connect(_select_map_region)
-    content.add_child(map_region_option)
     var character_title := Label.new()
     character_title.text = "PERSONAGEM"
     character_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER

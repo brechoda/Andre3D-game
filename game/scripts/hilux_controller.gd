@@ -557,7 +557,7 @@ func _update_vehicle_panel() -> void:
     if panel == null:
         return
     if _riding:
-        panel.text = "HILUX SRX 2017\nVELOCIDADE: %03d km/h\nACELERAR/FREAR • BOTÕES ESQ./DIR." % roundi(absf(_speed) * 3.6)
+        panel.text = "HILUX SRX 2017\nVELOCIDADE: %03d km/h" % roundi(absf(_speed) * 3.6)
     elif _andre != null and _andre.has_method("is_gorece_active") and _andre.is_gorece_active():
         panel.text = "HILUX SRX 2017\nGORECE: ENTRADA EXCLUSIVA\nAPROXIME-SE PARA DIRIGIR"
 

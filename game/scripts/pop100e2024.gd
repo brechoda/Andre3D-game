@@ -1237,9 +1237,9 @@ func _update_panel() -> void:
         return
     var kmh := absf(_speed) * 3.6
     if _riding:
-        _panel_label.text = "%s  •  PILOTANDO\nVELOCIDADE: %03d km/h\nW/S ACELERAR • A/D VIRAR" % [vehicle_display_name, int(round(kmh))]
+        _panel_label.text = "%s  •  PILOTANDO\nVELOCIDADE: %03d km/h" % [vehicle_display_name, int(round(kmh))]
     else:
-        _panel_label.text = "%s\nAPERTE O BOTÃO DA MOTO\nW/S ACELERAR • A/D VIRAR" % vehicle_display_name
+        _panel_label.text = "%s\nAPERTE O BOTÃO DA MOTO" % vehicle_display_name
 
 func _stable_vehicle_id() -> String:
     if not network_vehicle_id.is_empty():

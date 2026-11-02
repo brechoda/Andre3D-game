@@ -102,6 +102,8 @@ func _ready() -> void:
     visible = true
     andre_visual.visible = true
     dg_visual.visible = false
+    movement_label.visible = false
+    movement_label.text = ""
     joystick.changed.connect(_on_joystick_changed)
     run_button.button_down.connect(_on_run_button_down)
     run_button.button_up.connect(_on_run_button_up)
@@ -131,7 +133,6 @@ func _ready() -> void:
         for punch_name in COMBO_ANIMATIONS:
             if _animation_player.has_animation(punch_name):
                 _animation_player.get_animation(punch_name).loop_mode = Animation.LOOP_NONE
-    movement_label.text = "WASD / setas para mover  •  arraste à direita para girar a câmera"
     gorece.set_player_controlled(false)
     _apply_session_settings()
     _apply_selected_map_spawn()
@@ -316,7 +317,6 @@ func set_active_character(character_index: int) -> void:
         camera.current = true
         _update_camera_for(gorece.global_position)
         action_button.text = "DAR SOCO"
-        movement_label.text = "GORECE  •  WASD / setas para mover  •  arraste à direita para girar"
     else:
         visible = true
         gorece.set_player_controlled(false)
@@ -331,7 +331,6 @@ func set_active_character(character_index: int) -> void:
         _setup_neck_look()
         _camera_yaw = visual.rotation.y
         action_button.text = "DAR SOCO"
-        movement_label.text = ("DG" if _active_character == 2 else "ANDRÉ") + "  •  WASD / setas para mover  •  arraste à direita para girar"
         _update_camera()
 
 func _configure_player_animations() -> void:
