@@ -230,6 +230,9 @@ func _local_vehicle_state() -> Dictionary:
         elif node.name == "HiluxSRX2017":
             vehicle_type = "hilux"
             if vehicle_id.is_empty(): vehicle_id = "hilux_01"
+        elif node.name == "FiatUno":
+            vehicle_type = "fiatuno"
+            if vehicle_id.is_empty(): vehicle_id = "fiatuno_01"
         var vehicle_node := node as Node3D
         var vehicle_speed := float(node.get("_speed"))
         var vehicle_velocity: Vector3 = -vehicle_node.global_transform.basis.z * vehicle_speed

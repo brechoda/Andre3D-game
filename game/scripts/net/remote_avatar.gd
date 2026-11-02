@@ -209,7 +209,7 @@ func _find_shared_vehicle(vehicle_id: String) -> Node3D:
 func _play_riding() -> void:
 	if animation_player == null:
 		return
-	if _vehicle_type == "hilux":
+	if _vehicle_type in ["hilux", "fiatuno"]:
 		if not _seated_pose_ready:
 			if animation_player.has_animation("IDLE_stance"):
 				animation_player.play("IDLE_stance")

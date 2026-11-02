@@ -411,6 +411,9 @@ func _get_active_vehicle() -> Node3D:
     var hilux := _scene.get_node_or_null("HiluxSRX2017") as Node3D
     if hilux != null and hilux.has_method("is_riding") and bool(hilux.call("is_riding")):
         return hilux
+    var fiat_uno := _scene.get_node_or_null("FiatUno") as Node3D
+    if fiat_uno != null and fiat_uno.has_method("is_riding") and bool(fiat_uno.call("is_riding")):
+        return fiat_uno
     for vehicle_name in ["Pop100e2024", "WayfarerR1200"]:
         var vehicle := _scene.get_node_or_null(String(vehicle_name)) as Node3D
         if vehicle == null or not vehicle.has_method("is_riding") or not bool(vehicle.call("is_riding")):

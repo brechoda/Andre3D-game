@@ -432,7 +432,7 @@ func _update_distance_lod() -> void:
         var npc_active := gorece.global_position.distance_to(player_position) <= npc_simulation_distance
         gorece.set_process(npc_active)
         gorece.set_physics_process(npc_active)
-    for vehicle_name: String in ["Pop100e2024", "WayfarerR1200", "HiluxSRX2017"]:
+    for vehicle_name: String in ["Pop100e2024", "WayfarerR1200", "HiluxSRX2017", "FiatUno"]:
         var vehicle := get_parent().get_node_or_null(vehicle_name) as Node3D
         if vehicle == null:
             continue

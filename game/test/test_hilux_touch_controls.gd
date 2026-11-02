@@ -12,8 +12,8 @@ func _run() -> void:
 	var hud := scene.get_node("HUD/Root") as Control
 	var joystick := hud.get_node("TouchJoystick") as AndreVirtualJoystick
 	var hilux := scene.get_node("HiluxSRX2017")
-	var left_button := hud.get_node_or_null("SteerLeftButton") as Button
-	var right_button := hud.get_node_or_null("SteerRightButton") as Button
+	var left_button := hud.get_node_or_null("HiluxSteerLeftButton") as Button
+	var right_button := hud.get_node_or_null("HiluxSteerRightButton") as Button
 	_check(joystick.visible, "analog joystick must be available outside cars")
 	_check(left_button != null and right_button != null, "Hilux must create left and right steering buttons")
 	if left_button != null and right_button != null:
@@ -29,23 +29,27 @@ func _run() -> void:
 
 	hilux.set("_riding", true)
 	hilux.set("_speed", 2.0)
-	left_button.emit_signal("button_down")
-	_check(bool(hud.get_meta("touch_steer_left", false)), "pressing the left button must set left steering input")
+	if left_button != null:
+		left_button.emit_signal("button_down")
+	_check(bool(hud.get_meta("touch_hilux_steer_left", false)), "pressing the left button must set left steering input")
 	hilux.call("_physics_process", 0.1)
 	_check(float(hilux.get("_steering")) < 0.0, "left touch button must steer the car left")
-	left_button.emit_signal("button_up")
-	right_button.emit_signal("button_down")
-	_check(bool(hud.get_meta("touch_steer_right", false)), "pressing the right button must set right steering input")
+	if left_button != null:
+		left_button.emit_signal("button_up")
+	if right_button != null:
+		right_button.emit_signal("button_down")
+	_check(bool(hud.get_meta("touch_hilux_steer_right", false)), "pressing the right button must set right steering input")
 	hilux.call("_physics_process", 0.2)
 	_check(float(hilux.get("_steering")) > 0.0, "right touch button must steer the car right")
-	right_button.emit_signal("button_up")
+	if right_button != null:
+		right_button.emit_signal("button_up")
 
 	hilux.call("_set_drive_buttons_visible", false)
 	hilux.set("_riding", false)
 	hilux.call("_set_driving_hud", false)
 	_check(joystick.visible, "analog joystick must return after leaving the car")
 	_check(left_button != null and not left_button.visible, "car steering buttons must hide after leaving the car")
-	_check(not bool(hud.get_meta("touch_steer_left", false)) and not bool(hud.get_meta("touch_steer_right", false)), "steering input must clear after leaving the car")
+	_check(not bool(hud.get_meta("touch_hilux_steer_left", false)) and not bool(hud.get_meta("touch_hilux_steer_right", false)), "steering input must clear after leaving the car")
 
 	var motorcycle := scene.get_node("Pop100e2024")
 	motorcycle.call("_set_riding_hud", true)

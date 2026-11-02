@@ -33,6 +33,7 @@ const DOOR_OPEN_ANGLE := deg_to_rad(-55.0)
 const HIDDEN_WHILE_DRIVING := [
 	"TouchJoystick", "GasButton", "BrakeButton",
 	"SteerLeftButton", "SteerRightButton",
+	"HiluxGasButton", "HiluxBrakeButton", "HiluxSteerLeftButton", "HiluxSteerRightButton",
 	"RunButton", "CrouchButton", "JumpButton", "ActionButton", "SwitchButton"
 ]
 
@@ -389,16 +390,20 @@ func get_autopilot_speed() -> float:
 func get_autopilot_speed_limit() -> float:
 	return MAX_SPEED
 
+func _get_active_driver() -> Node3D:
+	if _andre != null and _andre.has_method("is_gorece_active") and _andre.is_gorece_active() and _gorece != null:
+		return _gorece
+	return _andre
+
 func is_near_player() -> bool:
-	if _gorece == null or _riding:
+	var driver := _get_active_driver()
+	if driver == null or _riding:
 		return false
-	if _andre != null and _andre.has_method("is_gorece_active") and not _andre.is_gorece_active():
-		return false
-	var local_position := global_transform.affine_inverse() * _gorece.global_position
+	var local_position := global_transform.affine_inverse() * driver.global_position
 	if local_position.x > MIN_SIDE_X:
 		return false
 	var approach := _approach_point()
-	var distance := Vector2(approach.x - _gorece.global_position.x, approach.z - _gorece.global_position.z).length()
+	var distance := Vector2(approach.x - driver.global_position.x, approach.z - driver.global_position.z).length()
 	return distance <= MOUNT_INTERACTION_DISTANCE
 
 func _approach_point() -> Vector3:
@@ -407,11 +412,7 @@ func _approach_point() -> Vector3:
 	return point
 
 func _place_driver() -> void:
-	var driver: Node3D = null
-	if _andre != null and _andre.has_method("is_gorece_active") and _andre.is_gorece_active() and _gorece != null:
-		driver = _gorece
-	elif _andre != null:
-		driver = _andre
+	var driver := _get_active_driver()
 	if driver == null:
 		return
 	var seat_world := global_transform * SEAT_HIP
@@ -468,10 +469,9 @@ func _start_dismount() -> void:
 		t.tween_property(_door, "rotation:y", _door_base_rotation.y + DOOR_OPEN_ANGLE, DOOR_SECONDS)
 		await t.finished
 	var exit_pos := _approach_point()
-	if _gorece != null:
-		_gorece.global_position = exit_pos + Vector3.UP * 0.1
-	elif _andre != null:
-		_andre.global_position = exit_pos + Vector3.UP * 0.1
+	var driver := _get_active_driver()
+	if driver != null:
+		driver.global_position = exit_pos + Vector3.UP * 0.1
 	if _door != null:
 		var t2 := create_tween()
 		t2.tween_property(_door, "rotation:y", _door_base_rotation.y, DOOR_SECONDS)
@@ -497,7 +497,7 @@ func _ensure_drive_buttons() -> void:
 func _set_drive_buttons_visible(visible: bool) -> void:
 	if _hud == null:
 		return
-	for child_name in ["GasButton", "BrakeButton", "SteerLeftButton", "SteerRightButton"]:
+	for child_name in ["HiluxGasButton", "HiluxBrakeButton", "HiluxSteerLeftButton", "HiluxSteerRightButton", "GasButton", "BrakeButton", "SteerLeftButton", "SteerRightButton"]:
 		var n := _hud.get_node_or_null(child_name)
 		if n != null:
 			n.visible = visible

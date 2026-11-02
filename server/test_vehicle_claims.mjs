@@ -162,11 +162,33 @@ try {
   assert.equal((await second.next((message) => message.type === "vehicle_claim_result")).granted, true);
 
   second.send({ type: "vehicle_release", vehicle_id: "hilux_01" });
+  await delay(120);
+  first.send({ type: "vehicle_claim", vehicle_id: "fiatuno_01" });
+  assert.equal((await first.next((message) => message.type === "vehicle_claim_result")).granted, true);
+  await delay(120);
+  second.send({ type: "vehicle_claim", vehicle_id: "fiatuno_01" });
+  const fiatUnoDenied = await second.next((message) => message.type === "vehicle_claim_result");
+  assert.equal(fiatUnoDenied.granted, false);
+  assert.equal(fiatUnoDenied.reason, "OCCUPIED");
+  first.send({
+    type: "state", seq: 2, x: 12, y: 0.5, z: 14, ry: 0.8,
+    vx: 2, vy: 0, vz: -3, latency_ms: 0,
+    vehicle: "fiatuno", vehicle_id: "fiatuno_01", riding: true,
+    vehicle_x: 12, vehicle_y: 0.5, vehicle_z: 14, vehicle_ry: 0.8,
+    vehicle_vx: 2, vehicle_vy: 0, vehicle_vz: -3,
+    character: "andre",
+  });
+  const fiatUnoSnapshot = await second.next((message) => message.type === "snapshot"
+    && message.players.some((player) => player.id === firstWelcome.id && player.vehicle_id === "fiatuno_01"));
+  const fiatUnoState = fiatUnoSnapshot.players.find((player) => player.id === firstWelcome.id);
+  assert.equal(fiatUnoState.vehicle, "fiatuno");
+  assert.equal(fiatUnoState.vehicle_x, 12);
+  first.send({ type: "vehicle_release", vehicle_id: "fiatuno_01" });
 
   dg.close();
   second.close();
   first.close();
-  console.log(`multiplayer v4 integration test: immediate relay ${relayDelayMs.toFixed(1)} ms; DG identity, motorcycle access, Hilux restriction, stale state, jump and claims ok`);
+  console.log(`multiplayer v4 integration test: immediate relay ${relayDelayMs.toFixed(1)} ms; DG identity, motorcycle access, Hilux restriction, Fiat Uno exclusive claims, stale state and jump ok`);
 } finally {
   for (const client of clients) client.close();
   server.kill("SIGTERM");
