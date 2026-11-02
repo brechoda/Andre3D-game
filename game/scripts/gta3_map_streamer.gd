@@ -284,7 +284,10 @@ func _process_pending_meshes() -> void:
 		mesh_instance.mesh = mesh
 		mesh_instance.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 		mesh_instance.gi_mode = GeometryInstance3D.GI_MODE_DISABLED
-		mesh_instance.visibility_range_end = load_radius
+		# As malhas importadas guardam a geometria em coordenadas do mundo,
+		# mas o nó fica na origem do MapStreamer. O streaming já limita tiles;
+		# culling por distância do nó oculta regiões distantes da origem.
+		mesh_instance.visibility_range_end = 0.0
 		_configure_alpha_materials(mesh_instance)
 		tile_root.add_child(mesh_instance)
 

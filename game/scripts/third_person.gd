@@ -124,32 +124,32 @@ func _ready() -> void:
             if _animation_player.has_animation(punch_name):
                 _animation_player.get_animation(punch_name).loop_mode = Animation.LOOP_NONE
     movement_label.text = "WASD / setas para mover  •  arraste à direita para girar a câmera"
-	gorece.set_player_controlled(false)
-	_apply_session_settings()
-	_apply_selected_map_spawn()
-	if _active_character == 1:
+    gorece.set_player_controlled(false)
+    _apply_session_settings()
+    _apply_selected_map_spawn()
+    if _active_character == 1:
         _update_camera_for(gorece.global_position)
     else:
         _update_camera()
-	call_deferred("_apply_remote_spawn")
+    call_deferred("_apply_remote_spawn")
 
 func _apply_selected_map_spawn() -> void:
-	var map_streamer := get_node_or_null("../MapStreamer")
-	if map_streamer == null or not map_streamer.has_method("get_selected_spawn"):
-		return
-	var spawn: Vector3 = map_streamer.call("get_selected_spawn")
-	global_position = spawn
-	gorece.global_position = spawn + Vector3(5.0, 0.0, 0.0)
-	var vehicle_offsets := {
-		"pop100_01": Vector3(-10.0, -1.4, 0.0),
-		"wayfarer_01": Vector3(-5.0, -1.1, 0.0),
-		"hilux_01": Vector3(22.7, -1.0, 1.0),
-		"fiatuno_01": Vector3(-20.0, -1.5, 0.0),
-	}
-	for vehicle_id: String in vehicle_offsets:
-		var vehicle := _find_spawn_vehicle(vehicle_id)
-		if vehicle != null:
-			vehicle.global_position = spawn + vehicle_offsets[vehicle_id]
+    var map_streamer := get_node_or_null("../MapStreamer")
+    if map_streamer == null or not map_streamer.has_method("get_selected_spawn"):
+        return
+    var spawn: Vector3 = map_streamer.call("get_selected_spawn")
+    global_position = spawn
+    gorece.global_position = spawn + Vector3(5.0, 0.0, 0.0)
+    var vehicle_offsets := {
+        "pop100_01": Vector3(-10.0, -1.4, 0.0),
+        "wayfarer_01": Vector3(-5.0, -1.1, 0.0),
+        "hilux_01": Vector3(22.7, -1.0, 1.0),
+        "fiatuno_01": Vector3(-20.0, -1.5, 0.0),
+    }
+    for vehicle_id: String in vehicle_offsets:
+        var vehicle := _find_spawn_vehicle(vehicle_id)
+        if vehicle != null:
+            vehicle.global_position = spawn + vehicle_offsets[vehicle_id]
 
 func restore_vehicle_exit_pose(heading: float) -> void:
     # O Player permanece sem rotação durante o gameplay; somente o visual
