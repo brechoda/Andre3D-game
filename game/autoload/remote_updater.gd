@@ -201,7 +201,10 @@ func get_map_package_path(region_id: String) -> String:
 	return _cache_package_path(str(entry.get("path", ""))) if not entry.is_empty() else ""
 
 func _find_map_entry(region_id: String) -> Dictionary:
-	for entry_variant: Variant in _manifest.get("files", []):
+	var candidates: Array = []
+	candidates.append_array(_manifest.get("map_regions", []))
+	candidates.append_array(_manifest.get("files", []))
+	for entry_variant: Variant in candidates:
 		if entry_variant is Dictionary and str((entry_variant as Dictionary).get("kind", "")) == "pck" and str((entry_variant as Dictionary).get("region", "")) == region_id:
 			return entry_variant as Dictionary
 	return {}
@@ -252,9 +255,13 @@ func _validate_manifest(manifest: Dictionary) -> Dictionary:
 	if version.is_empty() or version.length() > 64:
 		return {"ok": false}
 	var files: Variant = manifest.get("files", [])
-	if not files is Array or files.size() > 64:
+	var map_regions: Variant = manifest.get("map_regions", [])
+	if not files is Array or files.size() > 64 or not map_regions is Array or map_regions.size() > 8:
 		return {"ok": false}
-	for entry_variant: Variant in files:
+	var all_entries: Array = []
+	all_entries.append_array(files)
+	all_entries.append_array(map_regions)
+	for entry_variant: Variant in all_entries:
 		if not entry_variant is Dictionary:
 			return {"ok": false}
 		var entry: Dictionary = entry_variant
