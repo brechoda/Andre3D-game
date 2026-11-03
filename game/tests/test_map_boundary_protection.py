@@ -1,0 +1,65 @@
+from __future__ import annotations
+
+import json
+import unittest
+from pathlib import Path
+
+
+GAME_ROOT = Path(__file__).resolve().parents[1]
+MAP_ROOT = GAME_ROOT / "assets/maps/liberty_city"
+STREAMER_PATH = GAME_ROOT / "scripts/gta3_map_streamer.gd"
+MOUNTAIN_PATH = GAME_ROOT / "scripts/map_boundary_mountains.gd"
+
+
+class MapBoundaryProtectionTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.streamer = STREAMER_PATH.read_text(encoding="utf-8")
+        cls.mountains = MOUNTAIN_PATH.read_text(encoding="utf-8")
+        cls.catalog = json.loads((MAP_ROOT / "gta3_tile_catalog.json").read_text(encoding="utf-8"))
+        cls.regions = json.loads((MAP_ROOT / "map_regions.json").read_text(encoding="utf-8"))["regions"]
+
+    def test_each_supported_region_has_spatial_bounds_for_all_its_tiles(self) -> None:
+        catalog_by_name = {tile["name"]: tile for tile in self.catalog["tiles"]}
+        self.assertEqual({"center", "industrial"}, {region["id"] for region in self.regions})
+        for region in self.regions:
+            with self.subTest(region=region["id"]):
+                selected = [catalog_by_name[name] for name in region["tiles"]]
+                self.assertEqual(4, len(selected))
+                for tile in selected:
+                    self.assertEqual(3, len(tile["bounds_min"]))
+                    self.assertEqual(3, len(tile["bounds_max"]))
+                min_x = min(tile["bounds_min"][0] for tile in selected)
+                max_x = max(tile["bounds_max"][0] for tile in selected)
+                min_y = min(tile["bounds_min"][1] for tile in selected)
+                max_y = max(tile["bounds_max"][1] for tile in selected)
+                self.assertLess(min_x, max_x)
+                self.assertLess(min_y, max_y)
+
+    def test_tiles_are_selected_by_bounds_and_nearest_tile_is_kept(self) -> None:
+        self.assertIn("func _distance_to_tile_bounds", self.streamer)
+        self.assertIn("if candidates.is_empty() and not nearest.is_empty()", self.streamer)
+        self.assertNotIn("func _distance_to_tile_center", self.streamer)
+
+    def test_visual_meshes_wait_for_their_collision_meshes(self) -> None:
+        self.assertIn("for collision_pass in [true, false]", self.streamer)
+        self.assertIn("not is_collision_tile_loaded(tile_name)", self.streamer)
+        self.assertIn("collision_mesh.backface_collision = true", self.streamer)
+
+    def test_both_regions_get_a_visible_and_physical_mountain_ring(self) -> None:
+        self.assertIn('preload("res://scripts/map_boundary_mountains.gd")', self.streamer)
+        self.assertIn("_create_region_mountain_boundary()", self.streamer)
+        self.assertIn('mountain_visual.name = "MountainRangeVisual"', self.mountains)
+        self.assertIn('barrier.name = "MountainBoundaryCollision"', self.mountains)
+        for wall_name in ("SouthWall", "NorthWall", "WestWall", "EastWall"):
+            self.assertIn(f'"{wall_name}"', self.mountains)
+
+    def test_player_and_gorece_use_void_recovery(self) -> None:
+        self.assertIn("func guard_body_from_void(body: CharacterBody3D)", self.streamer)
+        for script_name in ("third_person.gd", "gorece_npc.gd"):
+            source = (GAME_ROOT / "scripts" / script_name).read_text(encoding="utf-8")
+            self.assertIn('call("guard_body_from_void", self)', source)
+
+
+if __name__ == "__main__":
+    unittest.main()

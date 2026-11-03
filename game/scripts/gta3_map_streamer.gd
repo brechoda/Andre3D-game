@@ -21,6 +21,7 @@ const OVERVIEW_TILE := "maps/overview"
 const INITIAL_SPAWN_TILE := "comntop/comntop"
 const SESSION_PATH := "user://andre3d_session.json"
 const SUPPORTED_REGION_IDS := ["industrial", "center"]
+const MOUNTAIN_BOUNDARY_SCRIPT := preload("res://scripts/map_boundary_mountains.gd")
 
 var _tile_records: Array[Dictionary] = []
 var _part_paths_by_tile: Dictionary = {}
@@ -36,12 +37,23 @@ var _low_material_cache: Dictionary = {}
 var _selected_region_id := ""
 var _selected_region_tiles: Dictionary = {}
 var _selected_spawn := Vector3.ZERO
+var _region_bounds_min := Vector3.ZERO
+var _region_bounds_max := Vector3.ZERO
+var _void_recovery_floor_y := -100.0
+var _last_safe_positions: Dictionary = {}
+var _collision_failed_tiles: Dictionary = {}
 func _ready() -> void:
 	add_to_group("graphics_map")
 	GraphicsSettings.apply()
 	_load_parts_manifest()
 	if _load_selected_region():
 		_restrict_to_selected_region()
+		if _manifest_ready:
+			if _compute_selected_region_bounds():
+				_create_region_mountain_boundary()
+			else:
+				_manifest_ready = false
+				push_error("Selected map region has no usable spatial bounds")
 	else:
 		_manifest_ready = false
 	if _manifest_ready:
@@ -180,6 +192,42 @@ func _restrict_to_selected_region() -> void:
 			_manifest_ready = false
 			return
 
+func _compute_selected_region_bounds() -> bool:
+	var min_x := INF
+	var min_y := INF
+	var min_z := INF
+	var max_x := -INF
+	var max_y := -INF
+	var max_z := -INF
+	var found_bounds := false
+	for record: Dictionary in _tile_records:
+		var minimum: Variant = record.get("bounds_min", [])
+		var maximum: Variant = record.get("bounds_max", [])
+		if not minimum is Array or not maximum is Array or minimum.size() < 3 or maximum.size() < 3:
+			continue
+		found_bounds = true
+		min_x = minf(min_x, float(minimum[0]))
+		min_y = minf(min_y, float(minimum[1]))
+		min_z = minf(min_z, float(minimum[2]))
+		max_x = maxf(max_x, float(maximum[0]))
+		max_y = maxf(max_y, float(maximum[1]))
+		max_z = maxf(max_z, float(maximum[2]))
+	if not found_bounds or min_x >= max_x or min_y >= max_y:
+		return false
+	_region_bounds_min = Vector3(min_x, min_y, min_z)
+	_region_bounds_max = Vector3(max_x, max_y, max_z)
+	_void_recovery_floor_y = to_global(Vector3(0.0, 0.0, min_z)).y - 15.0
+	return true
+
+func _create_region_mountain_boundary() -> void:
+	var boundary := MOUNTAIN_BOUNDARY_SCRIPT.new() as Node3D
+	boundary.name = "RegionMountainBoundary"
+	if not bool(boundary.call("build_for_region", _selected_region_id, _region_bounds_min, _region_bounds_max)):
+		push_warning("Map boundary mountains could not be generated for region: " + _selected_region_id)
+		boundary.queue_free()
+		return
+	add_child(boundary)
+
 func _read_json(path: String) -> Variant:
 	if not FileAccess.file_exists(path):
 		return null
@@ -197,13 +245,20 @@ func _refresh_active_tiles() -> void:
 		return
 	var source_position := to_local(player.global_position)
 	var candidates: Array[Dictionary] = []
+	var nearest: Dictionary = {}
+	var nearest_distance := INF
 	for record: Dictionary in _tile_records:
 		var tile_name := String(record.get("name", ""))
 		if tile_name == OVERVIEW_TILE or not _part_paths_by_tile.has(tile_name) or not _selected_region_tiles.has(tile_name):
 			continue
-		var distance := _distance_to_tile_center(source_position, record)
+		var distance := _distance_to_tile_bounds(source_position, record)
+		if distance < nearest_distance:
+			nearest_distance = distance
+			nearest = {"name": tile_name, "distance": distance}
 		if distance <= load_radius:
 			candidates.append({"name": tile_name, "distance": distance})
+	if candidates.is_empty() and not nearest.is_empty():
+		candidates.append(nearest)
 	candidates.sort_custom(func(a: Dictionary, b: Dictionary) -> bool:
 		return float(a["distance"]) < float(b["distance"])
 	)
@@ -211,19 +266,6 @@ func _refresh_active_tiles() -> void:
 	if _part_paths_by_tile.has(GROUND_FIX_TILE):
 		desired[GROUND_FIX_TILE] = true
 		# O mapa selecionado é autocontido; overview/props não entram nos três mapas.
-	if _ultra_low_mode and candidates.is_empty():
-		var nearest: Dictionary = {}
-		var nearest_distance := INF
-		for record: Dictionary in _tile_records:
-			var tile_name := String(record.get("name", ""))
-			if tile_name == OVERVIEW_TILE or not _part_paths_by_tile.has(tile_name) or not _selected_region_tiles.has(tile_name):
-				continue
-			var distance := _distance_to_tile_center(source_position, record)
-			if distance < nearest_distance:
-				nearest_distance = distance
-				nearest = {"name": tile_name, "distance": distance}
-		if not nearest.is_empty():
-			candidates.append(nearest)
 	var limit := mini(max_active_tiles, candidates.size())
 	for index: int in range(limit):
 		desired[String(candidates[index]["name"])] = true
@@ -236,8 +278,14 @@ func _refresh_active_tiles() -> void:
 			(_loaded_tiles[tile_name] as Node).queue_free()
 			_loaded_tiles.erase(tile_name)
 
-func _distance_to_tile_center(source_position: Vector3, record: Dictionary) -> float:
-	var center: Array = record["center"]
+func _distance_to_tile_bounds(source_position: Vector3, record: Dictionary) -> float:
+	var minimum: Variant = record.get("bounds_min", [])
+	var maximum: Variant = record.get("bounds_max", [])
+	if minimum is Array and maximum is Array and minimum.size() >= 2 and maximum.size() >= 2:
+		var dx := maxf(maxf(float(minimum[0]) - source_position.x, 0.0), source_position.x - float(maximum[0]))
+		var dy := maxf(maxf(float(minimum[1]) - source_position.y, 0.0), source_position.y - float(maximum[1]))
+		return Vector2(dx, dy).length()
+	var center: Array = record.get("center", [source_position.x, source_position.y])
 	return Vector2(float(center[0]) - source_position.x, float(center[1]) - source_position.y).length()
 
 func _start_tile_load(tile_name: String, source_position: Vector3) -> void:
@@ -245,6 +293,7 @@ func _start_tile_load(tile_name: String, source_position: Vector3) -> void:
 	tile_root.name = tile_name.replace("/", "_")
 	add_child(tile_root)
 	_loaded_tiles[tile_name] = tile_root
+	_collision_failed_tiles.erase(tile_name)
 	var nearest_path := ""
 	var nearest_distance := INF
 	var requested_parts := 0
@@ -272,58 +321,73 @@ func _start_tile_load(tile_name: String, source_position: Vector3) -> void:
 		var collision_error := ResourceLoader.load_threaded_request(collision_path, "Mesh", false)
 		if collision_error != OK and collision_error != ERR_BUSY:
 			push_error("Could not start COL1 collision load %s (error %d)" % [collision_path, collision_error])
+			_collision_failed_tiles[tile_name] = true
 		else:
 			_pending_paths[collision_path] = {"tile": tile_name, "collision": true}
 
 func _process_pending_meshes() -> void:
 	var processed_count := 0
-	for path: String in _pending_paths.keys():
-		var status := ResourceLoader.load_threaded_get_status(path)
-		if status == ResourceLoader.THREAD_LOAD_IN_PROGRESS:
-			continue
-		if processed_count >= max_meshes_per_frame:
-			return
-		processed_count += 1
-		var pending: Dictionary = _pending_paths[path]
-		var tile_name: String = String(pending["tile"])
-		var is_collision: bool = bool(pending["collision"])
-		_pending_paths.erase(path)
-		if status != ResourceLoader.THREAD_LOAD_LOADED:
-			push_error("Failed to import split GTA III mesh: " + path)
-			continue
-		var mesh := ResourceLoader.load_threaded_get(path) as Mesh
-		if mesh == null:
-			push_error("Split GTA III OBJ did not import as a Mesh: " + path)
-			continue
-		if not _wanted_tiles.has(tile_name) or not _loaded_tiles.has(tile_name):
-			continue
-		var tile_root := _loaded_tiles[tile_name] as Node3D
-		if is_collision:
-			if build_mesh_collisions:
-				var body := StaticBody3D.new()
-				body.name = "COL1Collision"
-				body.collision_layer = 1
-				body.collision_mask = 1
-				var collision := CollisionShape3D.new()
-				collision.name = path.get_file().get_basename()
-				var collision_mesh := mesh.create_trimesh_shape() as ConcavePolygonShape3D
-				if collision_mesh != null:
+	for collision_pass in [true, false]:
+		for path: String in _pending_paths.keys():
+			if not _pending_paths.has(path):
+				continue
+			var pending: Dictionary = _pending_paths[path]
+			var tile_name: String = String(pending["tile"])
+			var is_collision: bool = bool(pending["collision"])
+			if is_collision != collision_pass:
+				continue
+			var status := ResourceLoader.load_threaded_get_status(path)
+			if status == ResourceLoader.THREAD_LOAD_IN_PROGRESS:
+				continue
+			if processed_count >= max_meshes_per_frame:
+				return
+			if not is_collision and build_mesh_collisions and tile_name != OVERVIEW_TILE and not is_collision_tile_loaded(tile_name) and not _collision_failed_tiles.has(tile_name):
+				continue
+			processed_count += 1
+			_pending_paths.erase(path)
+			if status != ResourceLoader.THREAD_LOAD_LOADED:
+				push_error("Failed to import split GTA III mesh: " + path)
+				if is_collision:
+					_collision_failed_tiles[tile_name] = true
+				continue
+			var mesh := ResourceLoader.load_threaded_get(path) as Mesh
+			if mesh == null:
+				push_error("Split GTA III OBJ did not import as a Mesh: " + path)
+				if is_collision:
+					_collision_failed_tiles[tile_name] = true
+				continue
+			if not _wanted_tiles.has(tile_name) or not _loaded_tiles.has(tile_name):
+				continue
+			var tile_root := _loaded_tiles[tile_name] as Node3D
+			if is_collision:
+				if build_mesh_collisions:
+					var body := StaticBody3D.new()
+					body.name = "COL1Collision"
+					body.collision_layer = 1
+					body.collision_mask = 1
+					var collision := CollisionShape3D.new()
+					collision.name = path.get_file().get_basename()
+					var collision_mesh := mesh.create_trimesh_shape() as ConcavePolygonShape3D
+					if collision_mesh == null:
+						push_error("Collision mesh could not be built: " + path)
+						_collision_failed_tiles[tile_name] = true
+						continue
 					collision_mesh.backface_collision = true
-				collision.shape = collision_mesh
-				body.add_child(collision)
-				tile_root.add_child(body)
-			continue
-		var mesh_instance := MeshInstance3D.new()
-		mesh_instance.name = path.get_file().get_basename()
-		mesh_instance.mesh = mesh
-		mesh_instance.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-		mesh_instance.gi_mode = GeometryInstance3D.GI_MODE_DISABLED
-		# As malhas importadas guardam a geometria em coordenadas do mundo,
-		# mas o nó fica na origem do MapStreamer. O streaming já limita tiles;
-		# culling por distância do nó oculta regiões distantes da origem.
-		mesh_instance.visibility_range_end = 0.0
-		_configure_alpha_materials(mesh_instance)
-		tile_root.add_child(mesh_instance)
+					collision.shape = collision_mesh
+					body.add_child(collision)
+					tile_root.add_child(body)
+				continue
+			var mesh_instance := MeshInstance3D.new()
+			mesh_instance.name = path.get_file().get_basename()
+			mesh_instance.mesh = mesh
+			mesh_instance.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+			mesh_instance.gi_mode = GeometryInstance3D.GI_MODE_DISABLED
+			# As malhas importadas guardam a geometria em coordenadas do mundo,
+			# mas o nó fica na origem do MapStreamer. O streaming já limita tiles;
+			# culling por distância do nó oculta regiões distantes da origem.
+			mesh_instance.visibility_range_end = 0.0
+			_configure_alpha_materials(mesh_instance)
+			tile_root.add_child(mesh_instance)
 
 func _configure_alpha_materials(mesh_instance: MeshInstance3D) -> void:
 	var mesh := mesh_instance.mesh
@@ -449,6 +513,22 @@ func sample_ground_height(position: Vector3, reference_y: float, exclude: Array[
 			return {}
 		ray_exclude.append(collider_rid)
 	return {}
+
+func guard_body_from_void(body: CharacterBody3D) -> bool:
+	if body == null or not is_instance_valid(body) or not _manifest_ready:
+		return false
+	var body_id := body.get_instance_id()
+	if body.is_on_floor():
+		var ground_hit := sample_ground_height(body.global_position, body.global_position.y, [body.get_rid()])
+		if not ground_hit.is_empty():
+			_last_safe_positions[body_id] = body.global_position
+	if body.global_position.y >= _void_recovery_floor_y:
+		return false
+	var recovery_position: Vector3 = _last_safe_positions.get(body_id, _selected_spawn)
+	body.global_position = recovery_position + Vector3.UP * 0.1
+	body.velocity = Vector3.ZERO
+	body.reset_physics_interpolation()
+	return true
 
 func snap_body_to_map(body: CharacterBody3D) -> bool:
 	if body == null or not _has_loaded_region_collision():

@@ -215,6 +215,11 @@ func _physics_process(delta: float) -> void:
         velocity.y -= GRAVITY * delta
 
     move_and_slide()
+    var void_guard := get_node_or_null("../MapStreamer")
+    if void_guard != null and void_guard.has_method("guard_body_from_void") and bool(void_guard.call("guard_body_from_void", self)):
+        _jumping = false
+        _landing = false
+        _jump_buffer_remaining = 0.0
 
     if _jumping and is_on_floor() and velocity.y <= 0.0:
         _jumping = false
