@@ -10,12 +10,11 @@ Este documento explica como continuar o projeto sem depender do histórico da co
 - Build multiplayer esperado: `andre3d-mp-v4`
 - Pacote Android principal a partir da 2.0.6: `com.manus.andre3d.next`
 - Pacote legado 2.0.5: `com.manus.andre3d`; a chave antiga foi perdida, então não pode ser atualizado no mesmo pacote.
-- Versão Android pública atual: `2.2.2`
-- Código Android público atual: `34`
-- Último APK público: `2.2.2` / código `34`, distribuído em `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.2`.
+- Versão Android pública atual: `2.2.3`
+- Código Android público atual: `35`
+- Último APK público: `2.2.3` / código `35`, distribuído em `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.3`.
 - O workflow `Build Android APK` cria artefatos de depuração com chave temporária; eles não podem atualizar o APK público. Releases de produção exigem a keystore original e publicação correspondente no manifesto do servidor.
-- Build de teste mais recente: `2.2.3` / código `35`, assinado com a mesma identidade do APK público, mas ainda não publicado no release nem no manifesto obrigatório.
-- SHA-256 do APK de teste 2.2.3: `48843a7bbdd12a292fa5bf1e6bce326bdc38b4b37fe308fe5e2e4ba6e239efb7`.
+- SHA-256 do APK público 2.2.3: `48843a7bbdd12a292fa5bf1e6bce326bdc38b4b37fe308fe5e2e4ba6e239efb7`.
 
 ## Objetivo do projeto
 
@@ -131,12 +130,12 @@ Para substituir um asset já publicado, usar `gh release upload ... --clobber`, 
 
 ## Estado conhecido entregue
 
-- APK `2.2.2` (package `com.manus.andre3d.next`, código `34`) inclui o botão de alternância do microfone na HUD, ajustes remotos de interface e correções recentes de controles/mapas.
-- Release pública Android: `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.2`.
-- Manifesto `2026.11.02.12` publicado no commit `b4e0f7b` do repositório de distribuição (`main`), com atualização obrigatória e hash do APK.
+- APK `2.2.3` (package `com.manus.andre3d.next`, código `35`) inclui o botão PUXAR VEÍCULO, sincronização online e as funções da versão 2.2.2.
+- Release pública Android: `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.3`.
+- Manifesto `2026.11.02.13` publicado no commit `2f298c6` do repositório de distribuição (`main`), com `client.version: 2.2.3`, `mandatory_online: true`, tamanho e SHA-256 do APK.
 - Manifesto atual público: `https://andre3d-multiplayer-server.onrender.com/updates/manifest.json`.
 - O servidor público deve responder `{"ok":true,"build":"andre3d-mp-v4"}` em `/health`.
 - Commits do recurso de puxar veículo: [jogo `bd1af5b`](https://github.com/brechoda/Andre3D-game/commit/bd1af5b) e [servidor `0bd6aea`](https://github.com/brechoda/andre3d-multiplayer-server/commit/0bd6aea). O servidor limita a frequência, valida IDs/ocupação e libera a reserva anterior quando o jogador puxa outro veículo sem estar pilotando.
-- A integração `vehicle_pull` foi validada no Render; o manifesto público continua na versão `2.2.2`, então o APK `2.2.3` de teste não força a atualização dos demais jogadores.
+- O manifesto obrigatório 2.2.3 foi confirmado ao vivo no Render; instalações antigas baixam o APK validado e precisam instalá-lo antes de entrar no jogo.
 
 Antes de começar uma alteração, leia este arquivo, `docs/game-multiplayer.md`, `autoload/remote_updater.gd`, `scripts/net/multiplayer_client.gd` e o README do servidor. Depois de alterar, valide, atualize a documentação se o fluxo mudar e faça push somente dos arquivos intencionais.
