@@ -27,7 +27,7 @@
 - [x] As rodas devem parar de acumular giro quando o veículo estiver parado ou quando o motorista remoto desmontar.
 
 ## Mapa Liberty City (GTA III)
-- [x] Incorporar os pacotes-fonte do mapa e extrair o IMG mobile em 3.402 entradas DFF/TXD, preservando IPL, IDE, COL e DAT.
+- [x] Remover INDUSTRIAL e CENTRO e manter COSTA VISTA como mapa embutido.
 - [x] Gerar catálogo espacial dos 8.689 posicionamentos em 12 tiles, com limites, modelos e dicionários de textura.
 - [x] Gerar 12 meshes OBJ/MTL convertidas e dividi-las em partes de até 96 materiais/superfícies para contornar o limite do importador OBJ do Godot.
 - [x] Corrigir os caminhos relativos das texturas nas partes Godot-ready e copiar somente os PNG usados para `assets/maps/liberty_city`, pasta incluída na exportação.

@@ -6,7 +6,7 @@ const LOADING_ART_PATH := "res://assets/template/ui/loading_gta.png"
 
 var selected_mode := "online"
 var selected_character := "andre"
-var selected_map_region := "industrial"
+var selected_map_region := "costa_vista"
 var mode_hint: Label
 var character_box: VBoxContainer
 var map_region_option: OptionButton
@@ -190,8 +190,6 @@ func _build_menu() -> void:
     panel.add_child(content)
     map_region_option = OptionButton.new()
     map_region_option.custom_minimum_size = Vector2(360, 44)
-    map_region_option.add_item("INDUSTRIAL — principal, menor pacote")
-    map_region_option.add_item("CENTRO — bairros comerciais")
     map_region_option.add_item("COSTA VISTA — cidade costeira embutida")
     map_region_option.item_selected.connect(_select_map_region)
     content.add_child(map_region_option)
@@ -363,7 +361,7 @@ func _select_character(character: String) -> void:
     selected_character = character
 
 func _select_map_region(index: int) -> void:
-    var ids := ["industrial", "center", "costa_vista"]
+    var ids := ["costa_vista"]
     if index >= 0 and index < ids.size():
         var requested_region: String = String(ids[index])
         var active_region: String = ExternalContent.get_active_region_id()

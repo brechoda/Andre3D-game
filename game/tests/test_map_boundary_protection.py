@@ -21,7 +21,7 @@ class MapBoundaryProtectionTests(unittest.TestCase):
 
     def test_each_supported_region_has_spatial_bounds_for_all_its_tiles(self) -> None:
         catalog_by_name = {tile["name"]: tile for tile in self.catalog["tiles"]}
-        self.assertEqual({"center", "industrial", "costa_vista"}, {region["id"] for region in self.regions})
+        self.assertEqual({"costa_vista"}, {region["id"] for region in self.regions})
         for region in self.regions:
             with self.subTest(region=region["id"]):
                 if region.get("builtin"):

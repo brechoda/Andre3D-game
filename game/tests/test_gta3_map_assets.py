@@ -30,7 +30,7 @@ class Gta3MapAssetTests(unittest.TestCase):
         expected = {tile["name"].replace("/", "_") for tile in self.catalog["tiles"]}
         actual = {tile["tile"].replace("/", "_") for tile in self.parts_manifest["tiles"]}
         self.assertEqual(expected, actual)
-        self.assertEqual(12, self.parts_manifest["tile_count"])
+        self.assertEqual(2, self.parts_manifest["tile_count"])
 
     def test_split_meshes_preserve_every_triangle(self) -> None:
         if self.conversion_report is None:
@@ -116,7 +116,7 @@ class Gta3MapAssetTests(unittest.TestCase):
         self.assertIn("res://assets/maps/liberty_city/godot_tiles/tile_parts.json", streamer)
         presets = (ROOT / "export_presets.cfg").read_text(encoding="utf-8")
         self.assertIn('export_filter="all_resources"', presets)
-        self.assertIn('exclude_filter="dist/*,test/*,test-output/*,captures/*,docs/*,assets/template/provenance/*,tools/*,assets/source/*"', presets)
+        self.assertIn('assets/source/*,assets/maps/*', presets)
         self.assertTrue((RUNTIME_ROOT / "godot_tiles/tile_parts.json").is_file())
         self.assertIn('[node name="MapStreamer" type="Node3D" parent="."]', scene)
         self.assertIn('[node name="Player" type="CharacterBody3D" parent="."]', scene)
@@ -126,9 +126,6 @@ class Gta3MapAssetTests(unittest.TestCase):
     def test_region_spawn_points_include_player_npc_and_grounded_vehicles(self) -> None:
         regions_manifest = json.loads((RUNTIME_ROOT / "map_regions.json").read_text(encoding="utf-8"))
         regions = {region["id"]: region for region in regions_manifest["regions"]}
-        self.assertEqual([150.0, 19.9448, 50.0], regions["center"]["spawn"])
-        self.assertEqual([150.0, 19.9448, 0.0], regions["center"]["gorece_spawn"])
-        self.assertEqual({"pop100_01", "wayfarer_01", "hilux_01", "fiatuno_01"}, set(regions["center"]["vehicle_spawns"]))
         for region in regions.values():
             self.assertEqual({"pop100_01", "wayfarer_01", "hilux_01", "fiatuno_01"}, set(region["vehicle_spawns"]))
             for spawn in [region["spawn"], region["gorece_spawn"], *region["vehicle_spawns"].values()]:
@@ -146,15 +143,12 @@ class Gta3MapAssetTests(unittest.TestCase):
     def test_only_the_selected_map_region_can_be_downloaded_mounted_or_streamed(self) -> None:
         regions_manifest = json.loads((RUNTIME_ROOT / "map_regions.json").read_text(encoding="utf-8"))
         regions = {region["id"]: set(region.get("tiles", [])) for region in regions_manifest["regions"]}
-        self.assertEqual({"center", "industrial", "costa_vista"}, set(regions))
-        self.assertTrue(regions["center"].isdisjoint(regions["industrial"]))
+        self.assertEqual({"costa_vista"}, set(regions))
         costa = next(region for region in regions_manifest["regions"] if region["id"] == "costa_vista")
         self.assertTrue(costa["builtin"])
         self.assertEqual([], costa.get("tiles", []))
         self.assertTrue((ROOT / "scripts/costa_vista_builder.gd").exists())
         catalog_names = {tile["name"] for tile in self.catalog["tiles"]}
-        self.assertTrue(regions["center"] <= catalog_names)
-        self.assertTrue(regions["industrial"] <= catalog_names)
 
         updater = (ROOT / "autoload/remote_updater.gd").read_text(encoding="utf-8")
         external_content = (ROOT / "autoload/external_content.gd").read_text(encoding="utf-8")

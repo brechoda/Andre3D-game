@@ -20,7 +20,7 @@ const GROUND_FIX_COLLISION := "res://assets/maps/liberty_city/collisions/ground_
 const OVERVIEW_TILE := "maps/overview"
 const INITIAL_SPAWN_TILE := "comntop/comntop"
 const SESSION_PATH := "user://andre3d_session.json"
-const SUPPORTED_REGION_IDS := ["industrial", "center", "costa_vista"]
+const SUPPORTED_REGION_IDS := ["costa_vista"]
 const MAP_BOUNDARY_SCRIPT := preload("res://scripts/map_boundary_mountains.gd")
 const COSTA_VISTA_BUILDER := preload("res://scripts/costa_vista_builder.gd")
 
