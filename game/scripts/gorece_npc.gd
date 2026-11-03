@@ -3,6 +3,8 @@ class_name GoreceNpc
 
 const MOVE_SPEED := 3.0
 const RUN_SPEED := 4.8
+const ANALOG_RUN_ON_THRESHOLD := 0.84
+const ANALOG_RUN_OFF_THRESHOLD := 0.72
 const FOLLOW_RUN_DISTANCE := 6.0
 const FOLLOW_WALK_DISTANCE := 4.5
 const ACCELERATION := 14.0
@@ -60,6 +62,7 @@ const SEATED_POSE_DEGREES := {
 
 var player_controlled := false
 var running := false
+var _analog_sprinting := false
 var crouching := false
 var jump_requested := false
 var _jumping := false
@@ -172,16 +175,17 @@ func _physics_process(delta: float) -> void:
             input_vector = _world_vector_to_input(to_target.normalized())
 
     var analog_strength := clampf(input_vector.length(), 0.0, 1.0)
+    var sprinting := running or _update_analog_sprinting()
     var direction := _camera_relative_direction(input_vector) if player_controlled else Vector3(input_vector.x, 0.0, -input_vector.y)
     var walking := direction.length_squared() > 0.001 and analog_strength > 0.05 and not _action_busy
     if walking:
         direction = direction.normalized()
-        var speed := (RUN_SPEED if running else MOVE_SPEED) * (0.55 if crouching else 1.0)
+        var speed := (RUN_SPEED if sprinting else MOVE_SPEED) * (0.55 if crouching else 1.0)
         velocity.x = move_toward(velocity.x, direction.x * speed, ACCELERATION * delta)
         velocity.z = move_toward(velocity.z, direction.z * speed, ACCELERATION * delta)
         var facing := Vector3(velocity.x, 0.0, velocity.z).normalized()
         if facing.length_squared() > 0.01:
-            visual.rotation.y = lerp_angle(visual.rotation.y, atan2(-facing.x, -facing.z), minf(1.0, delta * 10.0))
+            _face_visual_toward(facing, delta)
     else:
         var horizontal_drag := DECELERATION if is_on_floor() else AIR_DRAG
         velocity.x = move_toward(velocity.x, 0.0, horizontal_drag * delta)
@@ -243,7 +247,7 @@ func _physics_process(delta: float) -> void:
             else:
                 desired = CROUCH_WALK_ANIMATION
     elif walking:
-        desired = RUN_ANIMATION if running else WALK_ANIMATION
+        desired = RUN_ANIMATION if sprinting else WALK_ANIMATION
     _play_animation(desired)
 
 func _world_vector_to_input(direction: Vector3) -> Vector2:
@@ -256,10 +260,26 @@ func _camera_relative_direction(input_vector: Vector2) -> Vector3:
     var right := Vector3(cos(camera_yaw), 0.0, -sin(camera_yaw))
     return right * input_vector.x + forward * (-input_vector.y)
 
+func _face_visual_toward(direction: Vector3, delta: float) -> void:
+    if visual == null or direction.length_squared() < 0.001:
+        return
+    var target_yaw := atan2(-direction.x, -direction.z)
+    var current_yaw := visual.global_rotation.y
+    visual.global_rotation = Vector3(0.0, lerp_angle(current_yaw, target_yaw, minf(1.0, delta * 10.0)), 0.0)
+
+func _update_analog_sprinting() -> bool:
+    var stick_strength := joystick_value.length() if player_controlled else 0.0
+    if not player_controlled or crouching or stick_strength <= ANALOG_RUN_OFF_THRESHOLD:
+        _analog_sprinting = false
+    elif not _analog_sprinting and stick_strength >= ANALOG_RUN_ON_THRESHOLD:
+        _analog_sprinting = true
+    return _analog_sprinting
+
 func set_player_controlled(enabled: bool) -> void:
     player_controlled = enabled
     if not enabled:
         running = false
+        _analog_sprinting = false
         set_crouching(false)
         joystick_value = Vector2.ZERO
         jump_requested = false
@@ -285,6 +305,7 @@ func set_crouching(enabled: bool) -> void:
     _set_crouch_collision(enabled)
     if enabled:
         running = false
+        _analog_sprinting = false
         _crouch_entering = _animation_player != null and _animation_player.has_animation(CROUCH_ENTER_ANIMATION)
         if _crouch_entering:
             _play_animation(CROUCH_ENTER_ANIMATION)

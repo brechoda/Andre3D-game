@@ -341,6 +341,7 @@ theme_override_styles/normal = SubResource("RunNormalStyle")
 theme_override_styles/hover = SubResource("RunHoverStyle")
 theme_override_styles/pressed = SubResource("RunPressedStyle")
 text = "CORRER"
+toggle_mode = true
 focus_mode = 0
 
 [node name="CrouchButton" type="Button" parent="HUD/Root"]

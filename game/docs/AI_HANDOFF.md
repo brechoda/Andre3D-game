@@ -24,7 +24,7 @@ Não substituir o projeto por um template novo. O projeto já tem mapa, veículo
 
 - `project.godot`: versão, cena inicial e autoloads. A cena inicial é `res://scenes/session_menu.tscn`.
 - `scenes/session_menu.tscn` e `scripts/session_menu.gd`: menu inicial, escolha de modo/personagem, espera da checagem remota e bloqueio de entrada quando há atualização obrigatória do APK.
-- `scenes/third_person.tscn` e `scripts/third_person.gd`: gameplay principal em terceira pessoa; mantém a tela de carregamento até o streamer confirmar geometria visual e colisão na área inicial, e por mais cinco segundos.
+- `scenes/third_person.tscn` e `scripts/third_person.gd`: gameplay principal em terceira pessoa; mantém a tela de carregamento até o streamer confirmar geometria visual e colisão na área inicial, e por mais cinco segundos. A orientação do modelo é aplicada em coordenadas globais; sprint começa na faixa externa do analógico com histerese, e o botão `CORRER` alterna sprint contínuo até novo toque. O mesmo comportamento de corrida vale para Gorece.
 - `scripts/gta3_map_streamer.gd`: exige `map_region` explícito na sessão, mantém apenas os tiles da região escolhida e não usa proximidade para habilitar tiles da outra região.
 - `scripts/net/multiplayer_client.gd`: cliente WebSocket. Ao entrar, envia `build`, `app_version`, sala, nome e personagem. Não remova `app_version`, pois o servidor bloqueia versões antigas.
 - `autoload/remote_updater.gd`: consulta o manifesto, valida arquivos por tamanho/SHA-256, grava conteúdo em `user://updates`, baixa o APK obrigatório pelo fluxo do menu e deixa PCKs de mapa apenas em cache; PCKs genéricos de mapa nunca são montados automaticamente.

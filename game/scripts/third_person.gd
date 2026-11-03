@@ -32,6 +32,8 @@ const JUMP_BUFFER_SECONDS := 0.14
 const COYOTE_SECONDS := 0.12
 const ANALOG_DEADZONE := 0.05
 const MIN_ANALOG_SPEED := 0.18
+const ANALOG_RUN_ON_THRESHOLD := 0.84
+const ANALOG_RUN_OFF_THRESHOLD := 0.72
 const NPC_SIMULATION_DISTANCE := 90.0
 const VEHICLE_SIMULATION_DISTANCE := 120.0
 const DISTANCE_LOD_INTERVAL := 0.5
@@ -60,6 +62,7 @@ var _rotating_mouse := false
 var _camera_touch_id := -1
 var _last_camera_touch := Vector2.ZERO
 var _running := false
+var _analog_sprinting := false
 var _crouching := false
 var _jump_requested := false
 var _jumping := false
@@ -105,8 +108,10 @@ func _ready() -> void:
     movement_label.visible = false
     movement_label.text = ""
     joystick.changed.connect(_on_joystick_changed)
-    run_button.button_down.connect(_on_run_button_down)
-    run_button.button_up.connect(_on_run_button_up)
+    run_button.toggle_mode = true
+    run_button.set_pressed_no_signal(false)
+    run_button.text = "CORRER"
+    run_button.toggled.connect(_on_run_button_toggled)
     crouch_button.toggled.connect(_on_crouch_toggled)
     jump_button.button_down.connect(_on_jump_button_down)
     action_button.button_down.connect(_on_action_button_down)
@@ -249,6 +254,10 @@ func _apply_remote_spawn_payload(json_text: String) -> void:
     var gorece_data: Variant = config.get("gorece", {})
     if gorece_data is Dictionary:
         _apply_spawn_transform(gorece, gorece_data as Dictionary)
+    if _active_character == 1:
+        var active_visual: Node3D = gorece.get_node_or_null("GoreceVisual") as Node3D
+        _camera_yaw = active_visual.global_rotation.y if active_visual != null else gorece.global_rotation.y
+        gorece.camera_yaw = _camera_yaw
 
     var vehicles: Variant = config.get("vehicles", {})
     if vehicles is Dictionary:
@@ -285,7 +294,7 @@ func _apply_spawn_transform(node: Node3D, data: Dictionary) -> bool:
     if node == self:
         node.rotation = Vector3.ZERO
         if visual != null:
-            visual.rotation = Vector3(0.0, heading, 0.0)
+            visual.global_rotation = Vector3(0.0, heading, 0.0)
         _camera_yaw = heading
     else:
         node.rotation.y = heading
@@ -321,9 +330,15 @@ func _apply_session_settings() -> void:
     set_active_character(character_index)
 
 func set_active_character(character_index: int) -> void:
-    _active_character = clampi(character_index, 0, 2)
+    if _active_character == 1 and gorece != null:
+        gorece.set_running(false)
     _running = false
+    _analog_sprinting = false
     _crouching = false
+    _active_character = clampi(character_index, 0, 2)
+    if run_button != null:
+        run_button.set_pressed_no_signal(false)
+        run_button.text = "CORRER"
     if switch_button != null:
         switch_button.text = "TROCAR PERSONAGEM"
     if _active_character == 1:
@@ -339,7 +354,7 @@ func set_active_character(character_index: int) -> void:
             gorece_visual = gorece.get("visual") as Node3D
         var gorece_yaw := _camera_yaw
         if gorece_visual != null:
-            gorece_yaw = gorece_visual.rotation.y
+            gorece_yaw = gorece_visual.global_rotation.y
         gorece.camera_yaw = gorece_yaw
         gorece.camera_pitch = _camera_pitch
         _camera_yaw = gorece_yaw
@@ -358,7 +373,7 @@ func set_active_character(character_index: int) -> void:
         _animation_player = _find_animation_player(visual)
         _configure_player_animations()
         _setup_neck_look()
-        _camera_yaw = visual.rotation.y
+        _camera_yaw = visual.global_rotation.y
         action_button.text = "DAR SOCO"
         _update_camera()
 
@@ -424,14 +439,16 @@ func _physics_process(delta: float) -> void:
     if _joystick_value.length() > 0.05:
         input_vector = _joystick_value
 
+    var analog_sprinting := _update_analog_sprinting()
+    var sprinting := (_running or analog_sprinting) and not _crouching
     var analog_strength: float = clampf(input_vector.length(), 0.0, 1.0)
     var direction: Vector3 = _camera_relative_direction(input_vector)
     var walking: bool = analog_strength > ANALOG_DEADZONE and direction.length_squared() > 0.001
     if walking:
         direction = direction.normalized()
-        var analog_speed_factor: float = lerpf(MIN_ANALOG_SPEED, 1.0, analog_strength)
+        var analog_speed_factor: float = 1.0 if sprinting else lerpf(MIN_ANALOG_SPEED, 1.0, analog_strength)
         var crouch_factor: float = 0.55 if _crouching else 1.0
-        var current_speed: float = MOVE_SPEED * analog_speed_factor * crouch_factor * (RUN_MULTIPLIER if _running and not _crouching else 1.0)
+        var current_speed: float = MOVE_SPEED * analog_speed_factor * crouch_factor * (RUN_MULTIPLIER if sprinting else 1.0)
         velocity.x = move_toward(velocity.x, direction.x * current_speed, ACCELERATION * delta)
         velocity.z = move_toward(velocity.z, direction.z * current_speed, ACCELERATION * delta)
     else:
@@ -446,9 +463,7 @@ func _physics_process(delta: float) -> void:
     if facing.length_squared() < 0.01 and walking:
         facing = direction
     if facing.length_squared() > 0.01:
-        facing = facing.normalized()
-        var target_yaw: float = atan2(-facing.x, -facing.z) + MODEL_YAW_OFFSET
-        visual.rotation.y = lerp_angle(visual.rotation.y, target_yaw, min(1.0, delta * 12.0))
+        _face_visual_toward(facing.normalized(), delta, 12.0)
 
     if _jump_requested and not _crouching and (is_on_floor() or _coyote_remaining > 0.0):
         velocity.y = JUMP_VELOCITY
@@ -475,7 +490,7 @@ func _physics_process(delta: float) -> void:
         if _animation_player != null and _playing_animation == JUMP_ANIMATION:
             _animation_player.stop()
             _playing_animation = ""
-    _update_walk_animation(walking, analog_strength)
+    _update_walk_animation(walking, analog_strength, sprinting)
 
 func _process(_delta: float) -> void:
     _update_map_loading_screen(_delta)
@@ -604,6 +619,22 @@ func _camera_relative_direction(input_vector: Vector2) -> Vector3:
     var right := Vector3(cos(_camera_yaw), 0.0, -sin(_camera_yaw))
     return right * input_vector.x + forward * (-input_vector.y)
 
+func _face_visual_toward(direction: Vector3, delta: float, turn_rate: float) -> void:
+    if visual == null or direction.length_squared() < 0.001:
+        return
+    var target_yaw := atan2(-direction.x, -direction.z) + MODEL_YAW_OFFSET
+    var current_yaw := visual.global_rotation.y
+    var next_yaw := lerp_angle(current_yaw, target_yaw, minf(1.0, delta * turn_rate))
+    visual.global_rotation = Vector3(0.0, next_yaw, 0.0)
+
+func _update_analog_sprinting() -> bool:
+    var stick_strength := _joystick_value.length()
+    if _crouching or stick_strength <= ANALOG_RUN_OFF_THRESHOLD:
+        _analog_sprinting = false
+    elif not _analog_sprinting and stick_strength >= ANALOG_RUN_ON_THRESHOLD:
+        _analog_sprinting = true
+    return _analog_sprinting
+
 func _update_camera() -> void:
     _update_camera_for(global_position)
 
@@ -617,7 +648,7 @@ func _update_camera_for(target_position: Vector3) -> void:
     camera.global_position = target_position + camera_offset
     camera.look_at(target_position + Vector3.UP * CAMERA_TARGET_HEIGHT, Vector3.UP)
 
-func _update_walk_animation(walking: bool, analog_strength: float) -> void:
+func _update_walk_animation(walking: bool, analog_strength: float, sprinting: bool = false) -> void:
     if _animation_player == null:
         return
     if _action_busy:
@@ -627,7 +658,7 @@ func _update_walk_animation(walking: bool, analog_strength: float) -> void:
         desired_animation = JUMP_ANIMATION
     elif _crouching and _animation_player.has_animation(CROUCH_ANIMATION):
         desired_animation = CROUCH_ANIMATION
-    elif walking and _running and _animation_player.has_animation(RUN_ANIMATION):
+    elif walking and sprinting and _animation_player.has_animation(RUN_ANIMATION):
         desired_animation = RUN_ANIMATION
     elif walking:
         desired_animation = WALK_ANIMATION
@@ -636,9 +667,9 @@ func _update_walk_animation(walking: bool, analog_strength: float) -> void:
             return
         _animation_player.play(desired_animation)
         _playing_animation = desired_animation
-    var analog_animation_speed: float = 1.0 if _jumping else lerpf(0.35, 1.22, analog_strength)
+    var analog_animation_speed: float = 1.0 if _jumping else (1.22 if sprinting else lerpf(0.35, 1.0, analog_strength))
     var crouch_animation_factor: float = 0.85 if _crouching else 1.0
-    _animation_player.speed_scale = analog_animation_speed * crouch_animation_factor * (1.22 if _running and not _crouching else 1.0)
+    _animation_player.speed_scale = analog_animation_speed * crouch_animation_factor
     _was_walking = walking
 
 func _play_animation(animation_name: String, blend: float = 0.0) -> void:
@@ -909,8 +940,7 @@ func _physics_follow_companion(delta: float) -> void:
         var target_speed := minf(follow_speed, (distance - desired_gap) * 1.4)
         velocity.x = move_toward(velocity.x, direction.x * target_speed, ACCELERATION * delta)
         velocity.z = move_toward(velocity.z, direction.z * target_speed, ACCELERATION * delta)
-        var target_yaw := atan2(-direction.x, -direction.z)
-        visual.rotation.y = lerp_angle(visual.rotation.y, target_yaw, minf(1.0, delta * 10.0))
+        _face_visual_toward(direction, delta, 10.0)
     else:
         velocity.x = move_toward(velocity.x, 0.0, DECELERATION * delta)
         velocity.z = move_toward(velocity.z, 0.0, DECELERATION * delta)
@@ -919,7 +949,7 @@ func _physics_follow_companion(delta: float) -> void:
     else:
         velocity.y -= GRAVITY * delta
     move_and_slide()
-    _update_walk_animation(walking, 1.0 if walking else 0.0)
+    _update_walk_animation(walking, 1.0 if walking else 0.0, _running)
 
 func _stop_follow_vehicle() -> void:
     if is_instance_valid(_follow_vehicle) and _follow_vehicle.has_method("stop_ai_follow"):
@@ -1283,26 +1313,29 @@ func _update_coordinates_label() -> void:
     var tracked_position := gorece.global_position if _active_character == 1 else global_position
     coordinates_label.text = "COORDENADAS\nX: %8.3f\nY: %8.3f\nZ: %8.3f" % [tracked_position.x, tracked_position.y, tracked_position.z]
 
-func _on_run_button_down() -> void:
-    if _active_character == 1:
-        gorece.set_running(true)
-        return
-    _running = true
+func _on_run_button_toggled(enabled: bool) -> void:
+    _set_run_button_state(enabled)
 
-func _on_run_button_up() -> void:
+func _set_run_button_state(enabled: bool) -> void:
+    var should_run := enabled
+    if should_run and (_crouching or (_active_character == 1 and gorece.crouching)):
+        should_run = false
     if _active_character == 1:
-        gorece.set_running(false)
-        return
-    _running = false
+        gorece.set_running(should_run)
+    else:
+        _running = should_run
+    if run_button != null:
+        if run_button.button_pressed != should_run:
+            run_button.set_pressed_no_signal(should_run)
+        run_button.text = "PARAR DE CORRER" if should_run else "CORRER"
 
 func _on_crouch_toggled(enabled: bool) -> void:
+    if enabled:
+        _set_run_button_state(false)
     if _active_character == 1:
         gorece.set_crouching(enabled)
         return
     _crouching = enabled
-    if enabled:
-        _running = false
-        run_button.button_pressed = false
 
 func _on_jump_button_down() -> void:
     if _active_character == 1:

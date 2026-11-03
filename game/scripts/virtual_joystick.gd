@@ -21,6 +21,8 @@ func _notification(what: int) -> void:
 		queue_redraw()
 	elif what == NOTIFICATION_VISIBILITY_CHANGED and not is_visible_in_tree():
 		reset_touch()
+	elif what in [NOTIFICATION_APPLICATION_FOCUS_OUT, NOTIFICATION_APPLICATION_PAUSED]:
+		reset_touch()
 
 # Capture the finger at the viewport level. _gui_input can stop receiving a
 # drag as soon as the finger leaves this Control, which used to make the pad
