@@ -552,6 +552,8 @@ func _ensure_drive_buttons() -> void:
         brake.button_down.connect(func() -> void: hud.set_meta("touch_brake", true))
         brake.button_up.connect(func() -> void: hud.set_meta("touch_brake", false))
         hud.add_child(brake)
+    RemoteUIConfig.register_element("hud.moto.accelerate", hud.get_node("GasButton"))
+    RemoteUIConfig.register_element("hud.moto.brake", brake)
     _set_drive_buttons_visible(false)
 
 func _configure_accelerator_button(button: Button) -> void:

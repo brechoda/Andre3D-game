@@ -40,6 +40,7 @@ var _status := "Toque no mapa para marcar um destino."
 func _ready() -> void:
     custom_minimum_size = Vector2(212.0, 304.0)
     mouse_filter = Control.MOUSE_FILTER_STOP
+    RemoteUIConfig.register_element("hud.gps", self)
     _scene = get_tree().current_scene
     _player = _scene.get_node_or_null("Player") as Node3D if _scene != null else null
     _gorece = _scene.get_node_or_null("GoreceNPC") as Node3D if _scene != null else null
@@ -107,6 +108,7 @@ func _create_ui() -> void:
     _button.add_theme_stylebox_override("pressed", pressed)
     _button.pressed.connect(_on_autopilot_button_pressed)
     add_child(_button)
+    RemoteUIConfig.register_element("hud.gps.autopilot", _button)
 
     _status_label = Label.new()
     _status_label.name = "GPSStatus"
@@ -120,13 +122,13 @@ func _create_ui() -> void:
         _status_label.add_theme_font_override("font", _font)
     _status_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
     add_child(_status_label)
+    RemoteUIConfig.register_element("hud.gps.status", _status_label)
 
 func _process(delta: float) -> void:
     if _player == null or not is_instance_valid(_player):
         return
     # O GPS e o piloto automático funcionam no mapa local enquanto os demais
     # jogadores/veículos continuam sendo sincronizados pelo multiplayer.
-    visible = true
 
     _refresh_elapsed += delta
     if _refresh_elapsed >= 0.12:

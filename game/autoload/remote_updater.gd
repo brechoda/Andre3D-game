@@ -327,12 +327,13 @@ func _load_cached_packs(files: Array) -> void:
 		if str(entry.get("kind", "file")) != "pck":
 			continue
 		# PCKs de mapa (inclusive o pacote legado sem região) nunca são montados aqui.
-		# Somente o PCK de runtime, verificado como livre de tiles, carrega automaticamente.
+		# O pacote de runtime fica abaixo do APK: dados ausentes podem ser usados,
+		# mas conteúdo remoto não substitui scripts/UI embarcados no aplicativo.
 		if not _is_runtime_content_package(entry):
 			continue
 		var package_path := _cache_package_path(str(entry.get("path", "")))
 		if FileAccess.file_exists(package_path):
-			if not ProjectSettings.load_resource_pack(package_path, true):
+			if not ProjectSettings.load_resource_pack(package_path, false):
 				push_warning("RemoteUpdater: pacote PCK não pôde ser carregado: " + package_path)
 
 func _http_get(url: String, max_bytes: int, progress_label: String = "", expected_bytes: int = 0) -> Dictionary:

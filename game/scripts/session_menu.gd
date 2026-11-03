@@ -125,6 +125,7 @@ func _show_download_screen() -> void:
     _download_progress.size = Vector2(300.0, 18.0)
     _download_progress.mouse_filter = Control.MOUSE_FILTER_IGNORE
     _download_overlay.add_child(_download_progress)
+    RemoteUIConfig.register_element("menu.download_progress", _download_progress)
 
     _download_percent = Label.new()
     _download_percent.text = "0%"
@@ -136,6 +137,7 @@ func _show_download_screen() -> void:
     _download_percent.size = Vector2(120.0, 34.0)
     _download_percent.mouse_filter = Control.MOUSE_FILTER_IGNORE
     _download_overlay.add_child(_download_percent)
+    RemoteUIConfig.register_element("menu.download_percent", _download_percent)
 
 func _process(_delta: float) -> void:
     if not _loading:
@@ -170,6 +172,7 @@ func _build_menu() -> void:
     var panel := PanelContainer.new()
     panel.custom_minimum_size = Vector2(460, 520)
     center.add_child(panel)
+    RemoteUIConfig.register_element("menu.panel", panel)
     var content := VBoxContainer.new()
     content.add_theme_constant_override("separation", 14)
     content.alignment = BoxContainer.ALIGNMENT_BEGIN
@@ -180,16 +183,19 @@ func _build_menu() -> void:
     map_region_option.add_item("CENTRO — bairros comerciais")
     map_region_option.item_selected.connect(_select_map_region)
     content.add_child(map_region_option)
+    RemoteUIConfig.register_element("menu.map_selector", map_region_option)
     var subtitle := Label.new()
     subtitle.text = "ESCOLHA COMO JOGAR"
     subtitle.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     subtitle.add_theme_font_size_override("font_size", 18)
     content.add_child(subtitle)
+    RemoteUIConfig.register_element("menu.subtitle", subtitle)
     mode_hint = Label.new()
     mode_hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     mode_hint.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
     mode_hint.custom_minimum_size = Vector2(400, 42)
     content.add_child(mode_hint)
+    RemoteUIConfig.register_element("menu.status", mode_hint)
     _install_update_button = _make_button("INSTALAR ATUALIZAÇÃO")
     _install_update_button.visible = false
     _install_update_button.pressed.connect(_on_update_action_pressed)
@@ -197,26 +203,33 @@ func _build_menu() -> void:
     var graphics_button := _make_button("CONFIGURAÇÕES GRÁFICAS")
     graphics_button.pressed.connect(_open_graphics_menu)
     content.add_child(graphics_button)
+    RemoteUIConfig.register_element("menu.graphics_button", graphics_button)
     var character_title := Label.new()
     character_title.text = "PERSONAGEM"
     character_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     character_title.add_theme_font_size_override("font_size", 16)
     content.add_child(character_title)
+    RemoteUIConfig.register_element("menu.character_title", character_title)
     character_box = VBoxContainer.new()
     character_box.add_theme_constant_override("separation", 8)
     content.add_child(character_box)
+    RemoteUIConfig.register_element("menu.character_list", character_box)
     var andre_button := _make_button("ANDRÉ")
     var gorece_button := _make_button("GORECE")
     var dg_button := _make_button("DG")
     character_box.add_child(andre_button)
     character_box.add_child(gorece_button)
     character_box.add_child(dg_button)
+    RemoteUIConfig.register_element("menu.character.andre", andre_button)
+    RemoteUIConfig.register_element("menu.character.gorece", gorece_button)
+    RemoteUIConfig.register_element("menu.character.dg", dg_button)
     andre_button.pressed.connect(func() -> void: _select_character("andre"))
     gorece_button.pressed.connect(func() -> void: _select_character("gorece"))
     dg_button.pressed.connect(func() -> void: _select_character("dg"))
     start_button = _make_button("ENTRAR NO JOGO")
     start_button.custom_minimum_size = Vector2(0, 54)
     content.add_child(start_button)
+    RemoteUIConfig.register_element("menu.start_button", start_button)
     start_button.pressed.connect(_start_game)
     var footer := Label.new()
     footer.text = "No online, o outro jogador aparece como personagem escolhido."
@@ -224,6 +237,7 @@ func _build_menu() -> void:
     footer.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
     footer.add_theme_font_size_override("font_size", 13)
     content.add_child(footer)
+    RemoteUIConfig.register_element("menu.footer", footer)
     _select_mode("online")
     _select_map_region(0)
     _select_character("andre")
@@ -252,6 +266,7 @@ func _open_graphics_menu() -> void:
     var panel := PanelContainer.new()
     panel.custom_minimum_size = Vector2(560, 530)
     center.add_child(panel)
+    RemoteUIConfig.register_element("menu.graphics.panel", panel)
     var content := VBoxContainer.new()
     content.add_theme_constant_override("separation", 12)
     content.alignment = BoxContainer.ALIGNMENT_CENTER
@@ -262,11 +277,13 @@ func _open_graphics_menu() -> void:
     title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     title.add_theme_font_size_override("font_size", 26)
     content.add_child(title)
+    RemoteUIConfig.register_element("menu.graphics.title", title)
     var info := Label.new()
     info.text = "Escolha os níveis e confirme para aplicar.\nO modo automático ajusta aos poucos quando o FPS fica abaixo de 30."
     info.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
     info.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
     content.add_child(info)
+    RemoteUIConfig.register_element("menu.graphics.info", info)
 
     _graphics_distance = _graphics_option(content, "DISTÂNCIA DE RENDERIZAÇÃO", GraphicsSettings.RENDER_DISTANCE_NAMES)
     _graphics_texture = _graphics_option(content, "QUALIDADE DAS TEXTURAS", GraphicsSettings.TEXTURE_QUALITY_NAMES)
@@ -275,6 +292,7 @@ func _open_graphics_menu() -> void:
     _graphics_auto.text = "MODO AUTOMÁTICO DE OTIMIZAÇÃO"
     _graphics_auto.tooltip_text = "Reduz a qualidade gradualmente se o FPS ficar abaixo de 30 e recupera após estabilidade."
     content.add_child(_graphics_auto)
+    RemoteUIConfig.register_element("menu.graphics.auto", _graphics_auto)
 
     var buttons := HBoxContainer.new()
     buttons.alignment = BoxContainer.ALIGNMENT_CENTER
@@ -453,6 +471,7 @@ func _show_loading_screen() -> void:
     title.add_theme_font_size_override("font_size", 28)
     title.add_theme_color_override("font_color", Color.WHITE)
     bottom.add_child(title)
+    RemoteUIConfig.register_element("menu.loading_title", title)
 
     _loading_status = Label.new()
     _loading_status.text = "Preparando o mapa..."
@@ -460,12 +479,14 @@ func _show_loading_screen() -> void:
     _loading_status.add_theme_font_size_override("font_size", 16)
     _loading_status.add_theme_color_override("font_color", Color("f6d58a"))
     bottom.add_child(_loading_status)
+    RemoteUIConfig.register_element("menu.loading_status", _loading_status)
 
     _loading_progress = ProgressBar.new()
     _loading_progress.custom_minimum_size = Vector2(0, 24)
     _loading_progress.max_value = 100.0
     _loading_progress.show_percentage = false
     bottom.add_child(_loading_progress)
+    RemoteUIConfig.register_element("menu.loading_progress", _loading_progress)
 
     _loading_percent = Label.new()
     _loading_percent.text = "0%"
@@ -473,6 +494,7 @@ func _show_loading_screen() -> void:
     _loading_percent.add_theme_font_size_override("font_size", 20)
     _loading_percent.add_theme_color_override("font_color", Color.WHITE)
     bottom.add_child(_loading_percent)
+    RemoteUIConfig.register_element("menu.loading_percent", _loading_percent)
 
 func _set_loading_progress(value: float) -> void:
     var percent := int(round(value * 100.0))

@@ -60,6 +60,12 @@ Quando o manifesto informa um `client.version` maior que `application/config/ver
 
 Para forçar atualização online, o cliente verifica `min_online_version` e o servidor também valida `app_version` no evento `join`. Portanto, não basta alterar somente a mensagem do menu: cliente, servidor e manifesto precisam permanecer compatíveis.
 
+## HUD e menu configuráveis remotamente
+
+O autoload `RemoteUIConfig` lê primeiro `config/remote_ui.json` embarcado no APK e, após o `RemoteUpdater` verificar o manifesto, aplica `config/remote_ui.json` do cache remoto. O arquivo usa `schema_version: 1` e IDs de elementos registrados pelo código do APK. São aceitos apenas ajustes JSON limitados — visibilidade de elementos autorizados, rótulos estáticos, itens já existentes de seletores, cores, tamanho de fonte, escala, posição e tamanho. Caminhos de nós, métodos e scripts não são aceitos. O botão de entrada e a ação de atualização obrigatória não podem ser ocultados pela configuração.
+
+Para mudar a interface sem republicar o APK, edite `updates/files/config/remote_ui.json` no repositório `andre3d-multiplayer-server`, atualize `path`, `url`, `size` e `sha256` do arquivo em `updates/manifest.json`, aumente `version`, faça commit/push e aguarde o deploy. O APK aplica a nova versão na próxima inicialização depois da validação de tamanho/hash. Mudanças de comportamento, novos elementos ou novos IDs ainda exigem uma versão do APK.
+
 ## Como gerar uma nova versão Android
 
 1. Alterar `config/version` em `project.godot`.

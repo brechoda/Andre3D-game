@@ -36,6 +36,8 @@ ExternalContent="*res://autoload/external_content.gd"
 
 RemoteUpdater="*res://autoload/remote_updater.gd"
 
+RemoteUIConfig="*res://autoload/remote_ui_config.gd"
+
 SaveStore="*res://autoload/save_store.gd"
 I18n="*res://autoload/i18n.gd"
 TuningStore="*res://autoload/tuning_store.gd"

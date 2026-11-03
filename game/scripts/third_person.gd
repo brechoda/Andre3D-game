@@ -113,6 +113,7 @@ func _ready() -> void:
     action_button.button_up.connect(_on_action_button_up)
     switch_button.pressed.connect(_toggle_character)
     follow_button.pressed.connect(_toggle_follow)
+    _register_remote_hud_elements()
     camera.current = true
     camera.add_to_group("graphics_camera")
     GraphicsSettings.apply()
@@ -141,6 +142,34 @@ func _ready() -> void:
     else:
         _update_camera()
     call_deferred("_apply_remote_spawn")
+
+func _register_remote_hud_elements() -> void:
+    var scene_root := get_parent()
+    if scene_root == null:
+        return
+    var hud_root := scene_root.get_node_or_null("HUD/Root") as Control
+    if hud_root == null:
+        return
+    RemoteUIConfig.register_element("hud.root", hud_root)
+    var elements := {
+        "hud.vehicle_panel": hud_root.get_node_or_null("VehiclePanel"),
+        "hud.coordinates": hud_root.get_node_or_null("CoordinatesLabel"),
+        "hud.camera_hint": hud_root.get_node_or_null("CameraHint"),
+        "hud.touch_joystick": hud_root.get_node_or_null("TouchJoystick"),
+        "hud.touch_label": hud_root.get_node_or_null("TouchJoystick/TouchLabel"),
+        "hud.run": hud_root.get_node_or_null("RunButton"),
+        "hud.crouch": hud_root.get_node_or_null("CrouchButton"),
+        "hud.jump": hud_root.get_node_or_null("JumpButton"),
+        "hud.action": hud_root.get_node_or_null("ActionButton"),
+        "hud.switch": hud_root.get_node_or_null("SwitchButton"),
+        "hud.ride": hud_root.get_node_or_null("RideButton"),
+        "hud.follow": hud_root.get_node_or_null("FollowButton"),
+        "hud.gps": hud_root.get_node_or_null("GPSAutopilot"),
+    }
+    for element_id: String in elements:
+        var element_node := elements[element_id] as Node
+        if element_node != null:
+            RemoteUIConfig.register_element(element_id, element_node)
 
 func _apply_selected_map_spawn() -> void:
     var map_streamer := get_node_or_null("../MapStreamer")

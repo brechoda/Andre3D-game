@@ -591,6 +591,10 @@ func _ensure_drive_buttons() -> void:
         _hud.add_child(brake)
     _ensure_steering_button("HiluxSteerLeftButton", "ESQUERDA", "touch_hilux_steer_left", 30.0)
     _ensure_steering_button("HiluxSteerRightButton", "DIREITA", "touch_hilux_steer_right", 170.0)
+    RemoteUIConfig.register_element("hud.hilux.accelerate", _hud.get_node("HiluxGasButton"))
+    RemoteUIConfig.register_element("hud.hilux.brake", _hud.get_node("HiluxBrakeButton"))
+    RemoteUIConfig.register_element("hud.hilux.steer_left", _hud.get_node("HiluxSteerLeftButton"))
+    RemoteUIConfig.register_element("hud.hilux.steer_right", _hud.get_node("HiluxSteerRightButton"))
 
 func _configure_accelerator_button(button: Button) -> void:
     if button == null or bool(button.get_meta("accelerator_handler_connected", false)):

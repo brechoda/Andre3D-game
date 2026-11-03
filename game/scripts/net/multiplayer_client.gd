@@ -486,6 +486,7 @@ func _create_status_label() -> Label:
     stack.position = Vector2(24, 92)
     stack.add_theme_constant_override("separation", 2)
     hud.add_child(stack)
+    RemoteUIConfig.register_element("hud.chat", stack)
     var row := HBoxContainer.new()
     row.add_theme_constant_override("separation", 12)
     stack.add_child(row)
