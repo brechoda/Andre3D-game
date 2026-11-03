@@ -20,6 +20,7 @@ const GROUND_FIX_COLLISION := "res://assets/maps/liberty_city/collisions/ground_
 const OVERVIEW_TILE := "maps/overview"
 const INITIAL_SPAWN_TILE := "comntop/comntop"
 const SESSION_PATH := "user://andre3d_session.json"
+const SUPPORTED_REGION_IDS := ["industrial", "center"]
 
 var _tile_records: Array[Dictionary] = []
 var _part_paths_by_tile: Dictionary = {}
@@ -32,15 +33,17 @@ var _refresh_elapsed := 0.0
 var _manifest_ready := false
 var _ultra_low_mode := false
 var _low_material_cache: Dictionary = {}
-var _selected_region_id := "center"
+var _selected_region_id := ""
 var _selected_region_tiles: Dictionary = {}
-var _selected_spawn := Vector3(13.9, 80.0, 517.0)
-
+var _selected_spawn := Vector3.ZERO
 func _ready() -> void:
 	add_to_group("graphics_map")
 	GraphicsSettings.apply()
 	_load_parts_manifest()
-	_load_selected_region()
+	if _load_selected_region():
+		_restrict_to_selected_region()
+	else:
+		_manifest_ready = false
 	if _manifest_ready:
 		_refresh_active_tiles()
 	set_process(true)
@@ -123,28 +126,59 @@ func _load_parts_manifest() -> void:
 	if not _manifest_ready:
 		push_error("GTA III map manifests contain no usable tiles")
 
-func _load_selected_region() -> void:
+func _load_selected_region() -> bool:
 	var region_data: Variant = _read_json(regions_manifest_path)
 	if not region_data is Dictionary:
-		return
+		return false
 	var regions: Variant = (region_data as Dictionary).get("regions", [])
 	if not regions is Array:
-		return
-	var requested_id: String = String((region_data as Dictionary).get("default_region", "center"))
-	if FileAccess.file_exists(SESSION_PATH):
-		var session: Variant = _read_json(SESSION_PATH)
-		if session is Dictionary:
-			requested_id = String((session as Dictionary).get("map_region", requested_id))
+		return false
+	# Sem escolha gravada pelo menu, ou diante de uma região desconhecida, não carrega mapa algum.
+	var session: Variant = _read_json(SESSION_PATH)
+	if not session is Dictionary:
+		return false
+	var requested_id := String((session as Dictionary).get("map_region", ""))
+	if not SUPPORTED_REGION_IDS.has(requested_id):
+		return false
 	for row: Variant in regions:
 		if not row is Dictionary or String((row as Dictionary).get("id", "")) != requested_id:
 			continue
-		_selected_region_id = requested_id
-		for tile: Variant in (row as Dictionary).get("tiles", []):
-			_selected_region_tiles[String(tile)] = true
+		var tile_values: Variant = (row as Dictionary).get("tiles", [])
+		if not tile_values is Array or (tile_values as Array).is_empty():
+			return false
+		var selected_tiles: Dictionary = {}
+		for tile: Variant in tile_values:
+			var tile_name := String(tile)
+			if not _part_paths_by_tile.has(tile_name):
+				return false
+			selected_tiles[tile_name] = true
 		var spawn: Variant = (row as Dictionary).get("spawn", [])
-		if spawn is Array and spawn.size() == 3:
-			_selected_spawn = Vector3(float(spawn[0]), float(spawn[1]), float(spawn[2]))
-		return
+		if not spawn is Array or (spawn as Array).size() != 3:
+			return false
+		_selected_region_id = requested_id
+		_selected_region_tiles = selected_tiles
+		_selected_spawn = Vector3(float(spawn[0]), float(spawn[1]), float(spawn[2]))
+		return true
+	return false
+
+func _restrict_to_selected_region() -> void:
+	var selected_records: Array[Dictionary] = []
+	var catalog_tiles: Dictionary = {}
+	for record: Dictionary in _tile_records:
+		var tile_name := String(record.get("name", ""))
+		if _selected_region_tiles.has(tile_name):
+			selected_records.append(record)
+			catalog_tiles[tile_name] = true
+	_tile_records = selected_records
+	for tile_name_variant: Variant in _part_paths_by_tile.keys():
+		var tile_name := String(tile_name_variant)
+		if tile_name != GROUND_FIX_TILE and not _selected_region_tiles.has(tile_name):
+			_part_paths_by_tile.erase(tile_name)
+	_manifest_ready = not _selected_region_tiles.is_empty() and not _tile_records.is_empty()
+	for tile_name: String in _selected_region_tiles.keys():
+		if not catalog_tiles.has(tile_name):
+			_manifest_ready = false
+			return
 
 func _read_json(path: String) -> Variant:
 	if not FileAccess.file_exists(path):
@@ -153,7 +187,7 @@ func _read_json(path: String) -> Variant:
 	return JSON.parse_string(file.get_as_text()) if file != null else null
 
 func _refresh_active_tiles() -> void:
-	if not _manifest_ready:
+	if not _manifest_ready or _selected_region_tiles.is_empty():
 		return
 	var world_root := get_parent()
 	if world_root == null:

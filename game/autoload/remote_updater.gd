@@ -14,6 +14,7 @@ const INSTALLED_MANIFEST_PATH := "user://updates/installed.json"
 const MAX_MANIFEST_BYTES := 256 * 1024
 const MAX_FILE_BYTES := 256 * 1024 * 1024
 const MAX_APK_BYTES := 512 * 1024 * 1024
+const SUPPORTED_MAP_REGIONS := ["industrial", "center"]
 
 var is_ready := false
 var update_succeeded := true
@@ -129,14 +130,19 @@ func _start_update_check() -> void:
 	_inspect_client_update(_manifest, manifest_url)
 
 	var packages: Array = _manifest.get("files", [])
-	var total := packages.size()
-	var index := 0
+	var installable_packages: Array[Dictionary] = []
 	for entry_variant: Variant in packages:
+		if not entry_variant is Dictionary:
+			continue
+		var entry := entry_variant as Dictionary
+		if str(entry.get("kind", "file")) == "pck" and not _is_runtime_content_package(entry):
+			continue
+		installable_packages.append(entry)
+	var total := installable_packages.size()
+	var index := 0
+	for entry_variant: Variant in installable_packages:
 		index += 1
 		var entry: Dictionary = entry_variant
-		# Pacotes regionais opcionais só baixam quando o jogador escolhe a região.
-		if _is_optional_map_package(entry):
-			continue
 		var relative_path := str(entry.get("path", ""))
 		var kind := str(entry.get("kind", "file"))
 		var destination := _cache_file_path(relative_path) if kind != "pck" else _cache_package_path(relative_path)
@@ -172,6 +178,9 @@ func map_region_size_text(region_id: String) -> String:
 	return _format_bytes(int(entry.get("size", 0)))
 
 func download_map_region(region_id: String) -> bool:
+	if not SUPPORTED_MAP_REGIONS.has(region_id):
+		_emit_status("A região solicitada não é uma opção de mapa válida", 1.0)
+		return false
 	if _map_download_in_progress:
 		return false
 	await wait_until_ready()
@@ -191,9 +200,8 @@ func download_map_region(region_id: String) -> bool:
 		var body: PackedByteArray = response.get("body", PackedByteArray())
 		if _body_matches_entry(body, entry):
 			success = _store_bytes(destination, body)
-	if success:
-		_load_cached_pack_entry(entry)
-		_emit_status("Mapa %s pronto" % region_id, 1.0)
+		if success:
+			_emit_status("Mapa %s baixado; será montado somente ao entrar" % region_id, 1.0)
 	else:
 		_emit_status("Não foi possível baixar o mapa %s" % region_id, 1.0)
 	_map_download_in_progress = false
@@ -204,6 +212,8 @@ func get_map_package_path(region_id: String) -> String:
 	return _cache_package_path(str(entry.get("path", ""))) if not entry.is_empty() else ""
 
 func _find_map_entry(region_id: String) -> Dictionary:
+	if not SUPPORTED_MAP_REGIONS.has(region_id):
+		return {}
 	var candidates: Array = []
 	candidates.append_array(_manifest.get("map_regions", []))
 	candidates.append_array(_manifest.get("files", []))
@@ -212,17 +222,14 @@ func _find_map_entry(region_id: String) -> Dictionary:
 			return entry_variant as Dictionary
 	return {}
 
-func _is_optional_map_package(entry: Dictionary) -> bool:
-	return str(entry.get("kind", "")) == "pck" and bool(entry.get("optional", false))
+func _is_runtime_content_package(entry: Dictionary) -> bool:
+	if str(entry.get("kind", "")) != "pck":
+		return false
+	return str(entry.get("path", "")).get_file().to_lower().begins_with("andre3d-runtime-online-")
 
 func _is_cached_map_region_valid(region_id: String) -> bool:
 	var entry := _find_map_entry(region_id)
 	return not entry.is_empty() and _is_cached_file_valid(_cache_package_path(str(entry.get("path", ""))), entry)
-
-func _load_cached_pack_entry(entry: Dictionary) -> void:
-	var package_path := _cache_package_path(str(entry.get("path", "")))
-	if FileAccess.file_exists(package_path) and not ProjectSettings.load_resource_pack(package_path, false):
-		push_warning("RemoteUpdater: pacote PCK não pôde ser carregado: " + package_path)
 
 func _inspect_client_update(manifest: Dictionary, manifest_url: String) -> void:
 	client_update_available = false
@@ -318,6 +325,10 @@ func _load_cached_packs(files: Array) -> void:
 	for entry_variant: Variant in files:
 		var entry: Dictionary = entry_variant
 		if str(entry.get("kind", "file")) != "pck":
+			continue
+		# PCKs de mapa (inclusive o pacote legado sem região) nunca são montados aqui.
+		# Somente o PCK de runtime, verificado como livre de tiles, carrega automaticamente.
+		if not _is_runtime_content_package(entry):
 			continue
 		var package_path := _cache_package_path(str(entry.get("path", "")))
 		if FileAccess.file_exists(package_path):

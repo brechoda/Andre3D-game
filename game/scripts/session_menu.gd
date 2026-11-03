@@ -335,15 +335,26 @@ func _select_character(character: String) -> void:
 func _select_map_region(index: int) -> void:
     var ids := ["industrial", "center"]
     if index >= 0 and index < ids.size():
-        selected_map_region = ids[index]
+        var requested_region: String = String(ids[index])
+        var active_region: String = ExternalContent.get_active_region_id()
+        if not active_region.is_empty() and active_region != requested_region:
+            selected_map_region = active_region
+            map_region_option.select(ids.find(active_region))
+            if mode_hint != null:
+                mode_hint.text = "O mapa %s já está carregado. Feche e reabra o jogo para trocar." % active_region.to_upper()
+            _map_content_ready = true
+            _sync_download_gate()
+            return
+        selected_map_region = requested_region
         if _remote_update_ready:
             call_deferred("_prepare_selected_map")
 
 func _prepare_selected_map() -> void:
     if _map_region_loading or not _remote_update_ready or RemoteUpdater.is_client_update_required():
         return
-    if ExternalContent.is_region_available(selected_map_region):
-        _map_content_ready = await ExternalContent.ensure_region(selected_map_region)
+    var requested_region: String = selected_map_region
+    if ExternalContent.is_region_available(requested_region):
+        _map_content_ready = true
         _sync_download_gate()
         return
     _map_region_loading = true
@@ -352,11 +363,15 @@ func _prepare_selected_map() -> void:
     if _download_overlay != null:
         _download_overlay.visible = true
     if mode_hint != null:
-        mode_hint.text = "Baixando mapa %s (%s)..." % [selected_map_region.to_upper(), RemoteUpdater.map_region_size_text(selected_map_region)]
-    var downloaded := await RemoteUpdater.download_map_region(selected_map_region)
-    if downloaded:
-        _map_content_ready = await ExternalContent.ensure_region(selected_map_region)
+        mode_hint.text = "Baixando mapa %s (%s)..." % [requested_region.to_upper(), RemoteUpdater.map_region_size_text(requested_region)]
+    var downloaded: bool = await RemoteUpdater.download_map_region(requested_region)
+    _map_content_ready = downloaded and ExternalContent.is_region_available(requested_region)
     _map_region_loading = false
+    if requested_region != selected_map_region:
+        _map_content_ready = ExternalContent.is_region_available(selected_map_region)
+        _sync_download_gate()
+        call_deferred("_prepare_selected_map")
+        return
     _sync_download_gate()
     if mode_hint != null and not _map_content_ready:
         mode_hint.text = "Não foi possível preparar o mapa selecionado. Tente novamente."
@@ -382,6 +397,10 @@ func _start_game() -> void:
             mode_hint.text = "Permita o acesso ao microfone para usar o chat de voz."
             start_button.disabled = false
             return
+    if not ExternalContent.ensure_region(selected_map_region):
+        mode_hint.text = ExternalContent.get_status_message()
+        start_button.disabled = false
+        return
     var file := FileAccess.open(SESSION_PATH, FileAccess.WRITE)
     if file != null:
         file.store_string(JSON.stringify({

@@ -123,6 +123,30 @@ class Gta3MapAssetTests(unittest.TestCase):
         self.assertIn("far = 3800.0", scene)
         self.assertNotIn('[node name="Ground" type="StaticBody3D" parent="."]', scene)
 
+    def test_only_the_selected_map_region_can_be_downloaded_mounted_or_streamed(self) -> None:
+        regions_manifest = json.loads((RUNTIME_ROOT / "map_regions.json").read_text(encoding="utf-8"))
+        regions = {region["id"]: set(region["tiles"]) for region in regions_manifest["regions"]}
+        self.assertEqual({"center", "industrial"}, set(regions))
+        self.assertTrue(regions["center"].isdisjoint(regions["industrial"]))
+        catalog_names = {tile["name"] for tile in self.catalog["tiles"]}
+        self.assertTrue(regions["center"] <= catalog_names)
+        self.assertTrue(regions["industrial"] <= catalog_names)
+
+        updater = (ROOT / "autoload/remote_updater.gd").read_text(encoding="utf-8")
+        external_content = (ROOT / "autoload/external_content.gd").read_text(encoding="utf-8")
+        streamer = (ROOT / "scripts/gta3_map_streamer.gd").read_text(encoding="utf-8")
+        menu = (ROOT / "scripts/session_menu.gd").read_text(encoding="utf-8")
+        self.assertIn("not _is_runtime_content_package(entry)", updater)
+        self.assertIn("func _is_runtime_content_package", updater)
+        self.assertIn("if not SUPPORTED_MAP_REGIONS.has(region_id):", updater)
+        self.assertNotIn('_mount_initial_map()', external_content)
+        self.assertIn("if not active_region_id.is_empty():", external_content)
+        self.assertIn("if _load_selected_region():", streamer)
+        self.assertIn("func _restrict_to_selected_region()", streamer)
+        self.assertIn("not _selected_region_tiles.has(tile_name)", streamer)
+        self.assertIn("RemoteUpdater.download_map_region(requested_region)", menu)
+        self.assertEqual(1, menu.count("ExternalContent.ensure_region(selected_map_region)"))
+
 
 if __name__ == "__main__":
     unittest.main()
