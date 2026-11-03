@@ -34,6 +34,7 @@ class RemoteUIConfigTests(unittest.TestCase):
         self.assertTrue(set(elements).issubset(supported))
         self.assertIn("menu.start_button", elements)
         self.assertIn("hud.gps", elements)
+        self.assertIn("hud.microphone", supported)
 
     def test_values_are_bounded_and_json_only(self):
         elements = self.config["elements"]

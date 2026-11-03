@@ -420,12 +420,6 @@ func _start_game() -> void:
         mode_hint.text = RemoteUpdater.get_online_block_message()
         return
     start_button.disabled = true
-    if selected_mode == "online":
-        var voice_permission_granted := await VoiceChat.request_microphone_permission()
-        if not voice_permission_granted:
-            mode_hint.text = "Permita o acesso ao microfone para usar o chat de voz."
-            start_button.disabled = false
-            return
     if not ExternalContent.ensure_region(selected_map_region):
         mode_hint.text = ExternalContent.get_status_message()
         start_button.disabled = false

@@ -46,9 +46,12 @@ func start() -> void:
         AudioServer.add_bus()
         capture_bus = AudioServer.bus_count - 1
         AudioServer.set_bus_name(capture_bus, "VoiceCapture")
-    capture_effect = AudioEffectCapture.new()
-    capture_effect.buffer_length = 0.25
-    AudioServer.add_bus_effect(capture_bus, capture_effect, 0)
+    if capture_effect == null:
+        capture_effect = AudioEffectCapture.new()
+        capture_effect.buffer_length = 0.25
+        AudioServer.add_bus_effect(capture_bus, capture_effect, 0)
+    else:
+        capture_effect.clear_buffer()
     AudioServer.set_bus_volume_db(capture_bus, -80.0)
     microphone_player = AudioStreamPlayer.new()
     microphone_player.stream = AudioStreamMicrophone.new()
@@ -57,12 +60,17 @@ func start() -> void:
     microphone_player.play()
     enabled = true
 
-func stop() -> void:
+func stop_microphone() -> void:
     enabled = false
     if microphone_player != null:
         microphone_player.stop()
         microphone_player.queue_free()
         microphone_player = null
+    if capture_effect != null:
+        capture_effect.clear_buffer()
+
+func stop() -> void:
+    stop_microphone()
     for player in remote_players.values():
         if is_instance_valid(player):
             player.queue_free()
@@ -73,18 +81,18 @@ func set_listener_position(position: Vector3) -> void:
     listener_position = position
 
 func _process(delta: float) -> void:
-    if not enabled or capture_effect == null:
-        return
-    elapsed += delta
-    if elapsed >= CAPTURE_INTERVAL:
-        elapsed = fmod(elapsed, CAPTURE_INTERVAL)
-        _capture_and_emit()
     var now := Time.get_ticks_msec() / 1000.0
     for remote_id in remote_last_frame.keys():
         if now - float(remote_last_frame[remote_id]) > REMOTE_TIMEOUT:
             var player: AudioStreamPlayer = remote_players.get(remote_id)
             if player != null:
                 player.volume_db = -80.0
+    if not enabled or capture_effect == null:
+        return
+    elapsed += delta
+    if elapsed >= CAPTURE_INTERVAL:
+        elapsed = fmod(elapsed, CAPTURE_INTERVAL)
+        _capture_and_emit()
 
 func _capture_and_emit() -> void:
     var available := capture_effect.get_frames_available()

@@ -53,6 +53,7 @@ var visual: Node3D
 @onready var action_button: Button = $"../HUD/Root/ActionButton"
 @onready var switch_button: Button = $"../HUD/Root/SwitchButton"
 @onready var follow_button: Button = $"../HUD/Root/FollowButton"
+@onready var microphone_button: Button = $"../HUD/Root/MicButton"
 @onready var gorece: GoreceNpc = $"../GoreceNPC"
 
 var _joystick_value := Vector2.ZERO
@@ -88,6 +89,7 @@ var _combo_strike_resolved := false
 var _active_character := 0 # 0 = Andre, 1 = GORECE, 2 = DG
 var _follow_enabled := false
 var _auto_mount_hilux_armed := false
+var _mic_toggle_in_progress := false
 var _follow_bike_target: Node3D
 var _follow_vehicle: Node3D
 var _online_mode := false
@@ -118,6 +120,9 @@ func _ready() -> void:
     action_button.button_up.connect(_on_action_button_up)
     switch_button.pressed.connect(_toggle_character)
     follow_button.pressed.connect(_toggle_follow)
+    microphone_button.toggle_mode = true
+    microphone_button.toggled.connect(_on_microphone_button_toggled)
+    _set_microphone_button_state(VoiceChat.enabled)
     _register_remote_hud_elements()
     camera.current = true
     camera.add_to_group("graphics_camera")
@@ -167,6 +172,7 @@ func _register_remote_hud_elements() -> void:
         "hud.jump": hud_root.get_node_or_null("JumpButton"),
         "hud.action": hud_root.get_node_or_null("ActionButton"),
         "hud.switch": hud_root.get_node_or_null("SwitchButton"),
+        "hud.microphone": hud_root.get_node_or_null("MicButton"),
         "hud.ride": hud_root.get_node_or_null("RideButton"),
         "hud.follow": hud_root.get_node_or_null("FollowButton"),
         "hud.gps": hud_root.get_node_or_null("GPSAutopilot"),
@@ -322,6 +328,7 @@ func _apply_session_settings() -> void:
         online_client.enabled = true
     follow_button.visible = not _online_mode
     switch_button.visible = not _online_mode
+    microphone_button.visible = _online_mode
     _follow_enabled = false
     if _online_mode:
         gorece.set_follow_target(null)
@@ -1312,6 +1319,33 @@ func _update_coordinates_label() -> void:
         return
     var tracked_position := gorece.global_position if _active_character == 1 else global_position
     coordinates_label.text = "COORDENADAS\nX: %8.3f\nY: %8.3f\nZ: %8.3f" % [tracked_position.x, tracked_position.y, tracked_position.z]
+
+func _on_microphone_button_toggled(enable_microphone: bool) -> void:
+    if _mic_toggle_in_progress:
+        return
+    if not enable_microphone:
+        VoiceChat.stop_microphone()
+        _set_microphone_button_state(false)
+        return
+    _mic_toggle_in_progress = true
+    microphone_button.disabled = true
+    microphone_button.text = "PEDINDO PERMISSÃO..."
+    await VoiceChat.start()
+    _mic_toggle_in_progress = false
+    microphone_button.disabled = false
+    var microphone_active := VoiceChat.enabled
+    _set_microphone_button_state(microphone_active)
+    if not microphone_active:
+        microphone_button.text = "MICROFONE: NEGADO"
+        microphone_button.tooltip_text = "Conceda a permissão do microfone para usar o chat de voz."
+
+func _set_microphone_button_state(microphone_active: bool) -> void:
+    if microphone_button == null:
+        return
+    if microphone_button.button_pressed != microphone_active:
+        microphone_button.set_pressed_no_signal(microphone_active)
+    microphone_button.text = "MICROFONE: LIGADO" if microphone_active else "MICROFONE: DESLIGADO"
+    microphone_button.tooltip_text = ""
 
 func _on_run_button_toggled(enabled: bool) -> void:
     _set_run_button_state(enabled)

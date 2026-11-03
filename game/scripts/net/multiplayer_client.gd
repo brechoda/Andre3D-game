@@ -62,8 +62,12 @@ func _ready() -> void:
     _status_label = _create_status_label()
     if not VoiceChat.voice_frame.is_connected(_on_voice_frame):
         VoiceChat.voice_frame.connect(_on_voice_frame)
-    VoiceChat.start()
     call_deferred("_connect_to_server")
+
+func _exit_tree() -> void:
+    if VoiceChat.voice_frame.is_connected(_on_voice_frame):
+        VoiceChat.voice_frame.disconnect(_on_voice_frame)
+    VoiceChat.stop()
 
 func _process(delta: float) -> void:
     if not enabled:
