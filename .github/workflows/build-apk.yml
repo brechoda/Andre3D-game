@@ -45,9 +45,7 @@ jobs:
             -storepass android -alias androiddebugkey -keypass android \
             -keyalg RSA -keysize 2048 -validity 10000 \
             -dname 'CN=Android Debug,O=Android,C=US'
-          # Copia tambem para o caminho default que o Godot procura
-          mkdir -p "$HOME/.android"
-          cp "$KEYSTORE" "$HOME/.android/debug.keystore"
+          printf 'KEYSTORE_PATH=%s\n' "$KEYSTORE" >> "$GITHUB_ENV"
           mkdir -p "$HOME/.config/godot"
           printf '%s\n' \
             '[gd_resource type="EditorSettings" format=3]' \
@@ -55,11 +53,8 @@ jobs:
             '[resource]' \
             "export/android/android_sdk_path = \"$ANDROID_HOME\"" \
             "export/android/java_sdk_path = \"$JAVA_HOME\"" \
-            "export/android/debug_keystore = \"$KEYSTORE\"" \
-            'export/android/debug_keystore_user = "androiddebugkey"' \
-            'export/android/debug_keystore_pass = "android"' \
             > "$HOME/.config/godot/editor_settings-4.7.tres"
-          ls -la "$KEYSTORE" "$HOME/.android/debug.keystore"
+          keytool -list -keystore "$KEYSTORE" -storepass android -alias androiddebugkey >/dev/null
 
       - name: Install Godot Android build template into project
         working-directory: game
@@ -76,28 +71,25 @@ jobs:
       - name: Export APK
         working-directory: game
         run: |
-          KEYSTORE="$HOME/.local/share/godot/keystores/debug.keystore"
-          # Corrige caminhos hardcoded de keystore no export_presets.cfg
-          sed -i "s|keystore/debug=.*|keystore/debug=\"$KEYSTORE\"|" export_presets.cfg
+          sed -i "s|keystore/debug=.*|keystore/debug=\"$KEYSTORE_PATH\"|" export_presets.cfg
           sed -i 's|keystore/debug_user=.*|keystore/debug_user="androiddebugkey"|' export_presets.cfg
           sed -i 's|keystore/debug_password=.*|keystore/debug_password="android"|' export_presets.cfg
-          sed -i "s|keystore/release=.*|keystore/release=\"$KEYSTORE\"|" export_presets.cfg
+          sed -i "s|keystore/release=.*|keystore/release=\"$KEYSTORE_PATH\"|" export_presets.cfg
           sed -i 's|keystore/release_user=.*|keystore/release_user="androiddebugkey"|' export_presets.cfg
           sed -i 's|keystore/release_password=.*|keystore/release_password="android"|' export_presets.cfg
-          grep keystore export_presets.cfg || true
           mkdir -p dist
-          godot --headless --path . --export-debug "Android" dist/Andre3D-2.2.5-debug.apk
+          godot --headless --path . --export-debug "Android" dist/Andre3D-2.2.6-debug.apk
 
       - name: Verify APK
         working-directory: game
         run: |
-          test -s dist/Andre3D-2.2.5-debug.apk
-          sha256sum dist/Andre3D-2.2.5-debug.apk
-          ls -lh dist/Andre3D-2.2.5-debug.apk
+          test -s dist/Andre3D-2.2.6-debug.apk
+          sha256sum dist/Andre3D-2.2.6-debug.apk
+          ls -lh dist/Andre3D-2.2.6-debug.apk
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Andre3D-2.2.5-debug
-          path: game/dist/Andre3D-2.2.5-debug.apk
+          name: Andre3D-2.2.6-debug
+          path: game/dist/Andre3D-2.2.6-debug.apk
           if-no-files-found: error

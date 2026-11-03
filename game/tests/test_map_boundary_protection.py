@@ -61,6 +61,11 @@ class MapBoundaryProtectionTests(unittest.TestCase):
             source = (GAME_ROOT / "scripts" / script_name).read_text(encoding="utf-8")
             self.assertIn('call("guard_body_from_void", self)', source)
 
+    def test_regional_spawns_are_converted_from_map_coordinates_to_world(self) -> None:
+        self.assertIn("func _map_coordinate_to_world(raw_position: Array) -> Vector3", self.streamer)
+        self.assertIn("Vector3(float(raw_position[0]), float(raw_position[2]), float(raw_position[1]))", self.streamer)
+        self.assertIn("_selected_spawn = _map_coordinate_to_world(spawn)", self.streamer)
+
 
 if __name__ == "__main__":
     unittest.main()

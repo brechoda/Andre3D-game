@@ -126,8 +126,8 @@ class Gta3MapAssetTests(unittest.TestCase):
     def test_region_spawn_points_include_player_npc_and_grounded_vehicles(self) -> None:
         regions_manifest = json.loads((RUNTIME_ROOT / "map_regions.json").read_text(encoding="utf-8"))
         regions = {region["id"]: region for region in regions_manifest["regions"]}
-        self.assertEqual([13.9, 80.0, 497.0], regions["center"]["spawn"])
-        self.assertEqual([18.9, 80.0, 497.0], regions["center"]["gorece_spawn"])
+        self.assertEqual([150.0, 19.9448, 50.0], regions["center"]["spawn"])
+        self.assertEqual([150.0, 19.9448, 0.0], regions["center"]["gorece_spawn"])
         self.assertEqual({"pop100_01", "wayfarer_01", "hilux_01", "fiatuno_01"}, set(regions["center"]["vehicle_spawns"]))
         for region in regions.values():
             self.assertEqual({"pop100_01", "wayfarer_01", "hilux_01", "fiatuno_01"}, set(region["vehicle_spawns"]))

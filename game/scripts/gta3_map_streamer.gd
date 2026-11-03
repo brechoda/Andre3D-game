@@ -181,11 +181,23 @@ func _load_selected_region() -> bool:
 						vehicle_spawns[String(vehicle_id)] = Vector3(float(vehicle_spawn[0]), float(vehicle_spawn[1]), float(vehicle_spawn[2]))
 			_selected_region_id = requested_id
 			_selected_region_tiles = selected_tiles
-			_selected_spawn = Vector3(float(spawn[0]), float(spawn[1]), float(spawn[2]))
-			_selected_gorece_spawn = Vector3(float(gorece_spawn[0]), float(gorece_spawn[1]), float(gorece_spawn[2]))
+			_selected_spawn = _map_coordinate_to_world(spawn)
+			_selected_gorece_spawn = _map_coordinate_to_world(gorece_spawn)
 			_selected_vehicle_spawns = vehicle_spawns
+			for vehicle_id: String in _selected_vehicle_spawns.keys():
+				var vehicle_map_position: Vector3 = _selected_vehicle_spawns[vehicle_id]
+				_selected_vehicle_spawns[vehicle_id] = _map_coordinate_to_world([
+					vehicle_map_position.x,
+					vehicle_map_position.y,
+					vehicle_map_position.z,
+				])
 			return true
 	return false
+
+func _map_coordinate_to_world(raw_position: Array) -> Vector3:
+	# O catálogo/manifesto usa [X, altura, Y], enquanto os OBJ usam [X, Y, Z].
+	# O MapStreamer aplica a transformação de coordenadas do mapa à cena.
+	return to_global(Vector3(float(raw_position[0]), float(raw_position[2]), float(raw_position[1])))
 
 func _restrict_to_selected_region() -> void:
 	var selected_records: Array[Dictionary] = []

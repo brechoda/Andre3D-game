@@ -94,7 +94,10 @@ func _run() -> void:
 			if not raw_position is Array or (raw_position as Array).size() != 3:
 				_fail("Invalid %s spawn in %s" % [String((point as Dictionary).get("id", "")), String((region as Dictionary).get("id", ""))])
 				return
-			var position := Vector3(float(raw_position[0]), float(raw_position[1]), float(raw_position[2]))
+			# O manifesto usa [X, altura, Y]; os meshes usam [X, Y, Z].
+			# Converter para o espaço global depois da transformação do MapStreamer.
+			var map_position := Vector3(float(raw_position[0]), float(raw_position[2]), float(raw_position[1]))
+			var position := map_root.to_global(map_position)
 			var query := PhysicsRayQueryParameters3D.create(position + Vector3.UP * 2.0, position - Vector3.UP * 250.0, 1)
 			query.hit_back_faces = true
 			var hit: Dictionary = world.get_world_3d().direct_space_state.intersect_ray(query)
