@@ -87,6 +87,54 @@
           -600.0
         ]
       }
+    },
+    {
+      "id": "costa_vista",
+      "name": "COSTA VISTA",
+      "description": "Área costeira ensolarada com ruas, quiosques e palmeiras",
+      "builtin": true,
+      "bounds_min": [
+        -104.0,
+        -5.0,
+        -104.0
+      ],
+      "bounds_max": [
+        104.0,
+        45.0,
+        104.0
+      ],
+      "spawn": [
+        0.0,
+        1.2,
+        0.0
+      ],
+      "gorece_spawn": [
+        5.0,
+        1.2,
+        4.0
+      ],
+      "vehicle_spawns": {
+        "pop100_01": [
+          6.0,
+          1.2,
+          4.0
+        ],
+        "wayfarer_01": [
+          -6.0,
+          1.2,
+          4.0
+        ],
+        "hilux_01": [
+          6.0,
+          1.2,
+          -4.0
+        ],
+        "fiatuno_01": [
+          -6.0,
+          1.2,
+          -4.0
+        ]
+      }
     }
   ]
 }

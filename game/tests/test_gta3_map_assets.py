@@ -145,9 +145,13 @@ class Gta3MapAssetTests(unittest.TestCase):
 
     def test_only_the_selected_map_region_can_be_downloaded_mounted_or_streamed(self) -> None:
         regions_manifest = json.loads((RUNTIME_ROOT / "map_regions.json").read_text(encoding="utf-8"))
-        regions = {region["id"]: set(region["tiles"]) for region in regions_manifest["regions"]}
-        self.assertEqual({"center", "industrial"}, set(regions))
+        regions = {region["id"]: set(region.get("tiles", [])) for region in regions_manifest["regions"]}
+        self.assertEqual({"center", "industrial", "costa_vista"}, set(regions))
         self.assertTrue(regions["center"].isdisjoint(regions["industrial"]))
+        costa = next(region for region in regions_manifest["regions"] if region["id"] == "costa_vista")
+        self.assertTrue(costa["builtin"])
+        self.assertEqual([], costa.get("tiles", []))
+        self.assertTrue((ROOT / "scripts/costa_vista_builder.gd").exists())
         catalog_names = {tile["name"] for tile in self.catalog["tiles"]}
         self.assertTrue(regions["center"] <= catalog_names)
         self.assertTrue(regions["industrial"] <= catalog_names)

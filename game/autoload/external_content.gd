@@ -3,7 +3,8 @@ extends Node
 
 signal status_changed(message: String)
 
-const SUPPORTED_REGION_IDS := ["industrial", "center"]
+const SUPPORTED_REGION_IDS := ["industrial", "center", "costa_vista"]
+const BUILTIN_REGION_IDS := ["costa_vista"]
 
 var map_ready := false
 var map_pack_path := ""
@@ -27,6 +28,12 @@ func ensure_region(region_id: String) -> bool:
 		status_message = "O mapa %s já foi carregado. Feche e reabra o jogo para escolher outro." % active_region_id.to_upper()
 		status_changed.emit(status_message)
 		return false
+	if BUILTIN_REGION_IDS.has(region_id):
+		active_region_id = region_id
+		map_ready = true
+		status_message = "Mapa %s pronto." % region_id.to_upper()
+		status_changed.emit(status_message)
+		return true
 	var package_path: String = RemoteUpdater.get_map_package_path(region_id)
 	if package_path.is_empty() or not FileAccess.file_exists(package_path):
 		status_message = "O mapa %s ainda não foi baixado." % region_id.to_upper()
@@ -51,6 +58,8 @@ func is_map_available() -> bool:
 func is_region_available(region_id: String) -> bool:
 	if not SUPPORTED_REGION_IDS.has(region_id):
 		return false
+	if BUILTIN_REGION_IDS.has(region_id):
+		return true
 	return active_region_id == region_id or RemoteUpdater.has_map_region(region_id)
 
 func get_active_region_id() -> String:

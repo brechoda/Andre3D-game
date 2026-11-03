@@ -20,8 +20,9 @@ const GROUND_FIX_COLLISION := "res://assets/maps/liberty_city/collisions/ground_
 const OVERVIEW_TILE := "maps/overview"
 const INITIAL_SPAWN_TILE := "comntop/comntop"
 const SESSION_PATH := "user://andre3d_session.json"
-const SUPPORTED_REGION_IDS := ["industrial", "center"]
+const SUPPORTED_REGION_IDS := ["industrial", "center", "costa_vista"]
 const MAP_BOUNDARY_SCRIPT := preload("res://scripts/map_boundary_mountains.gd")
+const COSTA_VISTA_BUILDER := preload("res://scripts/costa_vista_builder.gd")
 
 var _tile_records: Array[Dictionary] = []
 var _part_paths_by_tile: Dictionary = {}
@@ -47,20 +48,41 @@ var _collision_failed_tiles: Dictionary = {}
 func _ready() -> void:
 	add_to_group("graphics_map")
 	GraphicsSettings.apply()
-	_load_parts_manifest()
-	if _load_selected_region():
-		_restrict_to_selected_region()
-		if _manifest_ready:
-			if _compute_selected_region_bounds():
-				_create_region_invisible_boundary()
-			else:
-				_manifest_ready = false
-				push_error("Selected map region has no usable spatial bounds")
+	var requested_region := _requested_session_region()
+	if requested_region == "costa_vista":
+		if _load_selected_region():
+			_build_costa_vista_map()
+			# A barreira usa X/Y no plano local e Z como altura, enquanto o
+			# construtor Costa Vista usa X/Z no chão e Y como altura.
+			_region_bounds_min = Vector3(-104.0, -104.0, -5.0)
+			_region_bounds_max = Vector3(104.0, 104.0, 45.0)
+			_manifest_ready = true
+			_create_region_invisible_boundary()
 	else:
-		_manifest_ready = false
+		_load_parts_manifest()
+		if _load_selected_region():
+			_restrict_to_selected_region()
+			if _manifest_ready:
+				if _compute_selected_region_bounds():
+					_create_region_invisible_boundary()
+				else:
+					_manifest_ready = false
+					push_error("Selected map region has no usable spatial bounds")
+	if requested_region == "costa_vista" and not _manifest_ready:
+		push_error("Costa Vista could not be initialized")
+	if requested_region != "costa_vista" and not _manifest_ready:
+		push_error("Selected map region could not be initialized")
 	if _manifest_ready:
-		_refresh_active_tiles()
+		if _selected_region_id != "costa_vista":
+			_refresh_active_tiles()
 	set_process(true)
+
+func _requested_session_region() -> String:
+	var session: Variant = _read_json(SESSION_PATH)
+	return String((session as Dictionary).get("map_region", "")) if session is Dictionary else ""
+
+func _build_costa_vista_map() -> void:
+	COSTA_VISTA_BUILDER.build(self)
 
 func apply_graphics_settings(distance_level: int, texture_quality_level: int) -> void:
 	_ultra_low_mode = distance_level == 0
@@ -71,6 +93,8 @@ func apply_graphics_settings(distance_level: int, texture_quality_level: int) ->
 	_refresh_active_tiles()
 
 func _process(delta: float) -> void:
+	if _selected_region_id == "costa_vista":
+		return
 	_process_pending_meshes()
 	_refresh_elapsed += delta
 	if _refresh_elapsed >= refresh_interval:
@@ -157,7 +181,25 @@ func _load_selected_region() -> bool:
 	for row: Variant in regions:
 		if not row is Dictionary or String((row as Dictionary).get("id", "")) != requested_id:
 			continue
+		var builtin := bool((row as Dictionary).get("builtin", false))
 		var tile_values: Variant = (row as Dictionary).get("tiles", [])
+		if builtin and requested_id == "costa_vista":
+			var spawn: Variant = (row as Dictionary).get("spawn", [])
+			if not spawn is Array or (spawn as Array).size() != 3:
+				return false
+			var gorece_spawn: Variant = (row as Dictionary).get("gorece_spawn", spawn)
+			_selected_region_id = requested_id
+			_selected_region_tiles = {}
+			_selected_spawn = _builtin_coordinate_to_world(spawn)
+			_selected_gorece_spawn = _builtin_coordinate_to_world(gorece_spawn)
+			_selected_vehicle_spawns = {}
+			var vehicle_data: Variant = (row as Dictionary).get("vehicle_spawns", {})
+			if vehicle_data is Dictionary:
+				for vehicle_id: Variant in (vehicle_data as Dictionary).keys():
+					var vehicle_spawn: Variant = (vehicle_data as Dictionary)[vehicle_id]
+					if vehicle_spawn is Array and (vehicle_spawn as Array).size() == 3:
+						_selected_vehicle_spawns[String(vehicle_id)] = _builtin_coordinate_to_world(vehicle_spawn)
+			return true
 		if not tile_values is Array or (tile_values as Array).is_empty():
 			return false
 		var selected_tiles: Dictionary = {}
@@ -198,6 +240,9 @@ func _map_coordinate_to_world(raw_position: Array) -> Vector3:
 	# O catálogo/manifesto usa [X, altura, Y], enquanto os OBJ usam [X, Y, Z].
 	# O MapStreamer aplica a transformação de coordenadas do mapa à cena.
 	return to_global(Vector3(float(raw_position[0]), float(raw_position[2]), float(raw_position[1])))
+
+func _builtin_coordinate_to_world(raw_position: Array) -> Vector3:
+	return to_global(Vector3(float(raw_position[0]), float(raw_position[1]), float(raw_position[2])))
 
 func _restrict_to_selected_region() -> void:
 	var selected_records: Array[Dictionary] = []
@@ -488,6 +533,8 @@ func get_catalog_tile_count() -> int:
 	return _tile_records.size()
 
 func is_start_area_loaded() -> bool:
+	if _selected_region_id == "costa_vista":
+		return _manifest_ready and get_node_or_null("CostaVistaCity") != null
 	for tile_name: String in _selected_region_tiles.keys():
 		if not _loaded_tiles.has(tile_name) or not is_collision_tile_loaded(tile_name):
 			continue

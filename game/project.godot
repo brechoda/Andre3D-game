@@ -21,7 +21,7 @@ boot_splash/bg_color=Color(0.07843, 0.10196, 0.11765, 1)
 
 config/name="O Grande Roubo de Motos"
 config/description="Jogo Android de ação em terceira pessoa, com personagens, veículos e mapa inspirado em Liberty City."
-config/version="2.2.6"
+config/version="2.2.7"
 run/main_scene="res://scenes/session_menu.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://assets/template/characters/runner.png"
