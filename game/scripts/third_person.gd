@@ -53,6 +53,9 @@ var visual: Node3D
 @onready var action_button: Button = $"../HUD/Root/ActionButton"
 @onready var switch_button: Button = $"../HUD/Root/SwitchButton"
 @onready var follow_button: Button = $"../HUD/Root/FollowButton"
+@onready var pull_vehicle_button: Button = $"../HUD/Root/PullVehicleButton"
+var _pull_vehicle_popup: PopupMenu
+var _pull_vehicle_feedback_timer: Timer
 @onready var microphone_button: Button = $"../HUD/Root/MicButton"
 @onready var gorece: GoreceNpc = $"../GoreceNPC"
 
@@ -120,6 +123,20 @@ func _ready() -> void:
     action_button.button_up.connect(_on_action_button_up)
     switch_button.pressed.connect(_toggle_character)
     follow_button.pressed.connect(_toggle_follow)
+    pull_vehicle_button.pressed.connect(_show_pull_vehicle_menu)
+    _pull_vehicle_feedback_timer = Timer.new()
+    _pull_vehicle_feedback_timer.one_shot = true
+    _pull_vehicle_feedback_timer.wait_time = 1.6
+    _pull_vehicle_feedback_timer.timeout.connect(_reset_pull_vehicle_button_text)
+    add_child(_pull_vehicle_feedback_timer)
+    _pull_vehicle_popup = PopupMenu.new()
+    _pull_vehicle_popup.name = "PullVehiclePopup"
+    $"../HUD/Root".add_child(_pull_vehicle_popup)
+    _pull_vehicle_popup.add_item("Pop 100e", 0)
+    _pull_vehicle_popup.add_item("Wayfarer R1200", 1)
+    _pull_vehicle_popup.add_item("Hilux SRX 2017", 2)
+    _pull_vehicle_popup.add_item("Fiat Uno", 3)
+    _pull_vehicle_popup.id_pressed.connect(_on_pull_vehicle_selected)
     microphone_button.toggle_mode = true
     microphone_button.toggled.connect(_on_microphone_button_toggled)
     _set_microphone_button_state(VoiceChat.enabled)
@@ -175,6 +192,7 @@ func _register_remote_hud_elements() -> void:
         "hud.microphone": hud_root.get_node_or_null("MicButton"),
         "hud.ride": hud_root.get_node_or_null("RideButton"),
         "hud.follow": hud_root.get_node_or_null("FollowButton"),
+        "hud.pull_vehicle": hud_root.get_node_or_null("PullVehicleButton"),
         "hud.gps": hud_root.get_node_or_null("GPSAutopilot"),
     }
     for element_id: String in elements:
@@ -860,6 +878,49 @@ func _toggle_follow() -> void:
         _follow_bike_target = null
     _sync_follow_target()
     _update_follow_button()
+
+func _show_pull_vehicle_menu() -> void:
+    if _pull_vehicle_popup != null:
+        _pull_vehicle_popup.position = Vector2i(int(pull_vehicle_button.global_position.x), int(pull_vehicle_button.global_position.y + pull_vehicle_button.size.y))
+        _pull_vehicle_popup.popup()
+func _on_pull_vehicle_selected(index: int) -> void:
+    var ids := ["pop100_01", "wayfarer_01", "hilux_01", "fiatuno_01"]
+    if index < 0 or index >= ids.size():
+        return
+    var vehicle_id: String = ids[index]
+    var vehicle := _find_spawn_vehicle(vehicle_id)
+    if vehicle == null:
+        show_pull_vehicle_feedback("VEÍCULO INDISPONÍVEL")
+        return
+    if vehicle.has_method("is_riding") and bool(vehicle.call("is_riding")):
+        show_pull_vehicle_feedback("VEÍCULO EM USO")
+        return
+    var mp := get_parent().get_node_or_null("OnlineMultiplayer")
+    if mp != null and mp.has_method("is_connected_to_server") and bool(mp.call("is_connected_to_server")):
+        mp.call("request_vehicle_pull", vehicle_id)
+        pull_vehicle_button.text = "SOLICITADO..."
+    else:
+        _pull_vehicle_locally(vehicle, vehicle_id)
+func _pull_vehicle_locally(vehicle: Node, vehicle_id: String) -> void:
+    var player_position: Vector3 = gorece.global_position if _active_character == 1 else global_position
+    var player_yaw := gorece.global_rotation.y if _active_character == 1 else (visual.global_rotation.y if visual != null else global_rotation.y)
+    var forward := Vector3(-sin(player_yaw), 0.0, -cos(player_yaw))
+    var target := player_position + forward * 4.8
+    if vehicle.has_method("pull_near_player") and bool(vehicle.call("pull_near_player", target, player_yaw)):
+        show_pull_vehicle_feedback("VEÍCULO PUXADO")
+    else:
+        show_pull_vehicle_feedback("NÃO FOI POSSÍVEL")
+
+func show_pull_vehicle_feedback(message: String) -> void:
+    if not is_instance_valid(pull_vehicle_button):
+        return
+    pull_vehicle_button.text = message
+    if _pull_vehicle_feedback_timer != null:
+        _pull_vehicle_feedback_timer.start()
+
+func _reset_pull_vehicle_button_text() -> void:
+    if is_instance_valid(pull_vehicle_button):
+        pull_vehicle_button.text = "PUXAR VEÍCULO"
 
 func _update_follow_button() -> void:
     if follow_button == null:

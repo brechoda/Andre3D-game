@@ -21,7 +21,7 @@ const WALK_TO_DOOR_SPEED := 3.0
 const SLIDE_IN_SECONDS := 0.9
 const DOOR_SECONDS := 0.42
 const DOOR_OPEN_ANGLE := deg_to_rad(-58.0)
-const HIDDEN_WHILE_DRIVING := ["TouchJoystick", "GasButton", "BrakeButton", "SteerLeftButton", "SteerRightButton", "RunButton", "CrouchButton", "JumpButton", "ActionButton", "SwitchButton"]
+const HIDDEN_WHILE_DRIVING := ["TouchJoystick", "GasButton", "BrakeButton", "SteerLeftButton", "SteerRightButton", "RunButton", "CrouchButton", "JumpButton", "ActionButton", "SwitchButton", "PullVehicleButton"]
 
 @export var vehicle_display_name := "HILUX SRX 2017"
 @export var network_vehicle_id := "hilux_01"
@@ -140,6 +140,18 @@ func _update_engine_audio() -> void:
         _network_audio_mode = "off"
         _apply_engine_audio_mode("off")
 
+func pull_near_player(position: Vector3, yaw: float) -> bool:
+    if _riding or _mounting or _dismounting:
+        return false
+    _speed = 0.0
+    _steering = 0.0
+    _autopilot_active = false
+    _autopilot_input = Vector2.ZERO
+    global_position = position
+    global_rotation = Vector3(0.0, yaw, 0.0)
+    _ground_y = position.y + _wheel_ground_offset
+    _apply_map_ground_support()
+    return true
 func _apply_map_ground_support() -> void:
     var streamer := get_node_or_null("../MapStreamer")
     if streamer == null or not streamer.has_method("sample_ground_height"):

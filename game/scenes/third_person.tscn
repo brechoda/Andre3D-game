@@ -505,3 +505,21 @@ theme_override_styles/hover = SubResource("RunHoverStyle")
 theme_override_styles/pressed = SubResource("RunPressedStyle")
 text = "SEGUIR"
 focus_mode = 0
+
+[node name="PullVehicleButton" type="Button" parent="HUD/Root"]
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -250.0
+offset_top = 222.0
+offset_right = -30.0
+offset_bottom = 294.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(0.84, 1, 0.96, 1)
+theme_override_fonts/font = ExtResource("4_font")
+theme_override_font_sizes/font_size = 17
+theme_override_styles/normal = SubResource("RunNormalStyle")
+theme_override_styles/hover = SubResource("RunHoverStyle")
+theme_override_styles/pressed = SubResource("RunPressedStyle")
+text = "PUXAR VEÍCULO"
+focus_mode = 0

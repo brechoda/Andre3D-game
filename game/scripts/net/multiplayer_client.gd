@@ -29,6 +29,7 @@ var _jump_sequence := 0
 var _status_text := ""
 var _remotes: Dictionary = {}
 var _vehicle_claim_results: Dictionary = {}
+var _vehicle_pull_results: Dictionary = {}
 var _status_label: Label
 var _fps_label: Label
 var _coordinates_label: Label
@@ -255,6 +256,16 @@ func _local_vehicle_state() -> Dictionary:
         }
     return {"vehicle": "on_foot", "vehicle_id": "", "riding": false}
 
+func is_connected_to_server() -> bool:
+    return enabled and socket.get_ready_state() == WebSocketPeer.STATE_OPEN
+func request_vehicle_pull(vehicle_id: String) -> bool:
+    if not is_connected_to_server() or vehicle_id.is_empty():
+        _set_status("Multiplayer: não foi possível solicitar o veículo")
+        return false
+    _vehicle_pull_results[vehicle_id] = null
+    _send({"type": "vehicle_pull", "vehicle_id": vehicle_id})
+    _set_status("Solicitação para puxar veículo enviada")
+    return true
 func request_vehicle_claim(vehicle_id: String) -> bool:
     if not enabled:
         return true
@@ -335,6 +346,12 @@ func find_remote_target(attacker: Node3D) -> String:
         best_id = String(remote_id)
     return best_id
 
+func _find_vehicle_by_id(vehicle_id: String) -> Node:
+    if vehicle_id.is_empty(): return null
+    for child in get_parent().get_children():
+        if String(child.get("network_vehicle_id")) == vehicle_id:
+            return child
+    return null
 func _handle_message(text: String) -> void:
     var message = JSON.parse_string(text)
     if typeof(message) != TYPE_DICTIONARY:
@@ -368,6 +385,22 @@ func _handle_message(text: String) -> void:
             var remote: Node = _remotes.get(remote_id)
             if remote != null and remote.has_method("play_jump_animation"):
                 remote.call("play_jump_animation", int(message.get("seq", 0)))
+        "vehicle_pull_result":
+            var pull_id := String(message.get("vehicle_id", ""))
+            if not pull_id.is_empty(): _vehicle_pull_results[pull_id] = message
+            var pull_granted := _as_bool(message.get("granted", message.get("success", false)))
+            _set_status("Veículo puxado" if pull_granted else "Não foi possível puxar o veículo")
+            var player_controller := get_parent().get_node_or_null("Player")
+            if player_controller != null and player_controller.has_method("show_pull_vehicle_feedback"):
+                player_controller.call("show_pull_vehicle_feedback", "VEÍCULO PUXADO" if pull_granted else "VEÍCULO OCUPADO")
+        "vehicle_pulled":
+            var pulled_id := String(message.get("vehicle_id", ""))
+            var pulled_node := _find_vehicle_by_id(pulled_id)
+            if pulled_node != null:
+                var target := Vector3(float(message.get("x", 0.0)), float(message.get("y", 0.0)), float(message.get("z", 0.0)))
+                var yaw := float(message.get("ry", 0.0))
+                if pulled_node.has_method("pull_near_player"):
+                    pulled_node.call("pull_near_player", target, yaw)
         "vehicle_claim_result":
             var vehicle_id := String(message.get("vehicle_id", ""))
             if not vehicle_id.is_empty():

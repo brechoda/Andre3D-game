@@ -54,7 +54,7 @@ const MOUNT_INTERACTION_DISTANCE := 2.8
 var MAX_LEAN := 0.38   # ~22°
 var LEAN_SPEED := 6.5
 # Botões da tela que somem ao pilotar (o de pilotar/descer e os de ACELERAR/FREAR ficam).
-const HIDDEN_WHILE_RIDING := ["RunButton", "CrouchButton", "JumpButton", "ActionButton", "SwitchButton", "RideButton"]
+const HIDDEN_WHILE_RIDING := ["RunButton", "CrouchButton", "JumpButton", "ActionButton", "SwitchButton", "RideButton", "PullVehicleButton"]
 const DRIVE_BUTTON_SIDE := 120.0
 # Câmera da moto: posição base atrás da moto (0, 2.25, 5.5), que pode ser girada pelo jogador.
 const CAM_BASE_OFFSET := Vector3(0.0, 2.25, 5.5)
@@ -397,6 +397,21 @@ func _align_wheels_to_ground() -> void:
     _ground_local_y = front_bottom
     global_position.y = ground_y - front_bottom
 
+func pull_near_player(position: Vector3, yaw: float) -> bool:
+    if _riding or _mounting or _dismounting:
+        return false
+    _speed = 0.0
+    _steering_input = 0.0
+    _lean = 0.0
+    _wheelie = 0.0
+    _autopilot_active = false
+    _ai_driving = false
+    _autopilot_input = Vector2.ZERO
+    global_position = position
+    global_rotation = Vector3(0.0, yaw, 0.0)
+    ground_y = position.y + _ground_local_y
+    _apply_map_ground_support()
+    return true
 func _apply_map_ground_support() -> void:
     var streamer := get_node_or_null("../MapStreamer")
     if streamer == null or not streamer.has_method("sample_ground_height"):

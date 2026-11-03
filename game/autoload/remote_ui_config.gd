@@ -14,10 +14,10 @@ const ELEMENT_IDS := [
 	"menu.start_button", "menu.footer", "menu.download_progress", "menu.download_percent",
 	"menu.loading_title", "menu.loading_status", "menu.loading_progress", "menu.loading_percent",
 	"menu.graphics.panel", "menu.graphics.title", "menu.graphics.info", "menu.graphics.auto",
-	"hud.root", "hud.vehicle_panel", "hud.coordinates", "hud.camera_hint",
-        "hud.touch_joystick", "hud.touch_label", "hud.run", "hud.crouch", "hud.jump",
-        "hud.action", "hud.switch", "hud.microphone", "hud.ride", "hud.follow", "hud.gps",
-	"hud.gps.autopilot", "hud.gps.status", "hud.moto.accelerate", "hud.moto.brake",
+		"hud.root", "hud.vehicle_panel", "hud.coordinates", "hud.camera_hint",
+	        "hud.touch_joystick", "hud.touch_label", "hud.run", "hud.crouch", "hud.jump",
+	        "hud.action", "hud.switch", "hud.microphone", "hud.ride", "hud.follow", "hud.pull_vehicle", "hud.gps",
+		"hud.gps.autopilot", "hud.gps.status", "hud.moto.accelerate", "hud.moto.brake",
 	"hud.hilux.accelerate", "hud.hilux.brake", "hud.hilux.steer_left",
 	"hud.hilux.steer_right", "hud.chat",
 ]
@@ -28,15 +28,15 @@ const VISIBILITY_IDS := [
 	"menu.footer", "menu.download_progress", "menu.download_percent",
 	"menu.loading_title", "menu.loading_status", "menu.loading_progress", "menu.loading_percent",
 	"menu.graphics.panel", "menu.graphics.title", "menu.graphics.info", "menu.graphics.auto",
-	"hud.root", "hud.vehicle_panel", "hud.coordinates", "hud.camera_hint",
-        "hud.touch_joystick", "hud.touch_label", "hud.run", "hud.crouch", "hud.jump",
-        "hud.action", "hud.switch", "hud.microphone", "hud.ride", "hud.follow", "hud.gps", "hud.chat",
-]
+		"hud.root", "hud.vehicle_panel", "hud.coordinates", "hud.camera_hint",
+	        "hud.touch_joystick", "hud.touch_label", "hud.run", "hud.crouch", "hud.jump",
+	        "hud.action", "hud.switch", "hud.microphone", "hud.ride", "hud.follow", "hud.pull_vehicle", "hud.gps", "hud.chat",
+	]
 const TEXT_IDS := [
 	"menu.subtitle", "menu.graphics_button", "menu.character_title",
 	"menu.character.andre", "menu.character.gorece", "menu.character.dg",
 	"menu.start_button", "menu.footer", "menu.graphics.title", "menu.graphics.info", "menu.graphics.auto",
-        "hud.touch_label", "hud.run", "hud.crouch", "hud.jump", "hud.action", "hud.switch", "hud.microphone", "hud.ride", "hud.follow",
+        "hud.touch_label", "hud.run", "hud.crouch", "hud.jump", "hud.action", "hud.switch", "hud.microphone", "hud.ride", "hud.follow", "hud.pull_vehicle",
 	"hud.moto.accelerate", "hud.moto.brake", "hud.hilux.accelerate", "hud.hilux.brake",
 	"hud.hilux.steer_left", "hud.hilux.steer_right",
 ]
