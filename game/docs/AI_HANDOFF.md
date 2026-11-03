@@ -4,15 +4,16 @@ Este documento explica como continuar o projeto sem depender do histórico da co
 
 ## Identidade dos repositórios
 
-- Jogo Godot: `https://github.com/brechoda/Andre3D-GTA3`
+- Jogo Godot: `https://github.com/brechoda/Andre3D-game`
 - Servidor multiplayer e distribuição: `https://github.com/brechoda/andre3d-multiplayer-server`
 - Branch de produção dos dois repositórios: `main`
 - Build multiplayer esperado: `andre3d-mp-v4`
 - Pacote Android principal a partir da 2.0.6: `com.manus.andre3d.next`
 - Pacote legado 2.0.5: `com.manus.andre3d`; a chave antiga foi perdida, então não pode ser atualizado no mesmo pacote.
-- Versão atualmente preparada: `2.0.6`
-- Código Android atualmente preparado: `8`
-- Release principal: `https://github.com/brechoda/Andre3D-GTA3/releases/tag/v2.0.6`
+- Versão Android pública atual: `2.2.2`
+- Código Android público atual: `34`
+- Último APK público: `2.2.2` / código `34`, distribuído em `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.2`.
+- O workflow `Build Android APK` cria artefatos de depuração com chave temporária; eles não podem atualizar o APK público. Releases de produção exigem a keystore original e publicação correspondente no manifesto do servidor.
 
 ## Objetivo do projeto
 
@@ -128,9 +129,9 @@ Para substituir um asset já publicado, usar `gh release upload ... --clobber`, 
 
 ## Estado conhecido entregue
 
-- Código do jogo com atualizador remoto e gate de versão: commit `aa4ae5f`.
-- Servidor com gate online, manifesto e hash do APK: commit `64f9239`.
-- Release Android principal: `v2.0.6` (package `com.manus.andre3d.next`, código `8`).
+- APK `2.2.2` (package `com.manus.andre3d.next`, código `34`) inclui o botão de alternância do microfone na HUD, ajustes remotos de interface e correções recentes de controles/mapas.
+- Release pública Android: `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.2`.
+- Manifesto `2026.11.02.12` publicado no commit `b4e0f7b` do repositório de distribuição (`main`), com atualização obrigatória e hash do APK.
 - Manifesto atual público: `https://andre3d-multiplayer-server.onrender.com/updates/manifest.json`.
 - O servidor público deve responder `{"ok":true,"build":"andre3d-mp-v4"}` em `/health`.
 
