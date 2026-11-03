@@ -54,6 +54,7 @@ var visual: Node3D
 @onready var switch_button: Button = $"../HUD/Root/SwitchButton"
 @onready var follow_button: Button = $"../HUD/Root/FollowButton"
 @onready var pull_vehicle_button: Button = $"../HUD/Root/PullVehicleButton"
+@onready var ride_button: Button = $"../HUD/Root/RideButton"
 var _pull_vehicle_popup: PopupMenu
 var _pull_vehicle_feedback_timer: Timer
 @onready var microphone_button: Button = $"../HUD/Root/MicButton"
@@ -104,6 +105,9 @@ var _map_loading_percent: Label
 var _map_ready_elapsed := 0.0
 
 func _ready() -> void:
+    # Atualiza a interface de veículos depois dos scripts de cada veículo,
+    # que compartilham o mesmo botão na HUD.
+    process_priority = 100
     _show_map_loading_screen()
     visual = andre_visual
     # O avatar local não pode depender do estado de conexão/mapa para ser renderizado.
@@ -199,6 +203,51 @@ func _register_remote_hud_elements() -> void:
         var element_node := elements[element_id] as Node
         if element_node != null:
             RemoteUIConfig.register_element(element_id, element_node)
+
+func _update_ride_interaction_button() -> void:
+    if not is_instance_valid(ride_button):
+        return
+    var scene_root := get_parent()
+    if scene_root == null:
+        ride_button.visible = false
+        ride_button.disabled = true
+        return
+
+    var active_position: Vector3 = gorece.global_position if _active_character == 1 else global_position
+    var selected_vehicle: Node3D
+    var selected_is_ridden := false
+    var nearest_distance := INF
+    for candidate: Node in scene_root.get_children():
+        if candidate == self or not candidate.has_method("is_riding"):
+            continue
+        if candidate.has_method("is_ai_following") and bool(candidate.call("is_ai_following")):
+            continue
+        var is_ridden := bool(candidate.call("is_riding"))
+        if is_ridden:
+            selected_vehicle = candidate as Node3D
+            selected_is_ridden = true
+            break
+        if not candidate.has_method("is_near_player") or not bool(candidate.call("is_near_player")):
+            continue
+        var vehicle_node := candidate as Node3D
+        if vehicle_node == null:
+            continue
+        var distance := active_position.distance_to(vehicle_node.global_position)
+        if distance < nearest_distance:
+            nearest_distance = distance
+            selected_vehicle = vehicle_node
+
+    if selected_vehicle == null:
+        ride_button.visible = false
+        ride_button.disabled = true
+        return
+
+    var vehicle_name := String(selected_vehicle.get("vehicle_display_name")).strip_edges()
+    if vehicle_name.is_empty():
+        vehicle_name = String(selected_vehicle.name)
+    ride_button.text = ("SAIR DA " if selected_is_ridden else "DIRIGIR ") + vehicle_name
+    ride_button.disabled = false
+    ride_button.visible = true
 
 func _apply_selected_map_spawn() -> void:
     var map_streamer := get_node_or_null("../MapStreamer")
@@ -550,6 +599,7 @@ func _process(_delta: float) -> void:
     if _action_busy:
         _combo_elapsed += _delta
         _update_combo_chain()
+    _update_ride_interaction_button()
 
 func _show_map_loading_screen() -> void:
     _map_loading_layer = CanvasLayer.new()

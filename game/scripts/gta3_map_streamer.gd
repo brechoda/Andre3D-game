@@ -512,7 +512,9 @@ func get_pending_mesh_count() -> int:
 func get_catalog_tile_count() -> int:
 	return _tile_records.size()
 
-func is_start_area_loaded() -> bool: _manifest_ready and get_node_or_null("CostaVistaCity") != null
+func is_start_area_loaded() -> bool:
+	if not _manifest_ready:
+		return false
 	for tile_name: String in _selected_region_tiles.keys():
 		if not _loaded_tiles.has(tile_name) or not is_collision_tile_loaded(tile_name):
 			continue
