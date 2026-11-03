@@ -37,6 +37,8 @@ var _low_material_cache: Dictionary = {}
 var _selected_region_id := ""
 var _selected_region_tiles: Dictionary = {}
 var _selected_spawn := Vector3.ZERO
+var _selected_gorece_spawn := Vector3.ZERO
+var _selected_vehicle_spawns: Dictionary = {}
 var _region_bounds_min := Vector3.ZERO
 var _region_bounds_max := Vector3.ZERO
 var _void_recovery_floor_y := -100.0
@@ -164,13 +166,25 @@ func _load_selected_region() -> bool:
 			if not _part_paths_by_tile.has(tile_name):
 				return false
 			selected_tiles[tile_name] = true
-		var spawn: Variant = (row as Dictionary).get("spawn", [])
-		if not spawn is Array or (spawn as Array).size() != 3:
-			return false
-		_selected_region_id = requested_id
-		_selected_region_tiles = selected_tiles
-		_selected_spawn = Vector3(float(spawn[0]), float(spawn[1]), float(spawn[2]))
-		return true
+			var spawn: Variant = (row as Dictionary).get("spawn", [])
+			if not spawn is Array or (spawn as Array).size() != 3:
+				return false
+			var gorece_spawn: Variant = (row as Dictionary).get("gorece_spawn", spawn)
+			if not gorece_spawn is Array or (gorece_spawn as Array).size() != 3:
+				gorece_spawn = spawn
+			var vehicle_spawn_data: Variant = (row as Dictionary).get("vehicle_spawns", {})
+			var vehicle_spawns: Dictionary = {}
+			if vehicle_spawn_data is Dictionary:
+				for vehicle_id: Variant in (vehicle_spawn_data as Dictionary).keys():
+					var vehicle_spawn: Variant = (vehicle_spawn_data as Dictionary)[vehicle_id]
+					if vehicle_spawn is Array and (vehicle_spawn as Array).size() == 3:
+						vehicle_spawns[String(vehicle_id)] = Vector3(float(vehicle_spawn[0]), float(vehicle_spawn[1]), float(vehicle_spawn[2]))
+			_selected_region_id = requested_id
+			_selected_region_tiles = selected_tiles
+			_selected_spawn = Vector3(float(spawn[0]), float(spawn[1]), float(spawn[2]))
+			_selected_gorece_spawn = Vector3(float(gorece_spawn[0]), float(gorece_spawn[1]), float(gorece_spawn[2]))
+			_selected_vehicle_spawns = vehicle_spawns
+			return true
 	return false
 
 func _restrict_to_selected_region() -> void:
@@ -448,6 +462,12 @@ func get_selected_region_id() -> String:
 
 func get_selected_spawn() -> Vector3:
 	return _selected_spawn
+
+func get_selected_gorece_spawn() -> Vector3:
+	return _selected_gorece_spawn
+
+func get_selected_vehicle_spawns() -> Dictionary:
+	return _selected_vehicle_spawns.duplicate(true)
 
 func get_pending_mesh_count() -> int:
 	return _pending_paths.size()

@@ -134,9 +134,9 @@ Para substituir um asset já publicado, usar `gh release upload ... --clobber`, 
 - APK `2.2.4` (`com.manus.andre3d.next`, código `36`) inclui montanhas perimetrais com colisão em CENTRO e INDUSTRIAL, tiles selecionados por limites reais, carregamento de colisão antes do visual e recuperação do personagem se cair no vazio. Também conserva os recursos das versões anteriores, incluindo `PUXAR VEÍCULO`.
 - Release pública Android: `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.4`.
 - APK: `124881109` bytes; SHA-256 `d896f6d70fe1359d30b834dd1f45ad541385207716e420b74d2d13ecb194c248`. A assinatura foi conferida e é compatível com a versão 2.2.3.
-- Manifesto obrigatório `2026.11.03.14`, publicado no commit `110f971` do repositório de distribuição (`main`), com `client.version: 2.2.4`, `code: 36` e `mandatory_online: true`. Foi confirmado ao vivo no Render.
+- Manifesto obrigatório `2026.11.03.15`, publicado no commit `d6778b6b` do repositório de distribuição (`main`), com `client.version: 2.2.4`, `code: 36` e `mandatory_online: true`. Foi confirmado ao vivo no Render. Os PCKs regionais atualizados estão na release `map-v2.2.1-spawn-fix`.
 - Manifesto público: `https://andre3d-multiplayer-server.onrender.com/updates/manifest.json`.
-- Commit do jogo: [`d21f983`](https://github.com/brechoda/Andre3D-game/commit/d21f983). Commit do manifesto: [`110f971`](https://github.com/brechoda/andre3d-multiplayer-server/commit/110f971).
+- Base do audit do jogo: [`b3ec3a9`](https://github.com/brechoda/Andre3D-game/commit/b3ec3a9). Commit do manifesto: [`d6778b6b`](https://github.com/brechoda/andre3d-multiplayer-server/commit/d6778b6b).
 - A suíte Python terminou com 21 testes aprovados e 1 teste ignorado; o parser do Godot passou e o runtime confirmou as duas regiões e o resgate de queda.
 - O servidor público deve responder `{"ok":true,"build":"andre3d-mp-v4"}` em `/health`.
 

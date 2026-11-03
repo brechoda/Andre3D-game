@@ -123,6 +123,26 @@ class Gta3MapAssetTests(unittest.TestCase):
         self.assertIn("far = 3800.0", scene)
         self.assertNotIn('[node name="Ground" type="StaticBody3D" parent="."]', scene)
 
+    def test_region_spawn_points_include_player_npc_and_grounded_vehicles(self) -> None:
+        regions_manifest = json.loads((RUNTIME_ROOT / "map_regions.json").read_text(encoding="utf-8"))
+        regions = {region["id"]: region for region in regions_manifest["regions"]}
+        self.assertEqual([13.9, 80.0, 497.0], regions["center"]["spawn"])
+        self.assertEqual([18.9, 80.0, 497.0], regions["center"]["gorece_spawn"])
+        self.assertEqual({"pop100_01", "wayfarer_01", "hilux_01", "fiatuno_01"}, set(regions["center"]["vehicle_spawns"]))
+        for region in regions.values():
+            self.assertEqual({"pop100_01", "wayfarer_01", "hilux_01", "fiatuno_01"}, set(region["vehicle_spawns"]))
+            for spawn in [region["spawn"], region["gorece_spawn"], *region["vehicle_spawns"].values()]:
+                self.assertEqual(3, len(spawn))
+
+        streamer = (ROOT / "scripts/gta3_map_streamer.gd").read_text(encoding="utf-8")
+        third_person = (ROOT / "scripts/third_person.gd").read_text(encoding="utf-8")
+        self.assertIn("func get_selected_gorece_spawn()", streamer)
+        self.assertIn("func get_selected_vehicle_spawns()", streamer)
+        self.assertIn('map_streamer.call("get_selected_vehicle_spawns")', third_person)
+        self.assertIn('vehicle.call("sync_map_ground_after_spawn")', third_person)
+        for script_name in ("pop100e2024.gd", "hilux_controller.gd", "fiatuno_controller.gd"):
+            self.assertIn("func sync_map_ground_after_spawn()", (ROOT / "scripts" / script_name).read_text(encoding="utf-8"))
+
     def test_only_the_selected_map_region_can_be_downloaded_mounted_or_streamed(self) -> None:
         regions_manifest = json.loads((RUNTIME_ROOT / "map_regions.json").read_text(encoding="utf-8"))
         regions = {region["id"]: set(region["tiles"]) for region in regions_manifest["regions"]}

@@ -206,17 +206,25 @@ func _apply_selected_map_spawn() -> void:
         return
     var spawn: Vector3 = map_streamer.call("get_selected_spawn")
     global_position = spawn
-    gorece.global_position = spawn + Vector3(5.0, 0.0, 0.0)
+    var gorece_spawn := spawn + Vector3(5.0, 0.0, 0.0)
+    if map_streamer.has_method("get_selected_gorece_spawn"):
+        gorece_spawn = map_streamer.call("get_selected_gorece_spawn")
+    gorece.global_position = gorece_spawn
     var vehicle_offsets := {
         "pop100_01": Vector3(-10.0, -1.4, 0.0),
         "wayfarer_01": Vector3(-5.0, -1.1, 0.0),
         "hilux_01": Vector3(22.7, -1.0, 1.0),
         "fiatuno_01": Vector3(-20.0, -1.5, 0.0),
     }
+    var vehicle_spawns: Dictionary = {}
+    if map_streamer.has_method("get_selected_vehicle_spawns"):
+        vehicle_spawns = map_streamer.call("get_selected_vehicle_spawns")
     for vehicle_id: String in vehicle_offsets:
         var vehicle := _find_spawn_vehicle(vehicle_id)
         if vehicle != null:
-            vehicle.global_position = spawn + vehicle_offsets[vehicle_id]
+            vehicle.global_position = vehicle_spawns.get(vehicle_id, spawn + vehicle_offsets[vehicle_id])
+            if vehicle.has_method("sync_map_ground_after_spawn"):
+                vehicle.call("sync_map_ground_after_spawn")
 
 func restore_vehicle_exit_pose(heading: float) -> void:
     # O Player permanece sem rotação durante o gameplay; somente o visual
@@ -322,6 +330,8 @@ func _apply_spawn_transform(node: Node3D, data: Dictionary) -> bool:
         _camera_yaw = heading
     else:
         node.rotation.y = heading
+    if node.has_method("sync_map_ground_after_spawn"):
+        node.call("sync_map_ground_after_spawn")
     return true
 
 func _find_spawn_vehicle(vehicle_id: String) -> Node3D:

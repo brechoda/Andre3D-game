@@ -255,6 +255,10 @@ func _apply_map_ground_support() -> void:
 	_ground_y = surface.y
 	global_position.y = _ground_y - _wheel_ground_offset
 
+func sync_map_ground_after_spawn() -> void:
+	_ground_y = global_position.y + _wheel_ground_offset
+	_apply_map_ground_support()
+
 func _process(_delta: float) -> void:
 	_update_engine_audio()
 	_update_ride_button()

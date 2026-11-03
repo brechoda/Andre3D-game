@@ -427,6 +427,10 @@ func _apply_map_ground_support() -> void:
     ground_y = surface.y
     global_position.y = ground_y - _ground_local_y
 
+func sync_map_ground_after_spawn() -> void:
+    ground_y = global_position.y + _ground_local_y
+    _apply_map_ground_support()
+
 func _physics_process(delta: float) -> void:
     _apply_map_ground_support()
     if not _riding or _mounting or _dismounting:
