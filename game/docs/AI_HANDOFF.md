@@ -10,11 +10,11 @@ Este documento explica como continuar o projeto sem depender do histórico da co
 - Build multiplayer esperado: `andre3d-mp-v4`
 - Pacote Android principal a partir da 2.0.6: `com.manus.andre3d.next`
 - Pacote legado 2.0.5: `com.manus.andre3d`; a chave antiga foi perdida, então não pode ser atualizado no mesmo pacote.
-- Versão Android pública atual: `2.2.7`
-- Código Android público atual: `39`
-- Último APK público: `2.2.7` / código `39`, distribuído em `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.7`.
+- Versão Android pública atual: `2.2.8`
+- Código Android público atual: `40`
+- Último APK público: `2.2.8` / código `40`, distribuído em `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.8`.
 - O workflow `Build Android APK` cria artefatos de depuração com chave temporária; eles não podem atualizar o APK público. Releases de produção exigem a keystore original e publicação correspondente no manifesto do servidor.
-- SHA-256 do APK público 2.2.7: `03bb42ab33cf6a5bff87d32f3ee22fad22b022f873a6024042af9a199ceca945`.
+- SHA-256 do APK público 2.2.8: `92b0b3f302f28fd1e0235c0e9cd09da86c5736562d1d303803480f704eaddafe`.
 
 ## Objetivo do projeto
 
@@ -131,13 +131,13 @@ Para substituir um asset já publicado, usar `gh release upload ... --clobber`, 
 
 ## Estado conhecido entregue
 
-- APK `2.2.7` (`com.manus.andre3d.next`, código `39`) inclui o mapa embutido Costa Vista, com ruas, calçadas, gramados, quiosques, palmeiras, props, veículo, chão físico e barreira invisível, além dos mapas e recursos anteriores.
-- Release pública Android: `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.7`.
-- APK: `131070063` bytes; SHA-256 `03bb42ab33cf6a5bff87d32f3ee22fad22b022f873a6024042af9a199ceca945`. A assinatura foi verificada com o certificado `CN=sm`; o asset da release foi comparado byte a byte com o APK validado localmente.
-- Manifesto obrigatório `2026.11.03.18`, publicado no commit `ba1bad0` do repositório de distribuição (`main`), com `client.version: 2.2.7`, `code: 39` e `mandatory_online: true`. Foi confirmado ao vivo no Render.
+- APK `2.2.8` (`com.manus.andre3d.next`, código `40`) mantém o conteúdo de jogo publicado e corrige o bloqueio de carregamento após 100% e a atualização compartilhada do botão de pilotagem.
+- Release pública Android: `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.8`.
+- APK: `125377530` bytes; SHA-256 `92b0b3f302f28fd1e0235c0e9cd09da86c5736562d1d303803480f704eaddafe`. `apksigner` validou a assinatura e o fingerprint coincide com o APK anterior; o asset da release reporta o mesmo tamanho e SHA-256.
+- Manifesto obrigatório `2026.11.03.4`, publicado no commit `a1b5eb2` do repositório de distribuição (`main`), com `client.version: 2.2.8`, `code: 40` e `mandatory_online: true`; confirmado ao vivo no Render com HTTP 200.
 - Manifesto público: `https://andre3d-multiplayer-server.onrender.com/updates/manifest.json`.
-- Commit do jogo: [`b14c46d`](https://github.com/brechoda/Andre3D-game/commit/b14c46d). Commit do manifesto: [`ba1bad0`](https://github.com/brechoda/andre3d-multiplayer-server/commit/ba1bad0).
-- A suíte Python de mapas terminou com 15 testes aprovados e 1 teste ignorado; o parser do Godot passou. O construtor runtime de Costa Vista montou 121 nós de cidade com os 24 modelos recebidos.
-- O servidor público deve responder `{"ok":true,"build":"andre3d-mp-v4"}` em `/health`.
+- Correção do jogo: commit [`707b5c3`](https://github.com/brechoda/Andre3D-game/commit/707b5c3); versão/código Android: [`296d00a`](https://github.com/brechoda/Andre3D-game/commit/296d00a); manifesto: [`a1b5eb2`](https://github.com/brechoda/andre3d-multiplayer-server/commit/a1b5eb2).
+- Os testes Godot do streamer e do botão de pilotagem passaram; `npm test` e `node --check server.mjs` passaram no servidor.
+- O servidor público respondeu `{"ok":true,"build":"andre3d-mp-v4","rooms":0}` em `/health` após o deploy.
 
 Antes de começar uma alteração, leia este arquivo, `docs/game-multiplayer.md`, `autoload/remote_updater.gd`, `scripts/net/multiplayer_client.gd` e o README do servidor. Depois de alterar, valide, atualize a documentação se o fluxo mudar e faça push somente dos arquivos intencionais.
