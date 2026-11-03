@@ -10,11 +10,11 @@ Este documento explica como continuar o projeto sem depender do histórico da co
 - Build multiplayer esperado: `andre3d-mp-v4`
 - Pacote Android principal a partir da 2.0.6: `com.manus.andre3d.next`
 - Pacote legado 2.0.5: `com.manus.andre3d`; a chave antiga foi perdida, então não pode ser atualizado no mesmo pacote.
-- Versão Android pública atual: `2.2.5`
-- Código Android público atual: `37`
-- Último APK público: `2.2.5` / código `37`, distribuído em `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.5`.
+- Versão Android pública atual: `2.2.6`
+- Código Android público atual: `38`
+- Último APK público: `2.2.6` / código `38`, distribuído em `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.6`.
 - O workflow `Build Android APK` cria artefatos de depuração com chave temporária; eles não podem atualizar o APK público. Releases de produção exigem a keystore original e publicação correspondente no manifesto do servidor.
-- SHA-256 do APK público 2.2.5: `fc37e771fb675d94a5a273d3521a955c2a833f874ec210c12a90f40f029e1220`.
+- SHA-256 do APK público 2.2.6: `071b012c6a98cacc2889f5f716012d820b0c591d15e6e8ecc3951bc7e7cbe52a`.
 
 ## Objetivo do projeto
 
@@ -131,12 +131,12 @@ Para substituir um asset já publicado, usar `gh release upload ... --clobber`, 
 
 ## Estado conhecido entregue
 
-- APK `2.2.5` (`com.manus.andre3d.next`, código `37`) inclui o céu panorâmico CODA, a barreira invisível perimetral com quatro paredes físicas, alinhamento dos spawns com a colisão COL1, tiles selecionados por limites reais e recuperação após queda no vazio. Também conserva os recursos anteriores, incluindo `PUXAR VEÍCULO`.
-- Release pública Android: `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.5`.
-- APK: `125382086` bytes; SHA-256 `fc37e771fb675d94a5a273d3521a955c2a833f874ec210c12a90f40f029e1220`. A assinatura foi verificada e é compatível com a versão 2.2.4; o asset da release foi comparado byte a byte com o arquivo exportado.
-- Manifesto obrigatório `2026.11.03.16`, publicado no commit `16afd94` do repositório de distribuição (`main`), com `client.version: 2.2.5`, `code: 37` e `mandatory_online: true`. Foi confirmado ao vivo no Render.
+- APK `2.2.6` (`com.manus.andre3d.next`, código `38`) inclui o céu panorâmico CODA, a barreira invisível perimetral com quatro paredes físicas, conversão correta dos spawns regionais para coordenadas globais, pontos de entrada confirmados pela colisão COL1 e recuperação após queda no vazio. Também conserva os recursos anteriores, incluindo `PUXAR VEÍCULO`.
+- Release pública Android: `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.6`.
+- APK: `131065794` bytes; SHA-256 `071b012c6a98cacc2889f5f716012d820b0c591d15e6e8ecc3951bc7e7cbe52a`. A assinatura foi verificada com o certificado `CN=sm`; o asset da release foi comparado byte a byte com o APK validado localmente.
+- Manifesto obrigatório `2026.11.03.17`, publicado no commit `8194239` do repositório de distribuição (`main`), com `client.version: 2.2.6`, `code: 38` e `mandatory_online: true`. Foi confirmado ao vivo no Render.
 - Manifesto público: `https://andre3d-multiplayer-server.onrender.com/updates/manifest.json`.
-- Commit do jogo: [`ff554c7`](https://github.com/brechoda/Andre3D-game/commit/ff554c7). Commit do manifesto: [`16afd94`](https://github.com/brechoda/andre3d-multiplayer-server/commit/16afd94).
+- Commit do jogo: [`e20d5d6`](https://github.com/brechoda/Andre3D-game/commit/e20d5d6). Commit do manifesto: [`8194239`](https://github.com/brechoda/andre3d-multiplayer-server/commit/8194239).
 - A suíte Python terminou com 22 testes aprovados e 1 teste ignorado; o parser do Godot passou. O teste runtime encontrou piso COL1 sob 12 spawns e carregou 8 malhas visuais das duas regiões.
 - O servidor público deve responder `{"ok":true,"build":"andre3d-mp-v4"}` em `/health`.
 
