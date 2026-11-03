@@ -21,7 +21,7 @@ const OVERVIEW_TILE := "maps/overview"
 const INITIAL_SPAWN_TILE := "comntop/comntop"
 const SESSION_PATH := "user://andre3d_session.json"
 const SUPPORTED_REGION_IDS := ["industrial", "center"]
-const MOUNTAIN_BOUNDARY_SCRIPT := preload("res://scripts/map_boundary_mountains.gd")
+const MAP_BOUNDARY_SCRIPT := preload("res://scripts/map_boundary_mountains.gd")
 
 var _tile_records: Array[Dictionary] = []
 var _part_paths_by_tile: Dictionary = {}
@@ -52,7 +52,7 @@ func _ready() -> void:
 		_restrict_to_selected_region()
 		if _manifest_ready:
 			if _compute_selected_region_bounds():
-				_create_region_mountain_boundary()
+				_create_region_invisible_boundary()
 			else:
 				_manifest_ready = false
 				push_error("Selected map region has no usable spatial bounds")
@@ -233,11 +233,11 @@ func _compute_selected_region_bounds() -> bool:
 	_void_recovery_floor_y = to_global(Vector3(0.0, 0.0, min_z)).y - 15.0
 	return true
 
-func _create_region_mountain_boundary() -> void:
-	var boundary := MOUNTAIN_BOUNDARY_SCRIPT.new() as Node3D
-	boundary.name = "RegionMountainBoundary"
+func _create_region_invisible_boundary() -> void:
+	var boundary := MAP_BOUNDARY_SCRIPT.new() as Node3D
+	boundary.name = "RegionInvisibleBoundary"
 	if not bool(boundary.call("build_for_region", _selected_region_id, _region_bounds_min, _region_bounds_max)):
-		push_warning("Map boundary mountains could not be generated for region: " + _selected_region_id)
+		push_warning("Invisible map boundary could not be generated for region: " + _selected_region_id)
 		boundary.queue_free()
 		return
 	add_child(boundary)

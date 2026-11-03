@@ -46,11 +46,12 @@ class MapBoundaryProtectionTests(unittest.TestCase):
         self.assertIn("not is_collision_tile_loaded(tile_name)", self.streamer)
         self.assertIn("collision_mesh.backface_collision = true", self.streamer)
 
-    def test_both_regions_get_a_visible_and_physical_mountain_ring(self) -> None:
+    def test_both_regions_get_an_invisible_physical_boundary(self) -> None:
         self.assertIn('preload("res://scripts/map_boundary_mountains.gd")', self.streamer)
-        self.assertIn("_create_region_mountain_boundary()", self.streamer)
-        self.assertIn('mountain_visual.name = "MountainRangeVisual"', self.mountains)
-        self.assertIn('barrier.name = "MountainBoundaryCollision"', self.mountains)
+        self.assertIn("_create_region_invisible_boundary()", self.streamer)
+        self.assertIn('barrier.name = "InvisibleMapBoundary"', self.mountains)
+        self.assertNotIn("MeshInstance3D.new()", self.mountains)
+        self.assertNotIn("MountainRangeVisual", self.mountains)
         for wall_name in ("SouthWall", "NorthWall", "WestWall", "EastWall"):
             self.assertIn(f'"{wall_name}"', self.mountains)
 
