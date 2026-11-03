@@ -1,0 +1,479 @@
+newmtl courthse_night_m0_stone_column_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/commuseumkb/stone_column_64HV.PNG
+
+newmtl courthse_night_m1_stone_band64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/commuseumkb/stone_band64H.PNG
+
+newmtl courthse_night_m2_stone_block1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comartgaly/stone_block1_64.PNG
+
+newmtl courthse_night_m3_stone_STEP_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comartgaly/stone_STEP_64.PNG
+
+newmtl courthse_night_m4_Window19_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/commuseumkb/Window19_64HV.PNG
+
+newmtl courthse_night_m5_reliefpatcourt_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/commuseumkb/reliefpatcourt_64.PNG
+
+newmtl courthse_night_m6_door1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/archedbuilding/door1_64.PNG
+
+newmtl courthse_night_m7_China_Gr_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/commuseumkb/China_Gr_64HV.PNG
+
+newmtl courthse_night_m8_new_crthouse
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/commuseumkb/new_crthouse.PNG
+
+newmtl tcsky_skyscrp6_m0_concretemanky
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/concretemanky.PNG
+
+newmtl tcsky_skyscrp6_m1_sky2_64hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/sky2_64hv.PNG
+
+newmtl tcsky_skyscrp6_m2_newall1-1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cskytosh/newall1-1.PNG
+
+newmtl tcsky_skyscrp6_m3_skyr23nS256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cskytosh/skyr23nS256.PNG
+
+newmtl tcsky_skyscrp6_m4_towercement128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cskytosh/towercement128H.PNG
+
+newmtl tcsky_skyscrp6_m5_greyrooftop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/greyrooftop128.PNG
+
+newmtl tcsky_skyscrp6_m6_skyblugls256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cskytosh/skyblugls256.PNG
+
+newmtl tcsky_skyscrp6_m7_skyr04S128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cskytosh/skyr04S128.PNG
+
+newmtl tcsky_skyscrp6_m8_shopdoor4_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/casino/shopdoor4_64.PNG
+
+newmtl tcsky_skyscrp6_m9_allcolor
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cskytosh/allcolor.PNG
+
+newmtl tcsky_skyscrp6_m10_black64c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cskytosh/black64c.PNG
+
+newmtl empirestate_m0_shadeburgandy64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/canopy/shadeburgandy64HV.PNG
+
+newmtl empirestate_m1_Frill_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/canopy/Frill_64H.PNG
+
+newmtl empirestate_m2_shopwall_sandstone64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cempirest/shopwall_sandstone64HV.PNG
+
+newmtl empirestate_m3_Build2top
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cempirest/Build2top.PNG
+
+newmtl empirestate_m4_taxi_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/basketballcrt/taxi_256.PNG
+
+newmtl empirestate_m5_sandstone_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/sandstone_128.PNG
+
+newmtl empirestate_m6_uper_floors_1_high
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cempirest/uper_floors_1_high.PNG
+
+newmtl empirestate_m7_pavepat128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cempirest/pavepat128.PNG
+
+newmtl empirestate_m8_bank3_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/bank3_64.PNG
+
+newmtl empirestate_m9_decorentrance256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cempirest/decorentrance256.PNG
+
+newmtl empirestate_m10_decoclok_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cempirest/decoclok_64.PNG
+
+newmtl empirestate_m11_BuildDirt_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cempirest/BuildDirt_64.PNG
+
+newmtl empirestate_m12_ledgedirt_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cempirest/ledgedirt_64.PNG
+
+newmtl empirestate_m13_grnd_flr1_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cempirest/grnd_flr1_256.PNG
+
+newmtl empirestate_m14_alley1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cempirest/alley1_128.PNG
+
+newmtl empirestate_m15_inddoor1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/busdepot/inddoor1.PNG
+
+newmtl empirestate_m16_inwindow5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/cempirest/inwindow5.PNG
+
+newmtl com_land048nite_m0_patio_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comtownhall/patio_64.PNG
+
+newmtl com_land048nite_m1_Grass_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/com_police/Grass_64HV.PNG
+
+newmtl com_land048nite_m2_stone_block1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comartgaly/stone_block1_64.PNG
+
+newmtl com_land048nite_m3_dirt64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/dirt64.PNG
+
+newmtl com_land048nite_m4_carpark_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/carpark_128.PNG
+
+newmtl com_land048nite_m5_stone_column_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/commuseumkb/stone_column_64HV.PNG
+
+newmtl com_land048nite_m6_stone_band64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/commuseumkb/stone_band64H.PNG
+
+newmtl com_land048nite_m7_stone_STEP_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comartgaly/stone_STEP_64.PNG
+
+newmtl com_land048nite_m8_China_Gr_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/commuseumkb/China_Gr_64HV.PNG
+
+newmtl blok3_flats1_m0_low_win3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/low_win3.PNG
+
+newmtl blok3_flats1_m1_buildbot_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/buildbot_256.PNG
+
+newmtl blok3_flats1_m2_comgreybrick64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/comgreybrick64.PNG
+
+newmtl blok3_flats1_m3_bluewin256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/bluewin256.PNG
+
+newmtl blok3_flats1_m4_comgrey128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/comgrey128.PNG
+
+newmtl blok3_flats1_m5_low_win4
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/low_win4.PNG
+
+newmtl blok3_flats1_m6_buildbot2_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo1/buildbot2_256.PNG
+
+newmtl blok3_flats1_m7_buildtop2_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/buildtop2_256.PNG
+
+newmtl blok3_flats1_m8_low_win2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/low_win2.PNG
+
+newmtl blok3_flats1_m9_combly256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/combly256.PNG
+
+newmtl blok3_flats1_m10_buildside_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/buildside_256128.PNG
+
+newmtl blok3_flats1_m11_Build15top
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/Build15top.PNG
+
+newmtl blok3_flats1_m12_dragwall4_128hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/dragwall4_128hv.PNG
+
+newmtl blok3_flats1_m13_newall9-2128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/newall9-2128.PNG
+
+newmtl blok3_flats1_m14_srnd_side_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_side_2.PNG
+
+newmtl blok3_flats1_m15_srnd_topbit2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_topbit2.PNG
+
+newmtl blok3_flats1_m16_srnd_colour_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_colour_2.PNG
+
+newmtl blok3_flats1_m17_srnd_panel_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_panel_2.PNG
+
+newmtl blok3_flats1_m18_srnd_topbit1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_topbit1.PNG
+
+newmtl blok3_flats1_m19_clothingf128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/clothingf128.PNG
+
+newmtl blok3_flats1_m20_srnd_side_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_side_1.PNG
+
+newmtl blok3_flats1_m21_srnd_colour_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_colour_1.PNG
+
+newmtl blok3_flats1_m22_srnd_panel_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_panel_1.PNG
+
+newmtl blok3_flats1_m23_midgrey64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/midgrey64.PNG
+
+newmtl blok3_flats1_m24_shopboutique256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo3shps/shopboutique256128.PNG
+
+newmtl blok3_flats1_m25_doornvent256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/busdepot/doornvent256128.PNG
+
+newmtl blok3_flats1_m26_inddoor6
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/inddoor6.PNG
+
+newmtl blok3_flats1_m27_comdoor1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/comdoor1_128.PNG
+
+newmtl block3_flats2_m0_comgreybrick64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/comgreybrick64.PNG
+
+newmtl block3_flats2_m1_comgreytop64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/comgreytop64.PNG
+
+newmtl block3_flats2_m2_bluewin256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/bluewin256.PNG
+
+newmtl block3_flats2_m3_combly256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/combly256.PNG
+
+newmtl block3_flats2_m4_comgrey128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/comgrey128.PNG
+
+newmtl block3_flats2_m5_newall4-4_16c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/ctenblock3c/newall4-4_16c.PNG
+
+newmtl block3_fireesc_2_m0_fire_escfloor
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/fire_escfloor.PNG
+
+newmtl block3_fireesc_2_m1_fire_esc
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/fire_esc.PNG
+
+newmtl block3_fireesc_2_m2_fire_escladder
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/colcomp_new/fire_escladder.PNG
+
+newmtl blok3_ground_m0_carspace_texture
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/carspace_texture.PNG
+
+newmtl blok3_ground_m1_Road_cross256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tenement_ground/Road_cross256HV.PNG
+
+newmtl blok3_ground_m2_Tar_1line256HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/generic/Tar_1line256HV.PNG
+
+newmtl block3_shops4_m0_srnd_colour_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_colour_2.PNG
+
+newmtl block3_shops4_m1_srnd_topbit2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_topbit2.PNG
+
+newmtl block3_shops4_m2_srnd_panel_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_panel_2.PNG
+
+newmtl block3_shops4_m3_srnd_topbit1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_topbit1.PNG
+
+newmtl block3_shops4_m4_srnd_side_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_side_2.PNG
+
+newmtl block3_shops4_m5_midgrey64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/midgrey64.PNG
+
+newmtl block3_shops4_m6_shopboutique256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhilo3shps/shopboutique256128.PNG
+
+newmtl block3_shops4_m7_clothingf128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/clothingf128.PNG
+
+newmtl block3_shops4_m8_srnd_side_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_side_1.PNG
+
+newmtl block3_shops4_m9_srnd_colour_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_colour_1.PNG

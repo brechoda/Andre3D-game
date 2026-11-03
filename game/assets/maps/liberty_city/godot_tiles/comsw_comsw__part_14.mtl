@@ -1,0 +1,432 @@
+newmtl comswcentralbld5_m1_tallbuildb256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/tallbuildb256.PNG
+
+newmtl comswcentralbld5_m2_tallbuild256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/tallbuild256.PNG
+
+newmtl comswcentralbld5_m3_srnd_side_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_side_2.PNG
+
+newmtl comswcentralbld5_m4_srnd_topbit2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_topbit2.PNG
+
+newmtl comswcentralbld5_m5_srnd_colour_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_colour_2.PNG
+
+newmtl comswcentralbld5_m6_inddoor6
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/inddoor6.PNG
+
+newmtl comswcentralbld5_m7_srnd_panel_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_panel_2.PNG
+
+newmtl comswcentralbld5_m8_clothingf128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/clothingf128.PNG
+
+newmtl comswcentralbld5_m9_srnd_side_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_side_1.PNG
+
+newmtl comswcentralbld5_m10_srnd_topbit1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_topbit1.PNG
+
+newmtl comswcentralbld5_m11_srnd_colour_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_colour_1.PNG
+
+newmtl comswcentralbld5_m12_srnd_panel_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_panel_1.PNG
+
+newmtl comswcentralbld5_m13_srnd_flatdoor1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_flatdoor1.PNG
+
+newmtl comswcentralbld5_m14_com_shop_windowframe
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/com_shop_windowframe.PNG
+
+newmtl comswcentralbld5_m15_comdoor1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/comdoor1_128.PNG
+
+newmtl comswcentralbld5_m16_sffront7_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/sffront7_256128.PNG
+
+newmtl comswcentralbld5_m17_carpark_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/carpark_128.PNG
+
+newmtl comswcentralbld4_m0_sandstone_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/sandstone_128.PNG
+
+newmtl comswcentralbld4_m1_Build18win
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/Build18win.PNG
+
+newmtl comswcentralbld4_m2_Build20
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/Build20.PNG
+
+newmtl comswcentralbld4_m3_towercement64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/towercement64H.PNG
+
+newmtl comswcentralbld4_m4_shade_dirty_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/shade_dirty_64H.PNG
+
+newmtl comswcentralbld4_m5_Beda128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/Beda128.PNG
+
+newmtl comswcentralbld4_m6_redlitlingerie256hi128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/redlitlingerie256hi128.PNG
+
+newmtl comswcentralbld4_m7_joepizza256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/joepizza256.PNG
+
+newmtl comswcentralbld4_m8_redlita256hi128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/redlita256hi128.PNG
+
+newmtl comswcentralbld4_m9_magazineshop256hi128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/magazineshop256hi128.PNG
+
+newmtl comswcentralbld4_m10_ledge1_com_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/ledge1_com_256.PNG
+
+newmtl comswcentralbld4_m11_ledge_detl_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/ledge_detl_256.PNG
+
+newmtl comswcentralbld4_m12_grnd_flr1_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/grnd_flr1_256128.PNG
+
+newmtl comswcentralbld4_m13_srnd_topbit2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_topbit2.PNG
+
+newmtl comswcentralbld4_m14_carpark_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/carpark_128.PNG
+
+newmtl comswcentralbld6_m0_Storeroom7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/Storeroom7.PNG
+
+newmtl comswcentralbld6_m1_ledge_grey_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/ledge_grey_64H.PNG
+
+newmtl comswcentralbld6_m2_sandstone_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/sandstone_128.PNG
+
+newmtl comswcentralbld6_m3_wallgreyred128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/wallgreyred128.PNG
+
+newmtl comswcentralbld6_m4_ledge2_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/ledge2_64H.PNG
+
+newmtl comswcentralbld6_m5_rustybolts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustybolts.PNG
+
+newmtl LODswcentralbld7_m0_comswcentralbld704
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld704.PNG
+
+newmtl LODswcentralbld7_m1_comswcentralbld703
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld703.PNG
+
+newmtl LODswcentralbld7_m2_comswcentralbld701
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld701.PNG
+
+newmtl LODswcentralbld7_m3_comswcentralbld702
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld702.PNG
+
+newmtl LODswcentralbld7_m4_comswcentralbld705
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld705.PNG
+
+newmtl LODswcentralbld6_m0_comswcentralbld6a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld6a.PNG
+
+newmtl LODswcentralbld6_m1_comswcentralbld6b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld6b.PNG
+
+newmtl LODswcentralbld5_m0_comswcentralbld5a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld5a.PNG
+
+newmtl LODswcentralbld4_m0_comswcentralbld4b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld4b.PNG
+
+newmtl LODswcentralbld4_m1_comswcentralbld4a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld4a.PNG
+
+newmtl LODswcentralbld2_m0_comswcentralbld2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld2.PNG
+
+newmtl LODswcentralbld1_m0_comswcentralbld1b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld1b.PNG
+
+newmtl LODswcentralbld1_m1_comswcentralbld1c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld1c.PNG
+
+newmtl LODswcentralbld1_m2_comswcentralbld1a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld1a.PNG
+
+newmtl LODswcentralbld1_m3_comswcentralbld1d
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld1d.PNG
+
+newmtl LODswcentralbld3_m0_comswcentralbld1b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld1b.PNG
+
+newmtl LODswcentralbld3_m1_comswcentralbld1c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld1c.PNG
+
+newmtl LODswcentralbld3_m2_comswcentralbld1d
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld1d.PNG
+
+newmtl LODswcentralbld3_m3_comswcentralbld3a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld3a.PNG
+
+newmtl LODswcentralbld3_m4_comswcentralbld1a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comswcentralbld1a.PNG
+
+newmtl posh_shop_m0_poshinteriorwall
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/posh_shopshit/poshinteriorwall.PNG
+
+newmtl posh_shop_m1_floorboards
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/posh_shopshit/floorboards.PNG
+
+newmtl posh_shop_m2_subindwall3128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/posh_shopshit/subindwall3128.PNG
+
+newmtl posh_shop_m3_wood02
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/benches/wood02.PNG
+
+newmtl glassfx_composh_m0_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl tw_t_cafe_m0_tw_t_pc_bits
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tw@t/tw@t_pc_bits.PNG
+
+newmtl tw_t_cafe_m1_floorboards
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/posh_shopshit/floorboards.PNG
+
+newmtl tw_t_cafe_m2_tw_t_carpet
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tw@t/tw@t_carpet.PNG
+
+newmtl tw_t_cafe_m3_tw_t_wall2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tw@t/tw@t_wall2.PNG
+
+newmtl tw_t_cafe_m4_tw_t_wall1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tw@t/tw@t_wall1.PNG
+
+newmtl tw_t_cafe_m5_tw_t_handrail
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tw@t/tw@t_handrail.PNG
+
+newmtl tw_t_cafe_m6_tw_t_stairbits
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tw@t/tw@t_stairbits.PNG
+
+newmtl tw_t_cafe_m7_darkwallb64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airgrndb/darkwallb64.PNG
+
+newmtl tw_t_cafe_m8_tw_t_carpet2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tw@t/tw@t_carpet2.PNG
+
+newmtl tw_t_cafe_m9_gtascreens
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tw@t/gtascreens.PNG
+
+newmtl tw_t_cafe_m10_tw_t_sign
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/tw@t/tw@t_sign.PNG
+
+newmtl archedbuilding_m0_stone2_com_256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/archedbuilding/stone2_com_256.PNG
+
+newmtl archedbuilding_m1_inwindow1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/archedbuilding/inwindow1.PNG
+
+newmtl archedbuilding_m2_Paveblank_64hv
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Paveblank_64hv.PNG
+
+newmtl archedbuilding_m3_door1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/archedbuilding/door1_64.PNG
+
+newmtl tw__pedpath_tri_m0_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl LOD_newland085_m0_comnewland85a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comnewland85a.PNG
+
+newmtl LOD_newland085_m1_Grass_128HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Grass_128HV.PNG
+
+newmtl LOD_newland085_m2_comnewland85c
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comnewland85c.PNG
+
+newmtl LOD_newland085_m3_comnewland85b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/comnewland85b.PNG
+
+newmtl LODntrnce_b_m0_museum5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/museum5.PNG
+
+newmtl LODentrance_m0_museum5
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comSW_LOD/museum5.PNG
+
+newmtl bollard_m0_Alumox64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/Alumox64.PNG
+
+newmtl bollard_m1_blackdrum128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/blackdrum128.PNG

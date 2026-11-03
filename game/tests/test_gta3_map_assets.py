@@ -30,7 +30,7 @@ class Gta3MapAssetTests(unittest.TestCase):
         expected = {tile["name"].replace("/", "_") for tile in self.catalog["tiles"]}
         actual = {tile["tile"].replace("/", "_") for tile in self.parts_manifest["tiles"]}
         self.assertEqual(expected, actual)
-        self.assertEqual(2, self.parts_manifest["tile_count"])
+        self.assertEqual(6, self.parts_manifest["tile_count"])
 
     def test_split_meshes_preserve_every_triangle(self) -> None:
         if self.conversion_report is None:
@@ -143,11 +143,10 @@ class Gta3MapAssetTests(unittest.TestCase):
     def test_only_the_selected_map_region_can_be_downloaded_mounted_or_streamed(self) -> None:
         regions_manifest = json.loads((RUNTIME_ROOT / "map_regions.json").read_text(encoding="utf-8"))
         regions = {region["id"]: set(region.get("tiles", [])) for region in regions_manifest["regions"]}
-        self.assertEqual({"costa_vista"}, set(regions))
-        costa = next(region for region in regions_manifest["regions"] if region["id"] == "costa_vista")
-        self.assertTrue(costa["builtin"])
-        self.assertEqual([], costa.get("tiles", []))
-        self.assertTrue((ROOT / "scripts/costa_vista_builder.gd").exists())
+        self.assertEqual({"center"}, set(regions))
+        center = next(region for region in regions_manifest["regions"] if region["id"] == "center")
+        self.assertFalse(center.get("builtin", False))
+        self.assertTrue(center.get("tiles"))
         catalog_names = {tile["name"] for tile in self.catalog["tiles"]}
 
         updater = (ROOT / "autoload/remote_updater.gd").read_text(encoding="utf-8")

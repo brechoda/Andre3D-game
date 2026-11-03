@@ -20,9 +20,8 @@ const GROUND_FIX_COLLISION := "res://assets/maps/liberty_city/collisions/ground_
 const OVERVIEW_TILE := "maps/overview"
 const INITIAL_SPAWN_TILE := "comntop/comntop"
 const SESSION_PATH := "user://andre3d_session.json"
-const SUPPORTED_REGION_IDS := ["costa_vista"]
+const SUPPORTED_REGION_IDS := ["center"]
 const MAP_BOUNDARY_SCRIPT := preload("res://scripts/map_boundary_mountains.gd")
-const COSTA_VISTA_BUILDER := preload("res://scripts/costa_vista_builder.gd")
 
 var _tile_records: Array[Dictionary] = []
 var _part_paths_by_tile: Dictionary = {}
@@ -48,41 +47,24 @@ var _collision_failed_tiles: Dictionary = {}
 func _ready() -> void:
 	add_to_group("graphics_map")
 	GraphicsSettings.apply()
-	var requested_region := _requested_session_region()
-	if requested_region == "costa_vista":
-		if _load_selected_region():
-			_build_costa_vista_map()
-			# A barreira usa X/Y no plano local e Z como altura, enquanto o
-			# construtor Costa Vista usa X/Z no chão e Y como altura.
-			_region_bounds_min = Vector3(-104.0, -104.0, -5.0)
-			_region_bounds_max = Vector3(104.0, 104.0, 45.0)
-			_manifest_ready = true
-			_create_region_invisible_boundary()
-	else:
-		_load_parts_manifest()
-		if _load_selected_region():
-			_restrict_to_selected_region()
-			if _manifest_ready:
-				if _compute_selected_region_bounds():
-					_create_region_invisible_boundary()
-				else:
-					_manifest_ready = false
-					push_error("Selected map region has no usable spatial bounds")
-	if requested_region == "costa_vista" and not _manifest_ready:
-		push_error("Costa Vista could not be initialized")
-	if requested_region != "costa_vista" and not _manifest_ready:
+	_load_parts_manifest()
+	if _load_selected_region():
+		_restrict_to_selected_region()
+		if _manifest_ready:
+			if _compute_selected_region_bounds():
+				_create_region_invisible_boundary()
+			else:
+				_manifest_ready = false
+				push_error("Selected map region has no usable spatial bounds")
+	if not _manifest_ready:
 		push_error("Selected map region could not be initialized")
 	if _manifest_ready:
-		if _selected_region_id != "costa_vista":
-			_refresh_active_tiles()
+		_refresh_active_tiles()
 	set_process(true)
 
 func _requested_session_region() -> String:
 	var session: Variant = _read_json(SESSION_PATH)
 	return String((session as Dictionary).get("map_region", "")) if session is Dictionary else ""
-
-func _build_costa_vista_map() -> void:
-	COSTA_VISTA_BUILDER.build(self)
 
 func apply_graphics_settings(distance_level: int, texture_quality_level: int) -> void:
 	_ultra_low_mode = distance_level == 0
@@ -93,8 +75,6 @@ func apply_graphics_settings(distance_level: int, texture_quality_level: int) ->
 	_refresh_active_tiles()
 
 func _process(delta: float) -> void:
-	if _selected_region_id == "costa_vista":
-		return
 	_process_pending_meshes()
 	_refresh_elapsed += delta
 	if _refresh_elapsed >= refresh_interval:
@@ -532,9 +512,7 @@ func get_pending_mesh_count() -> int:
 func get_catalog_tile_count() -> int:
 	return _tile_records.size()
 
-func is_start_area_loaded() -> bool:
-	if _selected_region_id == "costa_vista":
-		return _manifest_ready and get_node_or_null("CostaVistaCity") != null
+func is_start_area_loaded() -> bool: _manifest_ready and get_node_or_null("CostaVistaCity") != null
 	for tile_name: String in _selected_region_tiles.keys():
 		if not _loaded_tiles.has(tile_name) or not is_collision_tile_loaded(tile_name):
 			continue

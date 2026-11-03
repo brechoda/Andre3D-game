@@ -1,0 +1,478 @@
+newmtl planter_short_m1_dirt64b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/dirt64b.PNG
+
+newmtl planter_long_m0_ledge_grey_128H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/ledge_grey_128H.PNG
+
+newmtl planter_long_m1_dirt64b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/dirt64b.PNG
+
+newmtl broadwaybuild_m0_nightnewallkb1128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/nightnewallkb1128.PNG
+
+newmtl broadwaybuild_m1_sandstone2_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/sandstone2_128.PNG
+
+newmtl broadwaybuild_m2_skyrA256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/skyrA256128.PNG
+
+newmtl broadwaybuild_m3_ledge_grey_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/ledge_grey_64H.PNG
+
+newmtl broadwaybuild_m4_shopwall_wood1_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/shopwall_wood1_64H.PNG
+
+newmtl broadwaybuild_m5_blackmetal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinatowns/blackmetal.PNG
+
+newmtl broadwaybuild_m6_blackmetal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinatowns/blackmetal.PNG
+
+newmtl broadwaybuild_m7_blackdrum128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/blackdrum128.PNG
+
+newmtl broadwaybuild_m8_sffront27_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/sffront27_256128.PNG
+
+newmtl broadwaybuild_m9_stone_block1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comartgaly/stone_block1_64.PNG
+
+newmtl broadwaybuild_m10_comdoor1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/comdoor1_128.PNG
+
+newmtl broadwaybuild_m11_door1_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/archedbuilding/door1_64.PNG
+
+newmtl broadwaybuild_m12_Pillarbrickgrey_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/Italynrth/Pillarbrickgrey_64HV.PNG
+
+newmtl broadwaybuild_m13_redlightc256hi128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/redlightc256hi128.PNG
+
+newmtl broadwaybuild_m14_cinemacounter_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/cinemacounter_64.PNG
+
+newmtl broadwaybuild_m15_cinemawindow_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/cinemawindow_64.PNG
+
+newmtl broadwaybuild_m16_red
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buoy/red.PNG
+
+newmtl broadwaybuild_m17_blackmetal
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/chinatowns/blackmetal.PNG
+
+newmtl broadwaybuild_m18_sandstone2_decowin
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/sandstone2_decowin.PNG
+
+newmtl broadwaybuild_m19_cinemaboard_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/8balls/cinemaboard_64HV.PNG
+
+newmtl broadwaybuild_m20_filmposter3_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/filmposter3_64.PNG
+
+newmtl broadwaybuild_m21_Alumox64b
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/3d8ball/Alumox64b.PNG
+
+newmtl broadwaybuild_m22_poster5_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster5_64.PNG
+
+newmtl broadwaybuild_m23_chromepipe2_64HV
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comartgaly/chromepipe2_64HV.PNG
+
+newmtl broadwaybuild_m24_poster7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster7.PNG
+
+newmtl broadwaybuild_m25_poster4_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster4_128.PNG
+
+newmtl broadwaybuild_m26_white64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/white64.PNG
+
+newmtl broadwaybuild_m27_StainGlass7_64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/StainGlass7_64.PNG
+
+newmtl broadwaybuild_m28_pipe64v
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/pipe64v.PNG
+
+newmtl broadwaybuild_m29_noodle_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/noodle_128.PNG
+
+newmtl broadwaybuild_m30_Fbk64lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/Fbk64lit.PNG
+
+newmtl broadwaybuild_m31_poster4_128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster4_128lit.PNG
+
+newmtl broadwaybuild_m32_convenience02_64lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/convenience02_64lit.PNG
+
+newmtl broadwaybuild_m33_convenience04_64lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/convenience04_64lit.PNG
+
+newmtl broadwaybuild_m34_convenience01_64lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/convenience01_64lit.PNG
+
+newmtl broadwaybuild_m35_neonwhite64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/billboard/neonwhite64.PNG
+
+newmtl broadwaybuild_m36_billbrd_light_64a
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/billbrd_light_64a.PNG
+
+newmtl broadwaybuild_m37_poster2_128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/poster2_128lit.PNG
+
+newmtl broadwaybuild_m38_SUMO_128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/SUMO_128lit.PNG
+
+newmtl broadwaybuild_m39_Squid128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/Squid128lit.PNG
+
+newmtl broadwaybuild_m40_phoneco_slim
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/phoneco_slim.PNG
+
+newmtl broadwaybuild_m41_cut_128lit
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/cut_128lit.PNG
+
+newmtl broadwaybuild_m42_hirisenv256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/hirisenv256.PNG
+
+newmtl broadwaybuild_m43_sffront26_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/buildmainten5/sffront26_256128.PNG
+
+newmtl broadwaybuild_m44_Fbk64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/combroadwy2/Fbk64.PNG
+
+newmtl broadwaybuild_m45_rustybolts
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/airport/rustybolts.PNG
+
+newmtl area5build2_m0_off9_128h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/off9_128h.PNG
+
+newmtl area5build2_m1_off5_128h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/off5_128h.PNG
+
+newmtl area5build2_m2_combeige128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/combeige128.PNG
+
+newmtl area5build2_m3_combeigebrick64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/combeigebrick64.PNG
+
+newmtl area5build2_m4_combeigeledge64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/combeigeledge64.PNG
+
+newmtl area5build2_m5_Build4win1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/Build4win1.PNG
+
+newmtl area5build2_m6_Build8top
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/Build8top.PNG
+
+newmtl area5build2_m7_Storeroom7
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/Storeroom7.PNG
+
+newmtl area5build2_m8_Storeroom3
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/Storeroom3.PNG
+
+newmtl area5build2_m9_greyrooftop128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/greyrooftop128.PNG
+
+newmtl area5build2_m10_Storeroom9
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/Storeroom9.PNG
+
+newmtl area5build2_m11_off4_128h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/off4_128h.PNG
+
+newmtl area5build2_m12_ledge2_64H
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/ledge2_64H.PNG
+
+newmtl area5build2_m13_sandstone_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/sandstone_128.PNG
+
+newmtl area5build2_m14_Build18win
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/Build18win.PNG
+
+newmtl area5build2_m15_low_win1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/low_win1.PNG
+
+newmtl area5build2_m16_low_win2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/low_win2.PNG
+
+newmtl area5build2_m17_off10_128h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/off10_128h.PNG
+
+newmtl area5build2_m18_tallbuild256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/tallbuild256.PNG
+
+newmtl area5build2_m19_tallbuildb256
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/tallbuildb256.PNG
+
+newmtl area5build2_m20_off2_64h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/off2_64h.PNG
+
+newmtl area5build2_m21_Build8win
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/Build8win.PNG
+
+newmtl area5build2_m22_off3_64h
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/off3_64h.PNG
+
+newmtl area5build2_m23_fire_esc
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/fire_esc.PNG
+
+newmtl area5build2_m24_fire_escfloor
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/fire_escfloor.PNG
+
+newmtl area5build2_m25_greyfence64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/greyfence64.PNG
+
+newmtl area5build2_m26_clothingf128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/clothingf128.PNG
+
+newmtl area5build2_m27_srnd_side_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_side_1.PNG
+
+newmtl area5build2_m28_srnd_topbit1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_topbit1.PNG
+
+newmtl area5build2_m29_srnd_colour_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_colour_1.PNG
+
+newmtl area5build2_m30_srnd_panel_1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_panel_1.PNG
+
+newmtl area5build2_m31_srnd_flatdoor1
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_flatdoor1.PNG
+
+newmtl area5build2_m32_com_shop_windowframe
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/com_shop_windowframe.PNG
+
+newmtl area5build2_m33_shopboutique128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl area5build2_m34_srnd_side_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_side_2.PNG
+
+newmtl area5build2_m35_srnd_topbit2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_topbit2.PNG
+
+newmtl area5build2_m36_srnd_colour_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_colour_2.PNG
+
+newmtl area5build2_m37_srnd_panel_2
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/srnd_panel_2.PNG
+
+newmtl area5build2_m38_inddoor6
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/inddoor6.PNG
+
+newmtl area5build2_m39_comdoor1_128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/comdoor1_128.PNG
+
+newmtl area5build2_m40_stuffa128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/stuffa128.PNG
+
+newmtl area5build2_m41_italygreenl256hi
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/italygreenl256hi.PNG
+
+newmtl area5build2_m42_gourmetdeli256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/gourmetdeli256128.PNG
+
+newmtl area5build2_m43_sffront7_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/sffront7_256128.PNG
+
+newmtl area5build2_m44_ind_Cafe256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/ind_Cafe256128.PNG
+
+newmtl area5build2_m45_sffront21_256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/sffront21_256128.PNG
+
+newmtl area5build2_m46_shoeshopb256128
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/area5b/shoeshopb256128.PNG

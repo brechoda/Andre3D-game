@@ -260,7 +260,7 @@ func _apply_remote_spawn_payload(json_text: String) -> void:
         push_warning("Spawn remoto ignorado: mapa incompatível.")
         return
     var map_streamer := get_node_or_null("../MapStreamer")
-    var selected_region := "industrial"
+    var selected_region := "center"
     if map_streamer != null and map_streamer.has_method("get_selected_region_id"):
         selected_region = str(map_streamer.call("get_selected_region_id"))
     var regional_spawns: Variant = config.get("regional_spawns", {})

@@ -1,8 +1,406 @@
 {
   "schema": 1,
   "material_limit": 96,
-  "tile_count": 2,
+  "tile_count": 6,
   "tiles": [
+    {
+      "tile": "comnbtm/comnbtm",
+      "source_obj": "comnbtm_comnbtm.obj",
+      "parts": [
+        "comnbtm_comnbtm__part_00.obj",
+        "comnbtm_comnbtm__part_01.obj",
+        "comnbtm_comnbtm__part_02.obj",
+        "comnbtm_comnbtm__part_03.obj",
+        "comnbtm_comnbtm__part_04.obj",
+        "comnbtm_comnbtm__part_05.obj",
+        "comnbtm_comnbtm__part_06.obj",
+        "comnbtm_comnbtm__part_07.obj",
+        "comnbtm_comnbtm__part_08.obj",
+        "comnbtm_comnbtm__part_09.obj",
+        "comnbtm_comnbtm__part_10.obj",
+        "comnbtm_comnbtm__part_11.obj",
+        "comnbtm_comnbtm__part_12.obj",
+        "comnbtm_comnbtm__part_13.obj",
+        "comnbtm_comnbtm__part_14.obj"
+      ],
+      "material_count": 1392,
+      "triangle_count": 97845,
+      "excluded_triangle_count": 56971,
+      "excluded_material_count": 52,
+      "part_summaries": [
+        {
+          "file": "comnbtm_comnbtm__part_00.obj",
+          "materials": 96,
+          "triangles": 5328,
+          "vertices": 9123
+        },
+        {
+          "file": "comnbtm_comnbtm__part_01.obj",
+          "materials": 96,
+          "triangles": 4505,
+          "vertices": 8048
+        },
+        {
+          "file": "comnbtm_comnbtm__part_02.obj",
+          "materials": 96,
+          "triangles": 7702,
+          "vertices": 12585
+        },
+        {
+          "file": "comnbtm_comnbtm__part_03.obj",
+          "materials": 96,
+          "triangles": 5240,
+          "vertices": 9390
+        },
+        {
+          "file": "comnbtm_comnbtm__part_04.obj",
+          "materials": 96,
+          "triangles": 5928,
+          "vertices": 10631
+        },
+        {
+          "file": "comnbtm_comnbtm__part_05.obj",
+          "materials": 96,
+          "triangles": 11240,
+          "vertices": 20343
+        },
+        {
+          "file": "comnbtm_comnbtm__part_06.obj",
+          "materials": 96,
+          "triangles": 4997,
+          "vertices": 9882
+        },
+        {
+          "file": "comnbtm_comnbtm__part_07.obj",
+          "materials": 96,
+          "triangles": 9522,
+          "vertices": 17000
+        },
+        {
+          "file": "comnbtm_comnbtm__part_08.obj",
+          "materials": 96,
+          "triangles": 6408,
+          "vertices": 11898
+        },
+        {
+          "file": "comnbtm_comnbtm__part_09.obj",
+          "materials": 96,
+          "triangles": 7381,
+          "vertices": 13339
+        },
+        {
+          "file": "comnbtm_comnbtm__part_10.obj",
+          "materials": 96,
+          "triangles": 6984,
+          "vertices": 13532
+        },
+        {
+          "file": "comnbtm_comnbtm__part_11.obj",
+          "materials": 96,
+          "triangles": 7574,
+          "vertices": 12414
+        },
+        {
+          "file": "comnbtm_comnbtm__part_12.obj",
+          "materials": 96,
+          "triangles": 4909,
+          "vertices": 9972
+        },
+        {
+          "file": "comnbtm_comnbtm__part_13.obj",
+          "materials": 96,
+          "triangles": 5604,
+          "vertices": 9919
+        },
+        {
+          "file": "comnbtm_comnbtm__part_14.obj",
+          "materials": 48,
+          "triangles": 4523,
+          "vertices": 7993
+        }
+      ]
+    },
+    {
+      "tile": "comntop/comntop",
+      "source_obj": "comntop_comntop.obj",
+      "parts": [
+        "comntop_comntop__part_00.obj",
+        "comntop_comntop__part_01.obj",
+        "comntop_comntop__part_02.obj",
+        "comntop_comntop__part_03.obj",
+        "comntop_comntop__part_04.obj",
+        "comntop_comntop__part_05.obj",
+        "comntop_comntop__part_06.obj",
+        "comntop_comntop__part_07.obj",
+        "comntop_comntop__part_08.obj",
+        "comntop_comntop__part_09.obj",
+        "comntop_comntop__part_10.obj",
+        "comntop_comntop__part_11.obj"
+      ],
+      "material_count": 1075,
+      "triangle_count": 122012,
+      "excluded_triangle_count": 45435,
+      "excluded_material_count": 75,
+      "part_summaries": [
+        {
+          "file": "comntop_comntop__part_00.obj",
+          "materials": 96,
+          "triangles": 7310,
+          "vertices": 12492
+        },
+        {
+          "file": "comntop_comntop__part_01.obj",
+          "materials": 96,
+          "triangles": 2333,
+          "vertices": 4027
+        },
+        {
+          "file": "comntop_comntop__part_02.obj",
+          "materials": 96,
+          "triangles": 27522,
+          "vertices": 51580
+        },
+        {
+          "file": "comntop_comntop__part_03.obj",
+          "materials": 96,
+          "triangles": 3019,
+          "vertices": 5684
+        },
+        {
+          "file": "comntop_comntop__part_04.obj",
+          "materials": 96,
+          "triangles": 16021,
+          "vertices": 29991
+        },
+        {
+          "file": "comntop_comntop__part_05.obj",
+          "materials": 96,
+          "triangles": 12873,
+          "vertices": 22735
+        },
+        {
+          "file": "comntop_comntop__part_06.obj",
+          "materials": 96,
+          "triangles": 6682,
+          "vertices": 11833
+        },
+        {
+          "file": "comntop_comntop__part_07.obj",
+          "materials": 96,
+          "triangles": 5996,
+          "vertices": 10675
+        },
+        {
+          "file": "comntop_comntop__part_08.obj",
+          "materials": 96,
+          "triangles": 12009,
+          "vertices": 22780
+        },
+        {
+          "file": "comntop_comntop__part_09.obj",
+          "materials": 96,
+          "triangles": 21987,
+          "vertices": 46174
+        },
+        {
+          "file": "comntop_comntop__part_10.obj",
+          "materials": 96,
+          "triangles": 5678,
+          "vertices": 9085
+        },
+        {
+          "file": "comntop_comntop__part_11.obj",
+          "materials": 19,
+          "triangles": 582,
+          "vertices": 807
+        }
+      ]
+    },
+    {
+      "tile": "comse/comse",
+      "source_obj": "comse_comse.obj",
+      "parts": [
+        "comse_comse__part_00.obj",
+        "comse_comse__part_01.obj",
+        "comse_comse__part_02.obj",
+        "comse_comse__part_03.obj",
+        "comse_comse__part_04.obj",
+        "comse_comse__part_05.obj",
+        "comse_comse__part_06.obj",
+        "comse_comse__part_07.obj"
+      ],
+      "material_count": 727,
+      "triangle_count": 55825,
+      "excluded_triangle_count": 30229,
+      "excluded_material_count": 64,
+      "part_summaries": [
+        {
+          "file": "comse_comse__part_00.obj",
+          "materials": 96,
+          "triangles": 14019,
+          "vertices": 25038
+        },
+        {
+          "file": "comse_comse__part_01.obj",
+          "materials": 96,
+          "triangles": 7818,
+          "vertices": 14138
+        },
+        {
+          "file": "comse_comse__part_02.obj",
+          "materials": 96,
+          "triangles": 3466,
+          "vertices": 6337
+        },
+        {
+          "file": "comse_comse__part_03.obj",
+          "materials": 96,
+          "triangles": 9888,
+          "vertices": 18072
+        },
+        {
+          "file": "comse_comse__part_04.obj",
+          "materials": 96,
+          "triangles": 5678,
+          "vertices": 11056
+        },
+        {
+          "file": "comse_comse__part_05.obj",
+          "materials": 96,
+          "triangles": 2303,
+          "vertices": 4531
+        },
+        {
+          "file": "comse_comse__part_06.obj",
+          "materials": 96,
+          "triangles": 5581,
+          "vertices": 10963
+        },
+        {
+          "file": "comse_comse__part_07.obj",
+          "materials": 55,
+          "triangles": 7072,
+          "vertices": 10442
+        }
+      ]
+    },
+    {
+      "tile": "comsw/comsw",
+      "source_obj": "comsw_comsw.obj",
+      "parts": [
+        "comsw_comsw__part_00.obj",
+        "comsw_comsw__part_01.obj",
+        "comsw_comsw__part_02.obj",
+        "comsw_comsw__part_03.obj",
+        "comsw_comsw__part_04.obj",
+        "comsw_comsw__part_05.obj",
+        "comsw_comsw__part_06.obj",
+        "comsw_comsw__part_07.obj",
+        "comsw_comsw__part_08.obj",
+        "comsw_comsw__part_09.obj",
+        "comsw_comsw__part_10.obj",
+        "comsw_comsw__part_11.obj",
+        "comsw_comsw__part_12.obj",
+        "comsw_comsw__part_13.obj",
+        "comsw_comsw__part_14.obj"
+      ],
+      "material_count": 1431,
+      "triangle_count": 97363,
+      "excluded_triangle_count": 50316,
+      "excluded_material_count": 32,
+      "part_summaries": [
+        {
+          "file": "comsw_comsw__part_00.obj",
+          "materials": 96,
+          "triangles": 8560,
+          "vertices": 14586
+        },
+        {
+          "file": "comsw_comsw__part_01.obj",
+          "materials": 96,
+          "triangles": 8742,
+          "vertices": 14966
+        },
+        {
+          "file": "comsw_comsw__part_02.obj",
+          "materials": 96,
+          "triangles": 11308,
+          "vertices": 20204
+        },
+        {
+          "file": "comsw_comsw__part_03.obj",
+          "materials": 96,
+          "triangles": 3963,
+          "vertices": 6527
+        },
+        {
+          "file": "comsw_comsw__part_04.obj",
+          "materials": 96,
+          "triangles": 7404,
+          "vertices": 13242
+        },
+        {
+          "file": "comsw_comsw__part_05.obj",
+          "materials": 96,
+          "triangles": 5483,
+          "vertices": 9925
+        },
+        {
+          "file": "comsw_comsw__part_06.obj",
+          "materials": 96,
+          "triangles": 4994,
+          "vertices": 8870
+        },
+        {
+          "file": "comsw_comsw__part_07.obj",
+          "materials": 96,
+          "triangles": 14727,
+          "vertices": 24672
+        },
+        {
+          "file": "comsw_comsw__part_08.obj",
+          "materials": 96,
+          "triangles": 1893,
+          "vertices": 3450
+        },
+        {
+          "file": "comsw_comsw__part_09.obj",
+          "materials": 96,
+          "triangles": 5267,
+          "vertices": 9868
+        },
+        {
+          "file": "comsw_comsw__part_10.obj",
+          "materials": 96,
+          "triangles": 3754,
+          "vertices": 6548
+        },
+        {
+          "file": "comsw_comsw__part_11.obj",
+          "materials": 96,
+          "triangles": 3254,
+          "vertices": 5815
+        },
+        {
+          "file": "comsw_comsw__part_12.obj",
+          "materials": 96,
+          "triangles": 6108,
+          "vertices": 10597
+        },
+        {
+          "file": "comsw_comsw__part_13.obj",
+          "materials": 96,
+          "triangles": 5272,
+          "vertices": 9856
+        },
+        {
+          "file": "comsw_comsw__part_14.obj",
+          "materials": 87,
+          "triangles": 6634,
+          "vertices": 11515
+        }
+      ]
+    },
     {
       "tile": "maps/overview",
       "source_obj": "maps_overview.obj",

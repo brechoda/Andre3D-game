@@ -1,52 +1,47 @@
 {
   "schema": 1,
-  "default_region": "costa_vista",
+  "default_region": "center",
   "regions": [
     {
-      "id": "costa_vista",
-      "name": "COSTA VISTA",
-      "description": "Área costeira ensolarada com ruas, quiosques e palmeiras",
-      "builtin": true,
-      "bounds_min": [
-        -104.0,
-        -5.0,
-        -104.0
-      ],
-      "bounds_max": [
-        104.0,
-        45.0,
-        104.0
+      "id": "center",
+      "name": "CENTRO",
+      "description": "Região central e bairros comerciais",
+      "tiles": [
+        "comnbtm/comnbtm",
+        "comntop/comntop",
+        "comse/comse",
+        "comsw/comsw"
       ],
       "spawn": [
-        0.0,
-        1.2,
-        0.0
+        150.0,
+        19.9448,
+        50.0
       ],
       "gorece_spawn": [
-        5.0,
-        1.2,
-        4.0
+        150.0,
+        19.9448,
+        0.0
       ],
       "vehicle_spawns": {
         "pop100_01": [
-          6.0,
-          1.2,
-          4.0
+          300.0,
+          10.6349,
+          50.0
         ],
         "wayfarer_01": [
-          -6.0,
-          1.2,
-          4.0
+          300.0,
+          11.1253,
+          0.0
         ],
         "hilux_01": [
-          6.0,
-          1.2,
-          -4.0
+          150.0,
+          15.1277,
+          -250.0
         ],
         "fiatuno_01": [
-          -6.0,
-          1.2,
-          -4.0
+          250.0,
+          1.1893,
+          -150.0
         ]
       }
     }

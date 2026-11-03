@@ -1,5 +1,7 @@
-# Andre 3D — Costa Vista
+# Andre 3D — Centro
 
-A versão atual usa **COSTA VISTA** como mapa embutido no jogo. INDUSTRIAL e CENTRO foram removidos do cliente, do menu, dos assets e da distribuição remota.
+A versão atual mantém somente o mapa **CENTRO**. INDUSTRIAL e COSTA VISTA foram removidos do cliente, do menu, dos assets e da distribuição remota.
 
-Não é necessário baixar um PCK de mapa para entrar em Costa Vista.
+O Centro é baixado sob demanda ao entrar no jogo.
+
+Arquivo: `Andre3D-map-center.pck`

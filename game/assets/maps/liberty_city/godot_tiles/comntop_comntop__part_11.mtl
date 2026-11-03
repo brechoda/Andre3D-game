@@ -1,0 +1,93 @@
+newmtl comlights_top05_m0_lod_lights_texture
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlights/lod_lights_texture.PNG
+
+newmtl comlights_top04_m0_lod_lights_texture
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlights/lod_lights_texture.PNG
+
+newmtl LODldingground1_m0_build_site
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/build_site.PNG
+
+newmtl LODldingground1_m1_newall10_seamless64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/newall10_seamless64.PNG
+
+newmtl LODldingground2_m0_build_site
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/build_site.PNG
+
+newmtl LODldingground2_m1_newall10_seamless64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/newall10_seamless64.PNG
+
+newmtl LODldingground3_m0_build_site
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/build_site.PNG
+
+newmtl LODldingground4_m0_build_site
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/build_site.PNG
+
+newmtl LODldingground5_m0_build_site
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/build_site.PNG
+
+newmtl LODldingground5_m1_newall10_seamless64
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/newall10_seamless64.PNG
+
+newmtl LODldingground6_m0_build_site
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/build_site.PNG
+
+newmtl LOD_cland127_m0_com_land_128_l0_top
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/com_land_128_l0_top.PNG
+
+newmtl LODlandnew7_m0_Grass_64HV_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/Grass_64HV_lod.PNG
+
+newmtl LODlandnew5_m0_Grass_64HV_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/Grass_64HV_lod.PNG
+
+newmtl LODlandnew6_m0_Grass_64HV_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/Grass_64HV_lod.PNG
+
+newmtl LODlandnew8_m0_Grass_64HV_lod
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comlod1/Grass_64HV_lod.PNG
+
+newmtl special_pathbity_m0_unnamed
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+
+newmtl csiteinttran_m0_dirtywhite
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/aircarpark/dirtywhite.PNG
+
+newmtl comparkbits_m0_carspace_texture
+Kd 1.0 1.0 1.0
+Ka 0.0 0.0 0.0
+map_Kd ../textures/comhospital/carspace_texture.PNG

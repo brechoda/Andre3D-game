@@ -3,8 +3,8 @@ extends Node
 
 signal status_changed(message: String)
 
-const SUPPORTED_REGION_IDS := ["costa_vista"]
-const BUILTIN_REGION_IDS := ["costa_vista"]
+const SUPPORTED_REGION_IDS := ["center"]
+const BUILTIN_REGION_IDS := ["center"]
 
 var map_ready := false
 var map_pack_path := ""
@@ -69,5 +69,5 @@ func get_status_message() -> String:
 	return status_message
 
 func get_install_path_hint() -> String:
-	var region_id := active_region_id if not active_region_id.is_empty() else "costa_vista"
+	var region_id := active_region_id if not active_region_id.is_empty() else "center"
 	return "Android/data/com.manus.andre3d.next/files/content/Andre3D-map-%s.pck" % region_id
