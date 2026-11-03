@@ -10,11 +10,11 @@ Este documento explica como continuar o projeto sem depender do histórico da co
 - Build multiplayer esperado: `andre3d-mp-v4`
 - Pacote Android principal a partir da 2.0.6: `com.manus.andre3d.next`
 - Pacote legado 2.0.5: `com.manus.andre3d`; a chave antiga foi perdida, então não pode ser atualizado no mesmo pacote.
-- Versão Android pública atual: `2.2.3`
-- Código Android público atual: `35`
-- Último APK público: `2.2.3` / código `35`, distribuído em `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.3`.
+- Versão Android pública atual: `2.2.4`
+- Código Android público atual: `36`
+- Último APK público: `2.2.4` / código `36`, distribuído em `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.4`.
 - O workflow `Build Android APK` cria artefatos de depuração com chave temporária; eles não podem atualizar o APK público. Releases de produção exigem a keystore original e publicação correspondente no manifesto do servidor.
-- SHA-256 do APK público 2.2.3: `48843a7bbdd12a292fa5bf1e6bce326bdc38b4b37fe308fe5e2e4ba6e239efb7`.
+- SHA-256 do APK público 2.2.4: `d896f6d70fe1359d30b834dd1f45ad541385207716e420b74d2d13ecb194c248`.
 
 ## Objetivo do projeto
 
@@ -26,8 +26,9 @@ Não substituir o projeto por um template novo. O projeto já tem mapa, veículo
 
 - `project.godot`: versão, cena inicial e autoloads. A cena inicial é `res://scenes/session_menu.tscn`.
 - `scenes/session_menu.tscn` e `scripts/session_menu.gd`: menu inicial, escolha de modo/personagem, espera da checagem remota e bloqueio de entrada quando há atualização obrigatória do APK. No Android, solicita apenas `POST_NOTIFICATIONS` ao iniciar, depois da checagem e se ainda não estiver concedida; não bloqueia o jogo nem solicita o microfone no menu.
-- `scenes/third_person.tscn` e `scripts/third_person.gd`: gameplay principal em terceira pessoa; mantém a tela de carregamento até o streamer confirmar geometria visual e colisão na área inicial, e por mais cinco segundos. A orientação do modelo é aplicada em coordenadas globais; sprint começa na faixa externa do analógico com histerese, e o botão `CORRER` alterna sprint contínuo até novo toque. A HUD também tem `PUXAR VEÍCULO`, que abre a lista dos veículos da cena e traz o escolhido para cerca de 4,8 m à frente do personagem.
-- `scripts/gta3_map_streamer.gd`: exige `map_region` explícito na sessão, mantém apenas os tiles da região escolhida e não usa proximidade para habilitar tiles da outra região.
+- `scenes/third_person.tscn` e `scripts/third_person.gd`: gameplay principal em terceira pessoa; mantém a tela de carregamento até o streamer confirmar geometria visual e colisão na área inicial, e por mais cinco segundos. A orientação do modelo é aplicada em coordenadas globais; sprint começa na faixa externa do analógico com histerese, e o botão `CORRER` alterna sprint contínuo até novo toque. A HUD também tem `PUXAR VEÍCULO`, que abre a lista dos veículos da cena e traz o escolhido para cerca de 4,8 m à frente do personagem. Se o personagem cair no vazio, o streamer o recupera no último ponto seguro ou no spawn da região.
+- `scripts/gta3_map_streamer.gd`: exige `map_region` explícito na sessão, mantém apenas os tiles da região escolhida e não usa proximidade para habilitar tiles da outra região. Agora seleciona tiles pela distância às bordas reais, processa colisões antes dos visuais e cria as montanhas perimetrais da região ativa.
+- `scripts/map_boundary_mountains.gd`: gera uma cordilheira low-poly ao redor da região ativa, com quatro barreiras físicas, evitando que o personagem saia da área jogável.
 - `scripts/net/multiplayer_client.gd`: cliente WebSocket. Ao entrar, envia `build`, `app_version`, sala, nome e personagem. Não remova `app_version`, pois o servidor bloqueia versões antigas. No evento `vehicle_pull`, espera a confirmação do servidor e aplica a posição/rotação do broadcast `vehicle_pulled` em todos os clientes.
 - `autoload/voice_chat.gd`: mantém o recebimento de vozes remoto e inicia a captura do microfone somente quando o botão `MICROFONE` na HUD é ligado; tocar novamente para o desligar interrompe a captura sem mutar outros jogadores.
 - `autoload/remote_updater.gd`: consulta o manifesto, valida arquivos por tamanho/SHA-256, grava conteúdo em `user://updates`, baixa o APK obrigatório pelo fluxo do menu e deixa PCKs de mapa apenas em cache; PCKs genéricos de mapa nunca são montados automaticamente.
@@ -98,15 +99,15 @@ godot --headless --path . --export-release "Android" dist/Andre3D-X.Y.Z.apk
 8. Criar um GitHub Release com o APK:
 
 ```bash
-gh release create vX.Y.Z dist/Andre3D-X.Y.Z.apk \
-  --repo brechoda/Andre3D-GTA3 \
-  --title "Andre 3D X.Y.Z" \
+gh release create apk-vX.Y.Z dist/Andre3D-X.Y.Z.apk \
+  --repo brechoda/andre3d-multiplayer-server \
+  --title "Andre3D X.Y.Z" \
   --notes "Resumo das alterações"
 ```
 
 Para substituir um asset já publicado, usar `gh release upload ... --clobber`, mas depois recalcular o hash.
 
-9. Atualizar `updates/manifest.json` no repositório do servidor com a URL do release, tamanho em bytes e SHA-256 do APK. Se a versão for obrigatória para online, atualizar `min_online_version` e o `MIN_CLIENT_VERSION` do servidor.
+9. Atualizar `updates/manifest.json` no repositório do servidor com a URL do release, tamanho em bytes e SHA-256 do APK. Se a versão mínima aceita pelo multiplayer também precisar mudar, atualizar `min_online_version` e o `MIN_CLIENT_VERSION` do servidor.
 10. Fazer commit/push do servidor e confirmar o manifesto público e `/health`.
 
 ## Regras de versionamento e compatibilidade
@@ -117,7 +118,7 @@ Para substituir um asset já publicado, usar `gh release upload ... --clobber`, 
 - Mudanças em mensagens WebSocket exigem alteração coordenada no cliente e no servidor.
 - Mantenha `build: "andre3d-mp-v4"` até haver uma migração de protocolo planejada.
 - O servidor reconhece `andre`, `gorece` e `dg`; o DG pode usar as motos, mas não a Hilux.
-- A assinatura principal usa uma chave de release permanente fora do repositório; preservar cópias seguras. O preset usa `/home/ubuntu/.local/share/godot/keystores/andre3d-main.jks`, alias `key1` e a variável de ambiente `GODOT_ANDROID_KEYSTORE_RELEASE_PASSWORD`; nunca commitar a senha ou a keystore.
+- A assinatura principal usa a keystore de release original, guardada fora do repositório. Nunca commitar a keystore, senha ou credenciais de assinatura; preservar cópias seguras da chave.
 
 ## Testes e higiene do repositório
 
@@ -130,12 +131,13 @@ Para substituir um asset já publicado, usar `gh release upload ... --clobber`, 
 
 ## Estado conhecido entregue
 
-- APK `2.2.3` (package `com.manus.andre3d.next`, código `35`) inclui o botão PUXAR VEÍCULO, sincronização online e as funções da versão 2.2.2.
-- Release pública Android: `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.3`.
-- Manifesto `2026.11.02.13` publicado no commit `2f298c6` do repositório de distribuição (`main`), com `client.version: 2.2.3`, `mandatory_online: true`, tamanho e SHA-256 do APK.
-- Manifesto atual público: `https://andre3d-multiplayer-server.onrender.com/updates/manifest.json`.
+- APK `2.2.4` (`com.manus.andre3d.next`, código `36`) inclui montanhas perimetrais com colisão em CENTRO e INDUSTRIAL, tiles selecionados por limites reais, carregamento de colisão antes do visual e recuperação do personagem se cair no vazio. Também conserva os recursos das versões anteriores, incluindo `PUXAR VEÍCULO`.
+- Release pública Android: `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.4`.
+- APK: `124881109` bytes; SHA-256 `d896f6d70fe1359d30b834dd1f45ad541385207716e420b74d2d13ecb194c248`. A assinatura foi conferida e é compatível com a versão 2.2.3.
+- Manifesto obrigatório `2026.11.03.14`, publicado no commit `110f971` do repositório de distribuição (`main`), com `client.version: 2.2.4`, `code: 36` e `mandatory_online: true`. Foi confirmado ao vivo no Render.
+- Manifesto público: `https://andre3d-multiplayer-server.onrender.com/updates/manifest.json`.
+- Commit do jogo: [`d21f983`](https://github.com/brechoda/Andre3D-game/commit/d21f983). Commit do manifesto: [`110f971`](https://github.com/brechoda/andre3d-multiplayer-server/commit/110f971).
+- A suíte Python terminou com 21 testes aprovados e 1 teste ignorado; o parser do Godot passou e o runtime confirmou as duas regiões e o resgate de queda.
 - O servidor público deve responder `{"ok":true,"build":"andre3d-mp-v4"}` em `/health`.
-- Commits do recurso de puxar veículo: [jogo `bd1af5b`](https://github.com/brechoda/Andre3D-game/commit/bd1af5b) e [servidor `0bd6aea`](https://github.com/brechoda/andre3d-multiplayer-server/commit/0bd6aea). O servidor limita a frequência, valida IDs/ocupação e libera a reserva anterior quando o jogador puxa outro veículo sem estar pilotando.
-- O manifesto obrigatório 2.2.3 foi confirmado ao vivo no Render; instalações antigas baixam o APK validado e precisam instalá-lo antes de entrar no jogo.
 
 Antes de começar uma alteração, leia este arquivo, `docs/game-multiplayer.md`, `autoload/remote_updater.gd`, `scripts/net/multiplayer_client.gd` e o README do servidor. Depois de alterar, valide, atualize a documentação se o fluxo mudar e faça push somente dos arquivos intencionais.
