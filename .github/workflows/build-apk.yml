@@ -86,18 +86,18 @@ jobs:
           sed -i 's|keystore/release_password=.*|keystore/release_password="android"|' export_presets.cfg
           grep keystore export_presets.cfg || true
           mkdir -p dist
-          godot --headless --path . --export-debug "Android" dist/Andre3D-2.2.4-debug.apk
+          godot --headless --path . --export-debug "Android" dist/Andre3D-2.2.5-debug.apk
 
       - name: Verify APK
         working-directory: game
         run: |
-          test -s dist/Andre3D-2.2.4-debug.apk
-          sha256sum dist/Andre3D-2.2.4-debug.apk
-          ls -lh dist/Andre3D-2.2.4-debug.apk
+          test -s dist/Andre3D-2.2.5-debug.apk
+          sha256sum dist/Andre3D-2.2.5-debug.apk
+          ls -lh dist/Andre3D-2.2.5-debug.apk
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Andre3D-2.2.4-debug
-          path: game/dist/Andre3D-2.2.4-debug.apk
+          name: Andre3D-2.2.5-debug
+          path: game/dist/Andre3D-2.2.5-debug.apk
           if-no-files-found: error
