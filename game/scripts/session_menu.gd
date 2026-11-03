@@ -50,6 +50,7 @@ func _wait_for_remote_update() -> void:
     await RemoteUpdater.wait_until_ready()
     _remote_update_ready = true
     if not RemoteUpdater.is_client_update_required():
+        call_deferred("_request_notification_permission")
         call_deferred("_prepare_selected_map")
     _sync_download_gate()
     if mode_hint != null:
@@ -62,6 +63,16 @@ func _wait_for_remote_update() -> void:
         if not RemoteUpdater.is_client_update_required() and not update_message.is_empty() and not RemoteUpdater.update_succeeded:
             mode_hint.text += "\n" + update_message
     _refresh_update_action()
+
+func _request_notification_permission() -> void:
+    if not OS.has_feature("android"):
+        return
+    var permission := "android.permission.POST_NOTIFICATIONS"
+    if OS.has_method("get_granted_permissions"):
+        var granted_permissions: PackedStringArray = OS.get_granted_permissions()
+        if permission in granted_permissions:
+            return
+    OS.request_permission(permission)
 
 func _on_remote_update_status(message: String, progress: float) -> void:
     if _download_progress != null:
