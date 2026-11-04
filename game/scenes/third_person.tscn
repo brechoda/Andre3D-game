@@ -115,7 +115,7 @@ refresh_interval = 1.0
 max_meshes_per_frame = 4
 
 [node name="Player" type="CharacterBody3D" parent="."]
-position = Vector3(20.73, 4.7448, -22.03)
+position = Vector3(184.73, 4.7448, -22.03)
 rotation_degrees = Vector3(0, 90, 0)
 script = ExtResource("1_player")
 floor_snap_length = 0.2
@@ -140,7 +140,7 @@ near = 0.05
 far = 3800.0
 
 [node name="GoreceNPC" type="CharacterBody3D" parent="."]
-position = Vector3(20.73, 4.7448, -30.03)
+position = Vector3(192.73, 4.7448, -22.03)
 rotation_degrees = Vector3(0, 90, 0)
 script = ExtResource("5_gorece_script")
 floor_snap_length = 0.2
