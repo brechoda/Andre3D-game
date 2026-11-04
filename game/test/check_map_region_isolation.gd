@@ -34,37 +34,31 @@ func _run() -> void:
 	if selected_region != "center":
 		_fail("Expected center to be selected, got: " + selected_region)
 		return
-	var catalog_file := FileAccess.open("res://assets/maps/liberty_city/gta3_tile_catalog.json", FileAccess.READ)
-	if catalog_file == null:
-		_fail("Could not read the spatial tile catalog")
+	var regions_file := FileAccess.open("res://assets/maps/liberty_city/map_regions.json", FileAccess.READ)
+	if regions_file == null:
+		_fail("Could not read the active map region manifest")
 		return
-	var catalog: Variant = JSON.parse_string(catalog_file.get_as_text())
-	if not catalog is Dictionary:
-		_fail("The spatial tile catalog is invalid")
+	var regions_data: Variant = JSON.parse_string(regions_file.get_as_text())
+	if not regions_data is Dictionary:
+		_fail("The map region manifest is invalid")
 		return
-	var industrial_center: Array = []
-	for row: Variant in (catalog as Dictionary).get("tiles", []):
-		if row is Dictionary and String((row as Dictionary).get("name", "")) == "industnw/industnw":
-			industrial_center = (row as Dictionary).get("center", [])
-			break
-	if industrial_center.size() < 2:
-		_fail("Could not find the Industrial tile center")
+	var regions: Variant = (regions_data as Dictionary).get("regions", [])
+	if not regions is Array or (regions as Array).size() != 1:
+		_fail("The current Android build should expose only the center region")
+		return
+	var center_region: Variant = (regions as Array)[0]
+	if not center_region is Dictionary or String((center_region as Dictionary).get("id", "")) != "center":
+		_fail("The only supported region must be center")
+		return
+	var allowed_tiles: Dictionary = {}
+	for tile_variant: Variant in (center_region as Dictionary).get("tiles", []):
+		allowed_tiles[String(tile_variant)] = true
+	if allowed_tiles.size() != 4:
+		_fail("The center region should contain exactly four tiles")
 		return
 
-	var player := Node3D.new()
-	player.name = "Player"
-	world.add_child(player)
-	# Simula o jogador chegando exatamente sobre um tile da região não selecionada.
-	player.global_position = streamer.to_global(Vector3(float(industrial_center[0]), float(industrial_center[1]), 0.0))
-	streamer.call("_refresh_active_tiles")
 
 	var selected_tiles: Dictionary = streamer.get("_selected_region_tiles")
-	var allowed_tiles := {
-		"comnbtm/comnbtm": true,
-		"comntop/comntop": true,
-		"comse/comse": true,
-		"comsw/comsw": true,
-	}
 	for tile_name: String in selected_tiles.keys():
 		if not allowed_tiles.has(tile_name):
 			_fail("Selected region contains an unexpected tile: " + tile_name)
@@ -79,7 +73,10 @@ func _run() -> void:
 		if tile_name != "ground_fix" and not allowed_tiles.has(tile_name):
 			_fail("The streamer requested an unselected tile: " + tile_name)
 			return
-	print("[map-region-isolation] center selected; no Industrial tile requested at its own coordinates")
+	if not wanted.is_empty():
+		_fail("Map tiles were requested before a player entered the selected region")
+		return
+	print("[map-region-isolation] center is the sole supported region; only its four tiles are requestable")
 	_restore_session()
 	world.queue_free()
 	await process_frame

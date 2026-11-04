@@ -12,12 +12,24 @@ func _initialize() -> void:
 func _run() -> void:
 	var args := OS.get_cmdline_user_args()
 	var expected_region := ""
+	var remote_spawns_by_region: Dictionary = {}
 	if not args.is_empty():
-		if args.size() not in [1, 2] or not ProjectSettings.load_resource_pack(args[0], false):
-			_fail("Usage: -- [<region-pck> [region-id]]")
+		if args.size() not in [1, 2, 3] or not ProjectSettings.load_resource_pack(args[0], false):
+			_fail("Usage: -- [<region-pck> [region-id [spawn-json]]]")
 			return
 		if args.size() == 2:
 			expected_region = args[1]
+		elif args.size() == 3:
+			expected_region = args[1]
+			var remote_file := FileAccess.open(args[2], FileAccess.READ)
+			if remote_file == null:
+				_fail("Could not open optional remote spawn.json")
+				return
+			var remote_data: Variant = JSON.parse_string(remote_file.get_as_text())
+			if not remote_data is Dictionary or not (remote_data as Dictionary).get("regional_spawns", {}) is Dictionary:
+				_fail("Optional remote spawn.json has an invalid structure")
+				return
+			remote_spawns_by_region = (remote_data as Dictionary)["regional_spawns"]
 	var file := FileAccess.open(REGIONS_PATH, FileAccess.READ)
 	if file == null:
 		_fail("Could not open map region manifest")
@@ -89,15 +101,40 @@ func _run() -> void:
 			return
 		for vehicle_id: Variant in (vehicles as Dictionary).keys():
 			spawn_points.append({"id": String(vehicle_id), "position": (vehicles as Dictionary)[vehicle_id]})
+		if not remote_spawns_by_region.is_empty():
+			var region_id := String((region as Dictionary).get("id", ""))
+			var remote_region: Variant = remote_spawns_by_region.get(region_id, null)
+			if not remote_region is Dictionary:
+				_fail("Remote spawn.json has no data for region " + region_id)
+				return
+			for actor_id: String in ["player", "gorece"]:
+				var actor_data: Variant = (remote_region as Dictionary).get(actor_id, {})
+				if not actor_data is Dictionary:
+					_fail("Remote spawn.json has no " + actor_id + " position for " + region_id)
+					return
+				spawn_points.append({"id": "remote_" + actor_id, "position": (actor_data as Dictionary).get("position", []), "world_space": true})
+			var remote_vehicles: Variant = (remote_region as Dictionary).get("vehicles", {})
+			if not remote_vehicles is Dictionary or (remote_vehicles as Dictionary).size() != 4:
+				_fail("Remote spawn.json is missing region vehicles: " + region_id)
+				return
+			for vehicle_id: Variant in (remote_vehicles as Dictionary).keys():
+				var vehicle_data: Variant = (remote_vehicles as Dictionary)[vehicle_id]
+				if not vehicle_data is Dictionary:
+					_fail("Remote spawn data is invalid for " + String(vehicle_id))
+					return
+				spawn_points.append({"id": "remote_" + String(vehicle_id), "position": (vehicle_data as Dictionary).get("position", []), "world_space": true})
 		for point: Variant in spawn_points:
 			var raw_position: Variant = (point as Dictionary).get("position", [])
 			if not raw_position is Array or (raw_position as Array).size() != 3:
 				_fail("Invalid %s spawn in %s" % [String((point as Dictionary).get("id", "")), String((region as Dictionary).get("id", ""))])
 				return
-			# O manifesto usa [X, altura, Y]; os meshes usam [X, Y, Z].
-			# Converter para o espaço global depois da transformação do MapStreamer.
-			var map_position := Vector3(float(raw_position[0]), float(raw_position[2]), float(raw_position[1]))
-			var position := map_root.to_global(map_position)
+			var position: Vector3
+			if bool((point as Dictionary).get("world_space", false)):
+				position = Vector3(float(raw_position[0]), float(raw_position[1]), float(raw_position[2]))
+			else:
+				# O manifesto usa [X, altura, Y]; converter ao espaço mundial.
+				var map_position := Vector3(float(raw_position[0]), float(raw_position[2]), float(raw_position[1]))
+				position = map_root.to_global(map_position)
 			var query := PhysicsRayQueryParameters3D.create(position + Vector3.UP * 2.0, position - Vector3.UP * 250.0, 1)
 			query.hit_back_faces = true
 			var hit: Dictionary = world.get_world_3d().direct_space_state.intersect_ray(query)
@@ -114,7 +151,7 @@ func _run() -> void:
 	if checked_spawns == 0:
 		_fail("No spawn points were checked")
 		return
-	print("[map-region-spawns] loaded %d tile visual meshes and found floor under %d spawn points" % [checked_visual_tiles, checked_spawns])
+	print("[map-region-spawns] loaded %d tile visual meshes and found floor under %d spawn points%s" % [checked_visual_tiles, checked_spawns, " including remote config" if not remote_spawns_by_region.is_empty() else ""])
 	quit(0)
 
 func _add_collision_tile(map_root: Node3D, tile_name: String) -> bool:

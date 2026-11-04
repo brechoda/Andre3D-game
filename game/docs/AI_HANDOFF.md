@@ -134,10 +134,10 @@ Para substituir um asset já publicado, usar `gh release upload ... --clobber`, 
 - APK `2.2.8` (`com.manus.andre3d.next`, código `40`) mantém o conteúdo de jogo publicado e corrige o bloqueio de carregamento após 100% e a atualização compartilhada do botão de pilotagem.
 - Release pública Android: `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.8`.
 - APK: `125377530` bytes; SHA-256 `92b0b3f302f28fd1e0235c0e9cd09da86c5736562d1d303803480f704eaddafe`. `apksigner` validou a assinatura e o fingerprint coincide com o APK anterior; o asset da release reporta o mesmo tamanho e SHA-256.
-- Manifesto obrigatório `2026.11.03.4`, publicado no commit `a1b5eb2` do repositório de distribuição (`main`), com `client.version: 2.2.8`, `code: 40` e `mandatory_online: true`; confirmado ao vivo no Render com HTTP 200.
+- Manifesto obrigatório `2026.11.04.1`, publicado no commit `0e85bd8` do repositório de distribuição (`main`), com `client.version: 2.2.8`, `code: 40` e `mandatory_online: true`; confirmado ao vivo no Render com HTTP 200.
 - Manifesto público: `https://andre3d-multiplayer-server.onrender.com/updates/manifest.json`.
-- Correção do jogo: commit [`707b5c3`](https://github.com/brechoda/Andre3D-game/commit/707b5c3); versão/código Android: [`296d00a`](https://github.com/brechoda/Andre3D-game/commit/296d00a); manifesto: [`a1b5eb2`](https://github.com/brechoda/andre3d-multiplayer-server/commit/a1b5eb2).
-- Os testes Godot do streamer e do botão de pilotagem passaram; `npm test` e `node --check server.mjs` passaram no servidor.
-- O servidor público respondeu `{"ok":true,"build":"andre3d-mp-v4","rooms":0}` em `/health` após o deploy.
+- Correção do jogo: commit [`707b5c3`](https://github.com/brechoda/Andre3D-game/commit/707b5c3); versão/código Android: [`296d00a`](https://github.com/brechoda/Andre3D-game/commit/296d00a); manifesto anterior: [`a1b5eb2`](https://github.com/brechoda/andre3d-multiplayer-server/commit/a1b5eb2); spawn `global-10`: [`0e85bd8`](https://github.com/brechoda/andre3d-multiplayer-server/commit/0e85bd8).
+- Auditoria do mapa: 15 testes Python (14 passaram, um skipped por arquivo-fonte excluído), parse Godot e isolamento da região passaram; o PCK CENTRO carregou quatro meshes visuais e os raycasts COL1 passaram para os seis spawns locais e os seis remotos. `npm test` e `node --check server.mjs` passaram no servidor.
+- O servidor público respondeu `{"ok":true,"build":"andre3d-mp-v4","rooms":0}` em `/health`; o manifesto atual ativo é `2026.11.04.1` e serve só o PCK `center`.
 
 Antes de começar uma alteração, leia este arquivo, `docs/game-multiplayer.md`, `autoload/remote_updater.gd`, `scripts/net/multiplayer_client.gd` e o README do servidor. Depois de alterar, valide, atualize a documentação se o fluxo mudar e faça push somente dos arquivos intencionais.

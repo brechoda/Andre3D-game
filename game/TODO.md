@@ -27,19 +27,20 @@
 - [x] As rodas devem parar de acumular giro quando o veículo estiver parado ou quando o motorista remoto desmontar.
 
 ## Mapa Liberty City (GTA III)
-- [x] Remover INDUSTRIAL e CENTRO e manter COSTA VISTA como mapa embutido.
+- [x] Manter CENTRO como única região selecionável, baixada em PCK; não distribuir INDUSTRIAL nem COSTA VISTA no cliente atual.
 - [x] Gerar catálogo espacial dos 8.689 posicionamentos em 12 tiles, com limites, modelos e dicionários de textura.
 - [x] Gerar 12 meshes OBJ/MTL convertidas e dividi-las em partes de até 96 materiais/superfícies para contornar o limite do importador OBJ do Godot.
-- [x] Corrigir os caminhos relativos das texturas nas partes Godot-ready e copiar somente os PNG usados para `assets/maps/liberty_city`, pasta incluída na exportação.
-- [x] Conectar o mapa à cena jogável com streaming do overview e até três tiles locais, mantendo personagens, veículos, áudio, multiplayer, controles touch e teclado existentes.
+- [x] Corrigir os caminhos relativos e preparar os assets runtime para distribuição no PCK regional (os mapas são excluídos do APK principal).
+- [x] Conectar o streamer à cena jogável para carregar apenas os tiles Centro da região escolhida, preservando personagens, veículos, multiplayer e controles existentes.
 - [x] Alinhar o spawn a uma superfície de estrada do IPL e ampliar o alcance de câmera para a escala da cidade.
 - [x] Gerar e aplicar as colisões COL1 originais por tile, incluindo faces, caixas e esferas transformadas pelos posicionamentos IPL.
 - [x] Corrigir transparências/máscaras: 280 texturas com alpha são detectadas no runtime e os materiais transparentes usam modo alpha com culling desativado.
 - [x] Substituir o `subglass.txd` truncado por texturas RGBA `glassfxsub1`/`glassfxsub2` e atualizar os MTLs dos modelos afetados.
 - [x] Executar smoke test desktop headless da cena de terceira pessoa após a importação dos meshes COL1.
 - [x] Remover de todos os tiles as árvores (incluindo variantes LOD e sombras), postes de iluminação/telefonia e semáforos, tanto visualmente quanto nas colisões; preservar arbustos baixos, prédios, asfalto e suportes estruturais.
-- [x] Separar o mapa em PCKs regionais, baixar automaticamente INDUSTRIAL como mapa principal mais leve e deixar CENTRO como download opcional escolhido no menu.
-- [ ] Fazer playtest visual/jogável no desktop e em dispositivo Android, conferir streaming/câmera/movimento e as bordas dos remendos do chão; o build APK do CI não substitui esses testes antes de considerar o mapa finalizado.
+- [x] Distribuir somente o PCK CENTRO, baixado sob demanda e montado apenas após a escolha da região.
+- [ ] Fazer playtest visual/jogável no desktop e em dispositivo Android para a região CENTRO; CI e raycasts headless não substituem teste visual, de controles e desempenho real.
+- [ ] Se o objetivo for a Liberty City completa, integrar os 8 tiles-base que não fazem parte do CENTRO e disponibilizá-los como regiões/PCKs jogáveis.
 
 ## Piloto automático e GPS offline
 - [x] No modo offline, adicionar um botão de piloto automático para o veículo; ao ativá-lo, o veículo deve seguir a pista sozinho e poder percorrê-la nos dois sentidos, sem remover o controle manual existente.
