@@ -10,11 +10,11 @@ Este documento explica como continuar o projeto sem depender do histórico da co
 - Build multiplayer esperado: `andre3d-mp-v4`
 - Pacote Android principal a partir da 2.0.6: `com.manus.andre3d.next`
 - Pacote legado 2.0.5: `com.manus.andre3d`; a chave antiga foi perdida, então não pode ser atualizado no mesmo pacote.
-- Versão Android pública atual: `2.2.9`
-- Código Android público atual: `41`
-- Último APK público: `2.2.9` / código `41`, distribuído em `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.9`.
-- O workflow `Build Android APK` cria artefatos de depuração com chave temporária; eles não podem atualizar o APK público. Releases de produção exigem a keystore original e publicação correspondente no manifesto do servidor.
-- SHA-256 do APK público 2.2.9: `57962d7d66a59baac432a748a69813116bc33eb9e833bc38fda2d71525c195d0`.
+- Versão Android pública atual: `2.2.11`
+- Código Android público atual: `43`
+- Último APK público: `2.2.11` / código `43`, distribuído em `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.11`.
+- O workflow `Build Android APK` cria artefatos de depuração com chave temporária; eles não podem atualizar o APK público. Releases de produção exigem a keystore original e a publicação correspondente no manifesto do servidor; consulte o aviso de segurança abaixo.
+- SHA-256 do APK público 2.2.11: `eafcb30ca5174b177f3e9fca25f649c4b127d452a68b6177d7d1745a89a334f9`.
 
 ## Objetivo do projeto
 
@@ -118,7 +118,7 @@ Para substituir um asset já publicado, usar `gh release upload ... --clobber`, 
 - Mudanças em mensagens WebSocket exigem alteração coordenada no cliente e no servidor.
 - Mantenha `build: "andre3d-mp-v4"` até haver uma migração de protocolo planejada.
 - O servidor reconhece `andre`, `gorece` e `dg`; o DG pode usar as motos, mas não a Hilux.
-- A assinatura principal usa a keystore de release original, guardada fora do repositório. Nunca commitar a keystore, senha ou credenciais de assinatura; preservar cópias seguras da chave.
+- Nunca commitar a keystore, senha ou credenciais de assinatura. A keystore principal foi exposta no histórico público do repositório de distribuição (commit `f8f69b8`); o arquivo foi removido do `main` no commit `e9ae5b7`, mas permanece acessível em commits antigos. A 2.2.11 foi assinada com ela por autorização explícita do proprietário. Trate-a como comprometida e planeje uma migração segura antes de futuros releases.
 
 ## Testes e higiene do repositório
 
