@@ -4,7 +4,7 @@ extends Node
 signal status_changed(message: String)
 
 const SUPPORTED_REGION_IDS := ["center"]
-const BUILTIN_REGION_IDS := ["center"]
+const BUILTIN_REGION_IDS: Array[String] = []
 
 var map_ready := false
 var map_pack_path := ""
