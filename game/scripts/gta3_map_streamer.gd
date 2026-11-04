@@ -164,21 +164,21 @@ func _load_selected_region() -> bool:
 		var builtin := bool((row as Dictionary).get("builtin", false))
 		var tile_values: Variant = (row as Dictionary).get("tiles", [])
 		if builtin and requested_id == "costa_vista":
-			var spawn: Variant = (row as Dictionary).get("spawn", [])
-			if not spawn is Array or (spawn as Array).size() != 3:
+			var builtin_spawn: Variant = (row as Dictionary).get("spawn", [])
+			if not builtin_spawn is Array or (builtin_spawn as Array).size() != 3:
 				return false
-			var gorece_spawn: Variant = (row as Dictionary).get("gorece_spawn", spawn)
+			var builtin_gorece_spawn: Variant = (row as Dictionary).get("gorece_spawn", builtin_spawn)
 			_selected_region_id = requested_id
 			_selected_region_tiles = {}
-			_selected_spawn = _builtin_coordinate_to_world(spawn)
-			_selected_gorece_spawn = _builtin_coordinate_to_world(gorece_spawn)
+			_selected_spawn = _builtin_coordinate_to_world(builtin_spawn)
+			_selected_gorece_spawn = _builtin_coordinate_to_world(builtin_gorece_spawn)
 			_selected_vehicle_spawns = {}
 			var vehicle_data: Variant = (row as Dictionary).get("vehicle_spawns", {})
 			if vehicle_data is Dictionary:
 				for vehicle_id: Variant in (vehicle_data as Dictionary).keys():
-					var vehicle_spawn: Variant = (vehicle_data as Dictionary)[vehicle_id]
-					if vehicle_spawn is Array and (vehicle_spawn as Array).size() == 3:
-						_selected_vehicle_spawns[String(vehicle_id)] = _builtin_coordinate_to_world(vehicle_spawn)
+					var builtin_vehicle_spawn: Variant = (vehicle_data as Dictionary)[vehicle_id]
+					if builtin_vehicle_spawn is Array and (builtin_vehicle_spawn as Array).size() == 3:
+						_selected_vehicle_spawns[String(vehicle_id)] = _builtin_coordinate_to_world(builtin_vehicle_spawn)
 			return true
 		if not tile_values is Array or (tile_values as Array).is_empty():
 			return false
@@ -188,32 +188,32 @@ func _load_selected_region() -> bool:
 			if not _part_paths_by_tile.has(tile_name):
 				return false
 			selected_tiles[tile_name] = true
-			var spawn: Variant = (row as Dictionary).get("spawn", [])
-			if not spawn is Array or (spawn as Array).size() != 3:
-				return false
-			var gorece_spawn: Variant = (row as Dictionary).get("gorece_spawn", spawn)
-			if not gorece_spawn is Array or (gorece_spawn as Array).size() != 3:
-				gorece_spawn = spawn
-			var vehicle_spawn_data: Variant = (row as Dictionary).get("vehicle_spawns", {})
-			var vehicle_spawns: Dictionary = {}
-			if vehicle_spawn_data is Dictionary:
-				for vehicle_id: Variant in (vehicle_spawn_data as Dictionary).keys():
-					var vehicle_spawn: Variant = (vehicle_spawn_data as Dictionary)[vehicle_id]
-					if vehicle_spawn is Array and (vehicle_spawn as Array).size() == 3:
-						vehicle_spawns[String(vehicle_id)] = Vector3(float(vehicle_spawn[0]), float(vehicle_spawn[1]), float(vehicle_spawn[2]))
-			_selected_region_id = requested_id
-			_selected_region_tiles = selected_tiles
-			_selected_spawn = _map_coordinate_to_world(spawn)
-			_selected_gorece_spawn = _map_coordinate_to_world(gorece_spawn)
-			_selected_vehicle_spawns = vehicle_spawns
-			for vehicle_id: String in _selected_vehicle_spawns.keys():
-				var vehicle_map_position: Vector3 = _selected_vehicle_spawns[vehicle_id]
-				_selected_vehicle_spawns[vehicle_id] = _map_coordinate_to_world([
-					vehicle_map_position.x,
-					vehicle_map_position.y,
-					vehicle_map_position.z,
-				])
-			return true
+		var region_spawn: Variant = (row as Dictionary).get("spawn", [])
+		if not region_spawn is Array or (region_spawn as Array).size() != 3:
+			return false
+		var region_gorece_spawn: Variant = (row as Dictionary).get("gorece_spawn", region_spawn)
+		if not region_gorece_spawn is Array or (region_gorece_spawn as Array).size() != 3:
+			region_gorece_spawn = region_spawn
+		var vehicle_spawn_data: Variant = (row as Dictionary).get("vehicle_spawns", {})
+		var vehicle_spawns: Dictionary = {}
+		if vehicle_spawn_data is Dictionary:
+			for vehicle_id: Variant in (vehicle_spawn_data as Dictionary).keys():
+				var map_vehicle_spawn: Variant = (vehicle_spawn_data as Dictionary)[vehicle_id]
+				if map_vehicle_spawn is Array and (map_vehicle_spawn as Array).size() == 3:
+					vehicle_spawns[String(vehicle_id)] = Vector3(float(map_vehicle_spawn[0]), float(map_vehicle_spawn[1]), float(map_vehicle_spawn[2]))
+		_selected_region_id = requested_id
+		_selected_region_tiles = selected_tiles
+		_selected_spawn = _map_coordinate_to_world(region_spawn)
+		_selected_gorece_spawn = _map_coordinate_to_world(region_gorece_spawn)
+		_selected_vehicle_spawns = vehicle_spawns
+		for vehicle_id: String in _selected_vehicle_spawns.keys():
+			var vehicle_map_position: Vector3 = _selected_vehicle_spawns[vehicle_id]
+			_selected_vehicle_spawns[vehicle_id] = _map_coordinate_to_world([
+				vehicle_map_position.x,
+				vehicle_map_position.y,
+				vehicle_map_position.z,
+			])
+		return true
 	return false
 
 func _map_coordinate_to_world(raw_position: Array) -> Vector3:

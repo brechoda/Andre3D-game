@@ -57,26 +57,38 @@ func _run() -> void:
 		_fail("The center region should contain exactly four tiles")
 		return
 
-
 	var selected_tiles: Dictionary = streamer.get("_selected_region_tiles")
-	for tile_name: String in selected_tiles.keys():
-		if not allowed_tiles.has(tile_name):
-			_fail("Selected region contains an unexpected tile: " + tile_name)
+	if selected_tiles.size() != allowed_tiles.size():
+		_fail("The streamer must select all four center tiles, got: " + str(selected_tiles.keys()))
+		return
+	for selected_tile_name: String in selected_tiles.keys():
+		if not allowed_tiles.has(selected_tile_name):
+			_fail("Selected region contains an unexpected tile: " + selected_tile_name)
 			return
 	var paths_by_tile: Dictionary = streamer.get("_part_paths_by_tile")
-	for tile_name in ["industne/industne", "industnw/industnw", "industse/industse", "industsw/industsw"]:
-		if paths_by_tile.has(tile_name):
-			_fail("An unselected Industrial tile remains requestable: " + tile_name)
+	for excluded_tile_name in ["industne/industne", "industnw/industnw", "industse/industse", "industsw/industsw"]:
+		if paths_by_tile.has(excluded_tile_name):
+			_fail("An unselected Industrial tile remains requestable: " + excluded_tile_name)
 			return
 	var wanted: Dictionary = streamer.get("_wanted_tiles")
-	for tile_name: String in wanted.keys():
-		if tile_name != "ground_fix" and not allowed_tiles.has(tile_name):
-			_fail("The streamer requested an unselected tile: " + tile_name)
+	for wanted_tile_name: String in wanted.keys():
+		if wanted_tile_name != "ground_fix" and not allowed_tiles.has(wanted_tile_name):
+			_fail("The streamer requested an unselected tile: " + wanted_tile_name)
 			return
 	if not wanted.is_empty():
 		_fail("Map tiles were requested before a player entered the selected region")
 		return
-	print("[map-region-isolation] center is the sole supported region; only its four tiles are requestable")
+
+	var player := Node3D.new()
+	player.name = "Player"
+	world.add_child(player)
+	player.global_position = streamer.call("get_selected_spawn")
+	streamer.call("_refresh_active_tiles")
+	var spawn_wanted: Dictionary = streamer.get("_wanted_tiles")
+	if not spawn_wanted.has("comntop/comntop"):
+		_fail("The tile under the center spawn (comntop/comntop) must be requested")
+		return
+	print("[map-region-isolation] all four center tiles and the spawn tile are requestable")
 	_restore_session()
 	world.queue_free()
 	await process_frame
