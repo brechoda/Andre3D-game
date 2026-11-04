@@ -10,11 +10,11 @@ Este documento explica como continuar o projeto sem depender do histórico da co
 - Build multiplayer esperado: `andre3d-mp-v4`
 - Pacote Android principal a partir da 2.0.6: `com.manus.andre3d.next`
 - Pacote legado 2.0.5: `com.manus.andre3d`; a chave antiga foi perdida, então não pode ser atualizado no mesmo pacote.
-- Versão Android pública atual: `2.2.8`
-- Código Android público atual: `40`
-- Último APK público: `2.2.8` / código `40`, distribuído em `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.8`.
+- Versão Android pública atual: `2.2.9`
+- Código Android público atual: `41`
+- Último APK público: `2.2.9` / código `41`, distribuído em `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.9`.
 - O workflow `Build Android APK` cria artefatos de depuração com chave temporária; eles não podem atualizar o APK público. Releases de produção exigem a keystore original e publicação correspondente no manifesto do servidor.
-- SHA-256 do APK público 2.2.8: `92b0b3f302f28fd1e0235c0e9cd09da86c5736562d1d303803480f704eaddafe`.
+- SHA-256 do APK público 2.2.9: `57962d7d66a59baac432a748a69813116bc33eb9e833bc38fda2d71525c195d0`.
 
 ## Objetivo do projeto
 
@@ -31,8 +31,8 @@ Não substituir o projeto por um template novo. O projeto já tem mapa, veículo
 - `scripts/map_boundary_mountains.gd`: cria quatro paredes de colisão invisíveis ao redor da região ativa, evitando que o personagem saia da área jogável sem renderizar montanhas.
 - `scripts/net/multiplayer_client.gd`: cliente WebSocket. Ao entrar, envia `build`, `app_version`, sala, nome e personagem. Não remova `app_version`, pois o servidor bloqueia versões antigas. No evento `vehicle_pull`, espera a confirmação do servidor e aplica a posição/rotação do broadcast `vehicle_pulled` em todos os clientes.
 - `autoload/voice_chat.gd`: mantém o recebimento de vozes remoto e inicia a captura do microfone somente quando o botão `MICROFONE` na HUD é ligado; tocar novamente para o desligar interrompe a captura sem mutar outros jogadores.
-- `autoload/remote_updater.gd`: consulta o manifesto, valida arquivos por tamanho/SHA-256, grava conteúdo em `user://updates`, baixa o APK obrigatório pelo fluxo do menu e deixa PCKs de mapa apenas em cache; PCKs genéricos de mapa nunca são montados automaticamente.
-- `autoload/external_content.gd`: monta apenas a região suportada escolhida ao iniciar; depois disso não aceita carregar a outra região até o jogo ser reaberto.
+- `autoload/remote_updater.gd`: consulta o manifesto, valida arquivos por tamanho/SHA-256, grava conteúdo em `user://updates`, baixa o APK obrigatório pelo fluxo do menu e mantém os PCKs regionais em cache.
+- `autoload/external_content.gd`: baixa/monta apenas a região selecionada antes de iniciar o gameplay; o Centro não é embutido no APK. Depois de montar uma região, não aceita carregar outra até o jogo ser reaberto.
 - `autoload/tuning_store.gd`: lê `config/tuning.json` remoto validado e usa o arquivo local como fallback.
 - `config/updates.json`: endpoint do manifesto e flag de checagem no início.
 - `config/multiplayer.json`: endpoint WebSocket/HTTP do servidor.
@@ -131,13 +131,13 @@ Para substituir um asset já publicado, usar `gh release upload ... --clobber`, 
 
 ## Estado conhecido entregue
 
-- APK `2.2.8` (`com.manus.andre3d.next`, código `40`) mantém o conteúdo de jogo publicado e corrige o bloqueio de carregamento após 100% e a atualização compartilhada do botão de pilotagem.
-- Release pública Android: `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.8`.
-- APK: `125377530` bytes; SHA-256 `92b0b3f302f28fd1e0235c0e9cd09da86c5736562d1d303803480f704eaddafe`. `apksigner` validou a assinatura e o fingerprint coincide com o APK anterior; o asset da release reporta o mesmo tamanho e SHA-256.
-- Manifesto obrigatório `2026.11.04.1`, publicado no commit `0e85bd8` do repositório de distribuição (`main`), com `client.version: 2.2.8`, `code: 40` e `mandatory_online: true`; confirmado ao vivo no Render com HTTP 200.
+- APK `2.2.9` (`com.manus.andre3d.next`, código `41`) corrige a falha que deixava o mapa preso na tela de carregamento: o APK exclui os assets do mapa e o Centro era tratado incorretamente como embutido, portanto o PCK remoto nunca era montado. Agora o app baixa e monta o PCK Centro validado antes de carregar a cena.
+- Release pública Android: `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.9`.
+- APK: `125377562` bytes; SHA-256 `57962d7d66a59baac432a748a69813116bc33eb9e833bc38fda2d71525c195d0`. `apksigner` validou a assinatura e o fingerprint coincide com o APK 2.2.8; o asset da release reporta o mesmo tamanho e SHA-256.
+- Manifesto obrigatório `2026.11.04.2`, publicado no commit [`d355464`](https://github.com/brechoda/andre3d-multiplayer-server/commit/d355464) do repositório de distribuição (`main`), com `client.version: 2.2.9`, `code: 41` e `mandatory_online: true`; confirmado ao vivo no Render com HTTP 200.
 - Manifesto público: `https://andre3d-multiplayer-server.onrender.com/updates/manifest.json`.
-- Correção do jogo: commit [`707b5c3`](https://github.com/brechoda/Andre3D-game/commit/707b5c3); versão/código Android: [`296d00a`](https://github.com/brechoda/Andre3D-game/commit/296d00a); manifesto anterior: [`a1b5eb2`](https://github.com/brechoda/andre3d-multiplayer-server/commit/a1b5eb2); spawn `global-10`: [`0e85bd8`](https://github.com/brechoda/andre3d-multiplayer-server/commit/0e85bd8).
-- Auditoria do mapa: 15 testes Python (14 passaram, um skipped por arquivo-fonte excluído), parse Godot e isolamento da região passaram; o PCK CENTRO carregou quatro meshes visuais e os raycasts COL1 passaram para os seis spawns locais e os seis remotos. `npm test` e `node --check server.mjs` passaram no servidor.
+- Correção do jogo/PCK obrigatório: commit [`039d4f8`](https://github.com/brechoda/Andre3D-game/commit/039d4f8); pacote/version code: commit [`039d4f8`](https://github.com/brechoda/Andre3D-game/commit/039d4f8); spawn `global-10`: [`0e85bd8`](https://github.com/brechoda/andre3d-multiplayer-server/commit/0e85bd8).
+- Auditoria do mapa: 15 testes Python (14 passaram, um skipped por arquivo-fonte excluído) e análise headless Godot passaram; o PCK CENTRO publicado carregou quatro meshes visuais e os raycasts COL1 passaram para os seis spawns. O Android baixa esse pacote (62.817.264 bytes) antes da entrada.
 - O servidor público respondeu `{"ok":true,"build":"andre3d-mp-v4","rooms":0}` em `/health`; o manifesto atual ativo é `2026.11.04.1` e serve só o PCK `center`.
 
 Antes de começar uma alteração, leia este arquivo, `docs/game-multiplayer.md`, `autoload/remote_updater.gd`, `scripts/net/multiplayer_client.gd` e o README do servidor. Depois de alterar, valide, atualize a documentação se o fluxo mudar e faça push somente dos arquivos intencionais.
