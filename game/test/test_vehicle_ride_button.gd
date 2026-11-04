@@ -42,5 +42,36 @@ func _run_test() -> void:
 		quit(1)
 		return
 
-	print("[vehicle-ride-button] nearby motorcycle remains interactable when Fiat is distant")
+	var gorece := scene.get_node_or_null("GoreceNPC") as CharacterBody3D
+	var multiplayer_client := scene.get_node_or_null("OnlineMultiplayer")
+	if gorece == null:
+		push_error("Gorece character is missing")
+		quit(1)
+		return
+	if multiplayer_client != null:
+		multiplayer_client.set("enabled", false)
+	player.call("set_active_character", 1)
+	gorece.global_position = pop.global_position + Vector3(0.0, 0.0, 1.0)
+	await process_frame
+	if not ride_button.visible or ride_button.disabled:
+		push_error("The active Gorece character could not interact with a nearby motorcycle")
+		quit(1)
+		return
+	ride_button.emit_signal("pressed")
+	await process_frame
+	if not bool(pop.call("is_riding")):
+		push_error("The active Gorece character did not mount the nearby motorcycle")
+		quit(1)
+		return
+	if pop.get("_rider_body") != gorece:
+		push_error("The motorcycle mounted a different character than the active Gorece")
+		quit(1)
+		return
+	pop.call("_finish_dismount")
+	if bool(pop.call("is_riding")) or not gorece.is_physics_processing():
+		push_error("Gorece did not regain control after dismounting")
+		quit(1)
+		return
+
+	print("[vehicle-ride-button] nearby motorcycle mounts and releases the active Gorece")
 	quit(0)

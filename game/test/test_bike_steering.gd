@@ -27,6 +27,9 @@ func _test_bike(bike_name: String, character: String) -> void:
     var scene := (load("res://scenes/third_person.tscn") as PackedScene).instantiate()
     root.add_child(scene)
     await process_frame
+    var multiplayer_client := scene.get_node_or_null("OnlineMultiplayer")
+    if multiplayer_client != null:
+        multiplayer_client.set("enabled", false)
     var player := scene.get_node("Player")
     if character == "dg":
         player.call("set_active_character", 2)

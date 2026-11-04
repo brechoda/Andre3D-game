@@ -92,6 +92,7 @@ var _riding := false
 var _network_mount_pending := false
 var _mounting := false
 var _dismounting := false
+var _rider_body: CharacterBody3D
 var _ai_driving := false
 var _ai_target: Node3D
 var _front_wheel: Node3D
@@ -671,12 +672,20 @@ func toggle_riding_from_universal() -> void:
         _start_mount()
 
 func is_near_player() -> bool:
-    if _player == null or _riding:
+    var rider := _get_active_rider_body()
+    if rider == null or _riding:
         return false
-    if _player.has_method("is_gorece_active") and _player.is_gorece_active():
-        return false
-    var distance := Vector2(global_position.x - _player.global_position.x, global_position.z - _player.global_position.z).length()
+    var distance := Vector2(global_position.x - rider.global_position.x, global_position.z - rider.global_position.z).length()
     return distance <= MOUNT_INTERACTION_DISTANCE
+
+func _get_active_rider_body() -> CharacterBody3D:
+    if _player == null:
+        return null
+    if _player.has_method("get_network_avatar"):
+        var avatar := _player.call("get_network_avatar") as CharacterBody3D
+        if avatar != null:
+            return avatar
+    return _player
 
 func _nearest_ride_target() -> Node:
     var nearest: Node = null
@@ -755,8 +764,17 @@ func _start_mount() -> void:
         _player.collision_layer = 0
         _player.collision_mask = 0
         # A montagem só é permitida perto da moto; começa na posição atual do personagem.
-        _mount_from_pos = _player.global_position
+        _mount_from_pos = _rider_body.global_position
         _mount_from_yaw = _rider_visual.global_rotation.y if _rider_visual != null else global_rotation.y
+        if _rider_body != _player:
+            _rider_body.velocity = Vector3.ZERO
+            _rider_body.collision_layer = 0
+            _rider_body.collision_mask = 0
+            if _rider_body.has_method("enter_vehicle_mode"):
+                _rider_body.call("enter_vehicle_mode")
+            else:
+                _rider_body.set_process(false)
+                _rider_body.set_physics_process(false)
     if _camera != null:
         _camera.current = true
     if _ride_button != null:
@@ -771,13 +789,20 @@ func _start_mount() -> void:
 
 func _refresh_rider_visual() -> void:
     if _player == null:
+        _rider_body = null
         _rider_visual = null
         _rider_animator = null
         _rider_skeleton = null
         return
-    _rider_visual = _player.get("visual") as Node3D
+    _rider_body = _get_active_rider_body()
+    _rider_visual = _rider_body.get("visual") as Node3D if _rider_body != null else null
     if _rider_visual == null:
-        _rider_visual = _player.get_node_or_null("AndreVisual") as Node3D
+        for visual_name in ["AndreVisual", "GoreceVisual", "DGVisual"]:
+            _rider_visual = _rider_body.get_node_or_null(visual_name) as Node3D if _rider_body != null else null
+            if _rider_visual == null:
+                _rider_visual = _player.get_node_or_null(visual_name) as Node3D
+            if _rider_visual != null:
+                break
     if _rider_visual == null:
         _rider_animator = null
         _rider_skeleton = null
@@ -810,27 +835,34 @@ func _finish_dismount() -> void:
     _stop_rider_grip_ik()
     _update_steering_parts(0.0)
     var heading := global_rotation.y
-    if _player != null:
+    var rider := _rider_body if is_instance_valid(_rider_body) else _get_active_rider_body()
+    if rider != null:
         # Desce pelo lado ESQUERDO (a animação é getoffLHS), no chão.
-        _player.global_position = _dismount_target()
+        rider.global_position = _dismount_target()
         # O corpo do Player nunca gira; quem gira é o visual. Assim o andar normal
         # (third_person.gd) continua apontando pro lado certo depois de descer.
-        _player.global_rotation = Vector3.ZERO
-        _player.velocity = Vector3.ZERO
+        rider.global_rotation = Vector3.ZERO
+        rider.velocity = Vector3.ZERO
         if _rider_visual != null:
             _rider_visual.position = _rider_visual_offset
             _rider_visual.global_rotation = Vector3(0.0, heading, 0.0)
-        # Câmera e animação do jogador voltam coerentes com a moto.
-        _player.set("_camera_yaw", heading)
-        _player.set("_playing_animation", "")
+        # O controlador/câmera continuam no Player raiz; o avatar ativo pode ser Gorece.
         _player.visible = true
         _player.collision_layer = 1
         _player.collision_mask = 1
         _player.set_process(true)
         _player.set_physics_process(true)
+        rider.visible = true
+        rider.collision_layer = 1
+        rider.collision_mask = 1
+        if rider != _player and rider.has_method("exit_vehicle_mode"):
+            rider.call("exit_vehicle_mode")
+        elif rider == _player:
+            _player.set("_camera_yaw", heading)
+            _player.set("_playing_animation", "")
         if _player.has_method("set_companion_vehicle_target"):
             _player.call("set_companion_vehicle_target", null)
-        if _player.has_method("restore_vehicle_exit_pose"):
+        if rider == _player and _player.has_method("restore_vehicle_exit_pose"):
             _player.call_deferred("restore_vehicle_exit_pose", heading)
     _play_rider_animation("IDLE_stance", true, MOUNT_BLEND)
     if _ride_button != null:
@@ -900,7 +932,7 @@ func _update_wheelie(throttle: float, wheelie_input: float, delta: float) -> voi
     _apply_lean()
 
 func _place_rider() -> void:
-    if _player == null:
+    if _player == null or not is_instance_valid(_rider_body):
         return
     var yaw := global_rotation.y
     var feet := global_transform * rider_seat_offset
@@ -920,7 +952,7 @@ func _place_rider() -> void:
         var lean_t := _lean_transform()
         visual_origin = global_transform * (lean_t * (rider_seat_offset + _rider_visual_offset))
         visual_basis = global_transform.basis * lean_t.basis
-    _player.global_position = feet
+    _rider_body.global_position = feet
     if _rider_visual != null:
         # O visual do Andre é quem aponta pra frente (third_person.gd gira ele, não o Player).
         # Antes só o Player girava e o piloto ficava virado pra onde andou por último.
