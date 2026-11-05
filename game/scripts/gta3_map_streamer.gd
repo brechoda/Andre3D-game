@@ -20,7 +20,8 @@ const GROUND_FIX_COLLISION := "res://assets/maps/liberty_city/collisions/ground_
 const OVERVIEW_TILE := "maps/overview"
 const INITIAL_SPAWN_TILE := "comntop/comntop"
 const SESSION_PATH := "user://andre3d_session.json"
-const SUPPORTED_REGION_IDS := ["center"]
+const SUPPORTED_REGION_IDS := ["center", "level2"]
+const STATIC_REGION_SCENE := "res://level2_static.tscn"
 const MAP_BOUNDARY_SCRIPT := preload("res://scripts/map_boundary_mountains.gd")
 
 var _tile_records: Array[Dictionary] = []
@@ -44,23 +45,48 @@ var _region_bounds_max := Vector3.ZERO
 var _void_recovery_floor_y := -100.0
 var _last_safe_positions: Dictionary = {}
 var _collision_failed_tiles: Dictionary = {}
+var _static_map_instance: Node3D
 func _ready() -> void:
 	add_to_group("graphics_map")
 	GraphicsSettings.apply()
 	_load_parts_manifest()
 	if _load_selected_region():
-		_restrict_to_selected_region()
-		if _manifest_ready:
-			if _compute_selected_region_bounds():
-				_create_region_invisible_boundary()
-			else:
-				_manifest_ready = false
-				push_error("Selected map region has no usable spatial bounds")
+		if _selected_region_id == "level2":
+			_load_static_region()
+		else:
+			_restrict_to_selected_region()
+			if _manifest_ready:
+				if _compute_selected_region_bounds():
+					_create_region_invisible_boundary()
+				else:
+					_manifest_ready = false
+					push_error("Selected map region has no usable spatial bounds")
 	if not _manifest_ready:
 		push_error("Selected map region could not be initialized")
-	if _manifest_ready:
+	if _manifest_ready and _selected_region_id != "level2":
 		_refresh_active_tiles()
 	set_process(true)
+
+func _load_static_region() -> void:
+	var packed := load(STATIC_REGION_SCENE) as PackedScene
+	if packed == null:
+		push_error("Static map scene is missing from the mounted region pack: " + STATIC_REGION_SCENE)
+		_manifest_ready = false
+		return
+	var world_root := get_parent()
+	if world_root == null:
+		_manifest_ready = false
+		return
+	_static_map_instance = packed.instantiate() as Node3D
+	if _static_map_instance == null:
+		_manifest_ready = false
+		return
+	_static_map_instance.name = "Level2StaticMap"
+	world_root.add_child(_static_map_instance)
+	_region_bounds_min = Vector3(-753.0, -17.0, -1880.0)
+	_region_bounds_max = Vector3(860.0, 50.0, 520.0)
+	_void_recovery_floor_y = _region_bounds_min.y - 15.0
+	_manifest_ready = true
 
 func _requested_session_region() -> String:
 	var session: Variant = _read_json(SESSION_PATH)
@@ -72,9 +98,12 @@ func apply_graphics_settings(distance_level: int, texture_quality_level: int) ->
 	load_radius = [220.0, 520.0, 780.0, 1100.0][clampi(distance_level, 0, 3)]
 	refresh_interval = 0.35 if _ultra_low_mode else 0.75
 	max_meshes_per_frame = [1, 2, 4, 7][clampi(texture_quality_level, 0, 3)]
-	_refresh_active_tiles()
+	if _selected_region_id != "level2":
+		_refresh_active_tiles()
 
 func _process(delta: float) -> void:
+	if _selected_region_id == "level2":
+		return
 	_process_pending_meshes()
 	_refresh_elapsed += delta
 	if _refresh_elapsed >= refresh_interval:
@@ -179,6 +208,16 @@ func _load_selected_region() -> bool:
 					var builtin_vehicle_spawn: Variant = (vehicle_data as Dictionary)[vehicle_id]
 					if builtin_vehicle_spawn is Array and (builtin_vehicle_spawn as Array).size() == 3:
 						_selected_vehicle_spawns[String(vehicle_id)] = _builtin_coordinate_to_world(builtin_vehicle_spawn)
+			return true
+		if requested_id == "level2":
+			var static_spawn: Variant = (row as Dictionary).get("spawn", [95.0, 15.0, -551.0])
+			if not static_spawn is Array or static_spawn.size() != 3:
+				return false
+			_selected_region_id = requested_id
+			_selected_region_tiles = {}
+			_selected_spawn = Vector3(float(static_spawn[0]), float(static_spawn[1]), float(static_spawn[2]))
+			_selected_gorece_spawn = _selected_spawn + Vector3(5.0, 0.0, 0.0)
+			_selected_vehicle_spawns = {}
 			return true
 		if not tile_values is Array or (tile_values as Array).is_empty():
 			return false

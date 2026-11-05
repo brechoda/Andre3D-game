@@ -44,6 +44,15 @@
           -150.0
         ]
       }
+    },
+    {
+      "id": "level2",
+      "name": "LEVEL 2",
+      "description": "Mapa estático externo baixável",
+      "tiles": [],
+      "spawn": [95.0, 15.0, -551.0],
+      "gorece_spawn": [100.0, 15.0, -551.0],
+      "vehicle_spawns": {}
     }
   ]
 }
