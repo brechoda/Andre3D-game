@@ -43,12 +43,16 @@ func _run() -> void:
 		_fail("The map region manifest is invalid")
 		return
 	var regions: Variant = (regions_data as Dictionary).get("regions", [])
-	if not regions is Array or (regions as Array).size() != 1:
-		_fail("The current Android build should expose only the center region")
+	if not regions is Array or (regions as Array).size() < 2:
+		_fail("The current Android build should expose the center and external regions")
 		return
-	var center_region: Variant = (regions as Array)[0]
-	if not center_region is Dictionary or String((center_region as Dictionary).get("id", "")) != "center":
-		_fail("The only supported region must be center")
+	var center_region: Variant = null
+	for region_variant: Variant in regions:
+		if region_variant is Dictionary and String((region_variant as Dictionary).get("id", "")) == "center":
+			center_region = region_variant
+			break
+	if center_region == null:
+		_fail("The supported regions must include center")
 		return
 	var allowed_tiles: Dictionary = {}
 	for tile_variant: Variant in (center_region as Dictionary).get("tiles", []):
