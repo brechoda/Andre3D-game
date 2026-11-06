@@ -123,13 +123,26 @@ class Gta3MapAssetTests(unittest.TestCase):
         self.assertIn("far = 3800.0", scene)
         self.assertNotIn('[node name="Ground" type="StaticBody3D" parent="."]', scene)
 
+    def test_scene_fallback_spawns_match_the_validated_center_road(self) -> None:
+        scene = (ROOT / "scenes/third_person.tscn").read_text(encoding="utf-8")
+        self.assertIn('[node name="Player" type="CharacterBody3D" parent="."]', scene)
+        self.assertIn("position = Vector3(184.73, 3.3474, -22.03)", scene)
+        self.assertIn('[node name="GoreceNPC" type="CharacterBody3D" parent="."]', scene)
+        self.assertIn("position = Vector3(185.0, 3.3474, -19.0)", scene)
+
     def test_region_spawn_points_include_player_npc_and_grounded_vehicles(self) -> None:
         regions_manifest = json.loads((RUNTIME_ROOT / "map_regions.json").read_text(encoding="utf-8"))
         regions = {region["id"]: region for region in regions_manifest["regions"]}
-        for region in regions.values():
-            self.assertEqual({"pop100_01", "wayfarer_01", "hilux_01", "fiatuno_01"}, set(region["vehicle_spawns"]))
-            for spawn in [region["spawn"], region["gorece_spawn"], *region["vehicle_spawns"].values()]:
-                self.assertEqual(3, len(spawn))
+        self.assertEqual({"center", "level2"}, set(regions))
+        center = regions["center"]
+        self.assertEqual({"pop100_01", "wayfarer_01", "hilux_01", "fiatuno_01"}, set(center["vehicle_spawns"]))
+        for spawn in [center["spawn"], center["gorece_spawn"], *center["vehicle_spawns"].values()]:
+            self.assertEqual(3, len(spawn))
+        level2 = regions["level2"]
+        self.assertEqual([], level2["tiles"])
+        self.assertEqual({}, level2["vehicle_spawns"])
+        self.assertEqual(3, len(level2["spawn"]))
+        self.assertEqual(3, len(level2["gorece_spawn"]))
 
         streamer = (ROOT / "scripts/gta3_map_streamer.gd").read_text(encoding="utf-8")
         third_person = (ROOT / "scripts/third_person.gd").read_text(encoding="utf-8")
@@ -143,7 +156,9 @@ class Gta3MapAssetTests(unittest.TestCase):
     def test_only_the_selected_map_region_can_be_downloaded_mounted_or_streamed(self) -> None:
         regions_manifest = json.loads((RUNTIME_ROOT / "map_regions.json").read_text(encoding="utf-8"))
         regions = {region["id"]: set(region.get("tiles", [])) for region in regions_manifest["regions"]}
-        self.assertEqual({"center"}, set(regions))
+        self.assertEqual({"center", "level2"}, set(regions))
+        self.assertEqual(4, len(regions["center"]))
+        self.assertEqual(set(), regions["level2"])
         center = next(region for region in regions_manifest["regions"] if region["id"] == "center")
         self.assertFalse(center.get("builtin", False))
         self.assertTrue(center.get("tiles"))
@@ -164,6 +179,9 @@ class Gta3MapAssetTests(unittest.TestCase):
         self.assertIn("if _load_selected_region():", streamer)
         self.assertIn("func _restrict_to_selected_region()", streamer)
         self.assertIn("not _selected_region_tiles.has(tile_name)", streamer)
+        self.assertIn('const SUPPORTED_REGION_IDS := ["center", "level2"]', streamer)
+        self.assertIn('const STATIC_REGION_SCENE := "res://level2_static.tscn"', streamer)
+        self.assertIn("func _load_static_region()", streamer)
         self.assertIn("RemoteUpdater.download_map_region(requested_region)", menu)
         self.assertEqual(1, menu.count("ExternalContent.ensure_region(selected_map_region)"))
 

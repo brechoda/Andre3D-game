@@ -10,11 +10,11 @@ Este documento explica como continuar o projeto sem depender do histórico da co
 - Build multiplayer esperado: `andre3d-mp-v4`
 - Pacote Android principal a partir da 2.0.6: `com.manus.andre3d.next`
 - Pacote legado 2.0.5: `com.manus.andre3d`; a chave antiga foi perdida, então não pode ser atualizado no mesmo pacote.
-- Versão Android pública atual: `2.2.11`
-- Código Android público atual: `43`
-- Último APK público: `2.2.11` / código `43`, distribuído em `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.11`.
+- Versão Android pública atual: `2.2.12`
+- Código Android público atual: `44`
+- Último APK público: `2.2.12` / código `44`, distribuído em `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.12`.
 - O workflow `Build Android APK` cria artefatos de depuração com chave temporária; eles não podem atualizar o APK público. Releases de produção exigem a keystore original e a publicação correspondente no manifesto do servidor; consulte o aviso de segurança abaixo.
-- SHA-256 do APK público 2.2.11: `eafcb30ca5174b177f3e9fca25f649c4b127d452a68b6177d7d1745a89a334f9`.
+- SHA-256 do APK público 2.2.12: `681968b272b9b0b934fa285111675ad10292d3bf3463c4a9250f580771ce7a91`.
 
 ## Objetivo do projeto
 
@@ -118,7 +118,7 @@ Para substituir um asset já publicado, usar `gh release upload ... --clobber`, 
 - Mudanças em mensagens WebSocket exigem alteração coordenada no cliente e no servidor.
 - Mantenha `build: "andre3d-mp-v4"` até haver uma migração de protocolo planejada.
 - O servidor reconhece `andre`, `gorece` e `dg`; o DG pode usar as motos, mas não a Hilux.
-- Nunca commitar a keystore, senha ou credenciais de assinatura. A keystore principal foi exposta no histórico público do repositório de distribuição (commit `f8f69b8`); o arquivo foi removido do `main` no commit `e9ae5b7`, mas permanece acessível em commits antigos. A 2.2.11 foi assinada com ela por autorização explícita do proprietário. Trate-a como comprometida e planeje uma migração segura antes de futuros releases.
+- Nunca commitar a keystore, senha ou credenciais de assinatura. A keystore principal foi exposta no histórico público do repositório de distribuição (commit `f8f69b8`); o arquivo foi removido do `main` no commit `e9ae5b7`, mas permanece acessível em commits antigos. A 2.2.12 foi assinada com essa chave. Trate-a como comprometida e planeje uma migração segura antes de futuros releases.
 
 ## Testes e higiene do repositório
 
@@ -131,13 +131,11 @@ Para substituir um asset já publicado, usar `gh release upload ... --clobber`, 
 
 ## Estado conhecido entregue
 
-- APK `2.2.9` (`com.manus.andre3d.next`, código `41`) corrige a falha que deixava o mapa preso na tela de carregamento: o APK exclui os assets do mapa e o Centro era tratado incorretamente como embutido, portanto o PCK remoto nunca era montado. Agora o app baixa e monta o PCK Centro validado antes de carregar a cena.
-- Release pública Android: `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.9`.
-- APK: `125377562` bytes; SHA-256 `57962d7d66a59baac432a748a69813116bc33eb9e833bc38fda2d71525c195d0`. `apksigner` validou a assinatura e o fingerprint coincide com o APK 2.2.8; o asset da release reporta o mesmo tamanho e SHA-256.
-- Manifesto obrigatório `2026.11.04.2`, publicado no commit [`d355464`](https://github.com/brechoda/andre3d-multiplayer-server/commit/d355464) do repositório de distribuição (`main`), com `client.version: 2.2.9`, `code: 41` e `mandatory_online: true`; confirmado ao vivo no Render com HTTP 200.
-- Manifesto público: `https://andre3d-multiplayer-server.onrender.com/updates/manifest.json`.
-- Correção do jogo/PCK obrigatório: commit [`039d4f8`](https://github.com/brechoda/Andre3D-game/commit/039d4f8); pacote/version code: commit [`039d4f8`](https://github.com/brechoda/Andre3D-game/commit/039d4f8); spawn `global-10`: [`0e85bd8`](https://github.com/brechoda/andre3d-multiplayer-server/commit/0e85bd8).
-- Auditoria do mapa: 15 testes Python (14 passaram, um skipped por arquivo-fonte excluído) e análise headless Godot passaram; o PCK CENTRO publicado carregou quatro meshes visuais e os raycasts COL1 passaram para os seis spawns. O Android baixa esse pacote (62.817.264 bytes) antes da entrada.
-- O servidor público respondeu `{"ok":true,"build":"andre3d-mp-v4","rooms":0}` em `/health`; o manifesto atual ativo é `2026.11.04.1` e serve só o PCK `center`.
+- APK público atual: `2.2.12`, código Android `44`, pacote `com.manus.andre3d.next`; release `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.12`. Nenhum APK novo foi criado nesta auditoria.
+- Liberty City continua parcial: o recorte CENTRO inclui quatro de 12 tiles-base; faltam oito. A opção externa `level2` é um mapa estático distinto, não os tiles faltantes da cidade.
+- PCK CENTRO ativo: release [`map-v2.2.2-spawn-fix`](https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/map-v2.2.2-spawn-fix), 62.720.388 bytes, SHA-256 `fc38ae751ea53c8795c222436ff7f332916a79eae5086521ced0ba7037cab26e`; Level2 opcional continua no PCK `map-v2.2.0-regions`.
+- Manifesto público `2026.11.05.5`, commit do servidor [`e97681a`](https://github.com/brechoda/andre3d-multiplayer-server/commit/e97681a), aponta para o PCK CENTRO v2.2.2, preserva Level2 e corrige o tamanho/hash de `spawn.json` (`global-13`, 1.830 bytes). O Render respondeu `{"ok":true,"build":"andre3d-mp-v4","rooms":0}` em `/health`.
+- Testes do mapa: 16 testes Python (15 passaram e um skipped porque o relatório de conversão foi excluído); Godot 4.7.2 parse, isolamento, streamer e o PCK montado em substituição aos recursos locais passaram. Foram carregadas 50 partes visuais, cinco meshes de colisão e 12 spawns local/remotos sobre COL1 (gap máximo `0.000 m`). `npm test` do servidor também passou.
+- Pendências de validação: playtest visual/jogável no desktop, instalação e controles no Android físico, e integração dos oito tiles faltantes para afirmar Liberty City completa. Assets de conversão excluídos do checkout público não devem ser confundidos com as malhas OBJ/MTL runtime editáveis disponíveis no projeto.
 
 Antes de começar uma alteração, leia este arquivo, `docs/game-multiplayer.md`, `autoload/remote_updater.gd`, `scripts/net/multiplayer_client.gd` e o README do servidor. Depois de alterar, valide, atualize a documentação se o fluxo mudar e faça push somente dos arquivos intencionais.

@@ -83,16 +83,12 @@ func _run() -> void:
 		_fail("Map tiles were requested before a player entered the selected region")
 		return
 
-	var player := Node3D.new()
-	player.name = "Player"
-	world.add_child(player)
-	player.global_position = streamer.call("get_selected_spawn")
-	streamer.call("_refresh_active_tiles")
-	var spawn_wanted: Dictionary = streamer.get("_wanted_tiles")
+	var spawn_position: Vector3 = streamer.call("get_selected_spawn")
+	var spawn_wanted: Dictionary = streamer.call("_desired_tiles_for_position", streamer.to_local(spawn_position))
 	if not spawn_wanted.has("comntop/comntop"):
-		_fail("The tile under the center spawn (comntop/comntop) must be requested")
+		_fail("The tile under the center spawn (comntop/comntop) must be selected for loading")
 		return
-	print("[map-region-isolation] all four center tiles and the spawn tile are requestable")
+	print("[map-region-isolation] four center tiles restricted; the spawn tile is selected")
 	_restore_session()
 	world.queue_free()
 	await process_frame

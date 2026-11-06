@@ -5,6 +5,7 @@ const COLLISION_DIRECTORY := "res://assets/maps/liberty_city/collisions/"
 const PARTS_MANIFEST_PATH := "res://assets/maps/liberty_city/godot_tiles/tile_parts.json"
 const MAP_ORIGIN := Vector3(-130.6, -15.2, 30.4)
 const MAP_ROTATION := Vector3(-90.0, 0.0, 0.0)
+const MAX_SPAWN_FLOOR_OFFSET := 0.75
 
 func _initialize() -> void:
 	call_deferred("_run")
@@ -14,7 +15,7 @@ func _run() -> void:
 	var expected_region := ""
 	var remote_spawns_by_region: Dictionary = {}
 	if not args.is_empty():
-		if args.size() not in [1, 2, 3] or not ProjectSettings.load_resource_pack(args[0], false):
+		if args.size() not in [1, 2, 3] or not ProjectSettings.load_resource_pack(args[0], true):
 			_fail("Usage: -- [<region-pck> [region-id [spawn-json]]]")
 			return
 		if args.size() == 2:
@@ -52,7 +53,8 @@ func _run() -> void:
 		return
 	var part_rows: Array = (parts_data as Dictionary).get("tiles", [])
 	var checked_spawns := 0
-	var checked_visual_tiles := 0
+	var checked_visual_mesh_parts := 0
+	var maximum_floor_offset := 0.0
 	for region: Variant in regions:
 		if not region is Dictionary:
 			continue
@@ -74,13 +76,14 @@ func _run() -> void:
 				var part_names: Variant = (part_row as Dictionary).get("parts", [])
 				if not part_names is Array or (part_names as Array).is_empty():
 					break
-				var visual_path := "res://assets/maps/liberty_city/godot_tiles/" + String((part_names as Array)[0])
-				var visual_mesh := ResourceLoader.load(visual_path, "Mesh") as Mesh
-				if visual_mesh == null or visual_mesh.get_surface_count() == 0:
-					_fail("Could not load visual mesh " + visual_path)
-					return
+				for part_name: Variant in part_names:
+					var visual_path := "res://assets/maps/liberty_city/godot_tiles/" + String(part_name)
+					var visual_mesh := ResourceLoader.load(visual_path, "Mesh") as Mesh
+					if visual_mesh == null or visual_mesh.get_surface_count() == 0:
+						_fail("Could not load visual mesh " + visual_path)
+						return
+					checked_visual_mesh_parts += 1
 				visual_found = true
-				checked_visual_tiles += 1
 				break
 			if not visual_found:
 				_fail("No visual mesh registered for tile " + tile_name)
@@ -123,35 +126,54 @@ func _run() -> void:
 					_fail("Remote spawn data is invalid for " + String(vehicle_id))
 					return
 				spawn_points.append({"id": "remote_" + String(vehicle_id), "position": (vehicle_data as Dictionary).get("position", []), "world_space": true})
-		for point: Variant in spawn_points:
-			var raw_position: Variant = (point as Dictionary).get("position", [])
-			if not raw_position is Array or (raw_position as Array).size() != 3:
-				_fail("Invalid %s spawn in %s" % [String((point as Dictionary).get("id", "")), String((region as Dictionary).get("id", ""))])
-				return
-			var position: Vector3
-			if bool((point as Dictionary).get("world_space", false)):
-				position = Vector3(float(raw_position[0]), float(raw_position[1]), float(raw_position[2]))
-			else:
-				# O manifesto usa [X, altura, Y]; converter ao espaço mundial.
-				var map_position := Vector3(float(raw_position[0]), float(raw_position[2]), float(raw_position[1]))
-				position = map_root.to_global(map_position)
-			var query := PhysicsRayQueryParameters3D.create(position + Vector3.UP * 2.0, position - Vector3.UP * 250.0, 1)
-			query.hit_back_faces = true
-			var hit: Dictionary = world.get_world_3d().direct_space_state.intersect_ray(query)
-			if hit.is_empty():
-				_fail("No COL1 floor directly below %s spawn in %s at %s" % [String((point as Dictionary).get("id", "")), String((region as Dictionary).get("id", "")), str(position)])
-				return
-			var collider := hit.get("collider") as Node
-			if collider == null or collider.name != "COL1Collision":
-				_fail("Spawn ray did not hit the expected map collision")
-				return
-			checked_spawns += 1
+			var local_world_spawns: Dictionary = {}
+			for point: Variant in spawn_points:
+				var raw_position: Variant = (point as Dictionary).get("position", [])
+				if not raw_position is Array or (raw_position as Array).size() != 3:
+					_fail("Invalid %s spawn in %s" % [String((point as Dictionary).get("id", "")), String((region as Dictionary).get("id", ""))])
+					return
+				var position: Vector3
+				if bool((point as Dictionary).get("world_space", false)):
+					position = Vector3(float(raw_position[0]), float(raw_position[1]), float(raw_position[2]))
+				else:
+					# O manifesto usa [X, altura, Y]; converter ao espaço mundial.
+					var map_position := Vector3(float(raw_position[0]), float(raw_position[2]), float(raw_position[1]))
+					position = map_root.to_global(map_position)
+				var point_id := String((point as Dictionary).get("id", ""))
+				if bool((point as Dictionary).get("world_space", false)):
+					var local_id := point_id.trim_prefix("remote_")
+					if not local_world_spawns.has(local_id):
+						_fail("Remote spawn has no local counterpart: " + point_id)
+						return
+					var local_position: Vector3 = local_world_spawns[local_id]
+					if local_position.distance_to(position) > 0.01:
+						_fail("Remote spawn %s diverges %.3f m from its local map coordinate" % [point_id, local_position.distance_to(position)])
+						return
+				else:
+					local_world_spawns[point_id] = position
+				var query := PhysicsRayQueryParameters3D.create(position + Vector3.UP * 2.0, position - Vector3.UP * 250.0, 1)
+				query.hit_back_faces = true
+				var hit: Dictionary = world.get_world_3d().direct_space_state.intersect_ray(query)
+				if hit.is_empty():
+					_fail("No COL1 floor directly below %s spawn in %s at %s" % [String((point as Dictionary).get("id", "")), String((region as Dictionary).get("id", "")), str(position)])
+					return
+				var collider := hit.get("collider") as Node
+				if collider == null or collider.name != "COL1Collision":
+					_fail("Spawn ray did not hit the expected map collision")
+					return
+				var floor_position: Vector3 = hit.get("position", position)
+				var floor_offset := absf(position.y - floor_position.y)
+				maximum_floor_offset = maxf(maximum_floor_offset, floor_offset)
+				if floor_offset > MAX_SPAWN_FLOOR_OFFSET:
+					_fail("Spawn %s is %.3f m from the COL1 floor in %s" % [String((point as Dictionary).get("id", "")), floor_offset, String((region as Dictionary).get("id", ""))])
+					return
+				checked_spawns += 1
 		world.queue_free()
 		await process_frame
 	if checked_spawns == 0:
 		_fail("No spawn points were checked")
 		return
-	print("[map-region-spawns] loaded %d tile visual meshes and found floor under %d spawn points%s" % [checked_visual_tiles, checked_spawns, " including remote config" if not remote_spawns_by_region.is_empty() else ""])
+	print("[map-region-spawns] loaded %d visual mesh parts; %d spawns are within %.3f m of COL1 floor%s" % [checked_visual_mesh_parts, checked_spawns, maximum_floor_offset, " including remote config" if not remote_spawns_by_region.is_empty() else ""])
 	quit(0)
 
 func _add_collision_tile(map_root: Node3D, tile_name: String) -> bool:

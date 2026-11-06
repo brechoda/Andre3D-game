@@ -334,6 +334,17 @@ func _refresh_active_tiles() -> void:
 	if player == null:
 		return
 	var source_position := to_local(player.global_position)
+	var desired := _desired_tiles_for_position(source_position)
+	_wanted_tiles = desired
+	for tile_name: String in desired.keys():
+		if not _loaded_tiles.has(tile_name):
+			_start_tile_load(tile_name, source_position)
+	for tile_name: String in _loaded_tiles.keys():
+		if not desired.has(tile_name):
+			(_loaded_tiles[tile_name] as Node).queue_free()
+			_loaded_tiles.erase(tile_name)
+
+func _desired_tiles_for_position(source_position: Vector3) -> Dictionary:
 	var candidates: Array[Dictionary] = []
 	var nearest: Dictionary = {}
 	var nearest_distance := INF
@@ -355,18 +366,10 @@ func _refresh_active_tiles() -> void:
 	var desired: Dictionary = {}
 	if _part_paths_by_tile.has(GROUND_FIX_TILE):
 		desired[GROUND_FIX_TILE] = true
-		# O mapa selecionado é autocontido; overview/props não entram nos três mapas.
 	var limit := mini(max_active_tiles, candidates.size())
 	for index: int in range(limit):
 		desired[String(candidates[index]["name"])] = true
-	_wanted_tiles = desired
-	for tile_name: String in desired.keys():
-		if not _loaded_tiles.has(tile_name):
-			_start_tile_load(tile_name, source_position)
-	for tile_name: String in _loaded_tiles.keys():
-		if not desired.has(tile_name):
-			(_loaded_tiles[tile_name] as Node).queue_free()
-			_loaded_tiles.erase(tile_name)
+	return desired
 
 func _distance_to_tile_bounds(source_position: Vector3, record: Dictionary) -> float:
 	var minimum: Variant = record.get("bounds_min", [])

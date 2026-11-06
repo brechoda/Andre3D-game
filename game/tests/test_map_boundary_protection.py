@@ -21,9 +21,16 @@ class MapBoundaryProtectionTests(unittest.TestCase):
 
     def test_each_supported_region_has_spatial_bounds_for_all_its_tiles(self) -> None:
         catalog_by_name = {tile["name"]: tile for tile in self.catalog["tiles"]}
-        self.assertEqual({"center"}, {region["id"] for region in self.regions})
+        self.assertEqual({"center", "level2"}, {region["id"] for region in self.regions})
         for region in self.regions:
             with self.subTest(region=region["id"]):
+                if region["id"] == "level2":
+                    self.assertEqual([], region["tiles"])
+                    self.assertIn("func _load_static_region()", self.streamer)
+                    self.assertIn('const STATIC_REGION_SCENE := "res://level2_static.tscn"', self.streamer)
+                    self.assertIn("_region_bounds_min = Vector3(-753.0, -17.0, -1880.0)", self.streamer)
+                    self.assertIn("_region_bounds_max = Vector3(860.0, 50.0, 520.0)", self.streamer)
+                    continue
                 if region.get("builtin"):
                     self.assertLess(region["bounds_min"][0], region["bounds_max"][0])
                     self.assertLess(region["bounds_min"][2], region["bounds_max"][2])
@@ -51,7 +58,7 @@ class MapBoundaryProtectionTests(unittest.TestCase):
         self.assertIn("collision_mesh.backface_collision = true", self.streamer)
 
     def test_selected_region_gets_an_invisible_physical_boundary(self) -> None:
-        self.assertIn('const SUPPORTED_REGION_IDS := ["center"]', self.streamer)
+        self.assertIn('const SUPPORTED_REGION_IDS := ["center", "level2"]', self.streamer)
         self.assertIn('preload("res://scripts/map_boundary_mountains.gd")', self.streamer)
         self.assertIn("_create_region_invisible_boundary()", self.streamer)
         self.assertIn('barrier.name = "InvisibleMapBoundary"', self.mountains)
@@ -69,7 +76,9 @@ class MapBoundaryProtectionTests(unittest.TestCase):
     def test_regional_spawns_are_converted_from_map_coordinates_to_world(self) -> None:
         self.assertIn("func _map_coordinate_to_world(raw_position: Array) -> Vector3", self.streamer)
         self.assertIn("Vector3(float(raw_position[0]), float(raw_position[2]), float(raw_position[1]))", self.streamer)
-        self.assertIn("_selected_spawn = _map_coordinate_to_world(spawn)", self.streamer)
+        self.assertIn("_selected_spawn = _map_coordinate_to_world(region_spawn)", self.streamer)
+        self.assertIn("func _builtin_coordinate_to_world(raw_position: Array) -> Vector3", self.streamer)
+        self.assertIn("_selected_spawn = _builtin_coordinate_to_world(builtin_spawn)", self.streamer)
 
 
 if __name__ == "__main__":
