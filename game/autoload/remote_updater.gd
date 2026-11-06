@@ -14,7 +14,7 @@ const INSTALLED_MANIFEST_PATH := "user://updates/installed.json"
 const MAX_MANIFEST_BYTES := 256 * 1024
 const MAX_FILE_BYTES := 256 * 1024 * 1024
 const MAX_APK_BYTES := 512 * 1024 * 1024
-const SUPPORTED_MAP_REGIONS := ["center"]
+const SUPPORTED_MAP_REGIONS := ["center", "level2"]
 
 var is_ready := false
 var update_succeeded := true
