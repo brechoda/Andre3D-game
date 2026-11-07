@@ -2,7 +2,7 @@
 
 ## Conclusão
 
-A integração funcional do recorte **CENTRO** foi validada no projeto e o PCK corrigido está ativo no servidor. Isso **não significa que Liberty City inteira esteja pronta**: o cliente possui quatro dos 12 tiles-base da cidade. Os outros oito tiles ainda não estão convertidos/disponibilizados. A opção **Level 2** é um mapa estático externo separado; ela não representa os tiles restantes de Liberty City.
+A integração funcional do recorte **CENTRO** foi validada no projeto e o PCK corrigido está ativo no servidor. Isso **não significa que Liberty City inteira esteja pronta**: o cliente possui quatro dos 12 tiles-base da cidade. Os outros oito tiles ainda não estão convertidos/disponibilizados. A opção **Level 2** é um mapa estático externo separado; ela não representa os tiles restantes de Liberty City. A cena Level2 da release carrega visualmente, mas a inspeção do PCK encontrou zero corpos/formas de colisão, então essa região ainda não está pronta para gameplay.
 
 A validação atual cobre dados, seleção de região, streaming por tile, colisões e spawns em Godot headless. Ainda faltam playtest visual/jogável em desktop e instalação/teste em um aparelho Android físico; sem essas verificações, não se deve afirmar que desempenho, transparência, controles touch e aparência estejam aprovados.
 
@@ -22,9 +22,9 @@ O teste com o PCK CENTRO publicado confirmou 12 pontos locais/remotos no piso CO
 
 - PCK CENTRO: release [`map-v2.2.2-spawn-fix`](https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/map-v2.2.2-spawn-fix), `Andre3D-map-center.pck`, 62.720.388 bytes, SHA-256 `fc38ae751ea53c8795c222436ff7f332916a79eae5086521ced0ba7037cab26e`. O pacote contém somente CENTRO e o manifesto interno atualizado.
 - Level 2 opcional e separado: release [`map-v2.2.0-regions`](https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/map-v2.2.0-regions), `Andre3D-map-level2.pck`, 47.307.196 bytes, SHA-256 `e1bb2dace0787dbc3f0cf4db3baa29d33ca2d2ac4d45e57b447b0c2defc15b62`.
-- Manifesto ativo: [`2026.11.05.5`](https://andre3d-multiplayer-server.onrender.com/updates/manifest.json), commit do servidor [`e97681a`](https://github.com/brechoda/andre3d-multiplayer-server/commit/e97681a). O manifesto aponta CENTRO ao PCK v2.2.2, mantém Level 2 opcional e preserva o APK 2.2.12. O arquivo de spawn `global-13` tem 1.830 bytes e SHA-256 `9b839af0a1b967a482cb7a5b4d55bfd0b6da322d8a2c311e3b42d7c37ec0253b`. A versão anterior do manifesto declarava incorretamente 1.834 bytes; o metadado foi corrigido.
+- Manifesto ativo corrigido: [`2026.11.07.1`](https://andre3d-multiplayer-server.onrender.com/updates/manifest.json). Aponta CENTRO ao PCK v2.2.2, mantém Level 2 opcional e preserva o APK 2.2.13. O arquivo de spawn `global-13` tem 1.830 bytes e SHA-256 `9b839af0a1b967a482cb7a5b4d55bfd0b6da322d8a2c311e3b42d7c37ec0253b`. A publicação intermediária declarava incorretamente 1.834 bytes e havia voltado ao PCK CENTRO v2.2.0; ambos os metadados foram corrigidos nesta auditoria.
 - Health do servidor: [`/health`](https://andre3d-multiplayer-server.onrender.com/health) respondeu `ok: true`, build `andre3d-mp-v4` após o deploy.
-- APK público atual: [`2.2.12`](https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.12), código Android `44`, pacote `com.manus.andre3d.next`. Este trabalho não gerou nem assinou um novo APK; o PCK é conteúdo remoto e a atualização do manifesto é independente do APK.
+- APK público atual: [`2.2.13`](https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.13), código Android `45`, pacote `com.manus.andre3d.next`; ativa downloads da região Level2. O build CI da main passou. Esta auditoria não criou outra release do APK; o PCK é conteúdo remoto e a atualização do manifesto é independente do APK.
 
 ## Verificações executadas
 
@@ -34,6 +34,7 @@ O teste com o PCK CENTRO publicado confirmou 12 pontos locais/remotos no piso CO
 - `check_gta3_map_streamer_script.gd`: streamer instanciado; meshes visuais e de colisão `ground_fix` carregadas.
 - `check_map_region_spawns.gd`: ao montar o PCK com substituição dos recursos locais, carregou 50 partes visuais e validou 12 raycasts/spawns sobre COL1; máximo `0.000 m`.
 - Validação isolada do PCK: quatro tiles CENTRO e cinco meshes de colisão (quatro colisões regionais mais `ground_fix`) carregados sem fallback para os assets do projeto.
+- Level2: o PCK release (`47.307.196` bytes, SHA-256 `e1bb2dace0787dbc3f0cf4db3baa29d33ca2d2ac4d45e57b447b0c2defc15b62`) montou a cena `level2_static.tscn` e carregou 2.556 `MeshInstance3D`/38.456.693 triângulos, mas nenhuma `StaticBody3D` ou `CollisionShape3D`. A área estática também não tem teste aprovado de raycast no spawn. Não usar como prova de jogabilidade/colisão.
 - Servidor: `node --check`, `npm test` e verificação do manifesto/tamanhos/hashes passaram depois da correção.
 
 Os testes são headless. **Ainda é necessário** percorrer e inspecionar visualmente CENTRO, testar câmera, streaming, transparência de vidro, colisões e desempenho, e validar no Android real o download/montagem do PCK, memória e controles touch. Se a meta for Liberty City completa, ainda é necessário integrar os oito tiles ausentes. Um smoke anterior da cena reportou arquivos de áudio Fiat Uno ausentes; é uma pendência separada do mapa e não foi revalidada nesta auditoria.
@@ -42,7 +43,7 @@ Os testes são headless. **Ainda é necessário** percorrer e inspecionar visual
 |---|---|---|
 | PCK CENTRO | Verificado em Godot | 50 partes visuais, cinco malhas de colisão e 12 spawns locais/remotos no piso. |
 | Liberty City inteira | Parcial | Somente CENTRO (4/12 tiles-base); faltam oito tiles. |
-| Level 2 | Pacote opcional separado | Mapa estático externo; não corresponde à cobertura faltante de Liberty City. |
+| Level 2 | Baixa e carrega visual | PCK contém 2.556 meshes, mas zero colisores conhecidos; não pronto para gameplay. |
 | Colisões COL1 e patch do chão | Integrados no PCK CENTRO | Colisão é carregada antes da mesh visual. |
 | `subglass.txd`/transparência | Assets de substituição presentes | A validação visual ainda depende do playtest desktop/Android. |
 | Spawn remoto | Corrigido (`global-13`) | Os 12 pontos locais/remotos ficaram a `0.000 m` do piso. |

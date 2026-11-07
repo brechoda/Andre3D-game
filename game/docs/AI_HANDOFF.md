@@ -10,11 +10,11 @@ Este documento explica como continuar o projeto sem depender do histórico da co
 - Build multiplayer esperado: `andre3d-mp-v4`
 - Pacote Android principal a partir da 2.0.6: `com.manus.andre3d.next`
 - Pacote legado 2.0.5: `com.manus.andre3d`; a chave antiga foi perdida, então não pode ser atualizado no mesmo pacote.
-- Versão Android pública atual: `2.2.12`
-- Código Android público atual: `44`
-- Último APK público: `2.2.12` / código `44`, distribuído em `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.12`.
+- Versão Android pública atual: `2.2.13`
+- Código Android público atual: `45`
+- Último APK público: `2.2.13` / código `45`, distribuído em `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.13`.
 - O workflow `Build Android APK` cria artefatos de depuração com chave temporária; eles não podem atualizar o APK público. Releases de produção exigem a keystore original e a publicação correspondente no manifesto do servidor; consulte o aviso de segurança abaixo.
-- SHA-256 do APK público 2.2.12: `681968b272b9b0b934fa285111675ad10292d3bf3463c4a9250f580771ce7a91`.
+- SHA-256 do APK público 2.2.13: `8805400706d04e6a02a9375ef254c2ed6b62e0645ae8d48ee16306668c737da2`.
 
 ## Objetivo do projeto
 
@@ -118,7 +118,7 @@ Para substituir um asset já publicado, usar `gh release upload ... --clobber`, 
 - Mudanças em mensagens WebSocket exigem alteração coordenada no cliente e no servidor.
 - Mantenha `build: "andre3d-mp-v4"` até haver uma migração de protocolo planejada.
 - O servidor reconhece `andre`, `gorece` e `dg`; o DG pode usar as motos, mas não a Hilux.
-- Nunca commitar a keystore, senha ou credenciais de assinatura. A keystore principal foi exposta no histórico público do repositório de distribuição (commit `f8f69b8`); o arquivo foi removido do `main` no commit `e9ae5b7`, mas permanece acessível em commits antigos. A 2.2.12 foi assinada com essa chave. Trate-a como comprometida e planeje uma migração segura antes de futuros releases.
+- Nunca commitar a keystore, senha ou credenciais de assinatura. A keystore principal foi exposta no histórico público do repositório de distribuição (commit `f8f69b8`); o arquivo foi removido do `main` no commit `e9ae5b7`, mas permanece acessível em commits antigos. A 2.2.13 foi assinada com essa chave. Trate-a como comprometida e planeje uma migração segura antes de futuros releases.
 
 ## Testes e higiene do repositório
 
@@ -131,11 +131,12 @@ Para substituir um asset já publicado, usar `gh release upload ... --clobber`, 
 
 ## Estado conhecido entregue
 
-- APK público atual: `2.2.12`, código Android `44`, pacote `com.manus.andre3d.next`; release `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.12`. Nenhum APK novo foi criado nesta auditoria.
+- APK público atual: `2.2.13`, código Android `45`, pacote `com.manus.andre3d.next`; release `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.13`. Esta versão habilita o download opcional Level2.
 - Liberty City continua parcial: o recorte CENTRO inclui quatro de 12 tiles-base; faltam oito. A opção externa `level2` é um mapa estático distinto, não os tiles faltantes da cidade.
 - PCK CENTRO ativo: release [`map-v2.2.2-spawn-fix`](https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/map-v2.2.2-spawn-fix), 62.720.388 bytes, SHA-256 `fc38ae751ea53c8795c222436ff7f332916a79eae5086521ced0ba7037cab26e`; Level2 opcional continua no PCK `map-v2.2.0-regions`.
-- Manifesto público `2026.11.05.5`, commit do servidor [`e97681a`](https://github.com/brechoda/andre3d-multiplayer-server/commit/e97681a), aponta para o PCK CENTRO v2.2.2, preserva Level2 e corrige o tamanho/hash de `spawn.json` (`global-13`, 1.830 bytes). O Render respondeu `{"ok":true,"build":"andre3d-mp-v4","rooms":0}` em `/health`.
+- O PCK Level2 baixa e monta `level2_static.tscn`, com 2.556 meshes visuais; o asset publicado não inclui `StaticBody3D` nem `CollisionShape3D`. Não declarar Level2 pronto para gameplay até produzir/testar colisões.
+- Manifesto corrigido para `2026.11.07.1`: aponta para CENTRO v2.2.2, preserva Level2 e APK 2.2.13, corrige o tamanho/hash de `spawn.json` (`global-13`, 1.830 bytes). A publicação anterior tinha revertido CENTRO para v2.2.0 e marcado o spawn como 1.834 bytes, em desacordo com o arquivo; `npm test` detectou a divergência.
 - Testes do mapa: 16 testes Python (15 passaram e um skipped porque o relatório de conversão foi excluído); Godot 4.7.2 parse, isolamento, streamer e o PCK montado em substituição aos recursos locais passaram. Foram carregadas 50 partes visuais, cinco meshes de colisão e 12 spawns local/remotos sobre COL1 (gap máximo `0.000 m`). `npm test` do servidor também passou.
-- Pendências de validação: playtest visual/jogável no desktop, instalação e controles no Android físico, e integração dos oito tiles faltantes para afirmar Liberty City completa. Assets de conversão excluídos do checkout público não devem ser confundidos com as malhas OBJ/MTL runtime editáveis disponíveis no projeto.
+- Pendências de validação: playtest visual/jogável no desktop, instalação e controles no Android físico, colisões do Level2, e integração dos oito tiles faltantes para afirmar Liberty City completa. Assets de conversão excluídos do checkout público não devem ser confundidos com as malhas OBJ/MTL runtime editáveis disponíveis no projeto.
 
 Antes de começar uma alteração, leia este arquivo, `docs/game-multiplayer.md`, `autoload/remote_updater.gd`, `scripts/net/multiplayer_client.gd` e o README do servidor. Depois de alterar, valide, atualize a documentação se o fluxo mudar e faça push somente dos arquivos intencionais.
