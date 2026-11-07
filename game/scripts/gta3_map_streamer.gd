@@ -102,15 +102,27 @@ func _build_static_region_collisions() -> int:
 	collision_body.collision_layer = 1
 	collision_body.collision_mask = 1
 	_static_map_instance.add_child(collision_body)
+	_static_map_instance.force_update_transform()
 	var collision_count := 0
+	var collision_shapes_by_mesh: Dictionary = {}
 	for mesh_node: Node in _static_map_instance.find_children("*", "MeshInstance3D", true, false):
 		var mesh_instance := mesh_node as MeshInstance3D
 		if mesh_instance == null or mesh_instance.mesh == null:
 			continue
-		var collision_shape := mesh_instance.mesh.create_trimesh_shape() as ConcavePolygonShape3D
-		if collision_shape == null:
+		# Copas/folhagem ficam visuais; trimesh completa cria pisos/parede suspensos.
+		# Malhas explicitamente chamadas ColliderArvore continuam físicas como troncos.
+		var mesh_name := mesh_instance.name.to_lower()
+		if mesh_name.begins_with("tree") or mesh_name.begins_with("arvore") or mesh_name.begins_with("bush") or mesh_name.begins_with("arbusto") or mesh_name.begins_with("grass") or mesh_name.begins_with("gramas"):
 			continue
-		collision_shape.backface_collision = true
+		mesh_instance.force_update_transform()
+		var mesh_id := mesh_instance.mesh.get_instance_id()
+		var collision_shape := collision_shapes_by_mesh.get(mesh_id) as ConcavePolygonShape3D
+		if collision_shape == null:
+			collision_shape = mesh_instance.mesh.create_trimesh_shape() as ConcavePolygonShape3D
+			if collision_shape == null:
+				continue
+			collision_shape.backface_collision = true
+			collision_shapes_by_mesh[mesh_id] = collision_shape
 		var shape_instance := CollisionShape3D.new()
 		shape_instance.name = mesh_instance.name + "Collision"
 		shape_instance.shape = collision_shape

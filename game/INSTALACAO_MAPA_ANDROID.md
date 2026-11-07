@@ -2,7 +2,7 @@
 
 ## Conteúdo disponível
 
-O mapa de Liberty City disponível no cliente é somente a região **CENTRO**, em um PCK baixado sob demanda: quatro dos 12 tiles-base. Os oito tiles restantes ainda não estão integrados. A opção **Level 2** é um mapa estático externo separado e não completa Liberty City. O cliente agora gera `StaticBody3D`/`CollisionShape3D` em runtime a partir das malhas visuais do PCK e recusa a região se nenhuma colisão puder ser criada; ainda é necessário validar o resultado em desktop e Android. INDUSTRIAL e ilhas não estão disponíveis como regiões de Liberty City.
+O mapa de Liberty City disponível no cliente é somente a região **CENTRO**, em um PCK baixado sob demanda: quatro dos 12 tiles-base. Os oito tiles restantes ainda não estão integrados. A opção **Level 2** é um mapa estático externo separado e não completa Liberty City. Para Level 2, o cliente gera `StaticBody3D`/`CollisionShape3D` a partir das malhas visuais, reutiliza formas de colisão por recurso e não torna copas/folhagem colidíveis (malhas `ColliderArvore` continuam físicas). A região é recusada se nenhuma colisão puder ser criada. Os dois PCKs passaram validação headless de spawn/colisão; ainda falta playtest visual e em Android. INDUSTRIAL e ilhas não estão disponíveis como regiões de Liberty City.
 
 O APK exclui `assets/maps/*`. Ao entrar em CENTRO, o jogo precisa de internet para baixar o PCK, verificar tamanho e SHA-256 e montá-lo. O manifesto do servidor mantém CENTRO como obrigatório e Level 2 como opcional.
 
@@ -19,6 +19,6 @@ O projeto Godot está no repositório [`brechoda/Andre3D-game`](https://github.c
 
 ## Validação e pendências
 
-O PCK CENTRO v2.2.2 foi testado em Godot: 50 partes visuais, cinco malhas de colisão e 12 spawns locais/remotos sobre COL1, com distância vertical máxima `0.000 m`. O PCK Level2 abre 2.556 meshes visuais, mas a auditoria não encontrou corpos/formas de colisão. Essas checagens headless não substituem conferir visualmente o mapa nem testar no aparelho.
+Os PCKs públicos foram baixados e os SHA-256 conferem com as releases. O PCK CENTRO v2.2.2 passou a validação Godot 4.7.2: 50 partes visuais e seis spawns (jogadores e quatro veículos) sobre COL1, com distância vertical máxima `0.000 m`. O PCK Level2 contém 2.556 malhas utilizáveis; o runtime/teste cria 1.530 formas de colisão elegíveis, reutilizando recursos de malha, e os dois spawns de personagens ficam a no máximo `0.139 m` de COL1. O teste também confirma que a copa das árvores não gera superfícies suspensas sobre personagens. Essas checagens headless não substituem conferir visualmente o mapa nem testar no aparelho.
 
 Para considerar o mapa pronto em um dispositivo, instale o APK, conecte à internet, selecione CENTRO e faça um playtest com câmera, streaming, transparência, colisões, desempenho e controles touch. A validação visual em desktop e o teste em Android físico ainda estão pendentes. Liberty City completa também depende da integração dos oito tiles que faltam.

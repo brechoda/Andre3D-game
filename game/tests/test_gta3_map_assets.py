@@ -143,6 +143,7 @@ class Gta3MapAssetTests(unittest.TestCase):
         self.assertEqual({}, level2["vehicle_spawns"])
         self.assertEqual(3, len(level2["spawn"]))
         self.assertEqual(3, len(level2["gorece_spawn"]))
+        self.assertEqual([100.0, 15.0, -551.0], level2["gorece_spawn"])
 
         streamer = (ROOT / "scripts/gta3_map_streamer.gd").read_text(encoding="utf-8")
         third_person = (ROOT / "scripts/third_person.gd").read_text(encoding="utf-8")
@@ -185,6 +186,8 @@ class Gta3MapAssetTests(unittest.TestCase):
         self.assertIn("func _build_static_region_collisions()", streamer)
         self.assertIn('collision_body.name = "COL1Collision"', streamer)
         self.assertIn("mesh_instance.mesh.create_trimesh_shape()", streamer)
+        self.assertIn("collision_shapes_by_mesh[mesh_id] = collision_shape", streamer)
+        self.assertIn('mesh_name.begins_with("arvore")', streamer)
         self.assertIn("if _build_static_region_collisions() == 0:", streamer)
         self.assertIn("RemoteUpdater.download_map_region(requested_region)", menu)
         self.assertEqual(1, menu.count("ExternalContent.ensure_region(selected_map_region)"))
