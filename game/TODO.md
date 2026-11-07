@@ -39,6 +39,7 @@
 - [x] Executar smoke test desktop headless da cena de terceira pessoa após a importação dos meshes COL1.
 - [x] Remover de todos os tiles as árvores (incluindo variantes LOD e sombras), postes de iluminação/telefonia e semáforos, tanto visualmente quanto nas colisões; preservar arbustos baixos, prédios, asfalto e suportes estruturais.
 - [x] Distribuir somente o PCK CENTRO, baixado sob demanda e montado apenas após a escolha da região.
+- [x] Criar colisões físicas em runtime para as malhas visuais do Level2 e recusar o mapa quando o PCK não fornecer nenhuma malha utilizável.
 - [ ] Fazer playtest visual/jogável no desktop e em dispositivo Android para a região CENTRO; CI e raycasts headless não substituem teste visual, de controles e desempenho real.
 - [ ] Se o objetivo for a Liberty City completa, integrar os 8 tiles-base que não fazem parte do CENTRO e disponibilizá-los como regiões/PCKs jogáveis.
 

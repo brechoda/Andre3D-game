@@ -83,10 +83,43 @@ func _load_static_region() -> void:
 		return
 	_static_map_instance.name = "Level2StaticMap"
 	world_root.add_child(_static_map_instance)
+	if _build_static_region_collisions() == 0:
+		push_error("Static Level2 map has no usable collision meshes")
+		_static_map_instance.queue_free()
+		_static_map_instance = null
+		_manifest_ready = false
+		return
 	_region_bounds_min = Vector3(-753.0, -17.0, -1880.0)
 	_region_bounds_max = Vector3(860.0, 50.0, 520.0)
 	_void_recovery_floor_y = _region_bounds_min.y - 15.0
 	_manifest_ready = true
+
+func _build_static_region_collisions() -> int:
+	if _static_map_instance == null:
+		return 0
+	var collision_body := StaticBody3D.new()
+	collision_body.name = "COL1Collision"
+	collision_body.collision_layer = 1
+	collision_body.collision_mask = 1
+	_static_map_instance.add_child(collision_body)
+	var collision_count := 0
+	for mesh_node: Node in _static_map_instance.find_children("*", "MeshInstance3D", true, false):
+		var mesh_instance := mesh_node as MeshInstance3D
+		if mesh_instance == null or mesh_instance.mesh == null:
+			continue
+		var collision_shape := mesh_instance.mesh.create_trimesh_shape() as ConcavePolygonShape3D
+		if collision_shape == null:
+			continue
+		collision_shape.backface_collision = true
+		var shape_instance := CollisionShape3D.new()
+		shape_instance.name = mesh_instance.name + "Collision"
+		shape_instance.shape = collision_shape
+		shape_instance.transform = _static_map_instance.global_transform.affine_inverse() * mesh_instance.global_transform
+		collision_body.add_child(shape_instance)
+		collision_count += 1
+	if collision_count == 0:
+		collision_body.queue_free()
+	return collision_count
 
 func _requested_session_region() -> String:
 	var session: Variant = _read_json(SESSION_PATH)

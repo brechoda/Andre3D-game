@@ -182,6 +182,10 @@ class Gta3MapAssetTests(unittest.TestCase):
         self.assertIn('const SUPPORTED_REGION_IDS := ["center", "level2"]', streamer)
         self.assertIn('const STATIC_REGION_SCENE := "res://level2_static.tscn"', streamer)
         self.assertIn("func _load_static_region()", streamer)
+        self.assertIn("func _build_static_region_collisions()", streamer)
+        self.assertIn('collision_body.name = "COL1Collision"', streamer)
+        self.assertIn("mesh_instance.mesh.create_trimesh_shape()", streamer)
+        self.assertIn("if _build_static_region_collisions() == 0:", streamer)
         self.assertIn("RemoteUpdater.download_map_region(requested_region)", menu)
         self.assertEqual(1, menu.count("ExternalContent.ensure_region(selected_map_region)"))
 

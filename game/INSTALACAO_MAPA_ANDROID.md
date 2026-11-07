@@ -2,7 +2,7 @@
 
 ## Conteúdo disponível
 
-O mapa de Liberty City disponível no cliente é somente a região **CENTRO**, em um PCK baixado sob demanda: quatro dos 12 tiles-base. Os oito tiles restantes ainda não estão integrados. A opção **Level 2** é um mapa estático externo separado e não completa Liberty City. A cena visual baixa e abre, mas o PCK publicado não contém `StaticBody3D`/`CollisionShape3D`; não considere Level 2 jogável até as colisões serem preparadas e testadas. INDUSTRIAL e ilhas não estão disponíveis como regiões de Liberty City.
+O mapa de Liberty City disponível no cliente é somente a região **CENTRO**, em um PCK baixado sob demanda: quatro dos 12 tiles-base. Os oito tiles restantes ainda não estão integrados. A opção **Level 2** é um mapa estático externo separado e não completa Liberty City. O cliente agora gera `StaticBody3D`/`CollisionShape3D` em runtime a partir das malhas visuais do PCK e recusa a região se nenhuma colisão puder ser criada; ainda é necessário validar o resultado em desktop e Android. INDUSTRIAL e ilhas não estão disponíveis como regiões de Liberty City.
 
 O APK exclui `assets/maps/*`. Ao entrar em CENTRO, o jogo precisa de internet para baixar o PCK, verificar tamanho e SHA-256 e montá-lo. O manifesto do servidor mantém CENTRO como obrigatório e Level 2 como opcional.
 
