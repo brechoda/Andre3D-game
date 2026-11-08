@@ -41,7 +41,8 @@
 - [x] Distribuir somente o PCK CENTRO, baixado sob demanda e montado apenas após a escolha da região.
 - [x] Criar colisões físicas em runtime para as malhas elegíveis do Level2, reutilizando shapes por recurso, ignorando copas/folhagem e recusando o mapa quando o PCK não fornecer nenhuma malha utilizável.
 - [x] Validar os PCKs publicados em Godot headless: seis spawns CENTRO sobre COL1 (máximo 0,000 m) e os dois spawns Level2 sobre colisões geradas em runtime (máximo 0,139 m).
-- [ ] Fazer playtest visual/jogável no desktop e em dispositivo Android para a região CENTRO; CI e raycasts headless não substituem teste visual, de controles e desempenho real.
+- [ ] Publicar novo APK de produção contendo as correções de colisão Level2 dos commits `1150a53`/`90994e3`; o APK público 2.2.13 é anterior a essas alterações e o artefato CI atual é debug.
+- [ ] Fazer playtest visual/jogável de CENTRO e Level2 no desktop e em dispositivo Android; CI e raycasts headless não substituem teste visual, de controles e desempenho real (o teste Level2 headless mediu ~399 MB/390 MiB de RSS de pico, ainda sem medição em Android).
 - [ ] Se o objetivo for a Liberty City completa, integrar os 8 tiles-base que não fazem parte do CENTRO e disponibilizá-los como regiões/PCKs jogáveis.
 
 ## Piloto automático e GPS offline
