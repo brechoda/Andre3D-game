@@ -12,7 +12,7 @@ const REMOTE_SCENE_PATH := "res://assets/models/andre_armed_biked.glb"
 const REMOTE_GORECE_SCENE_PATH := "res://assets/models/gorece_rigged.glb"
 const REMOTE_DG_SCENE_PATH := "res://assets/models/dg_rigged.glb"
 const MELEE_REACH := 1.65
-const ATTACK_ANIMATIONS := ["FightA_1", "FightA_2", "FightA_3"]
+const ATTACK_ANIMATIONS := ["FightA_1", "FightA_2", "FightA_3", "Gun_stand", "Gun_2_IDLE", "SHOT_partial"]
 
 var socket := WebSocketPeer.new()
 var server_url := ""

@@ -36,7 +36,7 @@ func _run_test() -> void:
             _fail("Cliente Godot não entrou na sala pelo servidor local")
             return
 
-    if not await _test_remote_avatars_are_unarmed():
+    if not await _test_remote_avatars_have_pistol():
         return
     if not await _test_motorcycle_claim_and_shared_transform():
         return
@@ -48,7 +48,7 @@ func _run_test() -> void:
     print("GODOT MULTIPLAYER TEST OK: 2 mundos; pulo sincronizado; moto/Hilux compartilhadas com rodas girando no observador; assentos exclusivos; sem veículos remotos duplicados")
     _finish(0)
 
-func _test_remote_avatars_are_unarmed() -> bool:
+func _test_remote_avatars_have_pistol() -> bool:
     var first_client = _worlds[0].get_node("OnlineMultiplayer")
     var second_client = _worlds[1].get_node("OnlineMultiplayer")
     var first_id := String(first_client.get("local_id"))
@@ -62,15 +62,12 @@ func _test_remote_avatars_are_unarmed() -> bool:
     if animator == null:
         _fail("O avatar remoto não tem AnimationPlayer")
         return false
-    if animator.current_animation in ["Gun_stand", "Gun_2_IDLE", "IDLE_armed", "WALK_armed", "run_armed"]:
-        _fail("O avatar remoto está usando uma pose de empunhadura: " + animator.current_animation)
-        return false
-    if remote.find_child("AssaultRifle", true, false) != null or remote.find_child("WeaponHandAttachment", true, false) != null:
-        _fail("O avatar remoto ainda contém um rifle ou ponto de montagem de arma")
+    if remote.find_child("PistolHandAttachment", true, false) == null:
+        _fail("O avatar remoto deve anexar a pistola CC0 à mão direita")
         return false
     for world in _worlds:
-        if world.get_node_or_null("HUD/Root/WeaponButton") != null:
-            _fail("O botão de arma ainda existe em uma HUD multiplayer")
+        if world.get_node_or_null("HUD/Root/WeaponButton") == null:
+            _fail("O botão de pistola deve existir em cada HUD multiplayer")
             return false
     return true
 

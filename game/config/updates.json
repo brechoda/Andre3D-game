@@ -1,5 +1,5 @@
 {
   "enabled": true,
-  "manifest_url": "https://andre3d-multiplayer-server.onrender.com/updates/manifest.json",
+  "manifest_url": "https://andre3d-multiplayer-server.onrender.com/updates/pistol/manifest.json",
   "check_on_start": true
 }

@@ -18,6 +18,8 @@ const CROUCH_ANIMATION := "Player_Sneak"
 const JUMP_ANIMATION := "JUMP_launch"
 const IDLE_ANIMATION := "IDLE_stance"
 const PUNCH_ANIMATION := "FightA_1"
+const WEAPON_IDLE_ANIMATIONS := ["Gun_stand", "Gun_2_IDLE", "IDLE_armed"]
+const WEAPON_FIRE_ANIMATION := "SHOT_partial"
 ## Full GTA SA unarmed combo chain from ped.ifp (FightA_1 -> FightA_2 -> FightA_3).
 const COMBO_ANIMATIONS := ["FightA_1", "FightA_2", "FightA_3"]
 const HIT_REACTION_ANIMATIONS := ["HIT_front", "HIT_back", "HIT_L", "HIT_R", "HitA_1", "HitA_2", "HitA_3"]
@@ -51,6 +53,8 @@ var visual: Node3D
 @onready var crouch_button: Button = $"../HUD/Root/CrouchButton"
 @onready var jump_button: Button = $"../HUD/Root/JumpButton"
 @onready var action_button: Button = $"../HUD/Root/ActionButton"
+@onready var weapon_button: Button = $"../HUD/Root/WeaponButton"
+@onready var aim_button: Button = $"../HUD/Root/AimButton"
 @onready var switch_button: Button = $"../HUD/Root/SwitchButton"
 @onready var follow_button: Button = $"../HUD/Root/FollowButton"
 @onready var pull_vehicle_button: Button = $"../HUD/Root/PullVehicleButton"
@@ -90,6 +94,10 @@ var _combo_clip_length := 0.0
 var _combo_elapsed := 0.0
 var _combo_tween: Tween
 var _combo_strike_resolved := false
+var _pistol_attachment: AndrePistolAttachment
+var _weapon_equipped := false
+var _weapon_aiming := false
+var _weapon_action_busy := false
 var _active_character := 0 # 0 = Andre, 1 = GORECE, 2 = DG
 var _follow_enabled := false
 var _auto_mount_hilux_armed := false
@@ -125,6 +133,8 @@ func _ready() -> void:
     jump_button.button_down.connect(_on_jump_button_down)
     action_button.button_down.connect(_on_action_button_down)
     action_button.button_up.connect(_on_action_button_up)
+    weapon_button.toggled.connect(_on_weapon_toggled)
+    aim_button.toggled.connect(_on_aim_toggled)
     switch_button.pressed.connect(_toggle_character)
     follow_button.pressed.connect(_toggle_follow)
     pull_vehicle_button.pressed.connect(_show_pull_vehicle_menu)
@@ -149,6 +159,7 @@ func _ready() -> void:
     camera.add_to_group("graphics_camera")
     GraphicsSettings.apply()
     _animation_player = _find_animation_player(visual)
+    _setup_pistol_for_visual()
     _apply_black_shoes()
     _apply_orange_clothes()
     _apply_dark_skin()
@@ -433,6 +444,7 @@ func set_active_character(character_index: int) -> void:
         gorece.set_process(true)
         gorece.set_physics_process(true)
         gorece.set_player_controlled(true)
+        _setup_pistol_for_visual()
         var gorece_visual := gorece.get_node_or_null("GoreceVisual") as Node3D
         if gorece_visual == null:
             gorece_visual = gorece.get("visual") as Node3D
@@ -444,7 +456,7 @@ func set_active_character(character_index: int) -> void:
         _camera_yaw = gorece_yaw
         camera.current = true
         _update_camera_for(gorece.global_position)
-        action_button.text = "DAR SOCO"
+        action_button.text = "ATIRAR"
     else:
         visible = true
         gorece.set_player_controlled(false)
@@ -457,8 +469,9 @@ func set_active_character(character_index: int) -> void:
         _animation_player = _find_animation_player(visual)
         _configure_player_animations()
         _setup_neck_look()
+        _setup_pistol_for_visual()
         _camera_yaw = visual.global_rotation.y
-        action_button.text = "DAR SOCO"
+        action_button.text = "ATIRAR"
         _update_camera()
 
 func _configure_player_animations() -> void:
@@ -1106,7 +1119,94 @@ func set_companion_vehicle_target(target: Node3D) -> void:
 func is_gorece_active() -> bool:
     return _active_character == 1
 
+func _setup_pistol_for_visual() -> void:
+    if _active_character == 1:
+        if gorece != null and gorece.has_method("setup_pistol"):
+            gorece.call("setup_pistol")
+        return
+    if is_instance_valid(_pistol_attachment):
+        _pistol_attachment.clear()
+        _pistol_attachment.queue_free()
+    _pistol_attachment = AndrePistolAttachment.new()
+    add_child(_pistol_attachment)
+    if not _pistol_attachment.setup(visual):
+        _pistol_attachment.queue_free()
+        _pistol_attachment = null
+    else:
+        _pistol_attachment.set_equipped(_weapon_equipped)
+
+func _on_weapon_toggled(enabled: bool) -> void:
+    _weapon_equipped = enabled
+    weapon_button.text = "GUARDAR" if enabled else "PISTOLA"
+    aim_button.disabled = not enabled
+    if not enabled:
+        aim_button.set_pressed_no_signal(false)
+        _weapon_aiming = false
+    if _active_character == 1:
+        if gorece != null and gorece.has_method("set_pistol_equipped"):
+            gorece.call("set_pistol_equipped", enabled)
+    elif _pistol_attachment != null:
+        _pistol_attachment.set_equipped(enabled)
+    if enabled and _active_character != 1:
+        _play_weapon_idle()
+
+func _on_aim_toggled(aiming: bool) -> void:
+    _weapon_aiming = aiming and _weapon_equipped
+    aim_button.text = "PARAR MIRA" if _weapon_aiming else "MIRAR"
+    if _active_character == 1:
+        if gorece != null and gorece.has_method("set_pistol_aiming"):
+            gorece.call("set_pistol_aiming", _weapon_aiming)
+    elif _weapon_aiming:
+        _play_weapon_idle()
+
+func _play_weapon_idle() -> void:
+    if _animation_player == null or not _weapon_equipped or _weapon_action_busy:
+        return
+    for animation_name in WEAPON_IDLE_ANIMATIONS:
+        if _animation_player.has_animation(animation_name):
+            var clip := _animation_player.get_animation(animation_name)
+            clip.loop_mode = Animation.LOOP_LINEAR
+            _animation_player.play(animation_name)
+            _playing_animation = animation_name
+            return
+
+func _fire_pistol() -> void:
+    if not _weapon_equipped:
+        return
+    if _active_character == 1:
+        if gorece != null and gorece.has_method("fire_pistol"):
+            gorece.call("fire_pistol")
+        return
+    if _animation_player == null or _weapon_action_busy:
+        return
+    var animation_name := WEAPON_FIRE_ANIMATION if _animation_player.has_animation(WEAPON_FIRE_ANIMATION) else "Gun_stand"
+    if not _animation_player.has_animation(animation_name):
+        return
+    var clip := _animation_player.get_animation(animation_name)
+    clip.loop_mode = Animation.LOOP_NONE
+    _weapon_action_busy = true
+    _action_busy = true
+    _animation_player.speed_scale = 1.0
+    _animation_player.play(animation_name)
+    _playing_animation = animation_name
+    var online_client := get_node_or_null("../OnlineMultiplayer")
+    if online_client != null and online_client.get("enabled") and online_client.has_method("send_combat_event"):
+        online_client.call("send_combat_event", "attack", animation_name)
+    var timer := get_tree().create_timer(maxf(clip.length, 0.18))
+    timer.timeout.connect(_finish_pistol_action)
+
+func _finish_pistol_action() -> void:
+    _weapon_action_busy = false
+    _action_busy = false
+    if _weapon_aiming:
+        _play_weapon_idle()
+    else:
+        _play_animation(IDLE_ANIMATION)
+
 func _on_action_button_down() -> void:
+    if _weapon_equipped:
+        _fire_pistol()
+        return
     if _active_character == 1:
         gorece.set_action_holding(true)
         gorece.perform_action()
