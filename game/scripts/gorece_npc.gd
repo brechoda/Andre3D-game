@@ -86,7 +86,7 @@ var _combo_clip_length := 0.0
 var _combo_tween: Tween
 var _combo_strike_resolved := false
 var _pistol_attachment: AndrePistolAttachment
-var _pistol_equipped := false
+var _pistol_equipped := true
 var _pistol_aiming := false
 var _pistol_action_busy := false
 var _jump_buffer_remaining := 0.0
