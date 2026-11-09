@@ -35,7 +35,7 @@ func setup(character_visual: Node3D) -> bool:
     # aligned with the right palm while the hand animations drive the pose.
     _weapon.position = Vector3(0.02, -0.01, -0.055)
     _weapon.rotation_degrees = Vector3(90.0, 0.0, 90.0)
-	_weapon.scale = Vector3.ONE * 1.0
+    _weapon.scale = Vector3.ONE * 1.0
     _attachment.add_child(_weapon)
     _ready_for_character = true
     set_equipped(true)
