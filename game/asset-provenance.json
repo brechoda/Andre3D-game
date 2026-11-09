@@ -72,50 +72,6 @@
       "used": false,
       "usedBy": []
     },
-    "assets/models/assault_rifle.glb": {
-      "declaredUseEvidence": [],
-      "generator": {},
-      "inputs": [],
-      "license": {},
-      "origin": "unknown",
-      "referenceEvidence": [
-        "scripts/third_person.gd"
-      ],
-      "regions": [],
-      "sha256": "sha256:ca6875768214f06884a9a78f5867cb4c28edb3f64f0c6e2ab92320e1504d5555",
-      "shipped": true,
-      "size": 100640,
-      "source": {},
-      "status": "present",
-      "transformations": [],
-      "useEvidence": [
-        "scripts/third_person.gd"
-      ],
-      "used": true,
-      "usedBy": []
-    },
-    "assets/models/assault_rifle_simple.glb": {
-      "declaredUseEvidence": [],
-      "generator": {},
-      "inputs": [],
-      "license": {},
-      "origin": "unknown",
-      "referenceEvidence": [
-        "scripts/third_person.gd"
-      ],
-      "regions": [],
-      "sha256": "sha256:266ffd12306a2afc2638e9a479687adf738fc3cd9e938ce8e3195ccb312a6b31",
-      "shipped": true,
-      "size": 8740,
-      "source": {},
-      "status": "present",
-      "transformations": [],
-      "useEvidence": [
-        "scripts/third_person.gd"
-      ],
-      "used": true,
-      "usedBy": []
-    },
     "assets/models/cuntgun.mtl": {
       "declaredUseEvidence": [],
       "generator": {},

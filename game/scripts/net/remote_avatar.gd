@@ -29,9 +29,6 @@ var _vehicle_received_at_msec := 0
 var _vehicle_network_age_seconds := 0.0
 var _vehicle_audio_mode := "off"
 var _target_vehicle_wheelie := 0.0
-var _pistol_attachment: AndrePistolAttachment
-
-
 var _vehicle_error_offset := Vector3.ZERO
 
 const MAX_LEAD_SECONDS := 0.2
@@ -60,14 +57,6 @@ func setup(visual_instance: Node3D, selected_character: String) -> void:
     add_child(visual)
     visual.position = Vector3(0, 0.98, 0)
     animation_player = _find_animation_player(visual)
-    if is_instance_valid(_pistol_attachment):
-        _pistol_attachment.clear()
-        _pistol_attachment.queue_free()
-    _pistol_attachment = AndrePistolAttachment.new()
-    add_child(_pistol_attachment)
-    if not _pistol_attachment.setup(visual):
-        _pistol_attachment.queue_free()
-        _pistol_attachment = null
     if character == "andre":
         _apply_andre_appearance(visual)
     _play_idle()
@@ -297,11 +286,6 @@ func _play_first(names: Array) -> void:
             return
 
 func play_combat_animation(animation_name: String) -> void:
-    if animation_name in ["Gun_stand", "Gun_2_IDLE", "SHOT_partial"]:
-        if _pistol_attachment != null:
-            _pistol_attachment.set_equipped(true)
-        _play_timed_combat_clip(animation_name)
-        return
     if animation_name not in ["FightA_1", "FightA_2", "FightA_3"]:
         return
     _play_timed_combat_clip(animation_name)

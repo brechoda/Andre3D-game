@@ -30,11 +30,12 @@ func _run() -> void:
         return
 
     var action_button := scene.get_node("HUD/Root/ActionButton") as Button
-    var weapon_button := scene.get_node("HUD/Root/WeaponButton") as Button
-    var aim_button := scene.get_node("HUD/Root/AimButton") as Button
-    _check(action_button.text == "ATIRAR", "action button must be a pistol fire control")
-    _check(weapon_button != null and aim_button != null, "pistol controls must exist in the HUD")
-    _check(player.find_child("PistolHandAttachment", true, false) != null, "player must attach the CC0 pistol to the right hand")
+    _check(action_button.text == "AÇÃO", "action button must use the unarmed action label")
+    _check(scene.get_node_or_null("HUD/Root/WeaponButton") == null, "weapon button must be removed from the HUD")
+    _check(scene.get_node_or_null("HUD/Root/AimButton") == null, "aim button must be removed from the HUD")
+    _check(scene.get_node_or_null("HUD/Root/RifleButton") == null, "rifle button must be removed from the HUD")
+    _check(player.find_child("PistolHandAttachment", true, false) == null, "player must not attach a pistol")
+    _check(player.find_child("M4HandAttachment", true, false) == null, "player must not attach an M4")
 
     var animation_player := player.get("_animation_player") as AnimationPlayer
     _check(animation_player != null and animation_player.has_animation("FightA_1"), "the original FightA_1 IFP clip must be loaded")
@@ -54,21 +55,6 @@ func _run() -> void:
     player.call("_update_walk_animation", false, 0.0)
     _check(animation_player.current_animation == "IDLE_stance", "standing idle must use the unarmed stance")
 
-    weapon_button.set_pressed(true)
-    _check(bool(player.get("_weapon_equipped")), "pistol must equip from the HUD")
-    _check(animation_player.has_animation("Gun_stand"), "Andre must expose the existing IFP pistol stance")
-    _check(animation_player.has_animation("Gun_2_IDLE"), "Andre must expose the existing IFP pistol idle")
-    _check(animation_player.has_animation("SHOT_partial"), "Andre must expose the existing IFP pistol shot")
-    aim_button.set_pressed(true)
-    _check(animation_player.current_animation in ["Gun_stand", "Gun_2_IDLE", "IDLE_armed"], "aim must use a pistol hold animation")
-    action_button.emit_signal("button_down")
-    await process_frame
-    _check(animation_player.current_animation == "SHOT_partial", "fire must play the existing IFP shot clip")
-    await create_timer(animation_player.get_animation("SHOT_partial").length + 0.1).timeout
-    _check(not bool(player.get("_weapon_action_busy")), "pistol shot action must finish")
-    weapon_button.set_pressed(false)
-    player.call("_on_aim_toggled", false)
-    player.call("_on_weapon_toggled", false)
 
     var gorece := scene.get_node("GoreceNPC") as GoreceNpc
     var gorece_animation_player := gorece.get("_animation_player") as AnimationPlayer
@@ -78,7 +64,7 @@ func _run() -> void:
     scene.queue_free()
     await process_frame
     if _failures.is_empty():
-        print("[combat-actions] PASS: CC0 pistol controls, IFP hold/aim/fire clips and two-way hit reactions")
+        print("[combat-actions] PASS: unarmed controls and two-way hit reactions")
         quit(0)
         return
     for failure in _failures:

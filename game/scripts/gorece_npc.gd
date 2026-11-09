@@ -85,10 +85,6 @@ var _combo_elapsed := 0.0
 var _combo_clip_length := 0.0
 var _combo_tween: Tween
 var _combo_strike_resolved := false
-var _pistol_attachment: AndrePistolAttachment
-var _pistol_equipped := true
-var _pistol_aiming := false
-var _pistol_action_busy := false
 var _jump_buffer_remaining := 0.0
 var _coyote_remaining := 0.0
 var _skeleton: Skeleton3D
@@ -97,7 +93,6 @@ var _seat_target: Dictionary = {}
 
 func _ready() -> void:
     _animation_player = _find_animation_player(visual)
-    setup_pistol()
     _make_collision_shape_unique()
     if _animation_player != null:
         for animation_name in [WALK_ANIMATION, RUN_ANIMATION, IDLE_ANIMATION, CROUCH_WALK_ANIMATION, CROUCH_IDLE_ANIMATION, JUMP_GLIDE_ANIMATION, FALL_ANIMATION]:
@@ -107,66 +102,6 @@ func _ready() -> void:
             if _animation_player.has_animation(animation_name):
                 _animation_player.get_animation(animation_name).loop_mode = Animation.LOOP_NONE
     _play_animation(IDLE_ANIMATION)
-
-func setup_pistol() -> void:
-    if is_instance_valid(_pistol_attachment):
-        _pistol_attachment.clear()
-        _pistol_attachment.queue_free()
-    _pistol_attachment = AndrePistolAttachment.new()
-    add_child(_pistol_attachment)
-    if not _pistol_attachment.setup(visual):
-        _pistol_attachment.queue_free()
-        _pistol_attachment = null
-    else:
-        _pistol_attachment.set_equipped(_pistol_equipped)
-
-func set_pistol_equipped(enabled: bool) -> void:
-    _pistol_equipped = enabled
-    if _pistol_attachment != null:
-        _pistol_attachment.set_equipped(enabled)
-    if enabled:
-        _play_weapon_idle()
-
-func set_pistol_aiming(aiming: bool) -> void:
-    _pistol_aiming = aiming and _pistol_equipped
-    if _pistol_aiming:
-        _play_weapon_idle()
-
-func _play_weapon_idle() -> void:
-    if _animation_player == null or not _pistol_equipped or _pistol_action_busy:
-        return
-    for animation_name in ["Gun_stand", "Gun_2_IDLE", "IDLE_armed", IDLE_ANIMATION]:
-        if _animation_player.has_animation(animation_name):
-            var clip := _animation_player.get_animation(animation_name)
-            clip.loop_mode = Animation.LOOP_LINEAR
-            _animation_player.play(animation_name)
-            _playing_animation = animation_name
-            return
-
-func fire_pistol() -> void:
-    if not _pistol_equipped or _animation_player == null or _pistol_action_busy:
-        return
-    var animation_name := "SHOT_partial" if _animation_player.has_animation("SHOT_partial") else ("Gun_stand" if _animation_player.has_animation("Gun_stand") else "IDLE_armed")
-    if not _animation_player.has_animation(animation_name):
-        return
-    var clip := _animation_player.get_animation(animation_name)
-    clip.loop_mode = Animation.LOOP_NONE
-    _pistol_action_busy = true
-    _action_busy = true
-    _animation_player.speed_scale = 1.0
-    _animation_player.play(animation_name)
-    _playing_animation = animation_name
-    var online_client := get_node_or_null("../OnlineMultiplayer")
-    if online_client != null and online_client.get("enabled") and online_client.has_method("send_combat_event"):
-        online_client.call("send_combat_event", "attack", animation_name)
-    var timer := get_tree().create_timer(maxf(clip.length, 0.18))
-    timer.timeout.connect(_finish_pistol_action)
-
-func _finish_pistol_action() -> void:
-    _pistol_action_busy = false
-    _action_busy = false
-    if _pistol_equipped:
-        _play_weapon_idle()
 
 func _process(delta: float) -> void:
     if _action_busy:

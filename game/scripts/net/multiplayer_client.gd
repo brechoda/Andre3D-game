@@ -12,7 +12,7 @@ const REMOTE_SCENE_PATH := "res://assets/models/andre_armed_biked.glb"
 const REMOTE_GORECE_SCENE_PATH := "res://assets/models/gorece_rigged.glb"
 const REMOTE_DG_SCENE_PATH := "res://assets/models/dg_rigged.glb"
 const MELEE_REACH := 1.65
-const ATTACK_ANIMATIONS := ["FightA_1", "FightA_2", "FightA_3", "Gun_stand", "Gun_2_IDLE", "SHOT_partial"]
+const ATTACK_ANIMATIONS := ["FightA_1", "FightA_2", "FightA_3"]
 
 var socket := WebSocketPeer.new()
 var server_url := ""
@@ -258,12 +258,19 @@ func _local_vehicle_state() -> Dictionary:
 
 func is_connected_to_server() -> bool:
     return enabled and socket.get_ready_state() == WebSocketPeer.STATE_OPEN
-func request_vehicle_pull(vehicle_id: String) -> bool:
+func request_vehicle_pull(vehicle_id: String, target: Vector3 = Vector3.ZERO, yaw: float = 0.0) -> bool:
     if not is_connected_to_server() or vehicle_id.is_empty():
         _set_status("Multiplayer: não foi possível solicitar o veículo")
         return false
     _vehicle_pull_results[vehicle_id] = null
-    _send({"type": "vehicle_pull", "vehicle_id": vehicle_id})
+    _send({
+        "type": "vehicle_pull",
+        "vehicle_id": vehicle_id,
+        "x": target.x,
+        "y": target.y,
+        "z": target.z,
+        "ry": yaw,
+    })
     _set_status("Solicitação para puxar veículo enviada")
     return true
 func request_vehicle_claim(vehicle_id: String) -> bool:
