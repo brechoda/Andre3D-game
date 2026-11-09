@@ -67,6 +67,8 @@ jobs:
           # Keep Godot from importing the Android Gradle template as game assets.
           touch android/build/.gdignore
           find android/build -type f -name '*.import' -delete
+          # Use the session CDN mirror because services.gradle.org intermittently returns 504.
+          sed -i 's|^distributionUrl=.*|distributionUrl=https\\://files.manuscdn.com/user_upload_by_module/session_file/310519664071928669/RpSxmQxhibnnsKUT.zip|' android/build/gradle/wrapper/gradle-wrapper.properties
 
       - name: Validate center map tile selection and spawn
         working-directory: game
