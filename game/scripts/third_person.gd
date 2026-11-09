@@ -19,7 +19,7 @@ const JUMP_ANIMATION := "JUMP_launch"
 const IDLE_ANIMATION := "IDLE_stance"
 const PUNCH_ANIMATION := "FightA_1"
 const WEAPON_IDLE_ANIMATIONS := ["Gun_stand", "Gun_2_IDLE", "IDLE_armed"]
-const WEAPON_FIRE_ANIMATION := "SHOT_partial"
+const WEAPON_FIRE_ANIMATION := "Gun_stand"
 ## Full GTA SA unarmed combo chain from ped.ifp (FightA_1 -> FightA_2 -> FightA_3).
 const COMBO_ANIMATIONS := ["FightA_1", "FightA_2", "FightA_3"]
 const HIT_REACTION_ANIMATIONS := ["HIT_front", "HIT_back", "HIT_L", "HIT_R", "HitA_1", "HitA_2", "HitA_3"]
