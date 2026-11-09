@@ -74,6 +74,7 @@ var _jumping := false
 var _spawn_grounded := false
 var _spawn_wait_elapsed := 0.0
 const SPAWN_MAP_WAIT_SECONDS := 3.0
+const VEHICLE_POSES_PATH := "user://andre3d_vehicle_poses.json"
 var _jump_buffer_remaining := 0.0
 var _coyote_remaining := 0.0
 var _animation_player: AnimationPlayer
@@ -274,6 +275,7 @@ func _apply_selected_map_spawn() -> void:
             vehicle.global_position = vehicle_spawns.get(vehicle_id, spawn + vehicle_offsets[vehicle_id])
             if vehicle.has_method("sync_map_ground_after_spawn"):
                 vehicle.call("sync_map_ground_after_spawn")
+    _restore_persisted_vehicle_poses()
 
 func restore_vehicle_exit_pose(heading: float) -> void:
     # O Player permanece sem rotação durante o gameplay; somente o visual
@@ -982,6 +984,7 @@ func _on_pull_vehicle_selected(index: int) -> void:
         _pull_vehicle_locally(vehicle, vehicle_id, target, player_yaw)
 func _pull_vehicle_locally(vehicle: Node, vehicle_id: String, target: Vector3, player_yaw: float) -> bool:
     if vehicle.has_method("pull_near_player") and bool(vehicle.call("pull_near_player", target, player_yaw)):
+        _persist_vehicle_pose(vehicle_id, vehicle)
         show_pull_vehicle_feedback("VEÍCULO PUXADO")
         return true
     else:
@@ -998,6 +1001,44 @@ func show_pull_vehicle_feedback(message: String) -> void:
 func _reset_pull_vehicle_button_text() -> void:
     if is_instance_valid(pull_vehicle_button):
         pull_vehicle_button.text = "PUXAR VEÍCULO"
+
+func _persist_vehicle_pose(vehicle_id: String, vehicle: Node3D) -> void:
+    if vehicle_id.is_empty() or vehicle == null:
+        return
+    var poses: Dictionary = {}
+    if FileAccess.file_exists(VEHICLE_POSES_PATH):
+        var file := FileAccess.open(VEHICLE_POSES_PATH, FileAccess.READ)
+        var parsed: Variant = JSON.parse_string(file.get_as_text()) if file != null else null
+        if parsed is Dictionary:
+            poses = parsed
+    poses[vehicle_id] = {
+        "x": vehicle.global_position.x,
+        "y": vehicle.global_position.y,
+        "z": vehicle.global_position.z,
+        "yaw": vehicle.global_rotation.y,
+    }
+    var output := FileAccess.open(VEHICLE_POSES_PATH, FileAccess.WRITE)
+    if output != null:
+        output.store_string(JSON.stringify(poses))
+
+func _restore_persisted_vehicle_poses() -> void:
+    if not FileAccess.file_exists(VEHICLE_POSES_PATH):
+        return
+    var file := FileAccess.open(VEHICLE_POSES_PATH, FileAccess.READ)
+    var parsed: Variant = JSON.parse_string(file.get_as_text()) if file != null else null
+    if not parsed is Dictionary:
+        return
+    for vehicle_id: String in (parsed as Dictionary).keys():
+        var pose: Variant = (parsed as Dictionary).get(vehicle_id)
+        if not pose is Dictionary:
+            continue
+        var vehicle := _find_spawn_vehicle(vehicle_id)
+        if vehicle == null or (vehicle.has_method("is_riding") and bool(vehicle.call("is_riding"))):
+            continue
+        vehicle.global_position = Vector3(float(pose.get("x", vehicle.global_position.x)), float(pose.get("y", vehicle.global_position.y)), float(pose.get("z", vehicle.global_position.z)))
+        vehicle.global_rotation.y = float(pose.get("yaw", vehicle.global_rotation.y))
+        if vehicle.has_method("sync_map_ground_after_spawn"):
+            vehicle.call("sync_map_ground_after_spawn")
 
 func _update_follow_button() -> void:
     if follow_button == null:

@@ -70,6 +70,22 @@ func _run_test() -> void:
 		quit(1)
 		return
 	wayfarer.call("_finish_dismount")
+	# Simula o próximo arranque: o spawn normal é aplicado, seguido da pose
+	# persistida do último puxar.
+	player.call("_apply_selected_map_spawn")
+	player.global_position = pull_origin
+	await process_frame
+	if wayfarer.global_position.distance_to(expected_pull) > 2.0:
+		push_error("The pulled Wayfarer pose was not restored after a simulated restart")
+		quit(1)
+		return
+	wayfarer.call("toggle_riding_from_universal")
+	await process_frame
+	if not bool(wayfarer.call("is_riding")):
+		push_error("The persisted Wayfarer could not be mounted after a simulated restart")
+		quit(1)
+		return
+	wayfarer.call("_finish_dismount")
 	player.call("set_active_character", 1)
 	gorece.global_position = pop.global_position + Vector3(0.0, 0.0, 1.0)
 	await process_frame
