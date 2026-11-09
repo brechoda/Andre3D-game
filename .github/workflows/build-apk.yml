@@ -26,11 +26,11 @@ jobs:
       - name: Install Godot and export templates
         run: |
           mkdir -p "$HOME/.local/bin" "$HOME/.local/share/godot/export_templates/4.7.2.stable"
-          curl --retry 6 --retry-all-errors --retry-delay 8 --connect-timeout 30 --max-time 900 -fsSL -o /tmp/godot.zip https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
+          curl --ipv4 --http1.1 --retry 10 --retry-all-errors --retry-delay 10 --connect-timeout 30 --max-time 1800 -fsSL -o /tmp/godot.zip https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_linux.x86_64.zip
           unzip -q /tmp/godot.zip -d "$HOME/.local/bin"
           mv "$HOME/.local/bin/Godot_v4.7.2-stable_linux.x86_64" "$HOME/.local/bin/godot"
           chmod +x "$HOME/.local/bin/godot"
-          curl --retry 6 --retry-all-errors --retry-delay 8 --connect-timeout 30 --max-time 900 -fsSL -o /tmp/templates.tpz https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_export_templates.tpz
+          curl --ipv4 --http1.1 --retry 10 --retry-all-errors --retry-delay 10 --connect-timeout 30 --max-time 1800 -fsSL -o /tmp/templates.tpz https://github.com/godotengine/godot/releases/download/4.7.2-stable/Godot_v4.7.2-stable_export_templates.tpz
           mkdir -p /tmp/templates
           unzip -q /tmp/templates.tpz -d /tmp/templates
           cp -a /tmp/templates/templates/. "$HOME/.local/share/godot/export_templates/4.7.2.stable/"
