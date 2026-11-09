@@ -57,12 +57,19 @@ func _run_test() -> void:
 	player.call("_on_pull_vehicle_selected", 1)
 	await process_frame
 	var pull_forward := Vector3(-sin(pull_yaw), 0.0, -cos(pull_yaw))
-	var expected_pull := pull_origin + pull_forward * 4.8
+	var expected_pull := pull_origin + pull_forward * 2.0
 	var pulled_distance := Vector2(wayfarer.global_position.x, wayfarer.global_position.z).distance_to(Vector2(expected_pull.x, expected_pull.z))
 	if pulled_distance > 2.0:
 		push_error("The Wayfarer did not move to the player's pull position: %.2f" % pulled_distance)
 		quit(1)
 		return
+	wayfarer.call("toggle_riding_from_universal")
+	await process_frame
+	if not bool(wayfarer.call("is_riding")):
+		push_error("The pulled Wayfarer stayed nearby but could not be mounted")
+		quit(1)
+		return
+	wayfarer.call("_finish_dismount")
 	player.call("set_active_character", 1)
 	gorece.global_position = pop.global_position + Vector3(0.0, 0.0, 1.0)
 	await process_frame

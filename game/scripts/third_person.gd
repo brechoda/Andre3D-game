@@ -967,7 +967,10 @@ func _on_pull_vehicle_selected(index: int) -> void:
     var player_position: Vector3 = gorece.global_position if _active_character == 1 else global_position
     var player_yaw := gorece.global_rotation.y if _active_character == 1 else (visual.global_rotation.y if visual != null else global_rotation.y)
     var forward := Vector3(-sin(player_yaw), 0.0, -cos(player_yaw))
-    var target := player_position + forward * 4.8
+    # A posição anterior deixava o centro da moto fora do raio de montagem
+    # (2,8 m), apesar de parecer próxima no ecrã. Mantemos espaço para o
+    # personagem e colocamos o veículo dentro do raio real de entrada.
+    var target := player_position + forward * 2.0
     var mp := get_parent().get_node_or_null("OnlineMultiplayer")
     if mp != null and mp.has_method("is_connected_to_server") and bool(mp.call("is_connected_to_server")):
         var request_sent := bool(mp.call("request_vehicle_pull", vehicle_id, target, player_yaw))

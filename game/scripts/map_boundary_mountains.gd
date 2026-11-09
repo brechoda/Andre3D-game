@@ -66,10 +66,12 @@ func _build_water_bands() -> void:
 	var span_x := right - left + WATER_BAND_WIDTH * 2.0
 	var span_y := top - bottom + WATER_BAND_WIDTH * 2.0
 	var water_z := _ground_z + WATER_HEIGHT_OFFSET
-	_add_water_band("SouthWater", Vector3(center_x, bottom - WATER_BAND_WIDTH * 0.5, water_z), Vector2(span_x, WATER_BAND_WIDTH), water_material)
-	_add_water_band("NorthWater", Vector3(center_x, top + WATER_BAND_WIDTH * 0.5, water_z), Vector2(span_x, WATER_BAND_WIDTH), water_material)
-	_add_water_band("WestWater", Vector3(left - WATER_BAND_WIDTH * 0.5, center_y, water_z), Vector2(WATER_BAND_WIDTH, span_y), water_material)
-	_add_water_band("EastWater", Vector3(right + WATER_BAND_WIDTH * 0.5, center_y, water_z), Vector2(WATER_BAND_WIDTH, span_y), water_material)
+	# A água cobre a folga entre os bounds do tile e a parede (EDGE_MARGIN),
+	# em vez de começar 90 m depois dela.
+	_add_water_band("SouthWater", Vector3(center_x, bottom, water_z), Vector2(span_x, WATER_BAND_WIDTH), water_material)
+	_add_water_band("NorthWater", Vector3(center_x, top, water_z), Vector2(span_x, WATER_BAND_WIDTH), water_material)
+	_add_water_band("WestWater", Vector3(left, center_y, water_z), Vector2(WATER_BAND_WIDTH, span_y), water_material)
+	_add_water_band("EastWater", Vector3(right, center_y, water_z), Vector2(WATER_BAND_WIDTH, span_y), water_material)
 
 
 func _add_water_band(water_name: String, center: Vector3, size: Vector2, material: StandardMaterial3D) -> void:
@@ -79,7 +81,9 @@ func _add_water_band(water_name: String, center: Vector3, size: Vector2, materia
 	mesh.size = size
 	water.mesh = mesh
 	water.material_override = material
-	water.rotation_degrees.x = 90.0
+	# O MapStreamer usa o plano local XY como chão e o eixo Z como altura.
+	# Rodar o PlaneMesh em X colocava a água na vertical e longe do mundo.
+	water.rotation = Vector3.ZERO
 	water.position = center
 	add_child(water)
 
