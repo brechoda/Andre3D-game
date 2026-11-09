@@ -69,7 +69,12 @@ func _run_test() -> void:
 		push_error("The pulled Wayfarer stayed nearby but could not be mounted")
 		quit(1)
 		return
-	wayfarer.call("_finish_dismount")
+	ride_button.emit_signal("pressed")
+	await create_timer(1.1).timeout
+	if bool(wayfarer.call("is_riding")) or not player.is_physics_processing():
+		push_error("The Ride button did not release the pulled Wayfarer: riding=%s mounting=%s dismounting=%s player_physics=%s disabled=%s connections=%d" % [str(wayfarer.get("_riding")), str(wayfarer.get("_mounting")), str(wayfarer.get("_dismounting")), str(player.is_physics_processing()), str(ride_button.disabled), ride_button.get_signal_connection_list("pressed").size()])
+		quit(1)
+		return
 	# Simula o próximo arranque: o spawn normal é aplicado, seguido da pose
 	# persistida do último puxar.
 	player.call("_apply_selected_map_spawn")
@@ -85,7 +90,12 @@ func _run_test() -> void:
 		push_error("The persisted Wayfarer could not be mounted after a simulated restart")
 		quit(1)
 		return
-	wayfarer.call("_finish_dismount")
+	ride_button.emit_signal("pressed")
+	await create_timer(1.1).timeout
+	if bool(wayfarer.call("is_riding")):
+		push_error("The Ride button did not release the persisted Wayfarer")
+		quit(1)
+		return
 	player.call("set_active_character", 1)
 	gorece.global_position = pop.global_position + Vector3(0.0, 0.0, 1.0)
 	await process_frame
@@ -103,7 +113,8 @@ func _run_test() -> void:
 		push_error("The motorcycle mounted a different character than the active Gorece")
 		quit(1)
 		return
-	pop.call("_finish_dismount")
+	ride_button.emit_signal("pressed")
+	await create_timer(1.1).timeout
 	if bool(pop.call("is_riding")) or not gorece.is_physics_processing():
 		push_error("Gorece did not regain control after dismounting")
 		quit(1)

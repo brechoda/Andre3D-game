@@ -50,6 +50,8 @@ const DISMOUNT_SIDE_OFFSET := -1.0
 const RIDER_BLEND := 0.12
 const MOUNT_BLEND := 0.15
 const MOUNT_INTERACTION_DISTANCE := 2.8
+const MOUNT_FAILSAFE_SECONDS := 1.4
+const DISMOUNT_FAILSAFE_SECONDS := 0.85
 # Lean padrão (Pop é mais leve e inclina mais fácil em baixa)
 var MAX_LEAN := 0.38   # ~22°
 var LEAN_SPEED := 6.5
@@ -92,6 +94,7 @@ var _riding := false
 var _network_mount_pending := false
 var _mounting := false
 var _dismounting := false
+var _dismount_requested := false
 var _rider_body: CharacterBody3D
 var _ai_driving := false
 var _ai_target: Node3D
@@ -232,8 +235,6 @@ func _ready() -> void:
         _dashboard_base_rotation = _dashboard.rotation
     if _player != null:
         _refresh_rider_visual()
-    if _ride_button != null and universal_ride_controller:
-        _ride_button.pressed.connect(_toggle_riding)
     _ensure_drive_buttons()
     _update_panel()
 
@@ -524,6 +525,9 @@ func _process(_delta: float) -> void:
         if _mounting and _rider_animator != null and not _rider_animator.is_playing():
             _mounting = false
             _play_rider_animation(BIKE_IDLE_ANIMATION, true)
+            if _dismount_requested:
+                _dismount_requested = false
+                _start_dismount()
         elif _dismounting and _rider_animator != null and not _rider_animator.is_playing():
             if _ai_driving:
                 _finish_ai_dismount()
@@ -666,7 +670,13 @@ func _toggle_riding() -> void:
 
 func toggle_riding_from_universal() -> void:
     if _riding:
-        if not _mounting and not _dismounting:
+        if _mounting:
+            # Não deixar o clique preso à duração do clip de montagem; em
+            # alguns modelos Android esse AnimationPlayer não termina.
+            _mounting = false
+            _dismount_requested = false
+            _start_dismount()
+        elif not _dismounting:
             _start_dismount()
     elif is_near_player():
         _start_mount()
@@ -784,8 +794,19 @@ func _start_mount() -> void:
     _play_rider_animation(BIKE_MOUNT_ANIMATION, false, MOUNT_BLEND)
     if _rider_animator == null:
         _mounting = false
+    else:
+        get_tree().create_timer(MOUNT_FAILSAFE_SECONDS).timeout.connect(_on_mount_failsafe_timeout, CONNECT_ONE_SHOT)
     _place_rider()
     _update_panel()
+
+func _on_mount_failsafe_timeout() -> void:
+    if not _riding or not _mounting:
+        return
+    _mounting = false
+    _play_rider_animation(BIKE_IDLE_ANIMATION, true)
+    if _dismount_requested:
+        _dismount_requested = false
+        _start_dismount()
 
 func _refresh_rider_visual() -> void:
     if _player == null:
@@ -824,7 +845,14 @@ func _start_dismount() -> void:
     if _rider_animator == null:
         _finish_dismount()
         return
+    # Alguns dispositivos deixam o AnimationPlayer sem avançar quando a
+    # janela perde foco. O botão não pode ficar preso em "SAIR" nesse caso.
+    get_tree().create_timer(DISMOUNT_FAILSAFE_SECONDS).timeout.connect(_on_dismount_failsafe_timeout, CONNECT_ONE_SHOT)
     _update_panel()
+
+func _on_dismount_failsafe_timeout() -> void:
+    if _dismounting and _riding:
+        _finish_dismount()
 
 func _finish_dismount() -> void:
     _dismounting = false

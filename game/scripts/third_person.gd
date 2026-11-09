@@ -128,6 +128,7 @@ func _ready() -> void:
     action_button.button_up.connect(_on_action_button_up)
     switch_button.pressed.connect(_toggle_character)
     follow_button.pressed.connect(_toggle_follow)
+    ride_button.pressed.connect(_on_shared_ride_button_pressed)
     pull_vehicle_button.pressed.connect(_show_pull_vehicle_menu)
     _pull_vehicle_feedback_timer = Timer.new()
     _pull_vehicle_feedback_timer.one_shot = true
@@ -249,6 +250,36 @@ func _update_ride_interaction_button() -> void:
     ride_button.text = ("SAIR DA " if selected_is_ridden else "DIRIGIR ") + vehicle_name
     ride_button.disabled = false
     ride_button.visible = true
+
+func _on_shared_ride_button_pressed() -> void:
+    var scene_root := get_parent()
+    if scene_root == null:
+        return
+    # Primeiro procura uma viatura já ocupada: este é o caminho de saída e
+    # não depende da distância depois que o veículo começou a mover-se.
+    for candidate: Node in scene_root.get_children():
+        if candidate == self or not candidate.has_method("is_riding") or not candidate.has_method("toggle_riding_from_universal"):
+            continue
+        if bool(candidate.call("is_riding")):
+            candidate.call("toggle_riding_from_universal")
+            return
+    var active_position: Vector3 = gorece.global_position if _active_character == 1 else global_position
+    var nearest: Node3D
+    var nearest_distance := INF
+    for candidate: Node in scene_root.get_children():
+        if candidate == self or not candidate.has_method("is_near_player") or not candidate.has_method("toggle_riding_from_universal"):
+            continue
+        if not bool(candidate.call("is_near_player")):
+            continue
+        var vehicle := candidate as Node3D
+        if vehicle == null:
+            continue
+        var distance := active_position.distance_to(vehicle.global_position)
+        if distance < nearest_distance:
+            nearest_distance = distance
+            nearest = vehicle
+    if nearest != null:
+        nearest.call("toggle_riding_from_universal")
 
 func _apply_selected_map_spawn() -> void:
     var map_streamer := get_node_or_null("../MapStreamer")
