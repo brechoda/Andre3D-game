@@ -547,11 +547,16 @@ func _physics_process(delta: float) -> void:
     if _joystick_value.length() > 0.05:
         input_vector = _joystick_value
 
+    var run_from_look := _running and not _crouching and not _action_busy and input_vector.length() <= 0.05
+    if run_from_look:
+        # Com CORRER ativo, soltar o analógico mantém o personagem em corrida
+        # na direção para a qual a câmara está apontada.
+        input_vector = Vector2(0.0, -1.0)
     var analog_sprinting := _update_analog_sprinting()
     var sprinting := (_running or analog_sprinting) and not _crouching
-    var analog_strength: float = clampf(input_vector.length(), 0.0, 1.0)
+    var analog_strength: float = 1.0 if run_from_look else clampf(input_vector.length(), 0.0, 1.0)
     var direction: Vector3 = _camera_relative_direction(input_vector)
-    var walking: bool = analog_strength > ANALOG_DEADZONE and direction.length_squared() > 0.001
+    var walking: bool = (run_from_look or analog_strength > ANALOG_DEADZONE) and direction.length_squared() > 0.001
     if walking:
         direction = direction.normalized()
         var analog_speed_factor: float = 1.0 if sprinting else lerpf(MIN_ANALOG_SPEED, 1.0, analog_strength)

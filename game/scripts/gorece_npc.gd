@@ -239,10 +239,13 @@ func _physics_process(delta: float) -> void:
         if not player_controlled and to_target.length_squared() > 0.01 and not _action_busy:
             input_vector = _world_vector_to_input(to_target.normalized())
 
-    var analog_strength := clampf(input_vector.length(), 0.0, 1.0)
+    var run_from_look := player_controlled and running and not crouching and not _action_busy and input_vector.length() <= 0.05
+    if run_from_look:
+        input_vector = Vector2(0.0, -1.0)
+    var analog_strength := 1.0 if run_from_look else clampf(input_vector.length(), 0.0, 1.0)
     var sprinting := running or _update_analog_sprinting()
     var direction := _camera_relative_direction(input_vector) if player_controlled else Vector3(input_vector.x, 0.0, -input_vector.y)
-    var walking := direction.length_squared() > 0.001 and analog_strength > 0.05 and not _action_busy
+    var walking := direction.length_squared() > 0.001 and (run_from_look or analog_strength > 0.05) and not _action_busy
     if walking:
         direction = direction.normalized()
         var speed := (RUN_SPEED if sprinting else MOVE_SPEED) * (0.55 if crouching else 1.0)
