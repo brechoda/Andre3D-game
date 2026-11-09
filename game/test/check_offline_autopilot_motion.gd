@@ -28,9 +28,9 @@ func _run_check() -> void:
     var player := scene.get_node_or_null("Player") as Node3D
     var gorece := scene.get_node_or_null("GoreceNPC") as Node3D
     var map_streamer := scene.get_node_or_null("MapStreamer")
-    var gps := scene.get_node_or_null("HUD/Root/OfflineGPS")
+    var gps := scene.get_node_or_null("HUD/Root/GPSAutopilot")
     if player == null or gorece == null or map_streamer == null or gps == null:
-        _fail("Faltam Player, GoreceNPC, MapStreamer ou OfflineGPS na cena.")
+        _fail("Faltam Player, GoreceNPC, MapStreamer ou GPSAutopilot na cena.")
         return
     player.set("_online_mode", false)
     gps.set("_scene", scene)

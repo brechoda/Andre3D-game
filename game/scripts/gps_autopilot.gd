@@ -167,7 +167,9 @@ func _physics_process(delta: float) -> void:
     while _route_index < _route_path.size() - 1 and source_pos.distance_to(_route_path[_route_index]) < maxf(2.2, _cell_size * 0.55):
         _route_index += 1
     var target_index := clampi(_route_index, 0, _route_path.size() - 1)
-    var lookahead := clampf(9.0 + speed_abs * 0.65, _cell_size * 1.1, 22.0)
+    # A grelha representa o centro das faixas. Um lookahead longo corta as
+    # esquinas e manda a moto contra prédios, por isso a aproximação é curta.
+    var lookahead := clampf(5.0 + speed_abs * 0.35, _cell_size * 0.7, 12.0)
     var along_route := source_pos.distance_to(_route_path[target_index])
     while target_index < _route_path.size() - 1 and along_route < lookahead:
         along_route += _route_path[target_index].distance_to(_route_path[target_index + 1])
@@ -181,14 +183,14 @@ func _physics_process(delta: float) -> void:
         return
     var local_offset: Vector3 = _control_vehicle.global_transform.basis.inverse() * offset
     var turn_angle := atan2(local_offset.x, -local_offset.z)
-    var steer := clampf(turn_angle * 1.35, -1.0, 1.0)
+    var steer := clampf(turn_angle * 1.08, -1.0, 1.0)
 
     var turn_factor := 1.0
     if absf(turn_angle) > 1.05:
-        turn_factor = 0.36
+        turn_factor = 0.22
     elif absf(turn_angle) > 0.62:
-        turn_factor = 0.58
-    var target_speed := speed_limit * 0.74 * turn_factor
+        turn_factor = 0.42
+    var target_speed := speed_limit * 0.48 * turn_factor
     if remaining < 18.0:
         target_speed = minf(target_speed, speed_limit * 0.52 * clampf(remaining / 18.0, 0.12, 1.0))
     var throttle := 0.0
@@ -198,6 +200,18 @@ func _physics_process(delta: float) -> void:
         throttle = -0.62
     if remaining < 3.4:
         throttle = -1.0 if speed_abs > 0.35 else 0.0
+
+    # Travar antes do obstáculo é preferível a insistir no acelerador. A
+    # própria colisão da viatura é usada como sonda, sem criar raycasts extra.
+    var blocked_ahead := false
+    if _control_vehicle.has_method("_movement_blocked") and speed_abs > 0.2:
+        var probe_distance := clampf(1.2 + speed_abs * 0.12, 1.2, 3.0)
+        var probe := -_control_vehicle.global_transform.basis.z * probe_distance
+        blocked_ahead = bool(_control_vehicle.call("_movement_blocked", probe))
+    if blocked_ahead:
+        throttle = -0.9 if speed_abs > 0.7 else 0.12
+        steer = clampf(turn_angle * 1.8, -1.0, 1.0)
+        _status = "A abrandar antes do obstáculo..."
 
     if speed_abs < 0.18 and throttle > 0.3 and remaining > 8.0:
         _stuck_time += delta
