@@ -5,10 +5,10 @@ signal settings_changed
 const SETTINGS_PATH := "user://andre3d_graphics.json"
 const RENDER_DISTANCE_NAMES := ["ULTRA BAIXA", "BAIXA", "MÉDIA", "ALTA"]
 const TEXTURE_QUALITY_NAMES := ["ULTRA BAIXA", "BAIXA", "MÉDIA", "ALTA"]
-const RENDER_DISTANCES := [220.0, 520.0, 780.0, 1100.0]
+const RENDER_DISTANCES := [150.0, 520.0, 780.0, 1100.0]
 const MAP_TILE_LIMITS := [1, 1, 2, 3]
 const MESHES_PER_FRAME := [1, 2, 4, 7]
-const RESOLUTION_SCALES := [0.45, 0.65, 0.82, 1.0]
+const RESOLUTION_SCALES := [0.35, 0.65, 0.82, 1.0]
 
 var render_distance_level := 1
 var texture_quality_level := 1
@@ -97,6 +97,9 @@ func apply() -> void:
     ProjectSettings.set_setting("rendering/textures/default_filters/use_nearest_mipmap_filter", texture_quality_level <= 1)
     ProjectSettings.set_setting("rendering/quality/shading/force_vertex_shading", ultra_low)
     ProjectSettings.set_setting("rendering/occlusion_culling/use_occlusion_culling", ultra_low)
+    ProjectSettings.set_setting("rendering/anti_aliasing/quality/msaa_3d", 0 if ultra_low else 2)
+    ProjectSettings.set_setting("rendering/anti_aliasing/quality/screen_space_aa", 0 if ultra_low else 1)
+    ProjectSettings.set_setting("rendering/environment/volumetric_fog/volume_size", 64 if ultra_low else 128)
     for camera in get_tree().get_nodes_in_group("graphics_camera"):
         if camera is Camera3D:
             (camera as Camera3D).far = RENDER_DISTANCES[render_distance_level]

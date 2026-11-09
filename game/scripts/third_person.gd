@@ -55,6 +55,7 @@ var visual: Node3D
 @onready var action_button: Button = $"../HUD/Root/ActionButton"
 @onready var weapon_button: Button = $"../HUD/Root/WeaponButton"
 @onready var aim_button: Button = $"../HUD/Root/AimButton"
+@onready var rifle_button: Button = $"../HUD/Root/RifleButton"
 @onready var switch_button: Button = $"../HUD/Root/SwitchButton"
 @onready var follow_button: Button = $"../HUD/Root/FollowButton"
 @onready var pull_vehicle_button: Button = $"../HUD/Root/PullVehicleButton"
@@ -95,9 +96,11 @@ var _combo_elapsed := 0.0
 var _combo_tween: Tween
 var _combo_strike_resolved := false
 var _pistol_attachment: AndrePistolAttachment
-var _weapon_equipped := false
+var _rifle_attachment: AndreRifleAttachment
+var _weapon_equipped := true
 var _weapon_aiming := false
 var _weapon_action_busy := false
+var _weapon_mode := "pistol"
 var _active_character := 0 # 0 = Andre, 1 = GORECE, 2 = DG
 var _follow_enabled := false
 var _auto_mount_hilux_armed := false
@@ -135,6 +138,7 @@ func _ready() -> void:
     action_button.button_up.connect(_on_action_button_up)
     weapon_button.toggled.connect(_on_weapon_toggled)
     aim_button.toggled.connect(_on_aim_toggled)
+    rifle_button.pressed.connect(_on_rifle_pressed)
     switch_button.pressed.connect(_toggle_character)
     follow_button.pressed.connect(_toggle_follow)
     pull_vehicle_button.pressed.connect(_show_pull_vehicle_menu)
@@ -160,6 +164,11 @@ func _ready() -> void:
     GraphicsSettings.apply()
     _animation_player = _find_animation_player(visual)
     _setup_pistol_for_visual()
+    _setup_rifle_for_visual()
+    weapon_button.set_pressed_no_signal(true)
+    weapon_button.text = "GUARDAR"
+    aim_button.disabled = false
+    rifle_button.text = "M4"
     _apply_black_shoes()
     _apply_orange_clothes()
     _apply_dark_skin()
@@ -445,6 +454,7 @@ func set_active_character(character_index: int) -> void:
         gorece.set_physics_process(true)
         gorece.set_player_controlled(true)
         _setup_pistol_for_visual()
+        _setup_rifle_for_visual()
         var gorece_visual := gorece.get_node_or_null("GoreceVisual") as Node3D
         if gorece_visual == null:
             gorece_visual = gorece.get("visual") as Node3D
@@ -470,6 +480,7 @@ func set_active_character(character_index: int) -> void:
         _configure_player_animations()
         _setup_neck_look()
         _setup_pistol_for_visual()
+        _setup_rifle_for_visual()
         _camera_yaw = visual.global_rotation.y
         action_button.text = "ATIRAR"
         _update_camera()
@@ -698,8 +709,8 @@ func _update_map_loading_screen(delta: float) -> void:
 
 func _update_distance_lod() -> void:
     var player_position := gorece.global_position if _active_character == 1 else global_position
-    var npc_simulation_distance := 45.0 if GraphicsSettings.render_distance_level == 0 else NPC_SIMULATION_DISTANCE
-    var vehicle_simulation_distance := 65.0 if GraphicsSettings.render_distance_level == 0 else VEHICLE_SIMULATION_DISTANCE
+    var npc_simulation_distance := 30.0 if GraphicsSettings.render_distance_level == 0 else NPC_SIMULATION_DISTANCE
+    var vehicle_simulation_distance := 45.0 if GraphicsSettings.render_distance_level == 0 else VEHICLE_SIMULATION_DISTANCE
     if gorece != null and _active_character != 1 and not _online_mode:
         var npc_active := gorece.global_position.distance_to(player_position) <= npc_simulation_distance
         gorece.set_process(npc_active)
@@ -1135,9 +1146,39 @@ func _setup_pistol_for_visual() -> void:
     else:
         _pistol_attachment.set_equipped(_weapon_equipped)
 
+func _setup_rifle_for_visual() -> void:
+    if is_instance_valid(_rifle_attachment):
+        _rifle_attachment.clear()
+        _rifle_attachment.queue_free()
+    _rifle_attachment = AndreRifleAttachment.new()
+    add_child(_rifle_attachment)
+    if not _rifle_attachment.setup(visual):
+        _rifle_attachment.queue_free()
+        _rifle_attachment = null
+    else:
+        _rifle_attachment.set_equipped(_weapon_equipped and _weapon_mode == "rifle")
+
+func _on_rifle_pressed() -> void:
+    if _active_character == 1:
+        return
+    _weapon_mode = "rifle"
+    _weapon_equipped = true
+    _weapon_aiming = false
+    weapon_button.set_pressed_no_signal(false)
+    weapon_button.text = "PISTOLA"
+    rifle_button.text = "GUARDAR M4"
+    aim_button.disabled = false
+    if _pistol_attachment != null:
+        _pistol_attachment.set_equipped(false)
+    if _rifle_attachment != null:
+        _rifle_attachment.set_equipped(true)
+    _play_weapon_idle()
+
 func _on_weapon_toggled(enabled: bool) -> void:
+    _weapon_mode = "pistol"
     _weapon_equipped = enabled
     weapon_button.text = "GUARDAR" if enabled else "PISTOLA"
+    rifle_button.text = "M4"
     aim_button.disabled = not enabled
     if not enabled:
         aim_button.set_pressed_no_signal(false)
@@ -1147,6 +1188,8 @@ func _on_weapon_toggled(enabled: bool) -> void:
             gorece.call("set_pistol_equipped", enabled)
     elif _pistol_attachment != null:
         _pistol_attachment.set_equipped(enabled)
+    if _rifle_attachment != null:
+        _rifle_attachment.set_equipped(false)
     if enabled and _active_character != 1:
         _play_weapon_idle()
 
