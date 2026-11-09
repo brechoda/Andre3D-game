@@ -21,7 +21,7 @@ boot_splash/bg_color=Color(0.07843, 0.10196, 0.11765, 1)
 
 config/name="Andre 3D — Pistola"
 config/description="Variante Android separada do Andre 3D com pistola, mira e disparo."
-config/version="3.0.0"
+config/version="3.0.1"
 run/main_scene="res://scenes/session_menu.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://assets/template/characters/runner.png"
