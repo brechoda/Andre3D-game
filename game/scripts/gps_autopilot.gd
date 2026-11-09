@@ -201,17 +201,32 @@ func _physics_process(delta: float) -> void:
     if remaining < 3.4:
         throttle = -1.0 if speed_abs > 0.35 else 0.0
 
-    # Travar antes do obstáculo é preferível a insistir no acelerador. A
-    # própria colisão da viatura é usada como sonda, sem criar raycasts extra.
-    var blocked_ahead := false
-    if _control_vehicle.has_method("_movement_blocked") and speed_abs > 0.2:
-        var probe_distance := clampf(1.2 + speed_abs * 0.12, 1.2, 3.0)
-        var probe := -_control_vehicle.global_transform.basis.z * probe_distance
-        blocked_ahead = bool(_control_vehicle.call("_movement_blocked", probe))
-    if blocked_ahead:
-        throttle = -0.9 if speed_abs > 0.7 else 0.12
-        steer = clampf(turn_angle * 1.8, -1.0, 1.0)
-        _status = "A abrandar antes do obstáculo..."
+    # Três sensores usam a própria forma de colisão do veículo: esquerda,
+    # centro e direita. Assim o piloto não insiste contra uma parede e pode
+    # escolher o lado livre sem abandonar completamente a rota do GPS.
+    var sensor_distance := clampf(1.8 + speed_abs * 0.16, 1.8, 3.4)
+    var sensor_side := 0.82
+    var sensor_left := _vehicle_front_sensor_blocked(_control_vehicle, -sensor_side, sensor_distance)
+    var sensor_center := _vehicle_front_sensor_blocked(_control_vehicle, 0.0, sensor_distance)
+    var sensor_right := _vehicle_front_sensor_blocked(_control_vehicle, sensor_side, sensor_distance)
+    if sensor_center:
+        if not sensor_left and sensor_right:
+            steer = minf(steer, -0.72)
+            throttle = minf(throttle, 0.18)
+            _status = "A desviar pela esquerda..."
+        elif not sensor_right and sensor_left:
+            steer = maxf(steer, 0.72)
+            throttle = minf(throttle, 0.18)
+            _status = "A desviar pela direita..."
+        elif not sensor_left and not sensor_right:
+            var preferred_steer := -0.72 if steer < 0.0 else 0.72
+            steer = preferred_steer
+            throttle = minf(throttle, 0.12)
+            _status = "A contornar o obstáculo..."
+        else:
+            throttle = -0.95 if speed_abs > 0.7 else 0.0
+            steer = 0.0
+            _status = "Obstáculo bloqueia a pista; a travar..."
 
     if speed_abs < 0.18 and throttle > 0.3 and remaining > 8.0:
         _stuck_time += delta
@@ -222,8 +237,30 @@ func _physics_process(delta: float) -> void:
         return
 
     _control_vehicle.call("set_autopilot_controls", Vector2(throttle, steer), true)
-    _status = "Piloto automático ligado • %.0f m restantes" % remaining
+    if not sensor_center:
+        _status = "Piloto automático ligado • %.0f m restantes" % remaining
     _status_label.text = _status
+
+func _vehicle_front_sensor_blocked(vehicle: Node3D, lateral_offset: float, forward_distance: float) -> bool:
+    var collision_body := vehicle.get_node_or_null("CollisionBody") as StaticBody3D
+    if collision_body == null or vehicle.get_world_3d() == null:
+        return false
+    var basis := vehicle.global_transform.basis
+    var travel := basis * Vector3(lateral_offset, 0.0, -forward_distance)
+    var predicted := vehicle.global_transform
+    predicted.origin += travel
+    for child in collision_body.get_children():
+        var collision_shape := child as CollisionShape3D
+        if collision_shape == null or collision_shape.shape == null:
+            continue
+        var query := PhysicsShapeQueryParameters3D.new()
+        query.shape = collision_shape.shape
+        query.transform = predicted * collision_shape.transform
+        query.collision_mask = 1
+        query.exclude = [collision_body.get_rid()]
+        if not vehicle.get_world_3d().direct_space_state.intersect_shape(query, 1).is_empty():
+            return true
+    return false
 
 func _draw() -> void:
     draw_rect(Rect2(Vector2.ZERO, size), Color("07141d", 0.94), true)
