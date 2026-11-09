@@ -20,7 +20,7 @@ const GROUND_FIX_COLLISION := "res://assets/maps/liberty_city/collisions/ground_
 const OVERVIEW_TILE := "maps/overview"
 const INITIAL_SPAWN_TILE := "comntop/comntop"
 const SESSION_PATH := "user://andre3d_session.json"
-const SUPPORTED_REGION_IDS := ["center", "level2"]
+const SUPPORTED_REGION_IDS := ["center"]
 const STATIC_REGION_SCENE := "res://level2_static.tscn"
 const MAP_BOUNDARY_SCRIPT := preload("res://scripts/map_boundary_mountains.gd")
 
@@ -52,7 +52,11 @@ func _ready() -> void:
     _load_parts_manifest()
     if _load_selected_region():
         if _selected_region_id == "level2":
-            _load_static_region()
+            # A cena principal ainda está a construir os filhos durante _ready;
+            # adicionar a cidade imediatamente falha com "parent busy" no Android.
+            call_deferred("_load_static_region")
+            set_process(true)
+            return
         else:
             _restrict_to_selected_region()
             if _manifest_ready:
@@ -230,6 +234,8 @@ func _load_selected_region() -> bool:
     if not session is Dictionary:
         return false
     var requested_id := String((session as Dictionary).get("map_region", ""))
+    if not SUPPORTED_REGION_IDS.has(requested_id):
+        requested_id = "center"
     if not SUPPORTED_REGION_IDS.has(requested_id):
         return false
     for row: Variant in regions:
@@ -602,6 +608,8 @@ func get_catalog_tile_count() -> int:
 func is_start_area_loaded() -> bool:
     if not _manifest_ready:
         return false
+    if _selected_region_id == "level2":
+        return is_instance_valid(_static_map_instance) and _static_map_instance.get_child_count() > 0
     for tile_name: String in _selected_region_tiles.keys():
         if not _loaded_tiles.has(tile_name) or not is_collision_tile_loaded(tile_name):
             continue
