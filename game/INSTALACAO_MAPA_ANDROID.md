@@ -1,24 +1,36 @@
 # Andre 3D — mapa CENTRO de Liberty City
 
-## Conteúdo disponível
+## O que está disponível
 
-O mapa de Liberty City disponível no cliente é somente a região **CENTRO**, em um PCK baixado sob demanda: quatro dos 12 tiles-base. Os oito tiles restantes ainda não estão integrados. A opção **Level 2** é um mapa estático externo separado e não completa Liberty City. Na fonte atual, o cliente gera `StaticBody3D`/`CollisionShape3D` a partir das malhas visuais, reutiliza formas de colisão por recurso e filtra copas/folhagem (malhas `ColliderArvore` continuam físicas). A região é recusada se nenhuma colisão puder ser criada. Os dois PCKs passaram validação headless de spawn/colisão, mas os commits dessa correção são posteriores ao APK público 2.2.13; é necessária uma nova versão de produção para que ela chegue a quem usa o APK. Ainda falta playtest visual e em Android. INDUSTRIAL e ilhas não estão disponíveis como regiões de Liberty City.
+A única região selecionável e baixável na fonte atual é **CENTRO**, composta por quatro dos 12 tiles-base de Liberty City. Os outros oito tiles ainda não foram integrados como áreas jogáveis. A opção **Level 2** está desativada: embora permaneça como metadado/código histórico no projeto, o menu, o atualizador e o streamer aceitam somente CENTRO. Uma sessão antiga que peça Level 2 é redirecionada para CENTRO.
 
-O APK exclui `assets/maps/*`. Ao entrar em CENTRO, o jogo precisa de internet para baixar o PCK, verificar tamanho e SHA-256 e montá-lo. O manifesto do servidor mantém CENTRO como obrigatório e Level 2 como opcional.
+O PCK CENTRO é baixado sob demanda; não está embutido no APK. O jogo precisa de internet para obter o manifesto, baixar o arquivo e conferir tamanho e SHA-256 antes de montá-lo. O spawn remoto `global-13` coloca André e Gorece lado a lado sobre a superfície COL1 do Centro.
 
-## Versões publicadas
+## Versões e endpoints conferidos
 
-- APK Android: `2.2.13`, código `45`, release [`apk-v2.2.13`](https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.13); contém a correção para baixar a região Level2.
-- PCK CENTRO: `Andre3D-map-center.pck`, release [`map-v2.2.2-spawn-fix`](https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/map-v2.2.2-spawn-fix), 62.720.388 bytes, SHA-256 `fc38ae751ea53c8795c222436ff7f332916a79eae5086521ced0ba7037cab26e`.
-- Level 2 (opcional e separado): `Andre3D-map-level2.pck`, release [`map-v2.2.0-regions`](https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/map-v2.2.0-regions).
-- Manifesto ativo: [`2026.11.07.1`](https://andre3d-multiplayer-server.onrender.com/updates/manifest.json); spawn remoto `global-13`. André `[184.73, 3.3474, -22.03]` e Gorece `[185.0, 3.3474, -19.0]` aparecem lado a lado na superfície COL1 do Centro.
+- **Projeto-fonte atual:** branch `main`, `project.godot` versão `3.0.6`, variante Andre 3D Pistola. A configuração do jogo usa [`/updates/pistol/manifest.json`](https://andre3d-multiplayer-server.onrender.com/updates/pistol/manifest.json).
+- **Atualizador da variante Pistola:** manifesto `2026.11.09.4`, com cliente 3.0.5 servido por CDN (`131.086.654` bytes; SHA-256 `49f2b8df27c151c57b7516fc9348ec2882d0c1475c6dd7c6cf03102a6a167558`). O arquivo e o hash foram conferidos nesta auditoria. Esse endpoint lista somente CENTRO.
+- **Manifesto principal legado:** [`/updates/manifest.json`](https://andre3d-multiplayer-server.onrender.com/updates/manifest.json), versão `2026.11.07.1`, cliente `2.2.13` código `45`; também lista somente CENTRO. A última release do GitHub continua [`apk-v2.2.13`](https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.13). A variante Pistola 3.0.5 é entregue pelo endpoint/CDN separado.
+- **Build de CI da fonte 3.0.6:** artefato debug, não uma release Android de produção. Uma publicação de produção requer uma estratégia segura de assinatura; a keystore principal foi exposta historicamente, conforme o alerta no `docs/AI_HANDOFF.md`.
+- **PCK CENTRO:** [`map-v2.2.2-spawn-fix`](https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/map-v2.2.2-spawn-fix), `Andre3D-map-center.pck`, `62.720.388` bytes, SHA-256 `fc38ae751ea53c8795c222436ff7f332916a79eae5086521ced0ba7037cab26e`.
 
-## Projeto editável
+## Abrir o projeto editável
 
-O projeto Godot está no repositório [`brechoda/Andre3D-game`](https://github.com/brechoda/Andre3D-game), branch `main`, na pasta `game/`. Clone o repositório e abra `game/project.godot` com Godot `4.7.2`. Os assets OBJ/MTL runtime do Centro e o código do streamer ficam no projeto; não confundir esses arquivos com os assets originais de conversão, que não fazem parte do checkout público. Para exportar o pacote CENTRO, use o preset `Android Map Center`.
+O projeto Godot completo está em [`brechoda/Andre3D-game`](https://github.com/brechoda/Andre3D-game), branch `main`, pasta `game/`. Clone o repositório e abra `game/project.godot` no Godot `4.7.2`. Os OBJ/MTL runtime do Centro e o código do streamer estão incluídos no checkout; assets originais de conversão excluídos não são necessários para editar esses recursos runtime. Para exportar somente o PCK Centro, use o preset `Android Map Center` (`preset.2`).
 
-## Validação e pendências
+## Validação e o que ainda falta
 
-Os PCKs públicos foram baixados e os SHA-256 conferem com as releases. O PCK CENTRO v2.2.2 passou a validação Godot 4.7.2: 50 partes visuais e seis spawns distintos (jogadores e quatro veículos) sobre COL1, com distância vertical máxima `0.000 m`. O PCK Level2 contém 2.556 malhas; o método de produção cria 1.530 formas de colisão elegíveis, reutilizando recursos de malha e filtrando nomes de copas/folhagem. Os dois spawns de personagens atingem COL1 por raycast, com gap máximo de `0.139 m`. O processo headless de validação atingiu cerca de `399 MB` (`390 MiB`) de RSS de pico; isso não substitui medir desempenho/memória em Android.
+Nesta auditoria, a suíte Python executou `16` testes: `15` passaram e `1` foi ignorado porque o relatório de conversão-fonte não está no repositório público. Godot 4.7.2 passou a verificação de parse, isolamento de região e instanciação do streamer. O PCK CENTRO carregou 50 partes visuais e os 12 pontos de verificação de spawns locais/remotos ficaram sobre COL1, com gap máximo de `0.000 m`. Os manifests locais e os dois endpoints ativos foram comparados: ambos publicam apenas CENTRO; o health do servidor e `npm test` também passaram.
 
-Para considerar as regiões prontas, primeiro publique um APK de produção que contenha as colisões Level2 e, então, instale-o, conecte à internet, selecione CENTRO e Level 2 e faça playtest visual/jogável com câmera, streaming, transparência, colisões, desempenho e controles touch. A validação visual em desktop e o teste em Android físico ainda estão pendentes. Liberty City completa também depende da integração dos oito tiles que faltam.
+Ainda é necessário fazer playtest visual/jogável do CENTRO em desktop e instalar a variante pretendida em um Android físico para conferir download, montagem, controles touch, transparência do vidro, transição entre tiles, FPS e memória. A integração completa de Liberty City também depende dos oito tiles-base que faltam. Level 2 não faz parte da disponibilidade atual; se for reativado no futuro, exige nova validação de colisões, memória e aparelho físico antes de voltar ao menu/manifesto.
+
+Para repetir os testes no projeto:
+
+```bash
+cd game
+python3 -m unittest tests.test_gta3_map_assets tests.test_map_boundary_protection -v
+godot --headless --path . --editor --quit --check-only
+godot --headless --path . --script res://test/check_map_region_isolation.gd
+godot --headless --path . --script res://test/check_gta3_map_streamer_script.gd
+godot --headless --path . --script res://test/check_map_region_spawns.gd -- <centro.pck> center <spawn.json>
+```

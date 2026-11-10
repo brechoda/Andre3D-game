@@ -39,10 +39,10 @@
 - [x] Executar smoke test desktop headless da cena de terceira pessoa após a importação dos meshes COL1.
 - [x] Remover de todos os tiles as árvores (incluindo variantes LOD e sombras), postes de iluminação/telefonia e semáforos, tanto visualmente quanto nas colisões; preservar arbustos baixos, prédios, asfalto e suportes estruturais.
 - [x] Distribuir somente o PCK CENTRO, baixado sob demanda e montado apenas após a escolha da região.
-- [x] Criar colisões físicas em runtime para as malhas elegíveis do Level2, reutilizando shapes por recurso, ignorando copas/folhagem e recusando o mapa quando o PCK não fornecer nenhuma malha utilizável.
-- [x] Validar os PCKs publicados em Godot headless: seis spawns CENTRO sobre COL1 (máximo 0,000 m) e os dois spawns Level2 sobre colisões geradas em runtime (máximo 0,139 m).
-- [ ] Publicar novo APK de produção contendo as correções de colisão Level2 dos commits `1150a53`/`90994e3`; o APK público 2.2.13 é anterior a essas alterações e o artefato CI atual é debug.
-- [ ] Fazer playtest visual/jogável de CENTRO e Level2 no desktop e em dispositivo Android; CI e raycasts headless não substituem teste visual, de controles e desempenho real (o teste Level2 headless mediu ~399 MB/390 MiB de RSS de pico, ainda sem medição em Android).
+- [x] Gerar e validar colisões trimesh experimentais para o PCK Level2 em testes headless; Level2 permanece desativado no produto atual e esses testes históricos não certificam gameplay Android.
+- [x] Manter CENTRO como única região aceita pelo atualizador/streamer e único PCK regional publicado nos manifests ativos; sessões antigas Level2 retornam ao Centro.
+- [ ] Fazer playtest visual/jogável de CENTRO em desktop e dispositivo Android; raycasts headless não substituem validação de aparência, streaming, controles, FPS e memória.
+- [ ] Se Level2 voltar a ser oferecido, revalidar suas colisões e uso de memória em Android físico antes de reativá-lo no menu/manifesto.
 - [ ] Se o objetivo for a Liberty City completa, integrar os 8 tiles-base que não fazem parte do CENTRO e disponibilizá-los como regiões/PCKs jogáveis.
 
 ## Piloto automático e GPS offline

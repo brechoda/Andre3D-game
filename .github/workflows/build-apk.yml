@@ -12,6 +12,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Run map and boundary contract tests
+        working-directory: game
+        run: python3 -m unittest tests.test_gta3_map_assets tests.test_map_boundary_protection -v
+
       - name: Install Android SDK
         uses: android-actions/setup-android@v3
         with:
