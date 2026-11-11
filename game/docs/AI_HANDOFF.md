@@ -11,9 +11,10 @@ Este documento explica como continuar o projeto sem depender do histórico da co
 - Pacote Android principal a partir da 2.0.6: `com.manus.andre3d.next`
 - Pacote legado 2.0.5: `com.manus.andre3d`; a chave antiga foi perdida, então não pode ser atualizado no mesmo pacote.
 - A fonte atual em `main` é `3.0.6`, variante Andre 3D Pistola (`com.manus.andre3d.pistol`, version code `7`).
-- O `config/updates.json` dessa variante consulta `/updates/pistol/manifest.json`, ativo como `2026.11.09.4`; ele serve o cliente `3.0.5` por CDN (131.086.654 bytes; SHA-256 `49f2b8df27c151c57b7516fc9348ec2882d0c1475c6dd7c6cf03102a6a167558`). O tamanho e o hash foram conferidos nesta auditoria. Esse APK não tem GitHub Release `apk-v3.0.5`.
+- O `config/updates.json` dessa variante consulta `/updates/pistol/manifest.json`, ativo como `2026.11.09.4`; ele serve o cliente `3.0.5` por CDN (131.086.654 bytes; SHA-256 `49f2b8df27c151c57b7516fc9348ec2882d0c1475c6dd7c6cf03102a6a167558`). O tamanho e o hash foram conferidos na auditoria de 10 de novembro de 2026. Esse APK não tem GitHub Release `apk-v3.0.5`.
+- O repositório do jogo tem também a release [`pistol-v3.0.0`](https://github.com/brechoda/Andre3D-game/releases/tag/pistol-v3.0.0), mas seu asset é `Andre3D-3.0.0-debug.apk`, baseado no código antigo que ainda mostrava Level 2. Como o manifesto anuncia 3.0.5, o updater da 3.0.0 bloqueia `_start_game()` até a atualização ser instalada; orientar usuários a completar o update antes de jogar.
 - O endpoint principal `/updates/manifest.json` permanece como distribuição anterior: cliente `2.2.13`, código `45`, release `https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/apk-v2.2.13`.
-- O workflow `Build Android APK` cria artefatos debug com chave temporária; o build fonte `3.0.6` do CI não é uma release de produção. Qualquer nova publicação exige uma estratégia de assinatura segura; consulte o alerta de segurança abaixo.
+- O workflow `Build Android APK` cria artefatos debug com chave temporária; o run `42758706238` do fonte `3.0.6` passou e gerou `Andre3D-3.0.6-debug`, não uma release de produção. Qualquer nova publicação exige uma estratégia de assinatura segura; consulte o alerta de segurança abaixo.
 - SHA-256 do APK público 2.2.13: `8805400706d04e6a02a9375ef254c2ed6b62e0645ae8d48ee16306668c737da2`.
 
 ## Objetivo do projeto

@@ -1,6 +1,6 @@
 # Liberty City (GTA III) — estado da integração
 
-**Auditoria:** 10 de novembro de 2026. Este relatório distingue o projeto-fonte atual, a variante Pistola distribuída pelo atualizador e o APK legado servido pelo endpoint principal.
+**Auditoria:** 11 de novembro de 2026. Este relatório distingue o projeto-fonte atual, a variante Pistola distribuída pelo atualizador e os APKs debug publicados em repositórios diferentes.
 
 ## Conclusão
 
@@ -27,9 +27,10 @@ O teste carrega o PCK com substituição dos recursos locais, inspeciona as 50 p
 ## Distribuição atual
 
 - **PCK CENTRO:** release [`map-v2.2.2-spawn-fix`](https://github.com/brechoda/andre3d-multiplayer-server/releases/tag/map-v2.2.2-spawn-fix), `Andre3D-map-center.pck`, `62.720.388` bytes, SHA-256 `fc38ae751ea53c8795c222436ff7f332916a79eae5086521ced0ba7037cab26e`. Os manifests ativos apontam para esse mesmo pacote; só CENTRO é listado.
-- **Variante Pistola usada pela fonte 3.0.6:** `config/updates.json` aponta para [`/updates/pistol/manifest.json`](https://andre3d-multiplayer-server.onrender.com/updates/pistol/manifest.json), versão de manifesto `2026.11.09.4`, variante `andre3d-pistol`, `min_app_version` `3.0.0`. O endpoint anuncia o cliente 3.0.5 num APK CDN de `131.086.654` bytes, SHA-256 `49f2b8df27c151c57b7516fc9348ec2882d0c1475c6dd7c6cf03102a6a167558`; o arquivo baixado nesta auditoria conferiu em tamanho e hash. O manifesto lista apenas CENTRO.
-- **Endpoint principal legado:** [`/updates/manifest.json`](https://andre3d-multiplayer-server.onrender.com/updates/manifest.json) continua na versão `2026.11.07.1`, com cliente `2.2.13` (código `45`) e somente CENTRO. A última GitHub Release listada continua `apk-v2.2.13`; o APK Pistola 3.0.5 é servido separadamente pelo CDN, não por uma GitHub Release `apk-v3.0.5`.
-- **Fonte atual:** `project.godot` registra `3.0.6`; o workflow Android produz artefato `3.0.6-debug`, não uma release de produção. O CI da main anterior a esta auditoria passou; esta auditoria acrescenta a suíte Python ao workflow para detectar regressões de mapa mais cedo.
+- **Variante Pistola usada pela fonte 3.0.6:** `config/updates.json` aponta para [`/updates/pistol/manifest.json`](https://andre3d-multiplayer-server.onrender.com/updates/pistol/manifest.json), versão de manifesto `2026.11.09.4`, variante `andre3d-pistol`, `min_app_version` `3.0.0`. O endpoint anuncia o cliente 3.0.5 num APK CDN de `131.086.654` bytes, SHA-256 `49f2b8df27c151c57b7516fc9348ec2882d0c1475c6dd7c6cf03102a6a167558`; o arquivo baixado na auditoria de 10 de novembro de 2026 conferiu em tamanho e hash. O manifesto lista apenas CENTRO.
+- **Release Pistola 3.0.0 no repositório do jogo:** [`pistol-v3.0.0`](https://github.com/brechoda/Andre3D-game/releases/tag/pistol-v3.0.0), publicada como `Andre3D-3.0.0-debug.apk` (`131.081.963` bytes; SHA-256 `9de29d8f005ee2ee2251c5555c536017945db24b64fd0972a4ad5ffca6faa4a8`). A tag `626721a` antecede a revisão center-only e ainda contém opção/whitelist Level 2. Contudo, seu updater vê o cliente `3.0.5` anunciado no manifesto como versão superior a `3.0.0`, considera a atualização obrigatória e bloqueia `_start_game()` até instalá-la. A 3.0.5 é servida por CDN; não há release GitHub `apk-v3.0.5`.
+- **Endpoint principal legado:** [`/updates/manifest.json`](https://andre3d-multiplayer-server.onrender.com/updates/manifest.json) continua na versão `2026.11.07.1`, com cliente `2.2.13` (código `45`) e somente CENTRO. A release `apk-v2.2.13` pertence ao repositório do servidor e não à variante Pistola.
+- **Fonte atual:** `project.godot` registra `3.0.6`; o workflow Android passou no CI `42758706238` e produz artefato `3.0.6-debug` (`80.411.105` bytes), não uma release de produção. O commit `be9859b` restringiu a variante 3.0.5 a CENTRO; a main atual também limita whitelist, menu e streamer a essa região.
 - **Spawn remoto:** `global-13`, `1.830` bytes, SHA-256 `9b839af0a1b967a482cb7a5b4d55bfd0b6da322d8a2c311e3b42d7c37ec0253b`.
 - **Servidor:** `/health` respondeu `ok: true`, build `andre3d-mp-v4`; `npm test` passou. Os dois manifests servidos pelo Render correspondem aos arquivos do repositório e listam somente CENTRO.
 
@@ -44,6 +45,7 @@ A keystore de assinatura principal foi exposta historicamente no repositório p�
 - `check_map_region_spawns.gd` com o PCK CENTRO ativo: 50 partes visuais e 12 verificações de spawns locais/remotos, gap máximo `0.000 m`.
 - Endpoint configurado para Pistola e endpoint legado comparados com os manifests locais: ambos saudáveis/coerentes e com CENTRO como única região.
 - APK CDN Pistola 3.0.5: tamanho e SHA-256 conferidos contra o manifesto ativo.
+- Release `pistol-v3.0.0`: tag, APK debug e código antigo com Level 2 verificados; a checagem de versão confirma que o cliente bloqueia o início até baixar/instalar o 3.0.5 anunciado pelo servidor.
 - Servidor: `node --check server.mjs` e `npm test` passaram.
 
 ## Estado e pendências
@@ -52,6 +54,7 @@ A keystore de assinatura principal foi exposta historicamente no repositório p�
 |---|---|---|
 | PCK CENTRO | Validado headless | 50 partes visuais; cinco meshes de colisão verificadas no PCK; spawns no piso. |
 | Streaming e bounds do Centro | Validado headless | Apenas quatro tiles da região Centro podem ser selecionados/streamados. |
+| Release Pistola 3.0.0 | Debug, substituída pelo updater | A tag antiga ainda mostra Level 2, mas o manifesto atual exige atualizar para 3.0.5 antes de iniciar gameplay. |
 | Level 2 | Desativado na versão atual | Metadados e código experimental permanecem no fonte, mas updater, menu e streamer suportam somente Centro. |
 | Liberty City completa | Parcial | CENTRO cobre 4/12 tiles-base; faltam oito tiles. |
 | Spawn remoto | Corrigido (`global-13`) | Seis posições locais/remotas coincidem e ficam sobre COL1 (gap `0.000 m`). |
