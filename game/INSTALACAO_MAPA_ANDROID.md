@@ -2,7 +2,7 @@
 
 ## O que está disponível
 
-A única região selecionável e baixável na fonte atual é **CENTRO**, composta por quatro dos 12 tiles-base de Liberty City. Os outros oito tiles ainda não foram integrados como áreas jogáveis. A opção **Level 2** está desativada: embora permaneça como metadado/código histórico no projeto, o menu, o atualizador e o streamer aceitam somente CENTRO. Uma sessão antiga que peça Level 2 é redirecionada para CENTRO.
+A única região selecionável e baixável na fonte atual é **CENTRO**, composta por quatro dos 12 tiles-base de Liberty City. Oito tiles ainda estão fora do PCK. Existem no checkout candidatos `landne` e `landsw` (38 partes OBJ e meshes de colisão), mas não estão registrados no catálogo de runtime/manifesto e não têm spawn, limites nem jogabilidade Android validados; portanto, não são regiões disponíveis. A lista-fonte completa precisa ser reconciliada para identificar os demais assets. A opção **Level 2** está desativada: embora permaneça como metadado/código histórico no projeto, o menu, o atualizador e o streamer aceitam somente CENTRO. Uma sessão antiga que peça Level 2 é redirecionada para CENTRO.
 
 O PCK CENTRO é baixado sob demanda; não está embutido no APK. O jogo precisa de internet para obter o manifesto, baixar o arquivo e conferir tamanho e SHA-256 antes de montá-lo. O spawn remoto `global-13` coloca André e Gorece lado a lado sobre a superfície COL1 do Centro.
 
@@ -23,7 +23,7 @@ O projeto Godot completo está em [`brechoda/Andre3D-game`](https://github.com/b
 
 Nesta auditoria, a suíte Python executou `16` testes: `15` passaram e `1` foi ignorado porque o relatório de conversão-fonte não está no repositório público. Godot 4.7.2 passou a verificação de parse, isolamento de região e instanciação do streamer. O PCK CENTRO carregou 50 partes visuais e os 12 pontos de verificação de spawns locais/remotos ficaram sobre COL1, com gap máximo de `0.000 m`. Os manifests locais e os dois endpoints ativos foram comparados: ambos publicam apenas CENTRO; o health do servidor e `npm test` também passaram.
 
-Ainda é necessário fazer playtest visual/jogável do CENTRO em desktop e instalar a variante pretendida em um Android físico para conferir download, montagem, controles touch, transparência do vidro, transição entre tiles, FPS e memória. A integração completa de Liberty City também depende dos oito tiles-base que faltam. Level 2 não faz parte da disponibilidade atual; se for reativado no futuro, exige nova validação de colisões, memória e aparelho físico antes de voltar ao menu/manifesto.
+Ainda é necessário fazer playtest visual/jogável do CENTRO em desktop e instalar a variante pretendida em um Android físico para conferir download, montagem, controles touch, transparência do vidro, transição entre tiles, FPS e memória. Para Liberty City completa, os oito tiles fora do PCK precisam ser reconciliados com a lista-fonte; `landne`/`landsw` são candidatos locais que exigem integração e validação antes de qualquer publicação. Level 2 não faz parte da disponibilidade atual; se for reativado no futuro, exige nova validação de colisões, memória e aparelho físico antes de voltar ao menu/manifesto.
 
 Para repetir os testes no projeto:
 

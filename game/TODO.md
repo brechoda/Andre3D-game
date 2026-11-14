@@ -28,8 +28,8 @@
 
 ## Mapa Liberty City (GTA III)
 - [x] Manter CENTRO como única região selecionável, baixada em PCK; não distribuir INDUSTRIAL nem COSTA VISTA no cliente atual.
-- [x] Gerar catálogo espacial dos 8.689 posicionamentos em 12 tiles, com limites, modelos e dicionários de textura.
-- [x] Gerar 12 meshes OBJ/MTL convertidas e dividi-las em partes de até 96 materiais/superfícies para contornar o limite do importador OBJ do Godot.
+- [x] Gerar catálogo espacial de 8.689 posicionamentos; o catálogo runtime atual registra seis conjuntos (quatro tiles CENTRO mais `maps/overview` e `maps/props`), não 12 tiles jogáveis.
+- [x] Dividir os seis conjuntos registrados em partes de até 96 materiais/superfícies; as 14 partes `landne` e 24 partes `landsw` presentes no checkout ainda não estão registradas no catálogo de runtime.
 - [x] Corrigir os caminhos relativos e preparar os assets runtime para distribuição no PCK regional (os mapas são excluídos do APK principal).
 - [x] Conectar o streamer à cena jogável para carregar apenas os tiles Centro da região escolhida, preservando personagens, veículos, multiplayer e controles existentes.
 - [x] Alinhar o spawn a uma superfície de estrada do IPL e ampliar o alcance de câmera para a escala da cidade.
@@ -43,7 +43,7 @@
 - [x] Manter CENTRO como única região aceita pelo atualizador/streamer e único PCK regional publicado nos manifests ativos; sessões antigas Level2 retornam ao Centro.
 - [ ] Fazer playtest visual/jogável de CENTRO em desktop e dispositivo Android; raycasts headless não substituem validação de aparência, streaming, controles, FPS e memória.
 - [ ] Se Level2 voltar a ser oferecido, revalidar suas colisões e uso de memória em Android físico antes de reativá-lo no menu/manifesto.
-- [ ] Se o objetivo for a Liberty City completa, integrar os 8 tiles-base que não fazem parte do CENTRO e disponibilizá-los como regiões/PCKs jogáveis.
+- [ ] Se o objetivo for Liberty City completa, reconciliar os oito tiles-base fora do PCK com a lista-fonte: validar e registrar os candidatos `landne`/`landsw`, localizar/reconciliar os demais assets e só então definir spawns, limites, colisões, streaming, PCKs e teste Android.
 
 ## Piloto automático e GPS offline
 - [x] No modo offline, adicionar um botão de piloto automático para o veículo; ao ativá-lo, o veículo deve seguir a pista sozinho e poder percorrê-la nos dois sentidos, sem remover o controle manual existente.

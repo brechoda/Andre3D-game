@@ -1,10 +1,10 @@
 # Liberty City (GTA III) — estado da integração
 
-**Auditoria:** 11 de novembro de 2026. Este relatório distingue o projeto-fonte atual, a variante Pistola distribuída pelo atualizador e os APKs debug publicados em repositórios diferentes.
+**Auditoria:** 14 de novembro de 2026. Este relatório distingue o projeto-fonte atual, a variante Pistola distribuída pelo atualizador e os APKs debug publicados em repositórios diferentes.
 
 ## Conclusão
 
-A região **CENTRO** está validada em Godot headless e é a **única região atualmente suportada** no cliente 3.0.6 e nos manifests ativos. Ela contém quatro dos 12 tiles-base de Liberty City. Portanto, o recorte Centro está tecnicamente pronto para download e validação headless, mas **Liberty City completa ainda não está pronta**: faltam oito tiles e playtests visuais/jogáveis no desktop e em Android físico.
+A região **CENTRO** está validada em Godot headless e é a **única região atualmente suportada** no cliente 3.0.6 e nos manifests ativos. Ela contém quatro dos 12 tiles-base de Liberty City. Portanto, o recorte Centro está tecnicamente pronto para download e validação headless, mas **Liberty City completa ainda não está pronta**: oito tiles continuam fora do PCK. Esta auditoria encontrou dois conjuntos candidatos no checkout (`landne` e `landsw`), mas eles ainda não estão registrados como regiões jogáveis nem passaram por teste de spawn, limites e Android; a lista-fonte completa dos 12 tiles não está neste repositório. Também falta o playtest visual/jogável do Centro.
 
 A fonte `main` está na versão `3.0.6` da variante **Andre 3D Pistola**. O `RemoteUpdater` e o `Gta3MapStreamer` aceitam somente `center`; o menu apresenta CENTRO. Embora `map_regions.json` ainda conserve metadados históricos de Level 2 e o streamer mantenha código experimental para esse mapa, Level 2 não é baixável nem selecionável: não consta nos manifests ativos e sessões antigas que o solicitem são direcionadas ao Centro. Não se deve descrever Level 2 como funcional/disponível nesta versão.
 
@@ -12,7 +12,7 @@ As verificações headless confirmam dados, seleção dos tiles do Centro, carre
 
 ## Escopo e implementação
 
-A integração de Liberty City tem um catálogo de 12 tiles-base. O recorte publicado CENTRO contém `comnbtm`, `comntop`, `comse` e `comsw`; os outros oito tiles ainda não estão incluídos como áreas jogáveis. `maps/overview`, `maps/props` e `assets/maps/costa_vista` não são regiões selecionáveis nesta integração.
+A meta de conversão documenta 12 tiles-base. O catálogo runtime versionado registra seis conjuntos: os quatro tiles do recorte publicado CENTRO (`comnbtm`, `comntop`, `comse`, `comsw`) e os auxiliares `maps/overview` e `maps/props`; estes dois auxiliares não são regiões selecionáveis. O inventário encontrou também 14 partes OBJ de `landne` e 24 de `landsw`, com MTL/texturas referenciadas presentes e um OBJ de colisão para cada conjunto, mas esses arquivos não constam em `tile_parts.json`, `collision_manifest.json` nem `map_regions.json`. Sua presença não os torna disponíveis no jogo. `assets/maps/costa_vista` também não é uma região selecionável nesta integração.
 
 A cena `scenes/third_person.tscn` usa `scripts/gta3_map_streamer.gd`. O menu prepara o conteúdo selecionado; `ExternalContent` monta o PCK regional depois de validar tamanho e SHA-256. O mapa não está embutido no APK e precisa ser baixado. No cliente atual, a lista permitida contém somente `center`; o streamer restringe o catálogo aos quatro tiles autorizados, seleciona tiles por bounds, processa colisões antes das meshes visuais e cria limites físicos invisíveis ao redor da área. As faixas de água da borda são visuais intencionais, separadas das paredes de colisão invisíveis.
 
@@ -43,6 +43,7 @@ A keystore de assinatura principal foi exposta historicamente no repositório p�
 - `check_map_region_isolation.gd`: quatro tiles do CENTRO restritos e tile do spawn selecionado.
 - `check_gta3_map_streamer_script.gd`: streamer instanciado; recursos de `ground_fix` carregados.
 - `check_map_region_spawns.gd` com o PCK CENTRO ativo: 50 partes visuais e 12 verificações de spawns locais/remotos, gap máximo `0.000 m`.
+- Verificador headless temporário de candidatos: Godot carregou 14 partes/94.183 triângulos de `landne` e 24 partes/197.491 triângulos de `landsw`, mais uma mesh de colisão para cada; isso só confirma importação de recursos, não alinhamento de colisão, spawn ou jogabilidade.
 - Endpoint configurado para Pistola e endpoint legado comparados com os manifests locais: ambos saudáveis/coerentes e com CENTRO como única região.
 - APK CDN Pistola 3.0.5: tamanho e SHA-256 conferidos contra o manifesto ativo.
 - Release `pistol-v3.0.0`: tag, APK debug e código antigo com Level 2 verificados; a checagem de versão confirma que o cliente bloqueia o início até baixar/instalar o 3.0.5 anunciado pelo servidor.
@@ -56,13 +57,13 @@ A keystore de assinatura principal foi exposta historicamente no repositório p�
 | Streaming e bounds do Centro | Validado headless | Apenas quatro tiles da região Centro podem ser selecionados/streamados. |
 | Release Pistola 3.0.0 | Debug, substituída pelo updater | A tag antiga ainda mostra Level 2, mas o manifesto atual exige atualizar para 3.0.5 antes de iniciar gameplay. |
 | Level 2 | Desativado na versão atual | Metadados e código experimental permanecem no fonte, mas updater, menu e streamer suportam somente Centro. |
-| Liberty City completa | Parcial | CENTRO cobre 4/12 tiles-base; faltam oito tiles. |
+| Liberty City completa | Parcial | CENTRO cobre 4/12 tiles-base; oito estão fora do PCK. Há candidatos `landne`/`landsw` no checkout, mas ainda não são regiões do catálogo nem têm spawn/limites validados; a proveniência/lista dos demais tiles precisa ser reconciliada com a fonte completa. |
 | Spawn remoto | Corrigido (`global-13`) | Seis posições locais/remotas coincidem e ficam sobre COL1 (gap `0.000 m`). |
 | Transparência `subglass` | Assets de substituição presentes | Aparência ainda precisa de playtest visual. |
 | Playtest desktop | Pendente | Percorrer o Centro, inspecionar vidro, transições de tile e colisões. |
 | Teste Android físico | Pendente | Instalar a variante pretendida; validar download, montagem, controles touch, FPS e memória. |
 | Nova versão 3.0.6 de produção | Pendente, se desejada | CI produz debug; resolver assinatura segura antes de distribuir build de produção. |
-| Oito tiles faltantes | Pendente para cidade completa | Integrar, testar e distribuir antes de chamar a cobertura de Liberty City completa. |
+| Tiles fora do PCK | Pendente para cidade completa | Registrar e validar `landne`/`landsw` se forem tiles-base válidos; localizar/reconciliar os demais assets e a lista-fonte. Só depois testar colisões, spawns, streaming, PCK e Android antes de chamar a cobertura completa. |
 
 Para repetir as verificações locais:
 
