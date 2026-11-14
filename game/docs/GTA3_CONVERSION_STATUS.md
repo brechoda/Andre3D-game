@@ -43,6 +43,7 @@ A keystore de assinatura principal foi exposta historicamente no repositório p�
 - `check_map_region_isolation.gd`: quatro tiles do CENTRO restritos e tile do spawn selecionado.
 - `check_gta3_map_streamer_script.gd`: streamer instanciado; recursos de `ground_fix` carregados.
 - `check_map_region_spawns.gd` com o PCK CENTRO ativo: 50 partes visuais e 12 verificações de spawns locais/remotos, gap máximo `0.000 m`.
+- Smoke desktop em `Xvfb`/Mesa llvmpipe a 1280×720 com o PCK publicado: a cena renderizou, o streamer carregou `comntop/comntop` e `ground_fix`, e o jogador percorreu 2,08 m por teclado permanecendo no chão. O renderer imprimiu erros `material=null`; esta execução não é um playtest visual completo nem mede desempenho em hardware.
 - Verificador headless temporário de candidatos: Godot carregou 14 partes/94.183 triângulos de `landne` e 24 partes/197.491 triângulos de `landsw`, mais uma mesh de colisão para cada; isso só confirma importação de recursos, não alinhamento de colisão, spawn ou jogabilidade.
 - Endpoint configurado para Pistola e endpoint legado comparados com os manifests locais: ambos saudáveis/coerentes e com CENTRO como única região.
 - APK CDN Pistola 3.0.5: tamanho e SHA-256 conferidos contra o manifesto ativo.
@@ -60,7 +61,7 @@ A keystore de assinatura principal foi exposta historicamente no repositório p�
 | Liberty City completa | Parcial | CENTRO cobre 4/12 tiles-base; oito estão fora do PCK. Há candidatos `landne`/`landsw` no checkout, mas ainda não são regiões do catálogo nem têm spawn/limites validados; a proveniência/lista dos demais tiles precisa ser reconciliada com a fonte completa. |
 | Spawn remoto | Corrigido (`global-13`) | Seis posições locais/remotas coincidem e ficam sobre COL1 (gap `0.000 m`). |
 | Transparência `subglass` | Assets de substituição presentes | Aparência ainda precisa de playtest visual. |
-| Playtest desktop | Pendente | Percorrer o Centro, inspecionar vidro, transições de tile e colisões. |
+| Playtest desktop | Parcial; pendente | Smoke automatizado de renderização/movimento passou sob llvmpipe, mas houve erros `material=null`; ainda é necessário percorrer o Centro e inspecionar visualmente vidro, transições de tile e colisões em renderer/hardware suportado. |
 | Teste Android físico | Pendente | Instalar a variante pretendida; validar download, montagem, controles touch, FPS e memória. |
 | Nova versão 3.0.6 de produção | Pendente, se desejada | CI produz debug; resolver assinatura segura antes de distribuir build de produção. |
 | Tiles fora do PCK | Pendente para cidade completa | Registrar e validar `landne`/`landsw` se forem tiles-base válidos; localizar/reconciliar os demais assets e a lista-fonte. Só depois testar colisões, spawns, streaming, PCK e Android antes de chamar a cobertura completa. |

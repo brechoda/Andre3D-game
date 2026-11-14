@@ -37,6 +37,7 @@
 - [x] Corrigir transparências/máscaras: 280 texturas com alpha são detectadas no runtime e os materiais transparentes usam modo alpha com culling desativado.
 - [x] Substituir o `subglass.txd` truncado por texturas RGBA `glassfxsub1`/`glassfxsub2` e atualizar os MTLs dos modelos afetados.
 - [x] Executar smoke test desktop headless da cena de terceira pessoa após a importação dos meshes COL1.
+- [x] Executar smoke de renderização desktop em `Xvfb` com o PCK CENTRO publicado: carregou `comntop` e `ground_fix`, aceitou 2,08 m de movimento por teclado e permaneceu no chão; o renderer software reportou erros `material=null`, então isso não substitui inspeção visual completa.
 - [x] Remover de todos os tiles as árvores (incluindo variantes LOD e sombras), postes de iluminação/telefonia e semáforos, tanto visualmente quanto nas colisões; preservar arbustos baixos, prédios, asfalto e suportes estruturais.
 - [x] Distribuir somente o PCK CENTRO, baixado sob demanda e montado apenas após a escolha da região.
 - [x] Gerar e validar colisões trimesh experimentais para o PCK Level2 em testes headless; Level2 permanece desativado no produto atual e esses testes históricos não certificam gameplay Android.
